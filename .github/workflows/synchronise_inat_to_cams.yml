@@ -19,14 +19,14 @@ name: Synchronise iNaturalist observations to CAMS
 on:
   workflow_dispatch:
   schedule:
-    - cron: '42 18 * * *'
-#    - cron: '42 * * * *'
+    - cron: '42 * * * *'
 
 jobs:
   build:
 
     runs-on: ubuntu-latest
     timeout-minutes: 120
+    environment: dev
 
     steps:
     - name: Checkout
@@ -56,6 +56,11 @@ jobs:
     - name: Synchronise iNaturalist to CAMS
       run: |
         python synchronise_inat_to_cams.py
+      env:
+        ARCGIS_URL: ${{ secrets.ARCGIS_URL }}
+        ARCGIS_USERNAME: ${{ secrets.ARCGIS_USERNAME }}
+        ARCGIS_PASSWORD: ${{ secrets.ARCGIS_PASSWORD }}
+        ARCGIS_FEATURE_LAYER_ID: ${{ secrets.ARCGIS_FEATURE_LAYER_ID }}
 
     - name: Commit & Push
       uses: Andro999b/push@v1.3
