@@ -1,0 +1,69 @@
+#  ====================================================================
+#  Copyright 2023 EcoNet.NZ
+#
+#  Licensed under the Apache License, Version 2.0 (the "License");
+#  you may not use this file except in compliance with the License.
+#  You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+#  Unless required by applicable law or agreed to in writing, software
+#  distributed under the License is distributed on an "AS IS" BASIS,
+#  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+#  See the License for the specific language governing permissions and
+#  limitations under the License.
+#  ====================================================================
+
+name: Run tests
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+      
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+        cache: 'pip'
+              
+    - name: Install dependencies
+      run: |
+        sudo apt install heimdal-dev  # Workaround for problem building gssapi wheel, see https://stackoverflow.com/questions/44449290/krb5-config-is-not-recognized-as-an-internal-or-external-command
+        python -m pip install --upgrade pip
+        python -m pip install flake8
+        python -m pip install wheel
+        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+
+    - name: Lint with flake8
+      run: |
+        # stop the build if there are Python syntax errors or undefined names
+        flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+        # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
+        flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics 
+             
+    - name: Run script
+      run: |
+        behave -f html -o reports/behave-report.html --junit
+      env: 
+        ARCGIS_URL: ${{ secrets.ARCGIS_URL }}
+        ARCGIS_USERNAME: ${{ secrets.ARCGIS_USERNAME }}
+        ARCGIS_PASSWORD: ${{ secrets.ARCGIS_PASSWORD }}
+
+    - name: Upload test reports
+      uses: actions/upload-artifact@v3
+      with:
+        name: test reports
+        path: |
+          reports/behave-report.html
+          reports/*.xml
+      # if: ${{ job.status == 'failure' }}
+      if: ${{ always() }}

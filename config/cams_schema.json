@@ -1,0 +1,190 @@
+{
+    "WeedLocations": {
+        "Date First Observed": {
+            "name": "DateDiscovered",
+            "type": "Date"
+        },
+        "Species": {
+            "name":   "SpeciesDropDown",
+            "type":   "String",
+            "length": 256,
+            "ref" :   "taxon_mapping.json"
+        },
+        "DataSource": {
+            "name": "SiteSource",
+            "type": "String",
+            "length": 39,
+            "values": {
+                "iNaturalist": "iNaturalist"
+            }
+        },
+        "Location details": {
+            "name": "LocationInfo",
+            "type": "String",
+            "length": 256
+        },
+        "Effort to control": {
+            "name": "Urgency",
+            "type": "Integer",
+            "range": "[1, 5]"
+        },
+        "CurrentStatus":{
+            "name": "ParentStatusWithDomain",
+            "type": "String",
+            "length": 80,
+            "values": {
+                "RED":      "RedGrowth",
+                "PURPLE":   "PurpleHistoric",
+                "ORANGE":   "OrangeDeadHeaded",
+                "PINK":     "PinkOccupantWillKillGrowth",
+                "YELLOW":   "YellowKilledThisYear",
+                "GREEN":    "GreenNoRegrowthThisYear",
+                "GRAY":     "GrayDuplicate",
+                "BLACK":    "BlackNoGrowthExpected"
+            }
+        }
+    },
+    "Visits_Table": {
+        "Date Visit Made": {
+            "name": "DateCheck",
+            "type": "Date"
+        },
+        "Area m2": {
+            "name": "Area",
+            "type": "Double"
+        },
+        "Height": {
+            "name": "Height",
+            "type": "Double"
+        },
+        "Treated": {
+            "name": "Treated",
+            "type": "String",
+            "length": 255,
+            "values": {
+                "Yes"        : "Yes",
+                "No"         : "No",
+                "Unknown"    : "DontKnow",
+                "Not Yet"    : "NotYet",
+                "Partially"  : "Partially"
+            }
+        },
+        "How treated": {
+            "name": "HowTreated",
+            "type": "String",
+            "length": 255,
+            "values": {
+                "No treatment"         : "NoTreatment",
+                "Cut but roots remain" : "CutButRootsRemain",
+                "Pulled or dug"        : "PulledOrDug",
+                "Ringbark"             : "Ringbark",
+                "Cut and paint"        : "CutAndPaint",
+                "Drill and fill"       : "DrillAndFill",
+                "Scrape stem and paste": "ScrapeStemAndPaste",
+                "Spray leaves"         : "SprayLeaves",
+                "Poisoned"             : "Poisoned",
+                "Don't know"           : "DontKnow"
+            }
+        },
+        "Treatment substance": {
+            "name": "TreatmentSubstance",
+            "type": "String",
+            "length": 80,
+            "values": {
+                "None"                        : "None",
+                "CutNPaste Original Gel"      : "CutNPasteOriginalGel",
+                "CutNPaste Bamboo Buster Gel" : "CutNPasteBambooBusterGel",
+                "CutNPaste Glimax"            : "CutNPasteGlimax",
+                "CutNPaste MetGel"            : "CutNPasteMetGel",
+                "CutNPaste Picloram Gel"      : "CutNPastePicloramGel",
+                "Dow Vigilant II"             : "DowVigilantII",
+                "Weed Weapon Invade Gel"      : "WeedWeaponInvadeGel",
+                "Weed Weapon Stump-Stop-Gel"  : "WeedWeaponStumpStopGel",
+                "OTHER-TREATMENT"             : "OTHERTREATMENT"
+            }
+        },
+        "Treatment details": {
+            "name": "TreatmentDetails",
+            "type": "String",
+            "length": 256
+        },
+        "Plant phenology->most common flowering/fruiting reproductive stage": {
+            "name": "Flowering",
+            "type": "String",
+            "length": 255,
+            "values": {
+                "not recorded"      : "0DontKnow",
+                "vegetative only"   : "4NoSignOfFlowering",
+                "flower buds"       : "2BudsForming",
+                "flowers"           : "3FlowersVisible",
+                "immature fruit"    : "7PodsForming",
+                "mature fruit"      : "8PodsBursting",
+                "seed dispersed"    : "9SeedDispersed"
+            }
+        },
+        "Radius (m) of area surveyed": {
+            "name": "CheckedNearbyRadius",
+            "type": "Double"
+        },
+        "description": {
+            "name": "NotesAndDetails",
+            "length": 5000,
+            "type": "String"
+        },
+        "Follow-up (YYYY-MM)": {
+            "name": "DateForReturnVisit",
+            "type": "Date"
+        },
+        "id": {
+            "name": "iNatRef",
+            "type": "String",
+            "length": 72
+        },
+        "url": {
+            "name": "iNaturalistURL",
+            "type": "String",
+            "length": 256
+        },
+        "Site difficulty": {
+            "name": "SiteDifficulty",
+            "type": "String",
+            "length": 256,
+            "values": {
+                "1 Easy (for most people)"                        : "1Easy",
+                "2 Moderate"                                      : "2Moderate",
+                "3 Challenging (may be rough or steep)"           : "3Challenging",
+                "4 Advanced (beyond most abilities)"              : "4Advanced",
+                "5 Professional skills required (eg rope access)" : "5Professional"
+            }
+        },
+        "ObservationQuality": {
+            "name": "ObservationQuality",
+            "type": "String",
+            "length": 256,
+            "values": {
+                "needs_id":       "needs_id",
+                "casual":         "casual",
+                "research":       "research_grade"
+            }
+        },
+        "WeedVisitStatus": {
+            "name": "WeedVisitStatus",
+            "type": "String",
+            "length": 80,
+            "values": {
+                "RED":      "RedGrowth",
+                "PURPLE":   "PurpleHistoric",
+                "ORANGE":   "OrangeDeadHeaded",
+                "PINK":     "PinkOccupantWillKillGrowth",
+                "YELLOW":   "YellowKilledThisYear",
+                "GREEN":    "GreenNoRegrowthThisYear",
+                "GRAY":     "GrayDuplicate",
+                "BLACK":    "BlackNoGrowthExpected"
+            }
+        },
+        "GUID_visits": {
+            "name": "GUID_visits",
+            "type": "GUID"
+        }
+    }
+}

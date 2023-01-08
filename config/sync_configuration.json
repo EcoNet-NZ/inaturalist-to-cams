@@ -1,0 +1,12 @@
+{
+    "Old Man's Beard Free Wellington": {
+        "file_prefix": "ombfw",
+        "taxon_ids": ["160697"],
+        "place_ids": ["6868"]
+    },
+    "Other vines in Wellington": {
+        "file_prefix": "other_vines_wellington",
+        "taxon_ids": ["285911", "879226"],
+        "place_ids": ["6868"]
+    }
+}
