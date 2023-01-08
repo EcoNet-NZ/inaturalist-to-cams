@@ -62,6 +62,10 @@ Credentials, such as the username and password for logging on, are encrypted and
 
 These credentials can only be read by GitHub Actions and are masked in the log files.
 
+### Environments
+
+**TBC** 
+
 ### Notifications
 
 If the workflow fails, a notification will be sent to the person who last updated the cron schedule or, if manually triggered, the person that triggered the workflow.
@@ -70,6 +74,21 @@ See [notifications for workflow runs](https://docs.github.com/en/actions/monitor
 ### Logs
 
 Detailed logs can be viewed by clicking on the workflow run. See [Using workflow run logs](https://docs.github.com/en/actions/monitoring-and-troubleshooting-workflows/using-workflow-run-logs) if you need help with this.
+
+### Timeouts
+
+**TBC:**
+
+* Workflow timeout
+* iNaturalist read timeout
+
+### Pricing
+
+**TBC**
+
+### Time of Last Update files
+
+TBC - pushed from GitHub Actions, use of GITHUB_TOKEN (auto generated) 
 
 ## Configuration
 
