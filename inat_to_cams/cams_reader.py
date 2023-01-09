@@ -25,7 +25,7 @@ class CamsReader:
 
     def read_observation(self, inat_id):
         query_table = f"iNatRef='{inat_id}'"
-        logging.info(f'Reading observation where {query_table}')
+        logging.info(f'Reading CAMS feature where {query_table}')
         rows = cams_interface.connection.query_weed_visits_table(query_table)
         if not rows:
             logging.info('No existing observation found')
@@ -34,10 +34,10 @@ class CamsReader:
         weed_visits = []
         location_guid = None
 
-        logging.info(f'Found existing observation with {len(rows)} visit rows')
+        logging.info(f'Found existing CAMS feature with {len(rows)} visit rows')
 
         for row in rows:
-            logging.info(f'Found table row {row}')
+            logging.info(f'Found visit table row {row}')
             visit = cams_observation.WeedVisit()
             cams_schema_config = config.cams_schema_config
             visit.object_id = row.attributes['OBJECTID']

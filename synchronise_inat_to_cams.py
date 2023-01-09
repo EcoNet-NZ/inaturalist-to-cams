@@ -61,6 +61,7 @@ def sync_updated_observations():
         taxon_ids = values['taxon_ids']
         place_ids = values['place_ids']
 
+        logging.info('=' * 80)
         logging.info(f"Syncing '{config_name}' with taxon_ids '{taxon_ids}' and place_ids '{place_ids}' since {timestamp}")
 
         time_of_previous_update = datetime.datetime.fromisoformat(timestamp)

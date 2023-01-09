@@ -34,7 +34,7 @@ class CamsWriter:
             logging.info('No updates to observation')
             return
 
-        logging.info(f'Writing observation {cams_observation.weed_visits[0].external_id}')
+        logging.info(f'Writing feature to CAMS with iNaturalist id {cams_observation.weed_visits[0].external_id}')
         new_layer_row = [{
             'geometry': cams_observation.geolocation,
             'attributes': {
@@ -52,7 +52,7 @@ class CamsWriter:
 
         [self.add_field(new_layer_row[0], 'WeedLocations', field) for field in fields]
 
-        logging.info(f'Writing WeedLocations layer: {new_layer_row}')
+        logging.info(f'Writing CAMS WeedLocations layer: {new_layer_row}')
 
         if not dry_run:
             if existing_feature:
@@ -96,7 +96,7 @@ class CamsWriter:
                 if weed_visit.date_visit_made != existing_feature.weed_visits[0].date_visit_made:
                     existing_feature = False  # create as new visit record
 
-            logging.info(f'Writing Weed_Visits table row: {new_data}')
+            logging.info(f'Writing CAMS Weed_Visits table row: {new_data}')
             if not dry_run:
                 if existing_feature:
                     new_data[0]['attributes']['objectId'] = existing_feature.weed_visits[0].object_id

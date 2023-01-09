@@ -23,7 +23,7 @@ from inat_to_cams import cams_writer, inaturalist_reader, translator  # setup_lo
 class INatToCamsSynchroniser:
     def sync_observation(self, observation):
         logging.info('-' * 80)
-        logging.info(f'Syncing observation {observation}')
+        logging.info(f'Syncing iNaturalist observation {observation}')
         inat_observation = inaturalist_reader.INatReader.flatten(observation)
         logging.info(f'Observed on {inat_observation.observed_on}')
 
