@@ -97,4 +97,4 @@ observation_counts = sync_updated_observations()
 
 logging.info('Completed synchronisation: ')
 for count in observation_counts.items():
-    print(f'* {count[0]:<35}{count[1]:>20} observations added')
+    logging.info(f'* {count[0]:<35}{count[1]:>20} observations added')
