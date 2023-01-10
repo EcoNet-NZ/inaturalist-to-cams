@@ -26,6 +26,8 @@
 - [ ] Update README
 - [ ] Review wording of feature files
 - [ ] Remove duplication on iNaturalist steps
+- [ ] Update to Arcgis api 2.1.0 
+- [ ] Add dependabot check for new versions
 
   
 # Post-beta

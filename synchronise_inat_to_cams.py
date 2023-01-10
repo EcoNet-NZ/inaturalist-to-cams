@@ -19,6 +19,7 @@ import func_timeout
 import logging
 import pathlib
 import pyinaturalist
+import sys
 
 from inat_to_cams import cams_interface, config, exceptions, inaturalist_reader, synchroniser
 
@@ -90,6 +91,13 @@ def sync_updated_observations():
 
     return new_observations_by_project
 
+def print_summary(summary_file):
+    f = open(summary_file, "a")
+
+    for item in observation_counts.items():
+        f.write(f'* {item[0]:<35}{item[1]:>20} observations added\n')
+    f.close()
+
 
 # delete_records()
 check_cams_schema()
@@ -98,3 +106,6 @@ observation_counts = sync_updated_observations()
 logging.info('Completed synchronisation: ')
 for count in observation_counts.items():
     logging.info(f'* {count[0]:<35}{count[1]:>20} observations added')
+
+if len(sys.argv) > 1:
+    print_summary(sys.argv[1])
