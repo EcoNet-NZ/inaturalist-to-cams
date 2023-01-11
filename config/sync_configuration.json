@@ -8,5 +8,10 @@
         "file_prefix": "other_vines_wellington",
         "taxon_ids": ["285911", "879226"],
         "place_ids": ["6868"]
+    },
+    "Woolly nightshade - Kaipatiki": {
+        "file_prefix": "woolly_nightshade_kaipatiki",
+        "taxon_ids": ["133287"],
+        "place_ids": ["123353"]
     }
 }
