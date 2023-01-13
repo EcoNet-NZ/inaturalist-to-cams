@@ -16,7 +16,7 @@
 
 import logging
 from behave import *
-from hamcrest import assert_that, equal_to
+from hamcrest import assert_that, equal_to, none
 from datetime import datetime
 from dateutils import today, yesterday, two_years_ago
 
@@ -72,6 +72,12 @@ def step_impl(context, child_count):
     context.id = context.observation.id
     row_count = context.connection.visits_row_count_with_same_locations_feature_as_visits_row(context.id)
     assert_that(row_count, equal_to(child_count)), f'Expected {child_count} Visits records for feature, but found {row_count}'
+
+
+@then(u"the visits record has '{field}' set to None")
+def step_impl(context, field):
+    row = context.connection.visits_row(str(context.observation.id), 0)
+    assert_that(row[field], equal_to(None))
 
 
 @then(u"the {index_str} visits record has date '{field}' set to '{date:ti}'")

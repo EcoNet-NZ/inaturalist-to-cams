@@ -56,6 +56,8 @@ For example,
 
 specifies that the workflow will be run at 42 minutes past each hour.
 
+Note that the GitHub cron schedule uses the UTC timezone.
+
 ### Secrets
 
 Credentials, such as the username and password for logging on, are encrypted and stored in [GitHub Secrets](../..//settings/secrets/actions).
