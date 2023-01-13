@@ -156,6 +156,11 @@ Feature: Processing a new iNaturalist observation populates a new WeedVisits rec
 		When we process the observation
 		Then the visits record has 'TreatmentSubstance' set to 'CutNPasteGlimax'
 
+		Example: Treatment Substance is not set if None
+		Given iNaturalist has a new OMB observation with 'Treatment substance' set to 'None'
+		When we process the observation
+		Then the visits record has 'TreatmentSubstance' set to None
+
 		Example: Treatment Details are set if provided
 		Given iNaturalist has a new OMB observation with 'Treatment details' set to 'Roots grubbed and herbicide applied'
 		When we process the observation

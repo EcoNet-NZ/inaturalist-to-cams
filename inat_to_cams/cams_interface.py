@@ -201,6 +201,8 @@ class CamsSchemaComparator:
                 expected_values = config.taxon_mapping.values()
             elif 'values' in schema_field:
                 expected_values = list(schema_field['values'].values())
+                if None in expected_values:
+                    expected_values.remove(None)
 
             fields = [x for x in cams_entity.properties.fields if x.name == expected_name]
             assert len(fields) == 1, \
