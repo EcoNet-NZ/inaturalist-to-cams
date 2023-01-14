@@ -1,9 +1,3 @@
-def normalise_geolocation(geo_dict):
-    geo_dict['geolocation']['spatialReference'].pop('latestWkid', None)
-    geo_dict['geolocation']['x'] = round(geo_dict['geolocation']['x'], 6)
-    geo_dict['geolocation']['y'] = round(geo_dict['geolocation']['y'], 6)
-
-
 #  ====================================================================
 #  Copyright 2023 EcoNet.NZ
 #
@@ -19,6 +13,13 @@ def normalise_geolocation(geo_dict):
 #  See the License for the specific language governing permissions and
 #  limitations under the License.
 #  ====================================================================
+
+
+def normalise_geolocation(geo_dict):
+    geo_dict['geolocation']['spatialReference'].pop('latestWkid', None)
+    geo_dict['geolocation']['x'] = round(geo_dict['geolocation']['x'], 6)
+    geo_dict['geolocation']['y'] = round(geo_dict['geolocation']['y'], 6)
+
 
 class CamsFeature:
 

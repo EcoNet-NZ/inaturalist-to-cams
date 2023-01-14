@@ -21,9 +21,9 @@ from inat_to_cams import cams_interface, cams_reader, config
 
 
 class CamsWriter:
-    # TODO add debug, including observation id
     def __init__(self):
         self.cams = cams_interface.connection
+        self.log_header_written = False
 
     def write_observation(self, cams_observation, dry_run=False):
         reader = cams_reader.CamsReader()
@@ -61,7 +61,7 @@ class CamsWriter:
                 new_layer_row[0]['attributes']['objectId'] = object_id
                 cams_interface.connection.update_weed_location_layer_row(new_layer_row)
             else:
-                global_id = cams_interface.connection.add_weed_location_layer_row(new_layer_row)
+                global_id, object_id = cams_interface.connection.add_weed_location_layer_row(new_layer_row)
 
         for weed_visit in cams_observation.weed_visits:
             new_data = [{
@@ -91,24 +91,44 @@ class CamsWriter:
 
             [self.add_field(new_data[0], 'Visits_Table', field) for field in fields]
 
+            new_weed_visit_record = True
             # Determine whether to create a new visit record if controlled or updated after previous visit
             if existing_feature:
-                if weed_visit.date_visit_made != existing_feature.weed_visits[0].date_visit_made:
-                    existing_feature = False  # create as new visit record
+                if weed_visit.date_visit_made == existing_feature.weed_visits[0].date_visit_made:
+                    new_weed_visit_record = False
 
             logging.info(f'Writing CAMS Weed_Visits table row: {new_data}')
             if not dry_run:
-                if existing_feature:
+                if new_weed_visit_record:
+                    results = self.cams.table.edit_features(adds=new_data)
+                    assert len(results['addResults']) == 1
+                    assert results['addResults'][0]['success'], f"Error writing WeedVisits {results['addResults'][0]}"
+                else:
                     new_data[0]['attributes']['objectId'] = existing_feature.weed_visits[0].object_id
                     results = self.cams.table.edit_features(updates=new_data)
                     assert len(results['updateResults']) == 1
                     assert results['updateResults'][0]['success'], f"Error writing WeedVisits {results['updateResults'][0]}"
-                else:
-                    results = self.cams.table.edit_features(adds=new_data)
-                    assert len(results['addResults']) == 1
-                    assert results['addResults'][0]['success'], f"Error writing WeedVisits {results['addResults'][0]}"
+
+            if not self.log_header_written:
+                self.write_log_header()
+                self.log_header_written = True
+            self.write_summary_log(cams_observation, object_id, existing_feature, new_weed_visit_record)
 
         return global_id
+
+    def write_log_header(self):
+        logging.getLogger('summary').info('')
+        logging.getLogger('summary').info('|Sync Event|Object Id|iNaturalist URL|')
+        logging.getLogger('summary').info('|----------|---------|---------------|')
+
+    def write_summary_log(self, cams_observation, object_id, existing_feature, new_weed_visit_record):
+        if not existing_feature:
+            sync_type = 'New feature'
+        elif new_weed_visit_record:
+            sync_type = 'Updated feature with new weed visit'
+        else:
+            sync_type = 'Updated feature with existing weed visit'
+        logging.getLogger('summary').info(f'|{sync_type}|**{object_id}**|{cams_observation.weed_visits[0].external_url}|')
 
     def get_observation_value(self, observation, key):
         if observation.ofvs:

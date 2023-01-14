@@ -139,3 +139,6 @@ reports/
 
 #PyCharm
 .idea/
+
+#Logs
+sync_history.md

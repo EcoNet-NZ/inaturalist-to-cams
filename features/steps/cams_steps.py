@@ -156,7 +156,12 @@ def step_impl(context):
     # pp.pprint(context.cams_observation.weed_location.date_first_observed)
     # updated_observation.weed_location.date_first_observed = context.cams_observation.weed_location.date_first_observed
 
+    print('checking weed location')
     assert_that(updated_observation.weed_location, equal_to(context.cams_observation.weed_location))
+    print('checking weed visits')
+    print(updated_observation.weed_visits[0].object_id)
+    print(context.cams_observation.weed_visits[0].object_id)
     assert_that(updated_observation.weed_visits[0], equal_to(context.cams_observation.weed_visits[0]))
+    print('checking observation')
     assert_that(updated_observation, equal_to(context.cams_observation))
     # assert(context.log_capture.find_event(message))

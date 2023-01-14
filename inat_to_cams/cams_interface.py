@@ -32,7 +32,7 @@ import os
 
 import arcgis
 
-from inat_to_cams import config  # setup_logging
+from inat_to_cams import config, setup_logging
 
 
 class CamsConnection:
@@ -46,6 +46,7 @@ class CamsConnection:
         # self.gis = arcgis.GIS(profile='econet_sync')
         self.item = self.gis.content.get(os.environ['ARCGIS_FEATURE_LAYER_ID'])
 
+        setup_logging.SetupLogging()
         logging.basicConfig(level=logging.INFO, format='%(asctime)s %(levelname)s %(message)s', datefmt='%Y-%m-%d %H:%M:%S', force=True)
         logging.info(f"Successfully logged in to {self.item.type} '{self.item.title}' as '{self.gis.properties.user.username}'")
 
@@ -75,7 +76,7 @@ class CamsConnection:
         results = self.layer.edit_features(adds=new_layer_row)
         assert len(results['addResults']) == 1
         assert results['addResults'][0]['success'], f"Error writing WeedLocation {results['addResults'][0]}"
-        return results['addResults'][0]['globalId']
+        return results['addResults'][0]['globalId'], results['addResults'][0]['objectId']
 
     def update_weed_location_layer_row(self, new_layer_row):
         results = self.layer.edit_features(updates=new_layer_row)
