@@ -53,6 +53,8 @@ class CamsReader:
             visit.treated = cams_schema_config.cams_field_key('Visits_Table', 'Treated', row.attributes['Treated'])
             visit.how_treated = cams_schema_config.cams_field_key('Visits_Table', 'How treated', row.attributes['HowTreated'])
             visit.treatment_substance = cams_schema_config.cams_field_key('Visits_Table', 'Treatment substance', row.attributes['TreatmentSubstance'])
+            if visit.treatment_substance == 'None':
+                visit.treatment_substance = None
             visit.treatment_details = row.attributes['TreatmentDetails']
             visit.visit_status = cams_schema_config.cams_field_key('Visits_Table', 'WeedVisitStatus', row.attributes['WeedVisitStatus'])
 

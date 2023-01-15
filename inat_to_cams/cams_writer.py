@@ -82,7 +82,7 @@ class CamsWriter:
                 ('Treated',                     weed_visit.treated),
                 ('How treated',                 weed_visit.how_treated),
                 ('Treatment substance',         weed_visit.treatment_substance),
-                ('Treatment details',            weed_visit.treatment_details),
+                ('Treatment details',           weed_visit.treatment_details),
                 ('WeedVisitStatus',             weed_visit.visit_status),
                 ('ObservationQuality',          weed_visit.observation_quality),
                 ('description',                 weed_visit.notes),
