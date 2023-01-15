@@ -91,6 +91,7 @@ def sync_updated_observations():
 
     return new_observations_by_project
 
+
 def print_summary(summary_file):
     f = open(summary_file, "a")
 

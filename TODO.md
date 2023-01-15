@@ -32,6 +32,7 @@
 - [ ] Consider removing, or hiding from view, iNaturalist id (is the URL sufficient?)
 - [x] Consider mapping TreatmentSubstance of None in iNat to null in CAMS
 - [ ] For truncated String fields, consider making last 3 characters "..."
+- [ ] Check use of `weed_visits[0]` in CamsWriter, should it be using most recent row rather than first 
 
 - [ ] Create project for Ernle Clarke Reserve (tradescantia, ivy, sycamore, aluminium plant, veldt grass, hanging sedge/carex pendula)
 

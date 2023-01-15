@@ -20,6 +20,8 @@ import logging
 class SetupLogging():
     def __init__(self):
         logging.basicConfig(level=logging.INFO, format='%(asctime)s %(levelname)s %(message)s', datefmt='%Y-%m-%d %H:%M:%S', force=True)
-
-
-logging_setup = SetupLogging()
+        handler = logging.FileHandler('sync_history.md')
+        logger = logging.getLogger('summary')
+        logger.setLevel(logging.INFO)
+        logger.addHandler(handler)
+        logger.propagate = False

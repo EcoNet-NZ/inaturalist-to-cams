@@ -71,6 +71,8 @@ class INatToCamsTranslator:
         weed_visit.treated = inat_observation.treated
         weed_visit.how_treated = inat_observation.how_treated
         weed_visit.treatment_substance = inat_observation.treatment_substance
+        if weed_visit.treatment_substance == 'None':
+            weed_visit.treatment_substance = None
         weed_visit.treatment_details = inat_observation.treatment_details
 
         weed_visits = [weed_visit]
