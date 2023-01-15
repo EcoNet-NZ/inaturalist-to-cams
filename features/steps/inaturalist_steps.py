@@ -22,7 +22,6 @@ from hamcrest import assert_that, equal_to, none
 import pyinaturalist
 
 from features.support import observation_factory
-from inat_to_cams import synchroniser
 
 
 @given(u'iNaturalist observation {inat_id} has {anything}')
@@ -252,14 +251,12 @@ def step_impl(context, date_field, name, value):
 @given(u"iNaturalist has an existing OMB observation which has been synced")
 def step_impl(context):
     context.observation = observation_factory.ObservationFactory()
-    syncer = synchroniser.INatToCamsSynchroniser()
-    context.cams_observation, context.global_id = syncer.sync_observation(context.observation)
+    context.cams_observation, context.global_id = context.synchroniser.sync_observation(context.observation)
 
 
 @given(u"that observation has been synced")
 def step_impl(context):
-    syncer = synchroniser.INatToCamsSynchroniser()
-    context.cams_observation, context.global_id = syncer.sync_observation(context.observation)
+    context.cams_observation, context.global_id = context.synchroniser.sync_observation(context.observation)
 
 
 @given(u"the OMB observation is verified by another user")

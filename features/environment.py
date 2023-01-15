@@ -15,14 +15,14 @@
 #  ====================================================================
 
 from behave import fixture
-from inat_to_cams import cams_interface, cams_reader, cams_writer, synchroniser
+from inat_to_cams import cams_interface, cams_reader, cams_writer, synchronise_inat_to_cams
 
 
 @fixture
 def before_all(context):
     context.writer = cams_writer.CamsWriter()
     context.reader = cams_reader.CamsReader()
-    context.synchroniser = synchroniser.INatToCamsSynchroniser()
+    context.synchroniser = synchronise_inat_to_cams.synchroniser
     context.connection = cams_interface.connection
     context.connection.delete_rows_with_inat_ref_of_length(4)
     # logging.basicConfig(filename="error.log")
