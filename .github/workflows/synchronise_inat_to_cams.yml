@@ -61,10 +61,8 @@ jobs:
         ARCGIS_FEATURE_LAYER_ID: ${{ secrets.ARCGIS_FEATURE_LAYER_ID }}
 
     - name: Commit & Push
-      uses: Andro999b/push@v1.3
+      uses: actions-js/push@v1.4
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        branch: main
-        force: false
         message: Updated by Github Actions ${{ github.run_number }}.${{ github.run_attempt }}
 
