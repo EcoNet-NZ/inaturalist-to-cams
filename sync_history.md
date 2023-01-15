@@ -58,3 +58,7 @@
 |Sync Event|Object Id|iNaturalist URL|
 |----------|---------|---------------|
 |Updated feature with new weed visit|**106200**|https://www.inaturalist.org/observations/81827805|
+
+|Sync Event|Object Id|iNaturalist URL|
+|----------|---------|---------------|
+|Updated feature with new weed visit|**106411**|https://www.inaturalist.org/observations/146434156|
