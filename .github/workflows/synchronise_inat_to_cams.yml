@@ -53,7 +53,7 @@ jobs:
              
     - name: Synchronise iNaturalist to CAMS
       run: |
-        python synchronise_inat_to_cams.py
+        python main.py
       env:
         ARCGIS_URL: ${{ secrets.ARCGIS_URL }}
         ARCGIS_USERNAME: ${{ secrets.ARCGIS_USERNAME }}
