@@ -46,7 +46,7 @@ def main():
     #     print_summary(sys.argv[1])
     # delete_records()
     check_cams_schema()
-    observation_counts = synchronise_inat_to_cams.INatToCamsSynchroniser().sync_updated_observations()
+    observation_counts = synchronise_inat_to_cams.synchroniser.sync_updated_observations()
 
     logging.info('Completed synchronisation: ')
     for count in observation_counts.items():
