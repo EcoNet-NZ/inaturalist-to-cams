@@ -19,7 +19,7 @@ import func_timeout
 import logging
 import pathlib
 
-from inat_to_cams import cams_writer, config, exceptions, inaturalist_reader, translator
+from inat_to_cams import cams_writer, config, exceptions, inaturalist_reader, summary_logger, translator
 
 
 class INatToCamsSynchroniser():
@@ -58,6 +58,8 @@ class INatToCamsSynchroniser():
             logging.info(f"{str(len(observations))} new or updated observations for {config_name}")
             new_observations_by_project[config_name] = len(observations)
 
+            self.setup_summary_log_to_print_config_name(config_name)
+
             for observation in observations:
                 try:
                     self.sync_observation(observation)
@@ -70,6 +72,10 @@ class INatToCamsSynchroniser():
                 p.write_text(time_of_latest_update.isoformat())
 
         return new_observations_by_project
+
+    def setup_summary_log_to_print_config_name(self, config_name):
+        summary_logger.config_name = config_name
+        summary_logger.config_name_written = False
 
     def sync_observation(self, observation):
         logging.info('-' * 80)

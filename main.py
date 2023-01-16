@@ -38,8 +38,8 @@ def delete_records():
 
 
 def main():
-    if len(sys.argv) > 1:
-        summary_logger.run_details_header = sys.argv[1]
+    if len(sys.argv) > 2:
+        summary_logger.run_details_header = f'# Run {sys.argv[1]}\n{sys.argv[2]}'
 
     # delete_records()
     check_cams_schema()
