@@ -53,7 +53,7 @@ jobs:
              
     - name: Synchronise iNaturalist to CAMS
       run: |
-        python main.py
+        python main.py "https://github.com/$GITHUB_REPOSITORY/commit/$GITHUB_SHA/checks/$GITHUB_RUN_ID"
       env:
         ARCGIS_URL: ${{ secrets.ARCGIS_URL }}
         ARCGIS_USERNAME: ${{ secrets.ARCGIS_USERNAME }}
