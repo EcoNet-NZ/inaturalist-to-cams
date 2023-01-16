@@ -14,14 +14,10 @@
 #  limitations under the License.
 #  ====================================================================
 
-import datetime
-import func_timeout
 import logging
-import pathlib
-import pyinaturalist
 import sys
 
-from inat_to_cams import cams_interface, synchronise_inat_to_cams
+from inat_to_cams import cams_interface, synchronise_inat_to_cams, summary_logger
 
 
 def check_cams_schema():
@@ -42,8 +38,9 @@ def delete_records():
 
 
 def main():
-    # if len(sys.argv) > 1:
-    #     print_summary(sys.argv[1])
+    if len(sys.argv) > 1:
+        summary_logger.run_details_header = sys.argv[1]
+
     # delete_records()
     check_cams_schema()
     observation_counts = synchronise_inat_to_cams.synchroniser.sync_updated_observations()
@@ -51,7 +48,6 @@ def main():
     logging.info('Completed synchronisation: ')
     for count in observation_counts.items():
         logging.info(f'* {count[0]:<35}{count[1]:>20} observations added')
-
 
 
 main()

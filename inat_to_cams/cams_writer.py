@@ -17,13 +17,12 @@
 from datetime import datetime
 import logging
 
-from inat_to_cams import cams_interface, cams_reader, config
+from inat_to_cams import cams_interface, cams_reader, config, summary_logger
 
 
 class CamsWriter:
     def __init__(self):
         self.cams = cams_interface.connection
-        self.log_header_written = False
 
     def write_observation(self, cams_observation, dry_run=False):
         reader = cams_reader.CamsReader()
@@ -109,26 +108,12 @@ class CamsWriter:
                     assert len(results['updateResults']) == 1
                     assert results['updateResults'][0]['success'], f"Error writing WeedVisits {results['updateResults'][0]}"
 
-            if not self.log_header_written:
-                self.write_log_header()
-                self.log_header_written = True
-            self.write_summary_log(cams_observation, object_id, existing_feature, new_weed_visit_record)
+            if not summary_logger.log_header_written:
+                summary_logger.write_log_header()
+                summary_logger.log_header_written = True
+            summary_logger.write_summary_log(cams_observation, object_id, existing_feature, new_weed_visit_record)
 
         return global_id
-
-    def write_log_header(self):
-        logging.getLogger('summary').info('')
-        logging.getLogger('summary').info('|Sync Event|Object Id|iNaturalist URL|')
-        logging.getLogger('summary').info('|----------|---------|---------------|')
-
-    def write_summary_log(self, cams_observation, object_id, existing_feature, new_weed_visit_record):
-        if not existing_feature:
-            sync_type = 'New feature'
-        elif new_weed_visit_record:
-            sync_type = 'Updated feature with new weed visit'
-        else:
-            sync_type = 'Updated feature with existing weed visit'
-        logging.getLogger('summary').info(f'|{sync_type}|**{object_id}**|{cams_observation.weed_visits[0].external_url}|')
 
     def get_observation_value(self, observation, key):
         if observation.ofvs:
