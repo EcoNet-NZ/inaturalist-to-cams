@@ -111,6 +111,9 @@ class CamsWriter:
             if not summary_logger.log_header_written:
                 summary_logger.write_log_header()
                 summary_logger.log_header_written = True
+            if not summary_logger.config_name:
+                summary_logger.write_config_name()
+                summary_logger.config_name_written = True
             summary_logger.write_summary_log(cams_observation, object_id, existing_feature, new_weed_visit_record)
 
         return global_id

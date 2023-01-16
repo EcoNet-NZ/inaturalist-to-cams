@@ -17,6 +17,8 @@
 import logging
 
 run_details_header = None
+config_name = None
+config_name_written = False
 log_header_written = False
 
 
@@ -30,6 +32,11 @@ def write_log_header():
 
     logging.getLogger('summary').info('|Sync Event|Object Id|Species|iNaturalist URL|')
     logging.getLogger('summary').info('|----------|---------|-------|---------------|')
+
+
+def write_config_name():
+    if config_name:
+        logging.getLogger('summary').info(f'## {config_name}')
 
 
 def write_summary_log(cams_observation, object_id, existing_feature, new_weed_visit_record):
