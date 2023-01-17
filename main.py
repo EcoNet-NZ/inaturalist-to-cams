@@ -14,7 +14,9 @@
 #  limitations under the License.
 #  ====================================================================
 
+import datetime
 import logging
+import pytz
 import sys
 
 from inat_to_cams import cams_interface, synchronise_inat_to_cams, summary_logger
@@ -39,7 +41,9 @@ def delete_records():
 
 def main():
     if len(sys.argv) > 2:
-        summary_logger.run_details_header = f'# Run {sys.argv[1]}\n{sys.argv[2]}'
+        server_timezone = pytz.timezone("Pacific/Auckland")
+        server_time = datetime.now(server_timezone)  # you could pass *tz* directly
+        summary_logger.run_details_header = f'# Run {sys.argv[1]} {server_time}\n{sys.argv[2]}'
 
     # delete_records()
     check_cams_schema()
