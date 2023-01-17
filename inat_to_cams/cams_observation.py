@@ -14,7 +14,6 @@
 #  limitations under the License.
 #  ====================================================================
 
-
 def normalise_geolocation(geo_dict):
     geo_dict['geolocation']['spatialReference'].pop('latestWkid', None)
     geo_dict['geolocation']['x'] = round(geo_dict['geolocation']['x'], 6)

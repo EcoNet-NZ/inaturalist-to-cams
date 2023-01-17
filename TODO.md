@@ -33,7 +33,8 @@
 - [x] Consider mapping TreatmentSubstance of None in iNat to null in CAMS
 - [ ] For truncated String fields, consider making last 3 characters "..."
 - [ ] Check use of `weed_visits[0]` in CamsWriter, should it be using most recent row rather than first 
-
+- [ ] Check duplicate YYY-GUID-visits on visits table
+- 
 - [ ] Create project for Ernle Clarke Reserve (tradescantia, ivy, sycamore, aluminium plant, veldt grass, hanging sedge/carex pendula)
 
   

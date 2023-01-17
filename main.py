@@ -47,7 +47,7 @@ def main():
 
     logging.info('Completed synchronisation: ')
     for count in observation_counts.items():
-        logging.info(f'* {count[0]:<35}{count[1]:>20} observations added')
+        logging.info(f'* {count[0]:<35}{count[1]:>20} observations synced')
 
 
 main()

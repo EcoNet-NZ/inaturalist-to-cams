@@ -98,5 +98,4 @@ class INatToCamsSynchroniser():
         return cams_observation, global_id
 
 
-
 synchroniser = INatToCamsSynchroniser()
