@@ -78,8 +78,8 @@ class CamsReader:
             location.effort_to_control = featureRow.attributes['Urgency']
             location.current_status = cams_schema_config.cams_field_key('WeedLocations', 'CurrentStatus', featureRow.attributes['ParentStatusWithDomain'])
 
-                # Temporarily until updated from weed visit by database trigger
-                location.external_url = featureRow.attributes['iNatURL']
+            # Temporarily until updated from weed visit by database trigger
+            location.external_url = featureRow.attributes['iNatURL']
 
         cams_feature = cams_observation.CamsFeature(featureRow.geometry, location, weed_visits)
         return cams_feature
