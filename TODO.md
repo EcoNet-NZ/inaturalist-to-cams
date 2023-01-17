@@ -19,7 +19,7 @@
 - [x] KS - Define and check standards for naming of CAMS fields
 - [x] Set up project on GitHub Econet organisation
 - [ ] Determine how to handle warnings/errors on GitHub actions
-- [ ] Create a job summary of observations synchronised on GitHub, see https://docs.github.com/en/actions/using-workflows/workflow-commands-for-github-actions#adding-a-job-summary
+- [x] Create a job summary of observations synchronised on GitHub, see https://docs.github.com/en/actions/using-workflows/workflow-commands-for-github-actions#adding-a-job-summary
 - [x] Check parent hierarchy for a taxon match for Banana Passionfruit observations
 - [x] Check Apache license conditions
 - [x] Add config for Site URL

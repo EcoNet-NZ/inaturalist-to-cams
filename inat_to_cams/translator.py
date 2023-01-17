@@ -54,6 +54,8 @@ class INatToCamsTranslator:
 
         weed_location.effort_to_control = effort_to_control
         weed_location.current_status = visit_status
+        weed_location.external_url = f'https://www.inaturalist.org/observations/{inat_observation.id}'
+
 
         weed_visit = cams_observation.WeedVisit()
         weed_visit.external_id = str(inat_observation.id)
