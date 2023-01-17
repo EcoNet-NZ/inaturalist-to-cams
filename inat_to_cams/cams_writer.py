@@ -141,10 +141,11 @@ class CamsWriter:
         schema_field = cams_schema_config.cams_schema[table_name][field_name]
         if 'values' in schema_field:
             value = cams_schema_config.cams_field_value(table_name, field_name, field_value)
-        elif schema_field['type'] == 'String' and field_value:
-            value = field_value[:schema_field['length']]
         else:
             value = field_value
+
+        if value and schema_field['length'] and len(value) > schema_field['length']:
+            value = field_value[:schema_field['length']-3] + '...'
 
         return (
             cams_schema_config.cams_field_name(table_name, field_name),
