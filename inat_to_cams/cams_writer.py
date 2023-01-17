@@ -26,14 +26,15 @@ class CamsWriter:
 
     def write_observation(self, cams_observation, dry_run=False):
         reader = cams_reader.CamsReader()
-        existing_feature = reader.read_observation(cams_observation.weed_visits[0].external_id)
+        inat_id = cams_observation.weed_visits[0].external_id
+        existing_feature = reader.read_observation(inat_id)
         global_id = None
 
         if existing_feature and existing_feature == cams_observation:
             logging.info('No relevant updates to observation')
             return
 
-        logging.info(f'Writing feature to CAMS with iNaturalist id {cams_observation.weed_visits[0].external_id}')
+        logging.info(f'Writing feature to CAMS with iNaturalist id {inat_id}')
         new_layer_row = [{
             'geometry': cams_observation.geolocation,
             'attributes': {
