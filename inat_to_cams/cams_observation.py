@@ -58,6 +58,7 @@ class WeedLocation:
         self.location_details = None
         self.effort_to_control = None
         self.current_status = None
+        self.external_url = None
 
     def __eq__(self, other):
         if type(other) is type(self):

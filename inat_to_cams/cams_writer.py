@@ -46,7 +46,8 @@ class CamsWriter:
             ('DataSource',          cams_observation.weed_location.data_source),
             ('Location details',    cams_observation.weed_location.location_details),
             ('Effort to control',   cams_observation.weed_location.effort_to_control),
-            ('CurrentStatus',       cams_observation.weed_location.current_status)
+            ('CurrentStatus',       cams_observation.weed_location.current_status),
+            ('iNaturalistURL',      cams_observation.weed_location.external_url)
         ]
 
         [self.add_field(new_layer_row[0], 'WeedLocations', field) for field in fields]

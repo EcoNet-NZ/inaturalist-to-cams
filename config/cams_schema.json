@@ -42,6 +42,11 @@
                 "GRAY":     "GrayDuplicate",
                 "BLACK":    "BlackNoGrowthExpected"
             }
+        },
+        "iNaturalistURL": {
+            "name": "iNatURL",
+            "type": "String",
+            "length": 256
         }
     },
     "Visits_Table": {
