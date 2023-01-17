@@ -147,13 +147,17 @@ class CamsWriter:
         else:
             value = field_value
 
-        if value and schema_field['length'] and len(value) > schema_field['length']:
-            value = field_value[:schema_field['length']-3] + '...'
+        value = self.truncate_string_value_if_needed(schema_field, value)
 
         return (
             cams_schema_config.cams_field_name(table_name, field_name),
             value
         )
+
+    def truncate_string_value_if_needed(self, schema_field, value):
+        if value and schema_field['type'] == 'String' and len(value) > schema_field['length']:
+            value = value[:schema_field['length'] - 3] + '...'
+        return value
 
     def add_field(self, row, table_name, field):
         entry = self.get_entry(table_name, field[0], field[1])
