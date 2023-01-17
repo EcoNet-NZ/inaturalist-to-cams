@@ -161,3 +161,14 @@ def step_impl(context):
     print('checking observation')
     assert_that(updated_observation, equal_to(context.cams_observation))
     # assert(context.log_capture.find_event(message))
+
+
+@given(u'we read the updated observation')
+def step_impl(context):
+    context.updated_observation = context.reader.read_observation(context.observation.id)
+
+
+@then(u'the updated observation is unchanged')
+def step_impl(context):
+    current_observation = context.reader.read_observation(context.observation.id)
+    assert_that(current_observation, equal_to(context.updated_observation))
