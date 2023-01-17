@@ -91,7 +91,6 @@
             "type": "String",
             "length": 80,
             "values": {
-                "None"                        : null,
                 "CutNPaste Original Gel"      : "CutNPasteOriginalGel",
                 "CutNPaste Bamboo Buster Gel" : "CutNPasteBambooBusterGel",
                 "CutNPaste Glimax"            : "CutNPasteGlimax",

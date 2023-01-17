@@ -41,12 +41,10 @@ class CamsSchemaConfiguration:
         return None
 
     def cams_field_key(self, entity, field, value):
-        # if value:
-        field_dict = self.cams_schema[entity][field]['values']
-        try:
+        if value:
+            field_dict = self.cams_schema[entity][field]['values']
             return list(field_dict.keys())[list(field_dict.values()).index(value)]
-        except ValueError:
-            return None
+        return None
 
 
 class SyncConfiguration:

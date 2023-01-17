@@ -16,7 +16,7 @@
 
 import logging
 from behave import *
-from hamcrest import assert_that, equal_to, none
+from hamcrest import assert_that, equal_to
 from datetime import datetime
 from dateutils import today, yesterday, two_years_ago
 
