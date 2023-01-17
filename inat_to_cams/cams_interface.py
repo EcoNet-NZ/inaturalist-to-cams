@@ -66,6 +66,9 @@ class CamsConnection:
     def query_weed_visits_table(self, query_table):
         return self.table.query(where=query_table)
 
+    def query_weed_visits_table_ids(self, query_table):
+        return self.table.query(where=query_table, returnIdsOnly=True)
+
     def query_weed_location_layer(self, query_layer):
         return self.layer.query(where=query_layer)
 
@@ -149,8 +152,6 @@ class CamsConnection:
 
     def visits_row_count(self, inat_id):
         query = f"iNatRef='{inat_id}'"
-        # query = "'YYY-GUID_visits'='a44e10da-c8a4-492a-bc19-9fee4c491d46'"
-        # query = "HowTreated='PulledOrDug'"
         row_count = self.table.query(where=query, return_count_only=True)
         return row_count
 

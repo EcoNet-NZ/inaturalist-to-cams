@@ -30,7 +30,7 @@ class CamsWriter:
         global_id = None
 
         if existing_feature and existing_feature == cams_observation:
-            logging.info('No updates to observation')
+            logging.info('No relevant updates to observation')
             return
 
         logging.info(f'Writing feature to CAMS with iNaturalist id {cams_observation.weed_visits[0].external_id}')
@@ -51,15 +51,15 @@ class CamsWriter:
 
         [self.add_field(new_layer_row[0], 'WeedLocations', field) for field in fields]
 
-        logging.info(f'Writing CAMS WeedLocations layer: {new_layer_row}')
-
         if not dry_run:
             if existing_feature:
                 global_id = existing_feature.weed_location.global_id
                 object_id = existing_feature.weed_location.object_id
                 new_layer_row[0]['attributes']['objectId'] = object_id
+                logging.info(f'Updating CAMS WeedLocations layer: {new_layer_row}')
                 cams_interface.connection.update_weed_location_layer_row(new_layer_row)
             else:
+                logging.info(f'Adding CAMS WeedLocations layer: {new_layer_row}')
                 global_id, object_id = cams_interface.connection.add_weed_location_layer_row(new_layer_row)
 
         for weed_visit in cams_observation.weed_visits:
@@ -96,13 +96,14 @@ class CamsWriter:
                 if weed_visit.date_visit_made == existing_feature.weed_visits[0].date_visit_made:
                     new_weed_visit_record = False
 
-            logging.info(f'Writing CAMS Weed_Visits table row: {new_data}')
             if not dry_run:
                 if new_weed_visit_record:
+                    logging.info(f'Adding CAMS Weed_Visits table row: {new_data}')
                     results = self.cams.table.edit_features(adds=new_data)
                     assert len(results['addResults']) == 1
                     assert results['addResults'][0]['success'], f"Error writing WeedVisits {results['addResults'][0]}"
                 else:
+                    logging.info(f'Updating CAMS Weed_Visits table row: {new_data}')
                     new_data[0]['attributes']['objectId'] = existing_feature.weed_visits[0].object_id
                     results = self.cams.table.edit_features(updates=new_data)
                     assert len(results['updateResults']) == 1

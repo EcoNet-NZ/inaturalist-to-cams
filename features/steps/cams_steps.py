@@ -150,16 +150,8 @@ def step_impl(context, message):
 
 @then(u'the existing OMB observation is unchanged')
 def step_impl(context):
-    updated_observation = context.reader.read_observation(context.observation.id)
-
-    print('checking weed location')
-    assert_that(updated_observation.weed_location, equal_to(context.cams_observation.weed_location))
-    print('checking weed visits')
-    print(updated_observation.weed_visits[0].object_id)
-    print(context.cams_observation.weed_visits[0].object_id)
-    assert_that(updated_observation.weed_visits[0], equal_to(context.cams_observation.weed_visits[0]))
-    print('checking observation')
-    assert_that(updated_observation, equal_to(context.cams_observation))
+    current_observation = context.reader.read_observation(context.observation.id)
+    assert_that(current_observation, equal_to(context.cams_observation))
     # assert(context.log_capture.find_event(message))
 
 
