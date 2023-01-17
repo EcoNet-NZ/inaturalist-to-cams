@@ -31,7 +31,7 @@
 - [ ] Check 504 error and maybe retry - see https://github.com/EcoNet-NZ/inaturalist-to-cams/actions/runs/3891132634/jobs/6640996900
 - [ ] Consider removing, or hiding from view, iNaturalist id (is the URL sufficient?)
 - [x] Consider mapping TreatmentSubstance of None in iNat to null in CAMS
-- [ ] For truncated String fields, consider making last 3 characters "..."
+- [x] For truncated String fields, consider making last 3 characters "..."
 - [ ] Check use of `weed_visits[0]` in CamsWriter, should it be using most recent row rather than first 
 - [ ] Check duplicate YYY-GUID-visits on visits table
 - 
