@@ -37,14 +37,15 @@ class CamsWriter:
             weed_geolocation_modified = existing_feature.geolocation != cams_observation.geolocation
             weed_location_modified = existing_feature.weed_location != cams_observation.weed_location
             weed_visit_modified = existing_feature.weed_visits[0] != cams_observation.weed_visits[0]
+            logging.info('Updating existing feature')
+            logging.info(f'Weed geolocation modified? : {weed_geolocation_modified}')
+            logging.info(f'Weed location modified? : {weed_location_modified}')
+            logging.info(f'Weed visit modified? : {weed_visit_modified}')
         else:
+            logging.info('Creating new feature')
             weed_geolocation_modified = True
             weed_location_modified = True
             weed_visit_modified = True
-
-        print(f'Weed geolocation modified? : {weed_geolocation_modified}')
-        print(f'Weed location modified? : {weed_location_modified}')
-        print(f'Weed visit modified? : {weed_visit_modified}')
 
         if weed_geolocation_modified or weed_location_modified:
             global_id, object_id = self.write_feature(cams_observation, inat_id, existing_feature, dry_run)
@@ -99,15 +100,11 @@ class CamsWriter:
 
         [self.add_field(new_data[0], 'Visits_Table', field) for field in fields]
 
-        print(f'Existing? {existing_feature}')
         new_weed_visit_record = True
         # Determine whether to create a new visit record if controlled or updated after previous visit
         if existing_feature:
-            print(f'date of visit: {weed_visit.date_visit_made}')
-            print(f'existing date: {existing_feature.weed_visits[0].date_visit_made}')
             if weed_visit.date_visit_made == existing_feature.weed_visits[0].date_visit_made:
                 new_weed_visit_record = False
-        print(f'New visit? {new_weed_visit_record}')
 
         if not dry_run:
             if new_weed_visit_record:
