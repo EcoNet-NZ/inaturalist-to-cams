@@ -28,31 +28,116 @@ class CamsWriter:
         reader = cams_reader.CamsReader()
         inat_id = cams_observation.weed_visits[0].external_id
         existing_feature = reader.read_observation(inat_id)
+
+        if existing_feature:
+            if existing_feature == cams_observation:
+                logging.info('No relevant updates to observation')
+                return
+
+            weed_geolocation_modified = existing_feature.geolocation != cams_observation.geolocation
+            weed_location_modified = existing_feature.weed_location != cams_observation.weed_location
+            weed_visit_modified = existing_feature.weed_visits[0] != cams_observation.weed_visits[0]
+            logging.info('Updating existing feature')
+            logging.info(f'Weed geolocation modified? : {weed_geolocation_modified}')
+            logging.info(f'Weed location modified? : {weed_location_modified}')
+            logging.info(f'Weed visit modified? : {weed_visit_modified}')
+        else:
+            logging.info('Creating new feature')
+            weed_geolocation_modified = True
+            weed_location_modified = True
+            weed_visit_modified = True
+
+        if weed_geolocation_modified or weed_location_modified:
+            global_id, object_id = self.write_feature(cams_observation, inat_id, existing_feature, dry_run)
+        else:
+            global_id = existing_feature.weed_location.global_id
+            object_id = existing_feature.weed_location.object_id
+
+        if weed_visit_modified:
+            new_weed_visit_record = self.write_weed_visit(cams_observation, existing_feature, global_id, object_id, dry_run)
+        else:
+            new_weed_visit_record = False
+
+        self.write_summary_log(cams_observation, existing_feature, object_id, new_weed_visit_record)
+
+        return global_id
+
+    def write_summary_log(self, cams_observation, existing_feature, object_id, new_weed_visit_record):
+        if not summary_logger.log_header_written:
+            summary_logger.write_log_header()
+            summary_logger.log_header_written = True
+        if not summary_logger.config_name:
+            summary_logger.write_config_name()
+            summary_logger.config_name_written = True
+        summary_logger.write_summary_log(cams_observation, object_id, existing_feature, new_weed_visit_record)
+
+    def write_weed_visit(self, cams_observation, existing_feature, global_id, object_id, dry_run):
+        weed_visit = cams_observation.weed_visits[0]
+        new_data = [{
+            'attributes': {
+            }
+        }]
+
+        fields = [
+            ('id', weed_visit.external_id),
+            ('url', weed_visit.external_url),
+            ('Date Visit Made', weed_visit.date_visit_made),
+            ('Area m2', weed_visit.area),
+            ('Height', weed_visit.height),
+            ('Radius (m) of area surveyed', weed_visit.radius_surveyed),
+            ('Site difficulty', weed_visit.site_difficulty),
+            ('Follow-up (YYYY-MM)', weed_visit.follow_up_date),
+            ('Plant phenology->most common flowering/fruiting reproductive stage', weed_visit.phenology),
+            ('Treated', weed_visit.treated),
+            ('How treated', weed_visit.how_treated),
+            ('Treatment substance', weed_visit.treatment_substance),
+            ('Treatment details', weed_visit.treatment_details),
+            ('WeedVisitStatus', weed_visit.visit_status),
+            ('ObservationQuality', weed_visit.observation_quality),
+            ('description', weed_visit.notes),
+            ('GUID_visits', global_id)
+        ]
+
+        [self.add_field(new_data[0], 'Visits_Table', field) for field in fields]
+
+        new_weed_visit_record = True
+        # Determine whether to create a new visit record if controlled or updated after previous visit
+        if existing_feature:
+            if weed_visit.date_visit_made == existing_feature.weed_visits[0].date_visit_made:
+                new_weed_visit_record = False
+
+        if not dry_run:
+            if new_weed_visit_record:
+                logging.info(f'Adding CAMS Weed_Visits table row: {new_data}')
+                results = self.cams.table.edit_features(adds=new_data)
+                assert len(results['addResults']) == 1
+                assert results['addResults'][0]['success'], f"Error writing WeedVisits {results['addResults'][0]}"
+            else:
+                logging.info(f'Updating CAMS Weed_Visits table row: {new_data}')
+                new_data[0]['attributes']['objectId'] = existing_feature.weed_visits[0].object_id
+                results = self.cams.table.edit_features(updates=new_data)
+                assert len(results['updateResults']) == 1
+                assert results['updateResults'][0]['success'], f"Error writing WeedVisits {results['updateResults'][0]}"
+        return new_weed_visit_record
+
+    def write_feature(self, cams_observation, inat_id, existing_feature, dry_run):
         global_id = None
-
-        if existing_feature and existing_feature == cams_observation:
-            logging.info('No relevant updates to observation')
-            return
-
         logging.info(f'Writing feature to CAMS with iNaturalist id {inat_id}')
         new_layer_row = [{
             'geometry': cams_observation.geolocation,
             'attributes': {
             }
         }]
-
         fields = [
             ('Date First Observed', cams_observation.weed_location.date_first_observed),
-            ('Species',             cams_observation.weed_location.species),
-            ('DataSource',          cams_observation.weed_location.data_source),
-            ('Location details',    cams_observation.weed_location.location_details),
-            ('Effort to control',   cams_observation.weed_location.effort_to_control),
-            ('CurrentStatus',       cams_observation.weed_location.current_status),
-            ('iNaturalistURL',      cams_observation.weed_location.external_url)
+            ('Species', cams_observation.weed_location.species),
+            ('DataSource', cams_observation.weed_location.data_source),
+            ('Location details', cams_observation.weed_location.location_details),
+            ('Effort to control', cams_observation.weed_location.effort_to_control),
+            ('CurrentStatus', cams_observation.weed_location.current_status),
+            ('iNaturalistURL', cams_observation.weed_location.external_url)
         ]
-
         [self.add_field(new_layer_row[0], 'WeedLocations', field) for field in fields]
-
         if not dry_run:
             if existing_feature:
                 global_id = existing_feature.weed_location.global_id
@@ -63,63 +148,7 @@ class CamsWriter:
             else:
                 logging.info(f'Adding CAMS WeedLocations layer: {new_layer_row}')
                 global_id, object_id = cams_interface.connection.add_weed_location_layer_row(new_layer_row)
-
-        for weed_visit in cams_observation.weed_visits:
-            new_data = [{
-                'attributes': {
-                }
-            }]
-
-            fields = [
-                ('id',                          weed_visit.external_id),
-                ('url',                         weed_visit.external_url),
-                ('Date Visit Made',             weed_visit.date_visit_made),
-                ('Area m2',                     weed_visit.area),
-                ('Height',                      weed_visit.height),
-                ('Radius (m) of area surveyed', weed_visit.radius_surveyed),
-                ('Site difficulty',             weed_visit.site_difficulty),
-                ('Follow-up (YYYY-MM)',         weed_visit.follow_up_date),
-                ('Plant phenology->most common flowering/fruiting reproductive stage', weed_visit.phenology),
-                ('Treated',                     weed_visit.treated),
-                ('How treated',                 weed_visit.how_treated),
-                ('Treatment substance',         weed_visit.treatment_substance),
-                ('Treatment details',           weed_visit.treatment_details),
-                ('WeedVisitStatus',             weed_visit.visit_status),
-                ('ObservationQuality',          weed_visit.observation_quality),
-                ('description',                 weed_visit.notes),
-                ('GUID_visits',                 global_id)
-            ]
-
-            [self.add_field(new_data[0], 'Visits_Table', field) for field in fields]
-
-            new_weed_visit_record = True
-            # Determine whether to create a new visit record if controlled or updated after previous visit
-            if existing_feature:
-                if weed_visit.date_visit_made == existing_feature.weed_visits[0].date_visit_made:
-                    new_weed_visit_record = False
-
-            if not dry_run:
-                if new_weed_visit_record:
-                    logging.info(f'Adding CAMS Weed_Visits table row: {new_data}')
-                    results = self.cams.table.edit_features(adds=new_data)
-                    assert len(results['addResults']) == 1
-                    assert results['addResults'][0]['success'], f"Error writing WeedVisits {results['addResults'][0]}"
-                else:
-                    logging.info(f'Updating CAMS Weed_Visits table row: {new_data}')
-                    new_data[0]['attributes']['objectId'] = existing_feature.weed_visits[0].object_id
-                    results = self.cams.table.edit_features(updates=new_data)
-                    assert len(results['updateResults']) == 1
-                    assert results['updateResults'][0]['success'], f"Error writing WeedVisits {results['updateResults'][0]}"
-
-            if not summary_logger.log_header_written:
-                summary_logger.write_log_header()
-                summary_logger.log_header_written = True
-            if not summary_logger.config_name:
-                summary_logger.write_config_name()
-                summary_logger.config_name_written = True
-            summary_logger.write_summary_log(cams_observation, object_id, existing_feature, new_weed_visit_record)
-
-        return global_id
+        return global_id, object_id
 
     def get_observation_value(self, observation, key):
         if observation.ofvs:
