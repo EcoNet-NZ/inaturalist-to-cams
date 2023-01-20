@@ -103,6 +103,9 @@ class CamsWriter:
         new_weed_visit_record = True
         # Determine whether to create a new visit record if controlled or updated after previous visit
         if existing_feature:
+            logging.info(f'New weed visit date: {weed_visit.date_visit_made}')
+            logging.info(f'Existing weed visit date: {existing_feature.weed_visits[0].date_visit_made}')
+            logging.info(f'Dates equal? {weed_visit.date_visit_made == existing_feature.weed_visits[0].date_visit_made}')
             if weed_visit.date_visit_made == existing_feature.weed_visits[0].date_visit_made:
                 new_weed_visit_record = False
 
