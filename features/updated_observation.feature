@@ -21,7 +21,8 @@ Feature: Processing an updated iNaturalist observation populates the existing We
 		Given iNaturalist has an existing OMB observation which has been synced
 		And the OMB observation is verified by another user
 		When we process the observation
-		Then the existing OMB observation is unchanged
+	    Then the WeedLocations feature has an associated record with 1 child visits record
+		And the existing OMB observation is unchanged
 
 		Example: An observation with multiple visit records is verified by another user
 	      Given iNaturalist has a new OMB observation with 'observed_on' = 2 years ago
