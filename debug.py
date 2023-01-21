@@ -14,7 +14,16 @@
 #  limitations under the License.
 #  ====================================================================
 import pytz
-from datetime import datetime
+from datetime import datetime, tzinfo
 
-date_field=1674169903000
-print(pytz.timezone('Pacific/Auckland').localize(datetime.fromtimestamp(date_field // 1000)))
+date_field=1674169903
+dt = datetime.fromtimestamp(date_field)
+print(dt.tzinfo)
+timezone = pytz.timezone('Pacific/Auckland')
+localized_date = timezone.localize(dt)
+print(localized_date)
+print(localized_date.tzinfo)
+print(localized_date.astimezone(timezone))
+print(localized_date.astimezone(timezone).tzinfo)
+print(dt.astimezone(timezone))
+print(dt.astimezone(timezone).tzinfo)
