@@ -42,7 +42,7 @@ Feature: Processing a new iNaturalist observation populates a new WeedVisits rec
 		Then the visits record has 'ObservationQuality' set to 'research_grade'
 
 	Rule: DateVisitMade is set on WeedVisits record
-		Example:
+		Example: DateVisitMade is set correctly
 		Given iNaturalist has a new OMB observation with id 1003 observed at 2022-04-03T17:01:00+12:00
 		And the visits table does not have a record with iNaturalist id 1003
 		When we process the observation

@@ -85,4 +85,6 @@ class CamsReader:
         return cams_feature
 
     def as_datetime(self, date_field):
-        return pytz.timezone('Pacific/Auckland').localize(datetime.fromtimestamp(date_field // 1000))
+        naive_datetime = datetime.fromtimestamp(date_field // 1000)
+        timezone = pytz.timezone('Pacific/Auckland')
+        return naive_datetime.astimezone(timezone)
