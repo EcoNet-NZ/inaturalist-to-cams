@@ -27,7 +27,7 @@ def write_log_header():
     logging.getLogger('summary').info('')
 
     if run_details_header:
-        logging.getLogger('summary').info(f'# {run_details_header}')
+        logging.getLogger('summary').info(f'{run_details_header}')
         logging.getLogger('summary').info('')
 
     logging.getLogger('summary').info('|Sync Event|Object Id|Species|iNaturalist URL|')
