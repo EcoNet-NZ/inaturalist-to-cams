@@ -23,6 +23,8 @@ on:
     branches: [ "main" ]
   workflow_dispatch:
 
+concurrency: non-concurrent  
+
 jobs:
   build:
 
