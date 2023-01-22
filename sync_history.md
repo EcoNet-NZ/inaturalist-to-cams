@@ -3027,3 +3027,22 @@ https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/c440716b4543306486d1678b
 |New feature|**110466**|OldMansBeard|https://www.inaturalist.org/observations/147137020|
 |New feature|**110467**|OldMansBeard|https://www.inaturalist.org/observations/147137821|
 |New feature|**110468**|OldMansBeard|https://www.inaturalist.org/observations/147138054|
+---
+
+# Run 365
+2023-01-23 10:48
+
+https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/fbf1b3173a44ed641e3380ed1e74fb83902267c6/checks/3981693734
+
+|Sync Event|Object Id|Species|iNaturalist URL|
+|----------|---------|-------|---------------|
+|Updated feature with new weed visit|**107963**|OldMansBeard|https://www.inaturalist.org/observations/48748717|
+|Updated feature with new weed visit|**107964**|OldMansBeard|https://www.inaturalist.org/observations/48748789|
+|New feature|**110469**|OldMansBeard|https://www.inaturalist.org/observations/147139325|
+|New feature|**110470**|OldMansBeard|https://www.inaturalist.org/observations/147139459|
+|New feature|**110471**|OldMansBeard|https://www.inaturalist.org/observations/147139657|
+|New feature|**110472**|OldMansBeard|https://www.inaturalist.org/observations/147140799|
+|New feature|**110473**|OldMansBeard|https://www.inaturalist.org/observations/147141056|
+|New feature|**110474**|OldMansBeard|https://www.inaturalist.org/observations/147141450|
+|New feature|**110475**|OldMansBeard|https://www.inaturalist.org/observations/147142299|
+|New feature|**110476**|OldMansBeard|https://www.inaturalist.org/observations/147142606|
