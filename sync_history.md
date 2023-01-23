@@ -3056,3 +3056,17 @@ https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/e0f844fd767568177ff6bf3e
 |Sync Event|Object Id|Species|iNaturalist URL|
 |----------|---------|-------|---------------|
 |New feature|**110477**|OldMansBeard|https://www.inaturalist.org/observations/147143285|
+---
+
+# Run 369
+2023-01-23 15:56
+
+https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/962943748a059a5f62d39b816eb1351d13f94566/checks/3982925903
+
+|Sync Event|Object Id|Species|iNaturalist URL|
+|----------|---------|-------|---------------|
+|New feature|**110478**|OldMansBeard|https://www.inaturalist.org/observations/147163088|
+|New feature|**110479**|OldMansBeard|https://www.inaturalist.org/observations/147163486|
+|New feature|**110480**|OldMansBeard|https://www.inaturalist.org/observations/147163928|
+|New feature|**110481**|OldMansBeard|https://www.inaturalist.org/observations/147164073|
+|New feature|**110482**|OldMansBeard|https://www.inaturalist.org/observations/147165759|
