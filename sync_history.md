@@ -3093,3 +3093,29 @@ https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/2b4f0c1d1a4c2cd31fdb6c7b
 |Sync Event|Object Id|Species|iNaturalist URL|
 |----------|---------|-------|---------------|
 |New feature|**110484**|OldMansBeard|https://www.inaturalist.org/observations/147177468|
+---
+
+# Run 375
+2023-01-23 21:48
+
+https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/2409ae63f6bfe718a2ab2c24c002c6ad23291791/checks/3984715027
+
+|Sync Event|Object Id|Species|iNaturalist URL|
+|----------|---------|-------|---------------|
+|Updated feature with existing weed visit|**107964**|OldMansBeard|https://www.inaturalist.org/observations/48748789|
+|Updated feature with new weed visit|**107965**|OldMansBeard|https://www.inaturalist.org/observations/48748851|
+|Updated feature with new weed visit|**107971**|OldMansBeard|https://www.inaturalist.org/observations/48750607|
+|Updated feature with new weed visit|**108133**|OldMansBeard|https://www.inaturalist.org/observations/69756335|
+|Updated feature with new weed visit|**108134**|OldMansBeard|https://www.inaturalist.org/observations/69825925|
+|Updated feature with new weed visit|**108166**|OldMansBeard|https://www.inaturalist.org/observations/70301848|
+|Updated feature with new weed visit|**108193**|OldMansBeard|https://www.inaturalist.org/observations/71602037|
+|Updated feature with new weed visit|**108194**|OldMansBeard|https://www.inaturalist.org/observations/71602079|
+|Updated feature with new weed visit|**108203**|OldMansBeard|https://www.inaturalist.org/observations/72137667|
+|Updated feature with new weed visit|**108798**|OldMansBeard|https://www.inaturalist.org/observations/108400517|
+|Updated feature with new weed visit|**108799**|OldMansBeard|https://www.inaturalist.org/observations/108400817|
+|Updated feature with new weed visit|**108924**|OldMansBeard|https://www.inaturalist.org/observations/111483577|
+|Updated feature with new weed visit|**108926**|OldMansBeard|https://www.inaturalist.org/observations/111621247|
+|Updated feature with new weed visit|**109271**|OldMansBeard|https://www.inaturalist.org/observations/142494135|
+|Updated feature with new weed visit|**109276**|OldMansBeard|https://www.inaturalist.org/observations/143327507|
+|Updated feature with new weed visit|**109482**|BananaPassionfruit|https://www.inaturalist.org/observations/48750291|
+|Updated feature with new weed visit|**109483**|BananaPassionfruit|https://www.inaturalist.org/observations/48750353|
