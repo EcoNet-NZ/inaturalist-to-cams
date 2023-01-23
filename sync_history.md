@@ -3119,3 +3119,33 @@ https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/2409ae63f6bfe718a2ab2c24
 |Updated feature with new weed visit|**109276**|OldMansBeard|https://www.inaturalist.org/observations/143327507|
 |Updated feature with new weed visit|**109482**|BananaPassionfruit|https://www.inaturalist.org/observations/48750291|
 |Updated feature with new weed visit|**109483**|BananaPassionfruit|https://www.inaturalist.org/observations/48750353|
+---
+
+# Run 376
+2023-01-23 22:48
+
+https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/8f55c40432ce9e30ae515f539d8c7bf1ace029ff/checks/3985162660
+
+|Sync Event|Object Id|Species|iNaturalist URL|
+|----------|---------|-------|---------------|
+|Updated feature with new weed visit|**107701**|OldMansBeard|https://www.inaturalist.org/observations/12563764|
+|Updated feature with new weed visit|**107756**|OldMansBeard|https://www.inaturalist.org/observations/24709685|
+|Updated feature with new weed visit|**108002**|OldMansBeard|https://www.inaturalist.org/observations/59417273|
+|Updated feature with new weed visit|**108005**|OldMansBeard|https://www.inaturalist.org/observations/60796936|
+|Updated feature with new weed visit|**108012**|OldMansBeard|https://www.inaturalist.org/observations/62247928|
+|Updated feature with new weed visit|**108013**|OldMansBeard|https://www.inaturalist.org/observations/62541952|
+|Updated feature with new weed visit|**108187**|OldMansBeard|https://www.inaturalist.org/observations/71117116|
+|Updated feature with new weed visit|**108575**|OldMansBeard|https://www.inaturalist.org/observations/105180212|
+|Updated feature with new weed visit|**108601**|OldMansBeard|https://www.inaturalist.org/observations/105407401|
+|Updated feature with new weed visit|**108667**|OldMansBeard|https://www.inaturalist.org/observations/106526171|
+|Updated feature with existing weed visit|**108799**|OldMansBeard|https://www.inaturalist.org/observations/108400817|
+|Updated feature with new weed visit|**108800**|OldMansBeard|https://www.inaturalist.org/observations/108400986|
+|Updated feature with new weed visit|**108869**|OldMansBeard|https://www.inaturalist.org/observations/110157483|
+|Updated feature with new weed visit|**108870**|OldMansBeard|https://www.inaturalist.org/observations/110157666|
+|Updated feature with new weed visit|**108871**|OldMansBeard|https://www.inaturalist.org/observations/110157904|
+|Updated feature with new weed visit|**108901**|OldMansBeard|https://www.inaturalist.org/observations/110740704|
+|Updated feature with new weed visit|**108915**|OldMansBeard|https://www.inaturalist.org/observations/111028382|
+|Updated feature with new weed visit|**109072**|OldMansBeard|https://www.inaturalist.org/observations/116004780|
+|Updated feature with new weed visit|**109359**|OldMansBeard|https://www.inaturalist.org/observations/146178024|
+|Updated feature with existing weed visit|**110478**|OldMansBeard|https://www.inaturalist.org/observations/147163088|
+|Updated feature with new weed visit|**109546**|BananaPassionfruit|https://www.inaturalist.org/observations/110158326|
