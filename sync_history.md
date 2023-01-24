@@ -3205,3 +3205,25 @@ https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/00418b1fc3bbe84e6c56e713
 |Sync Event|Object Id|Species|iNaturalist URL|
 |----------|---------|-------|---------------|
 |Updated feature with existing weed visit|**110541**|OldMansBeard|https://www.inaturalist.org/observations/147245822|
+---
+
+# Run 398
+2023-01-24 21:48
+
+https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/364303b6eea8c0025f7b878c1d6606f8877d9f7e/checks/3994448887
+
+|Sync Event|Object Id|Species|iNaturalist URL|
+|----------|---------|-------|---------------|
+|Updated feature with new weed visit|**107408**|OldMansBeard|https://www.inaturalist.org/observations/2989008|
+|Updated feature with new weed visit|**107409**|OldMansBeard|https://www.inaturalist.org/observations/2989025|
+|Updated feature with new weed visit|**107410**|OldMansBeard|https://www.inaturalist.org/observations/2989039|
+|Updated feature with new weed visit|**107412**|OldMansBeard|https://www.inaturalist.org/observations/2989066|
+|Updated feature with new weed visit|**107851**|OldMansBeard|https://www.inaturalist.org/observations/39438271|
+|Updated feature with new weed visit|**108053**|OldMansBeard|https://www.inaturalist.org/observations/65118422|
+|Updated feature with new weed visit|**108054**|OldMansBeard|https://www.inaturalist.org/observations/65118423|
+|Updated feature with new weed visit|**108055**|OldMansBeard|https://www.inaturalist.org/observations/65118424|
+|Updated feature with new weed visit|**108465**|OldMansBeard|https://www.inaturalist.org/observations/99293279|
+|Updated feature with new weed visit|**108483**|OldMansBeard|https://www.inaturalist.org/observations/100470214|
+|Updated feature with new weed visit|**109020**|OldMansBeard|https://www.inaturalist.org/observations/113353204|
+|Updated feature with existing weed visit|**110478**|OldMansBeard|https://www.inaturalist.org/observations/147163088|
+|Updated feature with existing weed visit|**110479**|OldMansBeard|https://www.inaturalist.org/observations/147163486|
