@@ -3299,3 +3299,16 @@ https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/b61032565da2a06d2f319d8e
 |Updated feature with new weed visit|**108458**|OldMansBeard|https://www.inaturalist.org/observations/99039401|
 |Updated feature with new weed visit|**108479**|OldMansBeard|https://www.inaturalist.org/observations/100289440|
 |Updated feature with new weed visit|**109479**|BananaPassionfruit|https://www.inaturalist.org/observations/48625333|
+---
+
+# Run 417
+2023-01-25 17:56
+
+https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/b80718d4dad91e5e7d70b6ccc4e75bac3a74ab04/checks/4002992922
+
+|Sync Event|Object Id|Species|iNaturalist URL|
+|----------|---------|-------|---------------|
+|Updated feature with new weed visit|**108362**|OldMansBeard|https://www.inaturalist.org/observations/80677478|
+|Updated feature with new weed visit|**108459**|OldMansBeard|https://www.inaturalist.org/observations/99039502|
+|Updated feature with new weed visit|**108460**|OldMansBeard|https://www.inaturalist.org/observations/99039574|
+|Updated feature with new weed visit|**109371**|OldMansBeard|https://www.inaturalist.org/observations/146654534|
