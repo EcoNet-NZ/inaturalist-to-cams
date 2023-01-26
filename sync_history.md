@@ -3383,3 +3383,33 @@ https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/bd223f7e981a9256c9be1cea
 |Updated feature with new weed visit|**108123**|OldMansBeard|https://www.inaturalist.org/observations/69067882|
 |Updated feature with new weed visit|**108463**|OldMansBeard|https://www.inaturalist.org/observations/99044550|
 |Updated feature with new weed visit|**108521**|OldMansBeard|https://www.inaturalist.org/observations/101972660|
+---
+
+# Run 440
+2023-01-26 17:56
+
+https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/54d276424f84ec15acae9e110a02c2aa0c5c0c49/checks/4012413869
+
+|Sync Event|Object Id|Species|iNaturalist URL|
+|----------|---------|-------|---------------|
+|New feature|**110707**|BluePassionFlower|https://www.inaturalist.org/observations/22447605|
+|New feature|**110708**|BluePassionFlower|https://www.inaturalist.org/observations/49108314|
+|New feature|**110709**|BluePassionFlower|https://www.inaturalist.org/observations/52523150|
+|New feature|**110710**|BluePassionFlower|https://www.inaturalist.org/observations/52527864|
+|New feature|**110711**|BluePassionFlower|https://www.inaturalist.org/observations/52535323|
+|New feature|**110712**|BluePassionFlower|https://www.inaturalist.org/observations/53007233|
+|New feature|**110713**|BluePassionFlower|https://www.inaturalist.org/observations/53009746|
+|New feature|**110714**|BluePassionFlower|https://www.inaturalist.org/observations/57577876|
+|New feature|**110715**|BluePassionFlower|https://www.inaturalist.org/observations/57579481|
+|New feature|**110716**|BluePassionFlower|https://www.inaturalist.org/observations/61439964|
+|New feature|**110717**|BluePassionFlower|https://www.inaturalist.org/observations/69379927|
+|New feature|**110718**|BluePassionFlower|https://www.inaturalist.org/observations/73577977|
+|New feature|**110719**|BluePassionFlower|https://www.inaturalist.org/observations/81801397|
+|New feature|**110720**|BluePassionFlower|https://www.inaturalist.org/observations/100115800|
+|New feature|**110721**|BluePassionFlower|https://www.inaturalist.org/observations/102734605|
+|New feature|**110722**|BluePassionFlower|https://www.inaturalist.org/observations/109896902|
+|New feature|**110723**|BluePassionFlower|https://www.inaturalist.org/observations/118089273|
+|New feature|**110724**|BluePassionFlower|https://www.inaturalist.org/observations/123434837|
+|New feature|**110725**|BluePassionFlower|https://www.inaturalist.org/observations/124640184|
+|New feature|**110726**|BluePassionFlower|https://www.inaturalist.org/observations/134537074|
+|New feature|**110727**|BluePassionFlower|https://www.inaturalist.org/observations/144383896|
