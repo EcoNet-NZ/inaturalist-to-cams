@@ -41,7 +41,7 @@ jobs:
         python-version: '3.9'
         cache: 'pip'
 
-    - name: Set timezone
+    - name: Set timezone   # so that we observations are stored to CAMS in NZ time
       uses: szenius/set-timezone@v1.0
       with:
         timezoneLinux: "Pacific/Auckland"

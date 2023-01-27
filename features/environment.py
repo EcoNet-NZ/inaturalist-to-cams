@@ -13,7 +13,6 @@
 #  See the License for the specific language governing permissions and
 #  limitations under the License.
 #  ====================================================================
-import os
 
 from behave import fixture
 from inat_to_cams import cams_interface, cams_reader, cams_writer, synchronise_inat_to_cams
@@ -26,5 +25,4 @@ def before_all(context):
     context.synchroniser = synchronise_inat_to_cams.synchroniser
     context.connection = cams_interface.connection
     context.connection.delete_rows_with_inat_ref_of_length(4)
-    os.environ['TZ'] = 'Pacific/Auckland'
     # logging.basicConfig(filename="error.log")
