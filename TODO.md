@@ -15,26 +15,28 @@
 - [x] Add check of item id before deleting data
 - [x] Print item id
 
-- [ ] KS - SiteSource - change to just iNaturalist not iNaturalist2022
 - [x] KS - Define and check standards for naming of CAMS fields
 - [x] Set up project on GitHub Econet organisation
-- [ ] Determine how to handle warnings/errors on GitHub actions
+- [x] Determine how to handle warnings/errors on GitHub actions
 - [x] Create a job summary of observations synchronised on GitHub, see https://docs.github.com/en/actions/using-workflows/workflow-commands-for-github-actions#adding-a-job-summary
 - [x] Check parent hierarchy for a taxon match for Banana Passionfruit observations
 - [x] Check Apache license conditions
 - [x] Add config for Site URL
-- [ ] Update README
-- [ ] Review wording of feature files
-- [ ] Remove duplication on iNaturalist steps
 - [x] Update to Arcgis api 2.1.0 
-- [ ] Add dependabot check for new versions
-- [ ] Check 504 error and maybe retry - see https://github.com/EcoNet-NZ/inaturalist-to-cams/actions/runs/3891132634/jobs/6640996900
-- [ ] Consider removing, or hiding from view, iNaturalist id (is the URL sufficient?)
+- [x] Check 504 error and maybe retry - see https://github.com/EcoNet-NZ/inaturalist-to-cams/actions/runs/3891132634/jobs/6640996900
 - [x] Consider mapping TreatmentSubstance of None in iNat to null in CAMS
 - [x] For truncated String fields, consider making last 3 characters "..."
-- [ ] Check use of `weed_visits[0]` in CamsWriter, should it be using most recent row rather than first 
 - [x] Check duplicate YYY-GUID-visits on visits table
+
+- [ ] KS - SiteSource - change to just iNaturalist not iNaturalist2022
+- [ ] Update README
+- [ ] Add dependabot check for new versions
+- [ ] Consider removing, or hiding from view, iNaturalist id (is the URL sufficient?)
+- [ ] Check use of `weed_visits[0]` in CamsWriter, should it be using most recent row rather than first 
 - [ ] Fix action so it doesn't show "deploying to dev"
+
+- [ ] Review wording of feature files
+- [ ] Remove duplication on iNaturalist steps
 
 - [ ] Create project for Ernle Clarke Reserve (tradescantia, ivy, sycamore, aluminium plant, veldt grass, hanging sedge/carex pendula)
 
