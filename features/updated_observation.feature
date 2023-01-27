@@ -36,6 +36,13 @@ Feature: Processing an updated iNaturalist observation populates the existing We
 		  Then the updated observation is unchanged
 	      And  the WeedLocations feature has an associated record with 2 child visits record
 
+    Rule: The weed geolocation is updated when changed
+        Example: The geolocation is updated
+        Given iNaturalist has an existing OMB observation at 'latitude': -41.2920665997, 'longitude': 174.7628175
+        And that observation has been synced
+        And the geolocation is updated to 'latitude': -41.1234567, 'longitude': 174.7654321
+        When we process the observation
+        Then a WeedLocations feature is set to geopoint 'x': 19454798.898506477, 'y': -5030568.632887149 in coordinate system EPSG:3857
 
 	Rule: The weed location record is updated with changes to relevant fields
 		Example: The location info is updated

@@ -43,15 +43,15 @@ def write_summary_log(cams_observation, object_id, existing_feature, new_weed_vi
     if not existing_feature:
         description = 'New weed'
     else:
-        description = ''
+        updates = []
         if weed_geolocation_modified:
-            description = 'Weed location updated. '
+            updates.append('Geolocation updated')
         if weed_location_modified:
-            description = description + 'Weed record updated. '
+            updates.append('Weed record updated')
         if weed_visit_modified:
             if new_weed_visit_record:
-                description = description + 'New weed visit record added.'
+                updates.append('Visit record added')
             else:
-                description = description + 'Weed visit record updated.'
+                updates.append('Visit record updated')
+        description = ', '.join(updates)
     logging.getLogger('summary').info(f'|{description}|**{object_id}**|{cams_observation.weed_location.species}|{cams_observation.weed_location.current_status}|[{cams_observation.weed_visits[0].external_id}]({cams_observation.weed_visits[0].external_url})|')
-
