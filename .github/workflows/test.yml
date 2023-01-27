@@ -40,6 +40,11 @@ jobs:
       with:
         python-version: '3.9'
         cache: 'pip'
+
+    - name: Set timezone
+      uses: szenius/set-timezone@v1.0
+      with:
+        timezoneLinux: "Pacific/Auckland"
               
     - name: Install dependencies
       run: |
