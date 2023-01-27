@@ -30,8 +30,8 @@ def write_log_header():
         logging.getLogger('summary').info(f'{run_details_header}')
         logging.getLogger('summary').info('')
 
-    logging.getLogger('summary').info('|Sync Event|Object Id|Species|iNaturalist URL|')
-    logging.getLogger('summary').info('|----------|---------|-------|---------------|')
+    logging.getLogger('summary').info('|Sync Event|Object Id|Species|Status|iNaturalist Id|')
+    logging.getLogger('summary').info('|----------|---------|-------|------|--------------|')
 
 
 def write_config_name():
@@ -39,12 +39,18 @@ def write_config_name():
         logging.getLogger('summary').info(f'## {config_name}')
 
 
-def write_summary_log(cams_observation, object_id, existing_feature, new_weed_visit_record):
+def write_summary_log(cams_observation, object_id, existing_feature, new_weed_visit_record, weed_geolocation_modified, weed_location_modified, weed_visit_modified):
     if not existing_feature:
-        sync_type = 'New feature'
-    elif new_weed_visit_record:
-        sync_type = 'Updated feature with new weed visit'
+        description = 'New weed'
     else:
-        sync_type = 'Updated feature with existing weed visit'
-    logging.getLogger('summary').info(f'|{sync_type}|**{object_id}**|{cams_observation.weed_location.species}|{cams_observation.weed_visits[0].external_url}|')
+        if weed_geolocation_modified:
+            description = 'Weed location updated. '
+        if weed_location_modified:
+            description = description + 'Weed record updated. '
+        if weed_visit_modified:
+            if new_weed_visit_record:
+                description = description + 'New weed visit record added.'
+            else:
+                description = description + 'Weed visit record updated.'
+    logging.getLogger('summary').info(f'|{description}|**{object_id}**|{cams_observation.weed_location.species}|{cams_observation.weed_location.current_status}|[{cams_observation.weed_visits[0].external_id}]({cams_observation.weed_visits[0].external_url})|')
 
