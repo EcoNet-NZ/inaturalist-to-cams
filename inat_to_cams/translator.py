@@ -84,8 +84,9 @@ class INatToCamsTranslator:
 
     def as_local_datetime(self, date_field):
         timestamp = datetime.fromisoformat(date_field)
-        timezone = pytz.timezone('Pacific/Auckland')
-        return timestamp.astimezone(timezone)
+        naive_datetime = timestamp.replace(tzinfo=None)
+        assert naive_datetime.tzinfo is None
+        return naive_datetime
 
     def calculate_visit_date_and_status(self, inat_observation):
         date_first_observed = inat_observation.observed_on

@@ -53,6 +53,11 @@ jobs:
         # exit-zero treats all errors as warnings. 
         flake8 . --count --exit-zero --max-complexity=16 --max-line-length=220 --statistics 
              
+    - name: Set timezone   # so that we observations are stored to CAMS in NZ time
+      uses: zcong1993/setup-timezone@master
+      with:
+        timezone: Pacific/Auckland
+
     - name: Synchronise iNaturalist to CAMS
       run: |
         python main.py $GITHUB_RUN_NUMBER "https://github.com/$GITHUB_REPOSITORY/commit/$GITHUB_SHA/checks/$GITHUB_RUN_ID"
