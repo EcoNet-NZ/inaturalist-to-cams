@@ -6,12 +6,7 @@
     },
     "Other vines in Wellington": {
         "file_prefix": "other_vines_wellington",
-        "taxon_ids": ["285911", "879226"],
-        "place_ids": ["6868"]
-    },
-    "Blue passion flower": {
-        "file_prefix": "bpf",
-        "taxon_ids": ["51454"],
+        "taxon_ids": ["285911", "879226", "51454"],
         "place_ids": ["6868"]
     },
     "Woolly nightshade - Kaipatiki": {
