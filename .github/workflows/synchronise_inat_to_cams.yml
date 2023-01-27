@@ -54,9 +54,9 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=16 --max-line-length=220 --statistics 
              
     - name: Set timezone   # so that we observations are stored to CAMS in NZ time
-      uses: szenius/set-timezone@v1.0
+      uses: zcong1993/setup-timezone@master
       with:
-        timezoneLinux: "Pacific/Auckland"
+        timezone: Pacific/Auckland
 
     - name: Synchronise iNaturalist to CAMS
       run: |
