@@ -43,6 +43,7 @@ def write_summary_log(cams_observation, object_id, existing_feature, new_weed_vi
     if not existing_feature:
         description = 'New weed'
     else:
+        description = ''
         if weed_geolocation_modified:
             description = 'Weed location updated. '
         if weed_location_modified:
