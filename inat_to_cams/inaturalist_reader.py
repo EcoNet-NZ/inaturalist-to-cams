@@ -63,8 +63,8 @@ class INatReader:
         follow_up = INatReader.get_observation_value(observation, 'Follow-up (YYYY-MM)')
         if follow_up and follow_up != '(undef.)':
             naive_datetime = datetime.datetime.strptime(follow_up + '-01', '%Y-%m-%d')
-            timezone = pytz.timezone('Pacific/Auckland')
-            inat_observation.follow_up_date = naive_datetime.astimezone(timezone)
+            assert naive_datetime.tzinfo is None
+            inat_observation.follow_up_date = naive_datetime
         else:
             inat_observation.follow_up_date = None
 
