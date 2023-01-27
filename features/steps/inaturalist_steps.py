@@ -67,8 +67,14 @@ def step_impl(context, inat_id, observation_date):
 
 
 @given(u"iNaturalist has a new OMB observation at 'latitude': {lat:f}, 'longitude': {lon:f}")
+@given(u"iNaturalist has an existing OMB observation at 'latitude': {lat:f}, 'longitude': {lon:f}")
 def step_impl(context, lat, lon):
     context.observation = observation_factory.ObservationFactory(location=(lat, lon))
+
+
+@given(u"the geolocation is updated to 'latitude': {lat:f}, 'longitude': {lon:f}")
+def step_impl(context, lat, lon):
+    context.observation.location = (lat, lon)
 
 
 @given(u'iNaturalist has a new OMB observation with id {inat_id} without location')
@@ -105,7 +111,7 @@ def step_impl(context, inat_id, inaturalist_taxon, ancestor_list):
 #     taxon.id = inaturalist_taxon
 #     context.observation = observation_factory.ObservationFactory(id=inat_id, taxon=taxon)
 #
-#
+
 @given(u"iNaturalist has a new OMB observation with description set to '{value}'")
 def step_impl(context, value):
     context.observation = observation_factory.ObservationFactory(description=value)

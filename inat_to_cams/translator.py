@@ -30,6 +30,8 @@ class INatToCamsTranslator:
                                       'spatialReference': {'wkid': 4326}
                                       })
 
+        cams_taxon = None
+
         for taxon in reversed(inat_observation.taxon_lineage):
             cams_taxon = config.taxon_mapping.get(str(taxon))
             if cams_taxon is not None:

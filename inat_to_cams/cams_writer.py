@@ -58,18 +58,18 @@ class CamsWriter:
         else:
             new_weed_visit_record = False
 
-        self.write_summary_log(cams_observation, existing_feature, object_id, new_weed_visit_record)
+        self.write_summary_log(cams_observation, existing_feature, object_id, new_weed_visit_record, weed_geolocation_modified, weed_location_modified, weed_visit_modified)
 
         return global_id
 
-    def write_summary_log(self, cams_observation, existing_feature, object_id, new_weed_visit_record):
+    def write_summary_log(self, cams_observation, existing_feature, object_id, new_weed_visit_record, weed_geolocation_modified, weed_location_modified, weed_visit_modified):
         if not summary_logger.log_header_written:
             summary_logger.write_log_header()
             summary_logger.log_header_written = True
         if not summary_logger.config_name:
             summary_logger.write_config_name()
             summary_logger.config_name_written = True
-        summary_logger.write_summary_log(cams_observation, object_id, existing_feature, new_weed_visit_record)
+        summary_logger.write_summary_log(cams_observation, object_id, existing_feature, new_weed_visit_record, weed_geolocation_modified, weed_location_modified, weed_visit_modified)
 
     def write_weed_visit(self, cams_observation, existing_feature, global_id, object_id, dry_run):
         weed_visit = cams_observation.weed_visits[0]
