@@ -54,4 +54,4 @@ def write_summary_log(cams_observation, object_id, existing_feature, new_weed_vi
             else:
                 updates.append('Visit record updated')
         description = ', '.join(updates)
-    logging.getLogger('summary').info(f'|{description}|**{object_id}**|{cams_observation.weed_location.species}|{cams_observation.weed_location.current_status}|[{cams_observation.weed_visits[0].external_id}]({cams_observation.weed_visits[0].external_url})|')
+    logging.getLogger('summary').info(f'|{description}|**{object_id}**|{cams_observation.weed_location.species}|{cams_observation.weed_location.current_status}|[{cams_observation.latest_weed_visit.external_id}]({cams_observation.latest_weed_visit.external_url})|')

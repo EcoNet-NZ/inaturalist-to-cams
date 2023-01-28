@@ -33,8 +33,7 @@ class CamsReader:
 
         logging.info(f'Found existing CAMS feature with {len(object_ids)} visit rows for iNaturalist id {inat_id}')
 
-        latest_object_id = object_ids[len(object_ids)-1]
-        weed_visits = []
+        latest_object_id = object_ids[-1]
         location_guid = None
 
         query_table = f"OBJECTID='{latest_object_id}'"
@@ -60,7 +59,6 @@ class CamsReader:
         visit.visit_status = cams_schema_config.cams_field_key('Visits_Table', 'WeedVisitStatus', visit_table_row.attributes['WeedVisitStatus'])
         visit.observation_quality = cams_schema_config.cams_field_key('Visits_Table', 'ObservationQuality', visit_table_row.attributes['ObservationQuality'])
         visit.notes = visit_table_row.attributes['NotesAndDetails']
-        weed_visits.append(visit)
 
         guid = visit_table_row.attributes['GUID_visits']
 
@@ -81,7 +79,7 @@ class CamsReader:
             # Temporarily until updated from weed visit by database trigger
             location.external_url = featureRow.attributes['iNatURL']
 
-        cams_feature = cams_observation.CamsFeature(featureRow.geometry, location, weed_visits)
+        cams_feature = cams_observation.CamsFeature(featureRow.geometry, location, visit)
         return cams_feature
 
     def as_datetime(self, date_field):

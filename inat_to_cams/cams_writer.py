@@ -26,7 +26,7 @@ class CamsWriter:
 
     def write_observation(self, cams_observation, dry_run=False):
         reader = cams_reader.CamsReader()
-        inat_id = cams_observation.weed_visits[0].external_id
+        inat_id = cams_observation.latest_weed_visit.external_id
         existing_feature = reader.read_observation(inat_id)
 
         if existing_feature:
@@ -36,7 +36,7 @@ class CamsWriter:
 
             weed_geolocation_modified = existing_feature.geolocation != cams_observation.geolocation
             weed_location_modified = existing_feature.weed_location != cams_observation.weed_location
-            weed_visit_modified = existing_feature.weed_visits[0] != cams_observation.weed_visits[0]
+            weed_visit_modified = existing_feature.latest_weed_visit != cams_observation.latest_weed_visit
             logging.info('Updating existing feature')
             logging.info(f'Weed geolocation modified? : {weed_geolocation_modified}')
             logging.info(f'Weed location modified? : {weed_location_modified}')
@@ -72,7 +72,7 @@ class CamsWriter:
         summary_logger.write_summary_log(cams_observation, object_id, existing_feature, new_weed_visit_record, weed_geolocation_modified, weed_location_modified, weed_visit_modified)
 
     def write_weed_visit(self, cams_observation, existing_feature, global_id, object_id, dry_run):
-        weed_visit = cams_observation.weed_visits[0]
+        weed_visit = cams_observation.latest_weed_visit
         new_data = [{
             'attributes': {
             }
@@ -104,9 +104,9 @@ class CamsWriter:
         # Determine whether to create a new visit record if controlled or updated after previous visit
         if existing_feature:
             logging.info(f'New weed visit date: {weed_visit.date_visit_made}')
-            logging.info(f'Existing weed visit date: {existing_feature.weed_visits[0].date_visit_made}')
-            logging.info(f'Dates equal? {weed_visit.date_visit_made == existing_feature.weed_visits[0].date_visit_made}')
-            if weed_visit.date_visit_made == existing_feature.weed_visits[0].date_visit_made:
+            logging.info(f'Existing weed visit date: {existing_feature.latest_weed_visit.date_visit_made}')
+            logging.info(f'Dates equal? {weed_visit.date_visit_made == existing_feature.latest_weed_visit.date_visit_made}')
+            if weed_visit.date_visit_made == existing_feature.latest_weed_visit.date_visit_made:
                 new_weed_visit_record = False
 
         if not dry_run:
@@ -117,7 +117,7 @@ class CamsWriter:
                 assert results['addResults'][0]['success'], f"Error writing WeedVisits {results['addResults'][0]}"
             else:
                 logging.info(f'Updating CAMS Weed_Visits table row: {new_data}')
-                new_data[0]['attributes']['objectId'] = existing_feature.weed_visits[0].object_id
+                new_data[0]['attributes']['objectId'] = existing_feature.latest_weed_visit.object_id
                 results = self.cams.table.edit_features(updates=new_data)
                 assert len(results['updateResults']) == 1
                 assert results['updateResults'][0]['success'], f"Error writing WeedVisits {results['updateResults'][0]}"

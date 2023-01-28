@@ -22,10 +22,10 @@ def normalise_geolocation(geo_dict):
 
 class CamsFeature:
 
-    def __init__(self, geolocation, weed_location, weed_visits):
+    def __init__(self, geolocation, weed_location, latest_weed_visit):
         self.geolocation = geolocation
         self.weed_location = weed_location
-        self.weed_visits = weed_visits
+        self.latest_weed_visit = latest_weed_visit
 
     def __eq__(self, other):
         if type(other) is type(self):

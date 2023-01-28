@@ -79,9 +79,7 @@ class INatToCamsTranslator:
             weed_visit.treatment_substance = None
         weed_visit.treatment_details = inat_observation.treatment_details
 
-        weed_visits = [weed_visit]
-
-        cams_feature = cams_observation.CamsFeature(geolocation, weed_location, weed_visits)
+        cams_feature = cams_observation.CamsFeature(geolocation, weed_location, weed_visit)
         return cams_feature
 
     def as_local_datetime(self, date_field):
