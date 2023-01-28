@@ -30,9 +30,9 @@
 - [x] Check use of `weed_visits[0]` in CamsWriter, should it be using most recent row rather than first 
 - [x] Consider removing, or hiding from view, iNaturalist id (is the URL sufficient? - no, we need the id)
 - [x] Add dependabot check for new versions
+- [x] Fix action so it doesn't show "deploying to dev"
 
 - [ ] Update README
-- [ ] Fix action so it doesn't show "deploying to dev"
 
 - [ ] Review wording of feature files
 - [ ] Remove duplication on iNaturalist steps
