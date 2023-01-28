@@ -16,9 +16,8 @@
 
 import logging
 from datetime import datetime
-import pytz
 
-from inat_to_cams import cams_interface, cams_observation, config
+from inat_to_cams import cams_interface, cams_feature, config
 
 
 class CamsReader:
@@ -40,7 +39,7 @@ class CamsReader:
         logging.info(f'Reading CAMS feature where {query_table}')
         visit_table_row = cams_interface.connection.query_weed_visits_table(query_table).features[0]
         logging.info(f'Found visit table row {visit_table_row}')
-        visit = cams_observation.WeedVisit()
+        visit = cams_feature.WeedVisit()
         cams_schema_config = config.cams_schema_config
         visit.object_id = visit_table_row.attributes['OBJECTID']
         visit.external_id = visit_table_row.attributes['iNatRef']
@@ -65,7 +64,7 @@ class CamsReader:
         query_layer = f"GlobalID='{guid}'"
         rows = cams_interface.connection.query_weed_location_layer_wgs84(query_layer)
         for featureRow in rows.features:
-            location = cams_observation.WeedLocation()
+            location = cams_feature.WeedLocation()
             logging.info(f'Found layer row {featureRow}')
             location.object_id = featureRow.attributes['OBJECTID']
             location.global_id = guid
@@ -79,8 +78,7 @@ class CamsReader:
             # Temporarily until updated from weed visit by database trigger
             location.external_url = featureRow.attributes['iNatURL']
 
-        cams_feature = cams_observation.CamsFeature(featureRow.geometry, location, visit)
-        return cams_feature
+        return cams_feature.CamsFeature(featureRow.geometry, location, visit)
 
     def as_datetime(self, date_field):
         naive_datetime = datetime.fromtimestamp(date_field // 1000)

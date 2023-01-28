@@ -20,7 +20,7 @@ import pytz
 
 from arcgis import geometry
 
-from inat_to_cams import cams_observation, config, exceptions
+from inat_to_cams import cams_feature, config, exceptions
 
 
 class INatToCamsTranslator:
@@ -43,7 +43,7 @@ class INatToCamsTranslator:
 
         (visit_date, visit_status) = self.calculate_visit_date_and_status(inat_observation)
 
-        weed_location = cams_observation.WeedLocation()
+        weed_location = cams_feature.WeedLocation()
         weed_location.date_first_observed = self.as_local_datetime(inat_observation.observed_on)
         weed_location.species = cams_taxon
         weed_location.data_source = 'iNaturalist'
@@ -59,7 +59,7 @@ class INatToCamsTranslator:
         weed_location.external_url = f'https://www.inaturalist.org/observations/{inat_observation.id}'
 
 
-        weed_visit = cams_observation.WeedVisit()
+        weed_visit = cams_feature.WeedVisit()
         weed_visit.external_id = str(inat_observation.id)
         weed_visit.external_url = f'https://www.inaturalist.org/observations/{inat_observation.id}'
         weed_visit.notes = inat_observation.description
@@ -79,8 +79,7 @@ class INatToCamsTranslator:
             weed_visit.treatment_substance = None
         weed_visit.treatment_details = inat_observation.treatment_details
 
-        cams_feature = cams_observation.CamsFeature(geolocation, weed_location, weed_visit)
-        return cams_feature
+        return cams_feature.CamsFeature(geolocation, weed_location, weed_visit)
 
     def as_local_datetime(self, date_field):
         timestamp = datetime.fromisoformat(date_field)

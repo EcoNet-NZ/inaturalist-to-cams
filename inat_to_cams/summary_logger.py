@@ -39,7 +39,7 @@ def write_config_name():
         logging.getLogger('summary').info(f'## {config_name}')
 
 
-def write_summary_log(cams_observation, object_id, existing_feature, new_weed_visit_record, weed_geolocation_modified, weed_location_modified, weed_visit_modified):
+def write_summary_log(cams_feature, object_id, existing_feature, new_weed_visit_record, weed_geolocation_modified, weed_location_modified, weed_visit_modified):
     if not existing_feature:
         description = 'New weed'
     else:
@@ -54,4 +54,4 @@ def write_summary_log(cams_observation, object_id, existing_feature, new_weed_vi
             else:
                 updates.append('Visit record updated')
         description = ', '.join(updates)
-    logging.getLogger('summary').info(f'|{description}|**{object_id}**|{cams_observation.weed_location.species}|{cams_observation.weed_location.current_status}|[{cams_observation.latest_weed_visit.external_id}]({cams_observation.latest_weed_visit.external_url})|')
+    logging.getLogger('summary').info(f'|{description}|**{object_id}**|{cams_feature.weed_location.species}|{cams_feature.weed_location.current_status}|[{cams_feature.latest_weed_visit.external_id}]({cams_feature.latest_weed_visit.external_url})|')
