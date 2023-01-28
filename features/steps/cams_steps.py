@@ -31,7 +31,7 @@ def step_impl(context, inat_id):
 @when(u'we process the observation')
 def step_impl(context):
     try:
-        cams_observation, context.global_id = context.synchroniser.sync_observation(context.observation)
+        cams_feature, context.global_id = context.synchroniser.sync_observation(context.observation)
         context.exc = None
     except exceptions.InvalidObservationError as e:
         context.exc = e
@@ -152,7 +152,7 @@ def step_impl(context, message):
 @then(u'the existing OMB observation is unchanged')
 def step_impl(context):
     current_observation = context.reader.read_observation(context.observation.id)
-    assert_that(current_observation, equal_to(context.cams_observation))
+    assert_that(current_observation, equal_to(context.cams_feature))
     # assert(context.log_capture.find_event(message))
 
 

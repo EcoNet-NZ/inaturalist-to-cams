@@ -27,12 +27,12 @@
 - [x] Consider mapping TreatmentSubstance of None in iNat to null in CAMS
 - [x] For truncated String fields, consider making last 3 characters "..."
 - [x] Check duplicate YYY-GUID-visits on visits table
+- [x] Check use of `weed_visits[0]` in CamsWriter, should it be using most recent row rather than first 
 
 - [ ] KS - SiteSource - change to just iNaturalist not iNaturalist2022
 - [ ] Update README
 - [ ] Add dependabot check for new versions
 - [ ] Consider removing, or hiding from view, iNaturalist id (is the URL sufficient?)
-- [ ] Check use of `weed_visits[0]` in CamsWriter, should it be using most recent row rather than first 
 - [ ] Fix action so it doesn't show "deploying to dev"
 
 - [ ] Review wording of feature files

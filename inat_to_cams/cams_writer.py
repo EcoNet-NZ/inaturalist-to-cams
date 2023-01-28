@@ -24,19 +24,19 @@ class CamsWriter:
     def __init__(self):
         self.cams = cams_interface.connection
 
-    def write_observation(self, cams_observation, dry_run=False):
+    def write_observation(self, cams_feature, dry_run=False):
         reader = cams_reader.CamsReader()
-        inat_id = cams_observation.weed_visits[0].external_id
+        inat_id = cams_feature.latest_weed_visit.external_id
         existing_feature = reader.read_observation(inat_id)
 
         if existing_feature:
-            if existing_feature == cams_observation:
+            if existing_feature == cams_feature:
                 logging.info('No relevant updates to observation')
                 return
 
-            weed_geolocation_modified = existing_feature.geolocation != cams_observation.geolocation
-            weed_location_modified = existing_feature.weed_location != cams_observation.weed_location
-            weed_visit_modified = existing_feature.weed_visits[0] != cams_observation.weed_visits[0]
+            weed_geolocation_modified = existing_feature.geolocation != cams_feature.geolocation
+            weed_location_modified = existing_feature.weed_location != cams_feature.weed_location
+            weed_visit_modified = existing_feature.latest_weed_visit != cams_feature.latest_weed_visit
             logging.info('Updating existing feature')
             logging.info(f'Weed geolocation modified? : {weed_geolocation_modified}')
             logging.info(f'Weed location modified? : {weed_location_modified}')
@@ -48,31 +48,31 @@ class CamsWriter:
             weed_visit_modified = True
 
         if weed_geolocation_modified or weed_location_modified:
-            global_id, object_id = self.write_feature(cams_observation, inat_id, existing_feature, dry_run)
+            global_id, object_id = self.write_feature(cams_feature, inat_id, existing_feature, dry_run)
         else:
             global_id = existing_feature.weed_location.global_id
             object_id = existing_feature.weed_location.object_id
 
         if weed_visit_modified:
-            new_weed_visit_record = self.write_weed_visit(cams_observation, existing_feature, global_id, object_id, dry_run)
+            new_weed_visit_record = self.write_weed_visit(cams_feature, existing_feature, global_id, object_id, dry_run)
         else:
             new_weed_visit_record = False
 
-        self.write_summary_log(cams_observation, existing_feature, object_id, new_weed_visit_record, weed_geolocation_modified, weed_location_modified, weed_visit_modified)
+        self.write_summary_log(cams_feature, existing_feature, object_id, new_weed_visit_record, weed_geolocation_modified, weed_location_modified, weed_visit_modified)
 
         return global_id
 
-    def write_summary_log(self, cams_observation, existing_feature, object_id, new_weed_visit_record, weed_geolocation_modified, weed_location_modified, weed_visit_modified):
+    def write_summary_log(self, cams_feature, existing_feature, object_id, new_weed_visit_record, weed_geolocation_modified, weed_location_modified, weed_visit_modified):
         if not summary_logger.log_header_written:
             summary_logger.write_log_header()
             summary_logger.log_header_written = True
         if not summary_logger.config_name:
             summary_logger.write_config_name()
             summary_logger.config_name_written = True
-        summary_logger.write_summary_log(cams_observation, object_id, existing_feature, new_weed_visit_record, weed_geolocation_modified, weed_location_modified, weed_visit_modified)
+        summary_logger.write_summary_log(cams_feature, object_id, existing_feature, new_weed_visit_record, weed_geolocation_modified, weed_location_modified, weed_visit_modified)
 
-    def write_weed_visit(self, cams_observation, existing_feature, global_id, object_id, dry_run):
-        weed_visit = cams_observation.weed_visits[0]
+    def write_weed_visit(self, cams_feature, existing_feature, global_id, object_id, dry_run):
+        weed_visit = cams_feature.latest_weed_visit
         new_data = [{
             'attributes': {
             }
@@ -104,9 +104,9 @@ class CamsWriter:
         # Determine whether to create a new visit record if controlled or updated after previous visit
         if existing_feature:
             logging.info(f'New weed visit date: {weed_visit.date_visit_made}')
-            logging.info(f'Existing weed visit date: {existing_feature.weed_visits[0].date_visit_made}')
-            logging.info(f'Dates equal? {weed_visit.date_visit_made == existing_feature.weed_visits[0].date_visit_made}')
-            if weed_visit.date_visit_made == existing_feature.weed_visits[0].date_visit_made:
+            logging.info(f'Existing weed visit date: {existing_feature.latest_weed_visit.date_visit_made}')
+            logging.info(f'Dates equal? {weed_visit.date_visit_made == existing_feature.latest_weed_visit.date_visit_made}')
+            if weed_visit.date_visit_made == existing_feature.latest_weed_visit.date_visit_made:
                 new_weed_visit_record = False
 
         if not dry_run:
@@ -117,28 +117,28 @@ class CamsWriter:
                 assert results['addResults'][0]['success'], f"Error writing WeedVisits {results['addResults'][0]}"
             else:
                 logging.info(f'Updating CAMS Weed_Visits table row: {new_data}')
-                new_data[0]['attributes']['objectId'] = existing_feature.weed_visits[0].object_id
+                new_data[0]['attributes']['objectId'] = existing_feature.latest_weed_visit.object_id
                 results = self.cams.table.edit_features(updates=new_data)
                 assert len(results['updateResults']) == 1
                 assert results['updateResults'][0]['success'], f"Error writing WeedVisits {results['updateResults'][0]}"
         return new_weed_visit_record
 
-    def write_feature(self, cams_observation, inat_id, existing_feature, dry_run):
+    def write_feature(self, cams_feature, inat_id, existing_feature, dry_run):
         global_id = None
         logging.info(f'Writing feature to CAMS with iNaturalist id {inat_id}')
         new_layer_row = [{
-            'geometry': cams_observation.geolocation,
+            'geometry': cams_feature.geolocation,
             'attributes': {
             }
         }]
         fields = [
-            ('Date First Observed', cams_observation.weed_location.date_first_observed),
-            ('Species', cams_observation.weed_location.species),
-            ('DataSource', cams_observation.weed_location.data_source),
-            ('Location details', cams_observation.weed_location.location_details),
-            ('Effort to control', cams_observation.weed_location.effort_to_control),
-            ('CurrentStatus', cams_observation.weed_location.current_status),
-            ('iNaturalistURL', cams_observation.weed_location.external_url)
+            ('Date First Observed', cams_feature.weed_location.date_first_observed),
+            ('Species', cams_feature.weed_location.species),
+            ('DataSource', cams_feature.weed_location.data_source),
+            ('Location details', cams_feature.weed_location.location_details),
+            ('Effort to control', cams_feature.weed_location.effort_to_control),
+            ('CurrentStatus', cams_feature.weed_location.current_status),
+            ('iNaturalistURL', cams_feature.weed_location.external_url)
         ]
         [self.add_field(new_layer_row[0], 'WeedLocations', field) for field in fields]
         if not dry_run:

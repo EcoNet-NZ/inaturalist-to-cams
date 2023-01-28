@@ -257,12 +257,12 @@ def step_impl(context, date_field, name, value):
 @given(u"iNaturalist has an existing OMB observation which has been synced")
 def step_impl(context):
     context.observation = observation_factory.ObservationFactory()
-    context.cams_observation, context.global_id = context.synchroniser.sync_observation(context.observation)
+    context.cams_feature, context.global_id = context.synchroniser.sync_observation(context.observation)
 
 
 @given(u"that observation has been synced")
 def step_impl(context):
-    context.cams_observation, context.global_id = context.synchroniser.sync_observation(context.observation)
+    context.cams_feature, context.global_id = context.synchroniser.sync_observation(context.observation)
 
 
 @given(u"the OMB observation is verified by another user")

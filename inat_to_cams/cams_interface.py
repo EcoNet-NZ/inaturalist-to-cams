@@ -67,11 +67,11 @@ class CamsConnection:
 
     @retry(delay=5, tries=3)
     def query_weed_visits_table(self, query_table):
-        return self.table.query(where=query_table)
+        return self.table.query(where=query_table, order_by_fields='OBJECTID')
 
     @retry(delay=5, tries=3)
     def query_weed_visits_table_ids(self, query_table):
-        return self.table.query(where=query_table, returnIdsOnly=True)
+        return self.table.query(where=query_table, order_by_fields='OBJECTID', returnIdsOnly=True)
 
     @retry(delay=5, tries=3)
     def query_weed_location_layer(self, query_layer):

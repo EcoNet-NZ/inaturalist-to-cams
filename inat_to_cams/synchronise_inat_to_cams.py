@@ -87,15 +87,15 @@ class INatToCamsSynchroniser():
             return
 
         inat_to_cams_translator = translator.INatToCamsTranslator()
-        cams_observation = inat_to_cams_translator.translate(inat_observation)
+        cams_feature = inat_to_cams_translator.translate(inat_observation)
 
-        if not cams_observation:
+        if not cams_feature:
             return
 
         writer = cams_writer.CamsWriter()
-        global_id = writer.write_observation(cams_observation)
+        global_id = writer.write_observation(cams_feature)
 
-        return cams_observation, global_id
+        return cams_feature, global_id
 
 
 synchroniser = INatToCamsSynchroniser()
