@@ -31,12 +31,14 @@ import logging
 import os
 
 import arcgis
+from retry import retry
 
 from inat_to_cams import config, setup_logging
 
 
 class CamsConnection:
 
+    @retry(delay=5, tries=3)
     def __init__(self):
 
         # self.gis = arcgis.GIS(profile='econet')
@@ -63,24 +65,30 @@ class CamsConnection:
 
         self.items_allowing_deletion = ['iNat_to_CAMS_Dev']
 
+    @retry(delay=5, tries=3)
     def query_weed_visits_table(self, query_table):
         return self.table.query(where=query_table)
 
+    @retry(delay=5, tries=3)
     def query_weed_visits_table_ids(self, query_table):
         return self.table.query(where=query_table, returnIdsOnly=True)
 
+    @retry(delay=5, tries=3)
     def query_weed_location_layer(self, query_layer):
         return self.layer.query(where=query_layer)
 
+    @retry(delay=5, tries=3)
     def query_weed_location_layer_wgs84(self, query_layer):
         return self.layer.query(where=query_layer, out_sr=4326)
 
+    @retry(delay=5, tries=3)
     def add_weed_location_layer_row(self, new_layer_row):
         results = self.layer.edit_features(adds=new_layer_row)
         assert len(results['addResults']) == 1
         assert results['addResults'][0]['success'], f"Error writing WeedLocation {results['addResults'][0]}"
         return results['addResults'][0]['globalId'], results['addResults'][0]['objectId']
 
+    @retry(delay=5, tries=3)
     def update_weed_location_layer_row(self, new_layer_row):
         results = self.layer.edit_features(updates=new_layer_row)
         assert len(results['updateResults']) == 1
@@ -90,6 +98,7 @@ class CamsConnection:
         query = f"OBJECTID > {object_id}"
         self.delete_table_rows_if_allowed(query)
 
+    @retry(delay=5, tries=3)
     def delete_table_rows_if_allowed(self, query):
         logging.info(f'Deleting table rows where {query}')
         if self.item.title in self.items_allowing_deletion:
@@ -103,6 +112,7 @@ class CamsConnection:
         query = f"OBJECTID > {object_id}"
         self.delete_layer_rows_if_allowed(query)
 
+    @retry(delay=5, tries=3)
     def delete_layer_rows_if_allowed(self, query):
         logging.info(f'Deleting layer rows where {query}')
         if self.item.title in self.items_allowing_deletion:
@@ -150,6 +160,7 @@ class CamsConnection:
         self.delete_table_rows_if_allowed(query_table_rows)
         return len(inat_refs)
 
+    @retry(delay=5, tries=3)
     def visits_row_count(self, inat_id):
         query = f"iNatRef='{inat_id}'"
         row_count = self.table.query(where=query, return_count_only=True)
@@ -164,6 +175,7 @@ class CamsConnection:
         logging.info(f'Reading visits row {row.features[index].attributes}')
         return row.features[index].attributes
 
+    @retry(delay=5, tries=3)
     def visits_row_count_with_same_locations_feature_as_visits_row(self, inat_id):
         query = f"iNatRef='{inat_id}'"
         row = self.query_weed_visits_table(query)

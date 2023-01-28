@@ -18,8 +18,9 @@ import datetime
 import logging
 
 import pyinaturalist
-import pytz
 import re
+
+from retry import retry
 
 from inat_to_cams import inaturalist_observation, exceptions
 
@@ -120,6 +121,7 @@ class INatReader:
                 return formatted_date
 
     @staticmethod
+    @retry(delay=5, tries=3)
     def get_matching_observations_updated_since(place_ids, taxon_ids, time_of_previous_update):
         client = pyinaturalist.iNatClient()
         observations = client.observations.search(
