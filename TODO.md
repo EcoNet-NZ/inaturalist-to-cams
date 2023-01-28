@@ -28,17 +28,20 @@
 - [x] For truncated String fields, consider making last 3 characters "..."
 - [x] Check duplicate YYY-GUID-visits on visits table
 - [x] Check use of `weed_visits[0]` in CamsWriter, should it be using most recent row rather than first 
+- [x] Consider removing, or hiding from view, iNaturalist id (is the URL sufficient? - no, we need the id)
+- [x] Add dependabot check for new versions
 
-- [ ] KS - SiteSource - change to just iNaturalist not iNaturalist2022
 - [ ] Update README
-- [ ] Add dependabot check for new versions
-- [ ] Consider removing, or hiding from view, iNaturalist id (is the URL sufficient?)
 - [ ] Fix action so it doesn't show "deploying to dev"
 
 - [ ] Review wording of feature files
 - [ ] Remove duplication on iNaturalist steps
 
 - [ ] Create project for Ernle Clarke Reserve (tradescantia, ivy, sycamore, aluminium plant, veldt grass, hanging sedge/carex pendula)
+
+# Main schema
+- [ ] SiteSource - change to just iNaturalist not iNaturalist2022
+- [ ] Visit Table - hide iNaturalist id and url from view
 
   
 # Post-beta
