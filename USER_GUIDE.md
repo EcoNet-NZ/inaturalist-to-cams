@@ -9,12 +9,10 @@ This guide assumes you already have an iNaturalist account and that a project ha
 1. how to add observations to iNaturalist with data that is useful for the CAMS application
 2. how to update existing observations in iNaturalist so that the CAMS weed data is updated
 
-## Adding observations to iNaturalist
-
 All observations (with a specific taxa and place) will be synchronised, whether they are added to the `Weed Management Aotearoa NZ` or not. 
 However, adding the observation to the `Weed Management Aotearoa NZ` project and filling in relevant observation fields provides information that is useful for controlling the weed.
 
-### Joining the `Weed Management Aotearoa NZ` project
+## Joining the `Weed Management Aotearoa NZ` project
 
 Before adding an observation to the `Weed Management Aotearoa NZ` project, you'll need to join the project.
 
@@ -22,7 +20,7 @@ Note that this can only be performed on the browser version, not on the mobile a
 
 Open the [Join Weed Management Aoetearoa NZ Project page](https://www.inaturalist.org/projects/weed-management-aotearoa-nz/join), read the project page and select the `Yes, I want to join` button. 
 
-### Adding a new observation to the `Weed Management Aotearoa NZ` project
+## Adding a new observation to the `Weed Management Aotearoa NZ` project
 
 If you're not familiar with adding observations to iNaturalist see [this guide](https://www.inaturalist.org/pages/add-an-observation-nz). 
 
@@ -30,7 +28,7 @@ Please check the location of the observation is accurate, and update it if neces
 
 **Note**: the mobile app does not currently allow you to add other users' observations to projects. You'll need to use the browser version to add other users' observations. 
 
-#### Using the Mobile app
+### Using the Mobile app
 
 When adding a new observation, click on the `Add to project(s)` option and select the `Weed Management Aotearoa NZ` project.
 
@@ -38,7 +36,7 @@ Fill out the fields, for example:
 
 <img src="https://user-images.githubusercontent.com/144202/215252973-d7e58184-a85d-4fb3-8f25-2469c897919c.png" alt="Filling in the details and clicking the tick button" width=400/>
 
-#### Using a Browser
+### Using a Browser
 
 When adding a new observation, select the `Projects` option and add the observation to the `Weed Management Aotearoa NZ` project. 
 
@@ -46,9 +44,9 @@ As you enter the details, you need to press the `Add` button next to each detail
 
 <img src="https://user-images.githubusercontent.com/144202/215251731-6f0da4f3-710a-49e7-9b7e-103b67ea0e87.png" alt="Filling in the details and clicking the 'Add' button next to each detail, as well as the 'Add to Project' button" width=400/>
 
-##### Weed Details
+### Weed Details
 
-These fields help us plan and tackle the weed:
+These fields help volunteers plan their work and control the weed:
 
 <dl>
   <dt>Location details</dt>
@@ -66,7 +64,7 @@ These fields help us plan and tackle the weed:
 </dl>
 
 
-##### Weed Control Details
+### Weed Control Details
 
 If you have done any control work on the weed, fill in these fields. This may be on the same day the weed was observed, or a later date. If the weed has previously been controlled, update the existing fields to reflect your weed control work.
 
@@ -85,7 +83,7 @@ If you have done any control work on the weed, fill in these fields. This may be
   <dd>Recommended date for a follow-up check or control work</dd>
 </dl>
 
-##### Status Updates
+### Status Updates
 
 These fields allow you to update the status of an existing observation. If the status has already been set on the weed, you may need to override the status and/or the date of status update.
 
