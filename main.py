@@ -43,7 +43,7 @@ def main():
     if len(sys.argv) > 2:
         server_timezone = pytz.timezone("Pacific/Auckland")
         server_time = datetime.datetime.now(server_timezone)  # you could pass *tz* directly
-        summary_logger.run_details_header = f"# Run {[sys.argv[1]]({sys.argv[2]})}\n{server_time.strftime('%Y-%m-%d %H:%M')}"
+        summary_logger.run_details_header = f"# Run [{sys.argv[1]}]({sys.argv[2]})\n{server_time.strftime('%Y-%m-%d %H:%M')}"
 
     # delete_records()
     check_cams_schema()
