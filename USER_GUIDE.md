@@ -8,12 +8,9 @@ This guide assumes you already have an iNaturalist account and that the taxa and
 
 We have created the `Weed Management Aotearoa NZ` iNaturalist project with observation fields that capture additional weed control data for the CAMS application. 
 
-The guide covers:
+The guide covers how to add and update observations to the `Weed Management Aotearoa NZ` iNaturalist project. 
 
-1. how to add observations to the `Weed Management Aotearoa NZ` iNaturalist project 
-2. how to update existing observations in the `Weed Management Aotearoa NZ` iNaturalist project 
-
-All observations (with a specific taxa and place) will be synchronised, whether they are added to the `Weed Management Aotearoa NZ` or not. 
+All observations (matching the specified taxa and places) will be synchronised, whether they are added to the `Weed Management Aotearoa NZ` or not. 
 However, adding the observation to the `Weed Management Aotearoa NZ` project and filling in relevant observation fields provides information that is useful for controlling the weed.
 
 ## Joining the `Weed Management Aotearoa NZ` project
@@ -52,52 +49,40 @@ As you enter the details, you need to press the `Add` button next to each detail
 
 These fields help volunteers plan their work and control the weed:
 
-<dl>
-  <dt>Location details</dt>
-  <dd>A short description of the location that is shown on the CAMS map, eg. `under bridge` or `downhill from gate`. The geolocation should guide us to the approximate location.</dd>
-  <dt>Area in square meters</dt>
-  <dd>The estimated size of the weed patch</dd>
-  <dt>Height (m)</dt>
-  <dd>The estimated height of the tallest part of the weed, in metres</dd>
-  <dt>Plant phenology->most common flowering/fruiting reproductive stage</dt>
-  <dd>The most common stage of plant growth</dd>
-  <dt>Site difficulty</dt>
-  <dd>The estimated difficulty of accessing the weed. Typically, levels 1-3 might be performed by the general public, level 4 by skilled workers, while level 5 typically requires professionals</dd>
-  <dt>Effort to control</dt>
-  <dd>The estimated time required to control the weed</dd>
-</dl>
-
+|Field name|Description|
+|----------|-----------|
+|Location details|A short description of the location that is shown on the CAMS map, eg. `under bridge` or `downhill from gate`. The geolocation should guide us to the approximate location|
+|Area in square meters|The estimated size of the weed patch|
+|Height (m)|The estimated height of the tallest part of the weed, in metres|
+|Plant phenology->most common flowering/fruiting reproductive stage|The most common stage of plant growth</dd>
+|Site difficulty|The estimated difficulty of accessing the weed. Typically, levels 1-3 might be performed by the general public, level 4 by skilled workers, while level 5 typically requires professionals|
+|Effort to control|The estimated time required to control the weed|
 
 ### Weed Control Details
 
 If you have done any control work on the weed, fill in these fields. This may be on the same day the weed was observed, or a later date. If the weed has previously been controlled, update the existing fields to reflect your weed control work.
 
-<dl>
-  <dt>Treated</dt>
-  <dd>Change to `Yes` if you have controlled the weed, or `Partially` if you've partially controlled it</dd>
-  <dt>Date controlled</dt>
-  <dd>Enter the date the control work was completed</dd>
-  <dt>How treated</dt>
-  <dd>Select how you have controlled the weed</dd>
-  <dt>Treatment substance</dt>
-  <dd>If using herbicide, select the herbicide which you have used</dd>
-  <dt>Treatment details</dt>
-  <dd>Any additional details of how the weed was controlled</dd>
-  <dt>Follow-up (YYYY-MM)</dt>
-  <dd>Recommended date for a follow-up check or control work</dd>
-</dl>
+|Field name|Description|
+|----------|-----------|
+|Treated|Set to `Yes` if you have controlled the weed, or `Partially` if you've partially controlled it|
+|Date controlled|Enter the date the control work was completed|
+|How treated|Select the treatment you have used to control the weed|
+|Treatment substance|If using herbicide, select the herbicide which you have used|
+|Treatment details|Any additional details of how the weed was controlled|
+|Follow-up (YYYY-MM)|Recommended date for a follow-up check or control work|
 
 ### Status Updates
 
-These fields allow you to update the status of an existing observation. If the status has already been set on the weed, you may need to override the status and/or the date of status update.
+These fields allow you to update the status of an existing observation.
+This is typically used when you revisit a weed spot, but don't control it.
+ You don't need to specify this if it is a new observation or if you have just controlled the weed.
 
-<dl>
-  <dt>Status update</dt>
-  <dd>Whether the weed is currently alive or dead</dd>
-  <dt>Date of status update</dt>
-  <dd>Enter the date the status update was observed</dd>
-</dl>
+If the status has already been set on the weed, you may need to override the status and/or the date of status update.
 
+<|Field name|Description|
+|----------|-----------|
+|Status update|Whether the weed is currently alive or dead|
+|Date of status update|Enter the date the status update was observed|
 
 ---
 
