@@ -21,7 +21,7 @@ Note that this can only be performed on the browser version, not on the mobile a
 
 Open the [Join Weed Management Aoetearoa NZ Project page](https://www.inaturalist.org/projects/weed-management-aotearoa-nz/join), read the project page and select the `Yes, I want to join` button. 
 
-## Adding a new observation to the `Weed Management Aotearoa NZ` project
+## Adding or updating an observation to the `Weed Management Aotearoa NZ` project
 
 If you're not familiar with adding observations to iNaturalist see [this guide](https://www.inaturalist.org/pages/add-an-observation-nz). 
 
@@ -79,7 +79,7 @@ This is typically used when you revisit a weed spot, but don't control it.
 
 If the status has already been set on the weed, you may need to override the status and/or the date of status update.
 
-<|Field name|Description|
+|Field name|Description|
 |----------|-----------|
 |Status update|Whether the weed is currently alive or dead|
 |Date of status update|Enter the date the status update was observed|
