@@ -1,13 +1,17 @@
 # iNaturalist to CAMS User Guide
 
 The iNaturalist to CAMS synchroniser will update the CAMS weed app with new observations from iNaturalist. 
-For each project, it will synchronize all observations with specific taxa (including descendents) from a particular place.
-If your project is not already configured for synchronisation talk to your project coordinator or email office@econet.nz.
+It will synchronise all observations with specific taxa (including descendents) from a particular place.
+To set up a new synchronisation email office@econet.nz.
 
-This guide assumes you already have an iNaturalist account and that a project has already been set up to synchronise the taxa and place you are entering. The guide covers:
+This guide assumes you already have an iNaturalist account and that the taxa and place you are entering are being synchronised.
 
-1. how to add observations to iNaturalist with data that is useful for the CAMS application
-2. how to update existing observations in iNaturalist so that the CAMS weed data is updated
+We have created the `Weed Management Aotearoa NZ` iNaturalist project with observation fields that capture additional weed control data for the CAMS application. 
+
+The guide covers:
+
+1. how to add observations to the `Weed Management Aotearoa NZ` iNaturalist project 
+2. how to update existing observations in the `Weed Management Aotearoa NZ` iNaturalist project 
 
 All observations (with a specific taxa and place) will be synchronised, whether they are added to the `Weed Management Aotearoa NZ` or not. 
 However, adding the observation to the `Weed Management Aotearoa NZ` project and filling in relevant observation fields provides information that is useful for controlling the weed.
