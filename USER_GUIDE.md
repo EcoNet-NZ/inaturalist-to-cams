@@ -25,7 +25,7 @@ Open the [Join Weed Management Aoetearoa NZ Project page](https://www.inaturalis
 
 If you're not familiar with adding observations to iNaturalist see [this guide](https://www.inaturalist.org/pages/add-an-observation-nz). 
 
-Please check the location of the observation is accurate, and update it if necessary. This will help us to find the weed in future.
+When adding an observation, please check the location of the observation is accurate, and update it if necessary. This will help us to find the weed in future.
 
 **Note**: the mobile app does not currently allow you to add other users' observations to projects. You'll need to use the browser version to add other users' observations. 
 
@@ -44,6 +44,8 @@ Fill out the fields, for example:
 ### Using a Browser
 
 When adding a new observation, select the `Projects` option and add the observation to the `Weed Management Aotearoa NZ` project. 
+
+To update an existing observation, find (and expand if necessary) the `Projects` icon on the right of the screen, click the cog to the right of the `Weed Management Aotearoa NZ` project and select `Fill out project observation fields``
 
 As you enter the details, you need to press the `Add` button next to each detail you wish to set. Failure to do this will mean that your details are not saved:
 
