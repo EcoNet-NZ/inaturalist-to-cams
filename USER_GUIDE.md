@@ -33,6 +33,10 @@ Please check the location of the observation is accurate, and update it if neces
 
 When adding a new observation, click on the `Add to project(s)` option and select the `Weed Management Aotearoa NZ` project.
 
+When editing one of your observations, click on the Edit (pencil) icon. 
+
+Note if someone else created the observation, you'll need to use the Browser version to add it to the `Weed Management Aotearoa NZ` project or update the observation fields. 
+
 Fill out the fields, for example:
 
 <img src="https://user-images.githubusercontent.com/144202/215252973-d7e58184-a85d-4fb3-8f25-2469c897919c.png" alt="Filling in the details and clicking the tick button" width=400/>
