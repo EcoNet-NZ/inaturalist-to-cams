@@ -90,10 +90,10 @@ If the status has already been set on the weed, you may need to override the sta
 
 * Why isn't my observation coming through to CAMS?
 
-Firstly, observations are synchronised hourly. You might need to wait if it's less than an hour since you entered it in iNaturalist.
+    Firstly, observations are synchronised hourly. You might need to wait if it's less than an hour since you entered it in iNaturalist.
 
-If using the mobile app, note that the observations, and updates, are stored locally and uploaded when your phone has a data connection. Sometimes this can get stuck. 
+    If using the mobile app, note that the observations, and updates, are stored locally and uploaded when your phone has a data connection. Sometimes this can get stuck. 
 
-Try clicking on the home button and then your observations to see if any are currently waiting or being uploaded. 
+    Try clicking on the home button and then your observations to see if any are currently waiting or being uploaded. 
 
-Check also that your Settings have "Automatic Upload (Auto Sync)" ticked, or invoke a manual upload. 
+    Check also that your Settings have "Automatic Upload (Auto Sync)" ticked, or invoke a manual upload. 
