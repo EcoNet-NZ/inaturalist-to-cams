@@ -31,6 +31,7 @@
 - [x] Consider removing, or hiding from view, iNaturalist id (is the URL sufficient? - no, we need the id)
 - [x] Add dependabot check for new versions
 - [x] Fix action so it doesn't show "deploying to dev"
+- [x] SiteSource - change to just iNaturalist not iNaturalist2022
 
 - [ ] Update README
 
@@ -40,10 +41,11 @@
 - [ ] Create project for Ernle Clarke Reserve (tradescantia, ivy, sycamore, aluminium plant, veldt grass, hanging sedge/carex pendula)
 
 # Main schema
-- [ ] SiteSource - change to just iNaturalist not iNaturalist2022
 - [ ] Visit Table - hide iNaturalist id and url from view
 
   
 # Post-beta
+- [ ] Allow location to be overridden
+- [ ] Black list of observations to not sync (eg those that don't allow observation fields?)
 - [ ] Allow for duplicates to be merged 
 - [ ] Allow Weed Location to be a polygon rather than point
