@@ -16,6 +16,7 @@
 
 from behave import fixture
 from inat_to_cams import cams_interface, cams_reader, cams_writer, synchronise_inat_to_cams
+import time
 
 
 @fixture
@@ -24,5 +25,6 @@ def before_all(context):
     context.reader = cams_reader.CamsReader()
     context.synchroniser = synchronise_inat_to_cams.synchroniser
     context.connection = cams_interface.connection
+    assert context.connection.is_test_schema(), 'Tests can only be run using a test schema'
     context.connection.delete_rows_with_inat_ref_of_length(4)
     # logging.basicConfig(filename="error.log")
