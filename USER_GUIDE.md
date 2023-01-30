@@ -19,7 +19,7 @@ Before adding an observation to the `Weed Management Aotearoa NZ` project, you'l
 
 Note that this can only be performed on the browser version, not on the mobile app.
 
-Open the [Join Weed Management Aoetearoa NZ Project page](https://www.inaturalist.org/projects/weed-management-aotearoa-nz/join), read the project page and select the `Yes, I want to join` button. 
+Open the [Join Weed Management Aotearoa NZ Project page](https://www.inaturalist.org/projects/weed-management-aotearoa-nz/join), read the project page and select the `Yes, I want to join` button. 
 
 ## Adding or updating an observation to the `Weed Management Aotearoa NZ` project
 
