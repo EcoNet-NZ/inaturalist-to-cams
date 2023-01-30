@@ -63,7 +63,10 @@ class CamsConnection:
         actual_table_name = self.table.properties.name
         assert actual_table_name == expected_table_name, f'Expected table name to be {expected_table_name} but found {actual_table_name}'
 
-        self.items_allowing_deletion = ['iNat_to_CAMS_Dev']
+        self.test_schema = ['iNat_to_CAMS_Dev']
+
+    def is_test_schema(self):
+        return self.item.title in self.test_schema
 
     @retry(delay=5, tries=3)
     def query_weed_visits_table(self, query_table):
@@ -98,14 +101,15 @@ class CamsConnection:
         query = f"OBJECTID > {object_id}"
         self.delete_table_rows_if_allowed(query)
 
+
     @retry(delay=5, tries=3)
     def delete_table_rows_if_allowed(self, query):
         logging.info(f'Deleting table rows where {query}')
-        if self.item.title in self.items_allowing_deletion:
+        if self.item.title in self.test_schema:
             self.table.delete_features(where=query)
             logging.info(f"Deleted table rows where {query}")
         else:
-            logging.info(f"ERROR: for safety, records can only be deleted from the named items {self.items_allowing_deletion}")
+            logging.info(f"ERROR: for safety, records can only be deleted from the named items {self.test_schema}")
             exit(1)
 
     def delete_location_rows_with_object_id_gt(self, object_id):
@@ -115,11 +119,11 @@ class CamsConnection:
     @retry(delay=5, tries=3)
     def delete_layer_rows_if_allowed(self, query):
         logging.info(f'Deleting layer rows where {query}')
-        if self.item.title in self.items_allowing_deletion:
+        if self.item.title in self.test_schema:
             self.layer.delete_features(where=query)
             logging.info(f"Deleted layer rows where {query}")
         else:
-            logging.info(f"ERROR: for safety, records can only be deleted from the named items {self.items_allowing_deletion}")
+            logging.info(f"ERROR: for safety, records can only be deleted from the named items {self.test_schema}")
             exit(1)
 
     def delete_feature_with_id(self, inat_id):
