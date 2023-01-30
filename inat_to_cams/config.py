@@ -42,8 +42,12 @@ class CamsSchemaConfiguration:
 
     def cams_field_key(self, entity, field, value):
         if value:
-            field_dict = self.cams_schema[entity][field]['values']
-            return list(field_dict.keys())[list(field_dict.values()).index(value)]
+            try:
+                field_dict = self.cams_schema[entity][field]['values']
+                return list(field_dict.keys())[list(field_dict.values()).index(value)]
+            except ValueError:
+                field_dict = self.cams_schema[entity][field]['legacy_values']
+                return list(field_dict.keys())[list(field_dict.values()).index(value)]
         return None
 
 

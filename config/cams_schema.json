@@ -16,6 +16,9 @@
             "length": 39,
             "values": {
                 "iNaturalist": "iNaturalist_v1"
+            },
+            "legacy_values": {
+                "iNaturalist": "iNaturalist"
             }
         },
         "Location details": {
