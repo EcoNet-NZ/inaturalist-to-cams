@@ -1,3 +1,4 @@
+gssapi==1.8.2
 pyinaturalist==0.18.0.dev4
 arcgis==2.1.0
 func_timeout==4.3.5
