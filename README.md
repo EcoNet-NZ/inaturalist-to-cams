@@ -8,12 +8,11 @@ The CAMS Weed App enables ongoing monitoring and control of weeds, showing diffe
 
 <img width="756" alt="map showing weed status symbols" src="https://user-images.githubusercontent.com/144202/203535217-20bef01d-fadb-4ef3-bf08-0745ba2cf954.png">
 
-The status of each observation can be updated by adding the observation to the [DRAFT - CAMS Weed App Metadata](https://inaturalist.nz/projects/draft-cams-weed-app-metadata) iNaturalist project and setting the observation fields. _**NOTE:** The name of this project and some fields may change during the initial development process._
+The status of each observation can be updated by adding the observation to the [Weed Management Aotearoa NZ](https://inaturalist.nz/projects/weed-management-aotearoa-nz) iNaturalist project and setting the observation fields. See the [user guide](USER_GUIDE.md) for instructions.
 
-This project is currently in **BETA** status and is updating a test CAMS instance. See our [TODO list](TODO.md) for outstanding tasks.
+The code is intended to be scheduled to run regularly, e.g. hourly, picking up new and updated observations from iNaturalist. Note that the updates to CAMS are idempotent, so can be rerun without creating new CAMS records. The synchronisation will only pick up new or updated observations containing updates that we are interested in.
 
-The code is intended to be scheduled to run regularly, e.g. hourly, picking up new and updated observations from iNaturalist. Note that the updates to CAMS are idempotent, so can be rerun without creating new CAMS records.
-The synchronisation will normally only pick up new or updated observations. Some of the updates are ignored (e.g. verifications of identifications) so being idempotent means the CAMS records will not be changed.
+We keep [this log](sync_history.md) of all observations and updates that have been synchronised.
 
 The iNaturalist observations are selected based on taxon and place (e.g. *old man's beard* in *Wellington*). Each matching iNaturalist observation creates a new Feature in CAMS, with a parent `WeedLocation` record and a child `WeedVisit` record. Updates to the iNaturalist observation may create additional `WeedVisit` records, dependent on what caused the update, for example:
 
