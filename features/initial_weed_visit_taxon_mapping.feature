@@ -29,18 +29,18 @@ Feature: Processing a new iNaturalist observation populates the correct taxon on
 		Then a WeedLocations feature is created with species 'OldMansBeard'
 
 	Rule: Where the mapped taxon is a higher taxa, all descendents of that taxa are mapped
-		Example: Section Elkea is mapped to BananaPassionfruit
-		Given iNaturalist has a new OMB observation for taxon 879226 with ancestors [878751,879226,133169]
+		Example: Subgenus Tacsonia is mapped to BananaPassionfruit
+		Given iNaturalist has a new OMB observation for taxon 879226 with ancestors [878751,879226,133169,1442036]
 		When we process the observation
 		Then a WeedLocations feature is created with species 'BananaPassionfruit'
 
-		Example: Passiflora tripartita (a child of Section Elkea) is also mapped to BananaPassionfruit
-		Given iNaturalist has a new OMB observation for taxon 133169 with ancestors [878751,879226,133169]
+		Example: Passiflora tripartita (a grandchild of Subgenus Tacsonia) is also mapped to BananaPassionfruit
+		Given iNaturalist has a new OMB observation for taxon 133169 with ancestors [878751,879226,133169,1442036]
 		When we process the observation
 		Then a WeedLocations feature is created with species 'BananaPassionfruit'
 
-		Example: Passiflora tripartita (a grandchild of Section Elkea) is also mapped to BananaPassionfruit
-		Given iNaturalist has a new OMB observation for taxon 133171 with ancestors [878751,879226,133169,133171]
+		Example: Passiflora tripartita (a great-grandchild of Subgenus Tacsonia) is also mapped to BananaPassionfruit
+		Given iNaturalist has a new OMB observation for taxon 133171 with ancestors [878751,879226,133169,133171,1442036]
 		When we process the observation
 		Then a WeedLocations feature is created with species 'BananaPassionfruit'
 
