@@ -1,5 +1,9 @@
 # iNaturalist to CAMS User Guide
 
+The CAMS weed app enhances our ability to manage weeds across a location by mapping the current status of the weed. The status is reset annually so that all locations are rechecked. Here's an example map:
+
+![map of weed locations coloured by status](https://user-images.githubusercontent.com/144202/216689482-62155187-1ee0-4a35-95fe-31620abba2d0.png)
+
 The iNaturalist to CAMS synchroniser will update the CAMS weed app with new observations from iNaturalist. 
 It will synchronise all observations with specific taxa (including descendents) from a particular place.
 To set up a new synchronisation email office@econet.nz.
