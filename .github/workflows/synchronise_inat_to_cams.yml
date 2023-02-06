@@ -32,27 +32,25 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v3
-      
+
+    - name: Install apt dependencies
+      uses: awalsh128/cache-apt-pkgs-action@latest
+      with:
+        packages: heimdal-dev   # Workaround for problem building gssapi wheel, see https://stackoverflow.com/questions/44449290/krb5-config-is-not-recognized-as-an-internal-or-external-command
+        version: 1.0
+
     - name: Set up Python
       uses: actions/setup-python@v4
       with:
         python-version: '3.9'
         cache: 'pip'
 
-    - name: Install dependencies
+    - name: Install pip dependencies
       run: |
-        sudo apt install heimdal-dev  # Workaround for problem building gssapi wheel, see https://stackoverflow.com/questions/44449290/krb5-config-is-not-recognized-as-an-internal-or-external-command
         python -m pip install --upgrade pip
         python -m pip install wheel
-        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi      
 
-    - name: Lint with flake8
-      run: |
-        # stop the build if there are Python syntax errors or undefined names
-        flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
-        # exit-zero treats all errors as warnings. 
-        flake8 . --count --exit-zero --max-complexity=16 --max-line-length=220 --statistics 
-             
     - name: Set timezone   # so that we observations are stored to CAMS in NZ time
       uses: zcong1993/setup-timezone@master
       with:
