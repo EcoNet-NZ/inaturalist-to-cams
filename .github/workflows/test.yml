@@ -48,6 +48,7 @@ jobs:
 
     - name: Install dependencies
       run: |
+        sudo apt update
         sudo apt install heimdal-dev  # Workaround for problem building gssapi wheel, see https://stackoverflow.com/questions/44449290/krb5-config-is-not-recognized-as-an-internal-or-external-command
         python -m pip install --upgrade pip
         python -m pip install flake8
