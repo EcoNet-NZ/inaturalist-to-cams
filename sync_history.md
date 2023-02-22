@@ -585,3 +585,14 @@
 |----------|---------|-------|------|--------------|
 |Visit record updated|**59718**|OldMansBeard|RED|[149379207](https://www.inaturalist.org/observations/149379207)|
 |Visit record updated|**59719**|OldMansBeard|RED|[149379424](https://www.inaturalist.org/observations/149379424)|
+---
+
+# Run [1074](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/5b905419ecacaf200a2832ba6b176f398b9a37fa/checks/4240181087)
+2023-02-22 19:54
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Visit record updated|**59714**|OldMansBeard|RED|[149378831](https://www.inaturalist.org/observations/149378831)|
+|Visit record updated|**59715**|OldMansBeard|RED|[149378892](https://www.inaturalist.org/observations/149378892)|
+|Visit record updated|**59716**|OldMansBeard|RED|[149378961](https://www.inaturalist.org/observations/149378961)|
+|Visit record updated|**59717**|OldMansBeard|RED|[149379093](https://www.inaturalist.org/observations/149379093)|
