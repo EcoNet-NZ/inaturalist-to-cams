@@ -57,7 +57,7 @@ As you enter the details, you need to press the `Add` button next to each detail
 
 ### Weed Details
 
-These fields help volunteers plan their work and control the weed:
+The first set of fields help volunteers plan their work and control the weed. It would be great if you could fill these out when you add an OMB observation. They can also be updated on subsequent visits:
 
 |Field name|Description|
 |----------|-----------|
@@ -85,7 +85,7 @@ If you have done any control work on the weed, fill in these fields. This may be
 
 These fields allow you to update the status of an existing observation.
 This is typically used when you revisit a weed spot, but don't control it.
- You don't need to specify this if it is a new observation or if you have just controlled the weed.
+You don't need to fill in these fields if it is a new observation or if you have just controlled the weed.
 
 If the status has already been set on the weed, you may need to override the status and/or the date of status update.
 
