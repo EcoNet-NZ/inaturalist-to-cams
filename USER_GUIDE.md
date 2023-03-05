@@ -49,9 +49,11 @@ Fill out the fields, for example:
 
 When adding a new observation, select the `Projects` option and add the observation to the `Weed Management Aotearoa NZ` project. 
 
-To update an existing observation, find (and expand if necessary) the `Projects` icon on the right of the screen, click the cog to the right of the `Weed Management Aotearoa NZ` project and select `Fill out project observation fields``
+To update an existing observation, find (and expand if necessary) the `Projects` icon on the right of the screen, click the cog to the right of the `Weed Management Aotearoa NZ` project and select `Fill out project observation fields`:
 
-As you enter the details, you need to press the `Add` button next to each detail you wish to set. Failure to do this will mean that your details are not saved:
+![image](https://user-images.githubusercontent.com/144202/222978348-8fcc2622-01cc-4e9e-ad72-a88dcfe25192.png)
+
+As you fill out the observation fields, you'll need to press the `Add` button next to each field you wish to set. Failure to do this will mean that the fields are not saved:
 
 <img src="https://user-images.githubusercontent.com/144202/215251731-6f0da4f3-710a-49e7-9b7e-103b67ea0e87.png" alt="Filling in the details and clicking the 'Add' button next to each detail, as well as the 'Add to Project' button" width=400/>
 
