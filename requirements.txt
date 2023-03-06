@@ -1,4 +1,4 @@
-pyinaturalist==0.18.0.dev4
+pyinaturalist==0.18.0
 arcgis==2.1.0.2
 func_timeout==4.3.5
 pytz==2022.7.1
