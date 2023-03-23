@@ -1402,3 +1402,11 @@
 |Sync Event|Object Id|Species|Status|iNaturalist Id|
 |----------|---------|-------|------|--------------|
 |Visit record updated|**60261**|OldMansBeard|RED|[151902409](https://www.inaturalist.org/observations/151902409)|
+---
+
+# Run [1735](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/848256e3f8ec0ad70e993127ea9560a73458a486/checks/4496257600)
+2023-03-23 14:57
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**60284**|OldMansBeard|RED|[151985962](https://www.inaturalist.org/observations/151985962)|
