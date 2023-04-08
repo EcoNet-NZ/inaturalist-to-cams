@@ -10,12 +10,11 @@ To set up a new synchronisation email office@econet.nz.
 
 This guide assumes you already have an iNaturalist account and that the taxa and place you are entering are being synchronised.
 
-We have created the `Weed Management Aotearoa NZ` iNaturalist project with observation fields that capture additional weed control data for the CAMS application. 
+We have created the `Weed Management Aotearoa NZ` iNaturalist project with observation fields that capture additional weed control data for the CAMS application. All observations (matching the specified taxa and places) will be synchronised, whether they are added to the `Weed Management Aotearoa NZ` or not. 
+However, adding the observation to the `Weed Management Aotearoa NZ` project and filling in relevant observation fields provides information that is useful for controlling the weed.
 
 The guide covers how to add and update observations to the `Weed Management Aotearoa NZ` iNaturalist project. 
 
-All observations (matching the specified taxa and places) will be synchronised, whether they are added to the `Weed Management Aotearoa NZ` or not. 
-However, adding the observation to the `Weed Management Aotearoa NZ` project and filling in relevant observation fields provides information that is useful for controlling the weed.
 
 ## Joining the `Weed Management Aotearoa NZ` project
 
@@ -41,9 +40,17 @@ When editing one of your observations, click on the Edit (pencil) icon.
 
 Note if someone else created the observation, you'll need to use the Browser version to add it to the `Weed Management Aotearoa NZ` project or update the observation fields. 
 
-Fill out the fields, for example:
+Fill out the fields:
 
-<img src="https://user-images.githubusercontent.com/144202/215252973-d7e58184-a85d-4fb3-8f25-2469c897919c.png" alt="Filling in the details and clicking the tick button" width=400/>
+#### Android
+
+<img src="https://user-images.githubusercontent.com/144202/215252973-d7e58184-a85d-4fb3-8f25-2469c897919c.png" alt="Filling in the details on Android and clicking the tick button" width=400/>
+
+#### iPhone
+
+Once you have completed or updated the fields you click the ‘back arrow’ in the top left, which automatically saves your data:
+
+<img src="https://user-images.githubusercontent.com/144202/230739860-cf5b3157-96b9-45f8-b7f3-c397ba99209a.png" alt="Filling in the details on iPhone" width=400/>
 
 ### Using a Browser
 
