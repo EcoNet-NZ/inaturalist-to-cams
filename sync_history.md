@@ -2140,3 +2140,11 @@
 |Sync Event|Object Id|Species|Status|iNaturalist Id|
 |----------|---------|-------|------|--------------|
 |Visit record updated|**60741**|CathedralBells|RED|[155692759](https://www.inaturalist.org/observations/155692759)|
+---
+
+# Run [2405](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/f3056ccb233f4f0964aab7ee92b3964f1e09dda9/checks/4759795263)
+2023-04-21 11:27
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**60797**|OldMansBeard|RED|[155798352](https://www.inaturalist.org/observations/155798352)|
