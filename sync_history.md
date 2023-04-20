@@ -2100,3 +2100,11 @@
 |Weed record updated, Visit record added|**58570**|OldMansBeard|GREEN|[115873104](https://www.inaturalist.org/observations/115873104)|
 |Weed record updated, Visit record added|**59894**|OldMansBeard|GREEN|[150243060](https://www.inaturalist.org/observations/150243060)|
 |Weed record updated, Visit record added|**60003**|OldMansBeard|GREEN|[150548280](https://www.inaturalist.org/observations/150548280)|
+---
+
+# Run [2384](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/ee50f7f53caa5630b226cb06c976239f13bb6f00/checks/4750013685)
+2023-04-20 14:54
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**60741**|CathedralBells|RED|[155692759](https://www.inaturalist.org/observations/155692759)|
