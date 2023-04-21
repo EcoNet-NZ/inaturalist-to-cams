@@ -1,12 +1,20 @@
 # iNaturalist to CAMS User Guide
 
-The CAMS weed app enhances our ability to manage weeds across a location by mapping the current status of the weed. The status is reset annually so that all locations are rechecked. Here's an example map:
+## Using the guide
+
+You can click on the ![image](https://user-images.githubusercontent.com/144202/233519091-4a0a447e-7605-4b21-9133-57f912939caa.png) icon above to view the Table of Contents and jump to a specific part of this guide.
+
+## Overview
+
+The CAMS weed app enhances our ability to manage weeds across a location by mapping the current status of the weed. The status of each weed is reset annually (currently in July) to `Purple - Please Check`. As people visit the weed during the year, they update the status, typically to `Green - regrowth has not occurred this year` or `Red - growth is occurring, please kill it`. If the weed is controlled, details of the control method are added and the status is changed to `Yellow - growth has been killed this year` or `Orange - dead-headed`. The goal is to recheck all weed locations during the year and update the status, with the end goal of making all the weed locations `Green`.
+
+The weed app shows a map with a marker at each weed location, coloured to show the current known status. Here's an example map:
 
 ![map of weed locations coloured by status](https://user-images.githubusercontent.com/144202/216689482-62155187-1ee0-4a35-95fe-31620abba2d0.png)
 
-The iNaturalist to CAMS synchroniser will update the CAMS weed app with new observations from iNaturalist. 
-It will synchronise all observations with specific taxa (including descendents) from a particular place.
-To set up a new synchronisation email office@econet.nz.
+The iNaturalist to CAMS synchroniser creates new records in the CAMS weed app from new iNaturalist observations and updates existing records when the iNaturalist observation is updated. Dependent on the change, it will update the status of each weed and change its colour on the map.
+
+It will synchronise all observations with specific taxa (including descendents) from a particular place. To set up a new synchronisation email office@econet.nz.
 
 This guide assumes you already have an iNaturalist account and that the taxa and place you are entering are being synchronised.
 
@@ -38,7 +46,7 @@ When adding a new observation, click on the `Add to project(s)` option and selec
 
 When editing one of your observations, click on the Edit (pencil) icon. 
 
-Note if someone else created the observation, you'll need to use the Browser version to add it to the `Weed Management Aotearoa NZ` project or update the observation fields. 
+Note if someone else created the observation, you'll need to use the Browser version to add it to the `Weed Management Aotearoa NZ` project and/or update the observation fields. 
 
 Fill out the fields:
 
@@ -64,7 +72,17 @@ As you fill out the observation fields, you'll need to press the `Add` button ne
 
 <img src="https://user-images.githubusercontent.com/144202/215251731-6f0da4f3-710a-49e7-9b7e-103b67ea0e87.png" alt="Filling in the details and clicking the 'Add' button next to each detail, as well as the 'Add to Project' button" width=400/>
 
-### Weed Details
+### Observation Fields
+
+The project contains a number of observation fields. These fields are logically in 3 groups:
+
+1. Weed Details - these should be entered when the weed is first observed, but can be entered or updated later on
+2. Weed Control Details - update these fields when you control a weed
+3. Status Updates - update these fields when you visit a weed at a later date, but don't control it
+
+Here's details of the fields in each group:
+
+#### Weed Details
 
 The first set of fields help volunteers plan their work and control the weed. It would be great if you could fill these out when you add an OMB observation. They can also be updated on subsequent visits:
 
@@ -77,7 +95,7 @@ The first set of fields help volunteers plan their work and control the weed. It
 |Site difficulty|The estimated difficulty of accessing the weed. Typically, levels 1-3 might be performed by the general public, level 4 by skilled workers, while level 5 typically requires professionals|
 |Effort to control|The estimated time required to control the weed|
 
-### Weed Control Details
+#### Weed Control Details
 
 If you have done any control work on the weed, fill in these fields. This may be on the same day the weed was observed, or a later date. If the weed has previously been controlled, update the existing fields to reflect your weed control work.
 
@@ -90,7 +108,7 @@ If you have done any control work on the weed, fill in these fields. This may be
 |Treatment details|Any additional details of how the weed was controlled|
 |Follow-up (YYYY-MM)|Recommended date for a follow-up check or control work|
 
-### Status Updates
+#### Status Updates
 
 These fields allow you to update the status of an existing observation.
 This is typically used when you revisit a weed spot, but don't control it.
@@ -116,3 +134,17 @@ If the status has already been set on the weed, you may need to override the sta
     Try clicking on the home button and then your observations to see if any are currently waiting or being uploaded. 
 
     Check also that your Settings have "Automatic Upload (Auto Sync)" ticked, or invoke a manual upload. 
+    
+* How are the status and colour updated in CAMS?
+
+    The changes that are needed to change the colour of the CAMS weed record are:
+
+    | Change in iNaturalist | Status and colour of weed record in CAMS |
+    | --------------------- | ---------------------------------------- |
+    | New observation | `Red - growth is occurring, please kill it` |
+    | `Treated` set to `Yes`, and `Date controlled` set | `Yellow - growth has been killed this year` |
+    | `Treated` set to `Partial`, `How Treated` set to `Cut but roots remain` and `Date controlled` set | `Orange - dead-headed` |
+    | `Status update` set to `Dead / Not Present` | `Green - regrowth has not occurred this year` |
+    | `Status update` set to `Alive / Regrowth` | `Red - growth is occurring, please kill it` |
+
+    As stated at the top of this guide, the status is reset annually currently in July. If the status has already been updated in the 2 months prior, the status will not be reset.
