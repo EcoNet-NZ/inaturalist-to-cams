@@ -1,6 +1,6 @@
 # iNaturalist to CAMS User Guide
 
-## Using the guide
+## Using this guide
 
 You can click on the ![image](https://user-images.githubusercontent.com/144202/233519091-4a0a447e-7605-4b21-9133-57f912939caa.png) icon above to view the Table of Contents and jump to a specific part of this guide.
 
@@ -10,19 +10,21 @@ The CAMS weed app enhances our ability to manage weeds across a location by mapp
 
 The weed app shows a map with a marker at each weed location, coloured to show the current known status. Here's an example map:
 
-![map of weed locations coloured by status](https://user-images.githubusercontent.com/144202/216689482-62155187-1ee0-4a35-95fe-31620abba2d0.png)
+![map of weed locations coloured by status](https://user-images.githubusercontent.com/144202/234097543-2158539d-a677-4e9a-a4fc-7f58d699386b.png)
 
-The iNaturalist to CAMS synchroniser creates new records in the CAMS weed app from new iNaturalist observations and updates existing records when the iNaturalist observation is updated. Dependent on the change, it will update the status of each weed and change its colour on the map.
+Clicking on a weed location shows details about the weed, including a link that takes you to the underlying iNaturalist observation:
 
-It will synchronise all observations with specific taxa (including descendents) from a particular place. To set up a new synchronisation email office@econet.nz.
+![image](https://user-images.githubusercontent.com/144202/234098290-bbbf3ba7-4e1b-40fa-8f56-a3d0f74e6fa9.png)
 
-This guide assumes you already have an iNaturalist account and that the taxa and place you are entering are being synchronised.
+All observations of the weed are synchronised to CAMS. You can enhance the data in CAMS, and set the weed status/colour, by adding the observation to, or updating it in, the `Weed Management Aotearoa NZ` iNaturalist project. This project contains observation fields that capture additional weed control data for the CAMS application.
 
-We have created the `Weed Management Aotearoa NZ` iNaturalist project with observation fields that capture additional weed control data for the CAMS application. All observations (matching the specified taxa and places) will be synchronised, whether they are added to the `Weed Management Aotearoa NZ` or not. 
-However, adding the observation to the `Weed Management Aotearoa NZ` project and filling in relevant observation fields provides information that is useful for controlling the weed.
+This guide assumes you already have an iNaturalist account and would like to add weed management data to your observations.
 
-The guide covers how to add and update observations to the `Weed Management Aotearoa NZ` iNaturalist project. 
+### Synchroniser
 
+The iNaturalist to CAMS synchroniser creates new records in the CAMS weed app from new iNaturalist observations and updates existing records when the iNaturalist observation is updated. Dependent on the change, it will update the status of each weed and change its colour on the map. It currently runs hourly, so don't expect the observation to be updated in CAMS instantly.
+
+It will synchronise all observations with specific taxa (including descendents) from a particular place. This guide assumes that the taxa and place you are entering are being synchronised. To set up a new synchronisation email office@econet.nz.
 
 ## Joining the `Weed Management Aotearoa NZ` project
 
@@ -42,11 +44,11 @@ When adding an observation, please check the location of the observation is accu
 
 ### Using the Mobile app
 
-When adding a new observation, click on the `Add to project(s)` option and select the `Weed Management Aotearoa NZ` project.
+When adding a new observation in iNaturalist, click on the `Add to project(s)` option and select the `Weed Management Aotearoa NZ` project.
 
-When editing one of your observations, click on the Edit (pencil) icon. 
+When editing one of your observations in iNaturalist, click on the Edit (pencil) icon. (To get to the iNaturalist observation from CAMS, you can click on the weed location dot and then click on the iNaturalist URL.)
 
-Note if someone else created the observation, you'll need to use the Browser version to add it to the `Weed Management Aotearoa NZ` project and/or update the observation fields. 
+Note if someone else created the observation, you'll currently need to use the Browser version to add it to the `Weed Management Aotearoa NZ` project and/or update the observation fields. 
 
 Fill out the fields:
 
@@ -62,15 +64,17 @@ Once you have completed or updated the fields you click the ‘back arrow’ in 
 
 ### Using a Browser
 
-When adding a new observation, select the `Projects` option and add the observation to the `Weed Management Aotearoa NZ` project. 
+When adding a new observation in iNaturalist, select the `Projects` option and add the observation to the `Weed Management Aotearoa NZ` project. 
 
-To update an existing observation, find (and expand if necessary) the `Projects` icon on the right of the screen, click the cog to the right of the `Weed Management Aotearoa NZ` project and select `Fill out project observation fields`:
+To update an existing observation in iNaturalist, find (and expand if necessary) the `Projects` icon on the right of the screen, click the cog to the right of the `Weed Management Aotearoa NZ` project and select `Fill out project observation fields`:
 
 ![image](https://user-images.githubusercontent.com/144202/222978348-8fcc2622-01cc-4e9e-ad72-a88dcfe25192.png)
 
 As you fill out the observation fields, you'll need to press the `Add` button next to each field you wish to set. Failure to do this will mean that the fields are not saved:
 
 <img src="https://user-images.githubusercontent.com/144202/215251731-6f0da4f3-710a-49e7-9b7e-103b67ea0e87.png" alt="Filling in the details and clicking the 'Add' button next to each detail, as well as the 'Add to Project' button" width=400/>
+
+Note that to get to the iNaturalist observation from CAMS, you can click on the weed location dot and then click on the iNaturalist URL.
 
 ### Observation Fields
 
