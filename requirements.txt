@@ -1,5 +1,6 @@
 pyinaturalist==0.18.0
 arcgis==2.1.0.3
+urllib3==1.26.15  # Fix this version to avoid TypeError: __init__() got an unexpected keyword argument 'method_whitelist'
 func_timeout==4.3.5
 pytz==2023.3
 python-dateutil==2.8.2
