@@ -38,7 +38,7 @@ from inat_to_cams import config, setup_logging
 
 class CamsConnection:
 
-    @retry(delay=5, tries=3)
+    # @retry(delay=5, tries=3)
     def __init__(self):
 
         # self.gis = arcgis.GIS(profile='econet')
