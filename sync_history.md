@@ -3511,3 +3511,12 @@
 |Sync Event|Object Id|Species|Status|iNaturalist Id|
 |----------|---------|-------|------|--------------|
 |Visit record updated|**61430**|CathedralBells|YELLOW|[163758020](https://www.inaturalist.org/observations/163758020)|
+---
+
+# Run [3333](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/3b4697e80777b762384536f9f98e5cdf5111bdd9/checks/5128997845)
+2023-05-31 16:59
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Visit record updated|**61342**|BananaPassionfruit|RED|[162098992](https://www.inaturalist.org/observations/162098992)|
+|Visit record updated|**61440**|BananaPassionfruit|RED|[163935931](https://www.inaturalist.org/observations/163935931)|
