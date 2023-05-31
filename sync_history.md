@@ -3503,3 +3503,11 @@
 |Sync Event|Object Id|Species|Status|iNaturalist Id|
 |----------|---------|-------|------|--------------|
 |Visit record updated|**61433**|CathedralBells|YELLOW|[163765703](https://www.inaturalist.org/observations/163765703)|
+---
+
+# Run [3332](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/15cca26c6542af54189f314ef5b41cacc0f0eee6/checks/5128674381)
+2023-05-31 15:58
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Visit record updated|**61430**|CathedralBells|YELLOW|[163758020](https://www.inaturalist.org/observations/163758020)|
