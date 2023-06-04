@@ -3569,3 +3569,63 @@
 |Sync Event|Object Id|Species|Status|iNaturalist Id|
 |----------|---------|-------|------|--------------|
 |New weed|**61875**|OldMansBeard|RED|[165405373](https://www.inaturalist.org/observations/165405373)|
+---
+
+# Run [3431](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/01c64477f2cd9842bfa3aab3ed99e3574a7fd195/checks/5168559295)
+2023-06-04 22:27
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**61881**|BlueMorningGlory|PURPLE|[2654410](https://www.inaturalist.org/observations/2654410)|
+|New weed|**61882**|BlueMorningGlory|PURPLE|[2666929](https://www.inaturalist.org/observations/2666929)|
+|New weed|**61883**|BlueMorningGlory|PURPLE|[2670717](https://www.inaturalist.org/observations/2670717)|
+|New weed|**61884**|BlueMorningGlory|PURPLE|[2707385](https://www.inaturalist.org/observations/2707385)|
+|New weed|**61885**|BlueMorningGlory|PURPLE|[3343569](https://www.inaturalist.org/observations/3343569)|
+|New weed|**61886**|BlueMorningGlory|PURPLE|[5007880](https://www.inaturalist.org/observations/5007880)|
+|New weed|**61887**|BlueMorningGlory|PURPLE|[5056529](https://www.inaturalist.org/observations/5056529)|
+|New weed|**61888**|BlueMorningGlory|PURPLE|[10079496](https://www.inaturalist.org/observations/10079496)|
+|New weed|**61889**|BlueMorningGlory|PURPLE|[10943562](https://www.inaturalist.org/observations/10943562)|
+|New weed|**61890**|BlueMorningGlory|PURPLE|[19784057](https://www.inaturalist.org/observations/19784057)|
+|New weed|**61891**|BlueMorningGlory|PURPLE|[21107740](https://www.inaturalist.org/observations/21107740)|
+|New weed|**61892**|BlueMorningGlory|PURPLE|[21140937](https://www.inaturalist.org/observations/21140937)|
+|New weed|**61893**|BlueMorningGlory|PURPLE|[21214014](https://www.inaturalist.org/observations/21214014)|
+|New weed|**61894**|BlueMorningGlory|PURPLE|[23605489](https://www.inaturalist.org/observations/23605489)|
+|New weed|**61895**|BlueMorningGlory|PURPLE|[38727218](https://www.inaturalist.org/observations/38727218)|
+|New weed|**61896**|BlueMorningGlory|PURPLE|[41669512](https://www.inaturalist.org/observations/41669512)|
+|New weed|**61897**|BlueMorningGlory|PURPLE|[43862234](https://www.inaturalist.org/observations/43862234)|
+|New weed|**61898**|BlueMorningGlory|PURPLE|[45711402](https://www.inaturalist.org/observations/45711402)|
+|New weed|**61899**|BlueMorningGlory|PURPLE|[49815154](https://www.inaturalist.org/observations/49815154)|
+|New weed|**61900**|BlueMorningGlory|PURPLE|[71033093](https://www.inaturalist.org/observations/71033093)|
+|Visit record updated|**59090**|BluePassionFlower|GREEN|[73577977](https://www.inaturalist.org/observations/73577977)|
+|New weed|**61901**|BlueMorningGlory|PURPLE|[76676498](https://www.inaturalist.org/observations/76676498)|
+|New weed|**61902**|BlueMorningGlory|PURPLE|[76700913](https://www.inaturalist.org/observations/76700913)|
+|New weed|**61903**|BlueMorningGlory|PURPLE|[76845846](https://www.inaturalist.org/observations/76845846)|
+|New weed|**61904**|BlueMorningGlory|PURPLE|[76886604](https://www.inaturalist.org/observations/76886604)|
+|New weed|**61905**|BlueMorningGlory|PURPLE|[79706746](https://www.inaturalist.org/observations/79706746)|
+|New weed|**61906**|BlueMorningGlory|PURPLE|[82632551](https://www.inaturalist.org/observations/82632551)|
+|New weed|**61907**|BlueMorningGlory|PURPLE|[105745852](https://www.inaturalist.org/observations/105745852)|
+|New weed|**61908**|BlueMorningGlory|PURPLE|[108385707](https://www.inaturalist.org/observations/108385707)|
+|New weed|**61909**|BlueMorningGlory|PURPLE|[109971743](https://www.inaturalist.org/observations/109971743)|
+|Visit record updated|**59133**|BananaPassionfruit|YELLOW|[110871345](https://www.inaturalist.org/observations/110871345)|
+|New weed|**61910**|BlueMorningGlory|PURPLE|[110871497](https://www.inaturalist.org/observations/110871497)|
+|New weed|**61911**|BlueMorningGlory|PURPLE|[113258841](https://www.inaturalist.org/observations/113258841)|
+|New weed|**61912**|BlueMorningGlory|PURPLE|[113986530](https://www.inaturalist.org/observations/113986530)|
+|New weed|**61913**|BlueMorningGlory|PURPLE|[113989605](https://www.inaturalist.org/observations/113989605)|
+|New weed|**61914**|BlueMorningGlory|PURPLE|[114132847](https://www.inaturalist.org/observations/114132847)|
+|New weed|**61915**|BlueMorningGlory|PURPLE|[114153233](https://www.inaturalist.org/observations/114153233)|
+|New weed|**61916**|BlueMorningGlory|PURPLE|[114594001](https://www.inaturalist.org/observations/114594001)|
+|New weed|**61917**|BlueMorningGlory|PURPLE|[115449158](https://www.inaturalist.org/observations/115449158)|
+|New weed|**61918**|BlueMorningGlory|PURPLE|[123488480](https://www.inaturalist.org/observations/123488480)|
+|New weed|**61919**|BlueMorningGlory|RED|[124314580](https://www.inaturalist.org/observations/124314580)|
+|New weed|**61920**|BlueMorningGlory|RED|[144704316](https://www.inaturalist.org/observations/144704316)|
+|New weed|**61921**|BlueMorningGlory|RED|[145555718](https://www.inaturalist.org/observations/145555718)|
+|Visit record updated|**59188**|CathedralBells|YELLOW|[147795503](https://www.inaturalist.org/observations/147795503)|
+|New weed|**61922**|BlueMorningGlory|RED|[150168306](https://www.inaturalist.org/observations/150168306)|
+|Visit record updated|**60020**|BluePassionFlower|RED|[150613505](https://www.inaturalist.org/observations/150613505)|
+|New weed|**61923**|BlueMorningGlory|RED|[151372285](https://www.inaturalist.org/observations/151372285)|
+|New weed|**61924**|BlueMorningGlory|RED|[157325295](https://www.inaturalist.org/observations/157325295)|
+|New weed|**61925**|BlueMorningGlory|RED|[158043353](https://www.inaturalist.org/observations/158043353)|
+|New weed|**61926**|BlueMorningGlory|RED|[158363686](https://www.inaturalist.org/observations/158363686)|
+|New weed|**61927**|BlueMorningGlory|RED|[159075451](https://www.inaturalist.org/observations/159075451)|
+|New weed|**61928**|BlueMorningGlory|RED|[159348409](https://www.inaturalist.org/observations/159348409)|
+|New weed|**61929**|BlueMorningGlory|RED|[161008329](https://www.inaturalist.org/observations/161008329)|
