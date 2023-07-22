@@ -69,7 +69,7 @@ These credentials can only be read by GitHub Actions and are masked in the log f
 Currently all environments are within the same ArcGIS account. The code requires two ArcGIS feature layers within this account:
 
 ##### Dev/Test
-An expendable feature layer for development and testing of new code. Prior to running the Behaviour Driven Development (BDD) tests, a check is made that the feature layer is intended for testing (see environment.py). This ensures that we are not creating and deleting test data in production.
+An expendable feature layer for development and testing of new code. Prior to running the Behaviour Driven Development (BDD) tests, a check is made that the feature layer is intended for testing (see [environment.py](./features/environment.py)). This ensures that we are not creating and deleting test data in production.
 
 ##### Production
 The main feature layer containing CAMS weed data targeted by the sychroniser.
@@ -104,7 +104,7 @@ An additional timeout of 120 seconds is applied to the iNaturalist read in case 
 
 ### Retries
 
-In case of intermittent issues, operations involving iNaturalist or ArcGIS include retry logic, currently set to retry 3 times with a 5 second wait between rertries.
+We have sometimes had intermittent issues connecting to iNaturalist or ArcGIS. To increase the chances of success, we have added retry logic to iNaturalist and ArcGIS interface methods. These are currently set to retry 3 times with a 5 second wait between retries.
 
 ### Workflow minutes
 
@@ -242,9 +242,11 @@ The folder structure is:
 * `features` contains the feature files including automated test scenarios
 * `inat_to_cams` contains the main code
 
-### Sequence diagram
+### Overview
 
 This diagram shows the flow of the synchronisation from iNaturalist to ArcGIS CAMS.
+
+![image](https://github.com/EcoNet-NZ/inaturalist-to-cams/assets/144202/69008037-612f-4b9d-a428-4855c5a0fd36)
 
 When the [synchroniser](inat_to_cams/synchronise_inat_to_cams.py) is invoked, it:
 
@@ -271,4 +273,10 @@ The project's features are described using [Feature Files](https://behave.readth
 
 Explore our [feature files](features).
 
-The resultant reports are published as artifacts at the end of each [Run Tests](../../actions/workflows/test.yml) workflow run.
+The resultant reports are published as artifacts at the end of each [Run Tests](../../actions/workflows/test.yml) workflow run:
+
+<img width="539" alt="image" src="https://github.com/EcoNet-NZ/inaturalist-to-cams/assets/144202/faf2eb06-09f8-4b92-aa83-612b0f85093a">
+
+Unzipping the report file and opening the `behave_reports.html` file shows the status of each scenario:
+
+<img width="863" alt="image" src="https://github.com/EcoNet-NZ/inaturalist-to-cams/assets/144202/6b59e43f-c823-4986-b999-495167e8e397">
