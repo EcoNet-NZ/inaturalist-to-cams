@@ -4,7 +4,7 @@ This repository contains a [scheduled workflow](#scheduled-workflow), [configura
 
 ## Overview
 
-The CAMS Weed App enables ongoing monitoring and control of weeds, showing different colours and shapes for the current status of the weed patch. The status is reset to `Purple - please check` every year (currently on 1st September, but will be configurable) and the status is updated as each patch is checked:
+The CAMS Weed App enables ongoing monitoring and control of weeds, showing different colours and shapes for the current status of the weed patch. The status is reset periodically to `Purple - please check` and the status is updated as each patch is checked:
 
 <img width="756" alt="map showing weed status symbols" src="https://user-images.githubusercontent.com/144202/203535217-20bef01d-fadb-4ef3-bf08-0745ba2cf954.png">
 
@@ -41,7 +41,7 @@ The time that the latest observation was updated is stored in a `*_time_of_last_
 
 ## Scheduled workflow
 
-The synchroniser is run regularly (currently hourly) by the [synchronise-inat-to-cams](/../../actions/workflows/synchronise_inat_to_cams.yml) workflow. 
+The synchroniser is run regularly (currently hourly) by the [synchronise-inat-to-cams](.github/workflows/synchronise_inat_to_cams.yml) workflow. 
 
 It can be triggered manually by clicking the `Run workflow` button on that page (assuming you are logged in and have permission to do so).
 
@@ -59,13 +59,25 @@ Note that the GitHub cron schedule uses the UTC timezone.
 
 ### Secrets
 
-Credentials, such as the username and password for logging on, are encrypted and stored in [GitHub Secrets](../..//settings/secrets/actions).
+Credentials, such as the username and password for logging on, are encrypted and stored in [GitHub Secrets](../../settings/secrets/actions).
 
 These credentials can only be read by GitHub Actions and are masked in the log files.
 
 ### Environments
 
-**TBC** 
+#### ArcGIS
+Currently all environments are within the same ArcGIS account. The code requires two ArcGIS feature layers within this account:
+
+##### Dev/Test
+An expendable feature layer for development and testing of new code. Prior to running the Behaviour Driven Development (BDD) tests, a check is made that the feature layer is intended for testing (see environment.py). This ensures that we are not creating and deleting test data in production.
+
+##### Production
+The main feature layer containing CAMS weed data targeted by the sychroniser.
+
+The environment is configured in the relevant [workflow file](.github/workflows/).
+
+#### iNaturalist
+We do not have a test environment for iNaturalist, so do not perform any automated testing against iNaturalist. The operations we currently perform do not need an iNaturalist account, so are performed anonymously.
 
 ### Notifications
 
@@ -78,18 +90,34 @@ Detailed logs can be viewed by clicking on the workflow run. See [Using workflow
 
 ### Timeouts
 
-**TBC:**
+At one stage, iNaturalist had an issue reading changes which hung on the get request for 6 hours until the GitHub job timed out. To avoid this happening again we have implemented:
 
-* Workflow timeout
-* iNaturalist read timeout
+#### Workflow timeout
+An overall timeout after 120 minutes configured in the [workflow](.github/workflows/synchronise_inat_to_cams.yml)
 
-### Pricing
+`    timeout-minutes: 120`
 
-**TBC**
+This should allow for large synchronisation jobs to be performed, while also reducing the overall minutes used when reads fail.
+
+#### iNaturalist read timeout
+An additional timeout of 120 seconds is applied to the iNaturalist read in case this hangs.
+
+### Retries
+
+In case of intermittent issues, operations involving iNaturalist or ArcGIS include retry logic, currently set to retry 3 times with a 5 second wait between rertries.
+
+### Workflow minutes
+
+The workflow is currently running under the GitHub free account, limited to 2,000 minutes/month. Since the workflow runs hourly, this equates to about 2.7 minutes per workflow run. 
+
+Most of the workflow time is spent installing cached dependencies. While our immediate dependencies currently use fixed versions, some of the transitive dependencies use version ranges, which can cause this time to escalate. It's worth keeping a periodic watch on the time taken taking by the workflows to ensure they normally complete within 2 minutes.
 
 ### Time of Last Update files
 
-TBC - pushed from GitHub Actions, use of GITHUB_TOKEN (auto generated) 
+The [synchronisation workflow](.github/workflows/synchronise_inat_to_cams.yml) updates several files which are subsequently committed and pushed back to GitHub. These files are:
+
+* a `*_time_of_last_update.txt` file for each sync configuration
+* `sync_history.md` containing details of all observations synchronised
 
 ## Configuration
 
@@ -205,20 +233,37 @@ It uses:
 
 For development, we have used the free PyCharm IDE.
 
-### Code structure
+### Folder structure
 
-**TO BE COMPLETED**
+The folder structure is:
+
+* `.github` contains the GitHub workflows and dependabot file (for notification of security vulnerabilities and package updates in dependencies)
+* `config` contains configuration files
+* `features` contains the feature files including automated test scenarios
+* `inat_to_cams` contains the main code
 
 ### Sequence diagram
 
-**TO BE COMPLETED**
+This diagram shows the flow of the synchronisation from iNaturalist to ArcGIS CAMS.
 
-### Authentication
+When the [synchroniser](inat_to_cams/synchronise_inat_to_cams.py) is invoked, it:
 
-1. No authentication is needed for iNaturalist since the endpoints in use do not require authentication.
-2. The ArcGIS API documentation describes a [range of options](https://developers.arcgis.com/python/guide/working-with-different-authentication-schemes/) for configuring authentication.
+1. Parses the [sync_configuration](config/sync_configuration.json) file to determine the synchronisations to perform. A sync configuration contains the taxa and places to be synchronised. For each sync configuration:
+    1. The `time of last update` is read
+    1. A request is made to iNaturalist for any new observations for the relevant taxa and places since the previous last update time
+    1. For each new observation:
+        1. The observation is read by [iNaturalist_reader](inat_to_cams/inaturalist_reader.py). 
+        1. This creates a complex data structure, which is flattened into an [iNaturalist_observation](inat_to_cams/inaturalist_observation.py).
+        1. The [translator](inat_to_cams/translator.py) translates the observation into a [cams_feature](inat_to_cams/cams_feature.py). There is some complexity to the translation, for example:
+            * some weeds are mapped at a higher level of the taxonomy than an individual species. For example, `Banana Passionfruit` is mapped to `Section Elkea` which contains a number of species and their hybrids. The translation works up the taxonomic tree until it finds a matching taxa.
+            * the `visit date` and `status` are calculated dependent on the latest of the `date_controlled`, `date_of_status_update`, `date_first_observed` fields. The `status` is translated to one of the CAMS colour status fields dependent on various fields.
+            * dates and times are converted from UTC to local time
+        1. The `cams_feature` is written to the ArcGIS CAMS feature layer using the [cams_writer](inat_to_cams/cams_writer.py). This uses a [cams_reader](./inat_to_cams/cams_reader.py) to read the current record and check for differences before creating the `feature` and/or `visit record` if modified. Sometimes the changes in the iNaturalist observation are to fields that we aren't interested in and no changes need writing to CAMS.
+            * String fields are truncated if they are longer than the target CAMS fields.
+            * `cams_writer` and `cams_reader` delegate to [cams_interface](./inat_to_cams/cams_interface.py) to interface with ArcGIS. This interface also checks that the fields in the CAMS feature layer and visits table are as expected (type, length etc)
+        1. A summary of any changes are [logged](./sync_history.md) using the [summary logger](./inat_to_cams/summary_logger.py). This is configured in [setup_logging](./inat_to_cams/setup_logging.py).
+    1. The updated `time of last update` is written to file.
 
-**TO BE COMPLETED**
 
 ### Behaviour Driven Development
 
@@ -226,3 +271,4 @@ The project's features are described using [Feature Files](https://behave.readth
 
 Explore our [feature files](features).
 
+The resultant reports are published as artifacts at the end of each [Run Tests](../../actions/workflows/test.yml) workflow run.
