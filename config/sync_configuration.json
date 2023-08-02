@@ -13,5 +13,10 @@
         "file_prefix": "woolly_nightshade_kaipatiki",
         "taxon_ids": ["133287"],
         "place_ids": ["123353"]
+    },
+    "Moth Plant - NZ": {
+        "file_prefix": "moth_plant_nz",
+        "taxon_ids": ["75499"],
+        "place_ids": ["6803"]
     }
 }
