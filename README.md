@@ -147,7 +147,7 @@ where:
   The average volunteer won't be able to tell the difference and all of them need tackling!
 
   The taxon_ids must also be defined in the `taxon_mapping` file (see below).
-* `"place_ids"` contains a comma delimited list of iNaturalist places to be included. The [iNaturalist places](https://www.inaturalist.org/places) page includes a search bar to allow you to find the relevant place (or you can create a new place if needed).
+* `"place_ids"` contains a comma delimited list of iNaturalist places to be included. The [iNaturalist places](https://www.inaturalist.org/places) page includes a search bar to allow you to find the relevant place (or you can create a new place if needed). Clicking on `Embed Place Widget` will show the place id in the URL.
 
 Observations that contain one of the `taxon_ids` within one of the `place_ids` will be synchronised. (Note that observations must have a location and date observed set as well as geoprivacy being set to Open for the observation to be synchronised.) 
 
