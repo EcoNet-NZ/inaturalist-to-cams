@@ -4484,3 +4484,11 @@
 |Sync Event|Object Id|Species|Status|iNaturalist Id|
 |----------|---------|-------|------|--------------|
 |Visit record updated|**64293**|CathedralBells|RED|[179750759](https://www.inaturalist.org/observations/179750759)|
+---
+
+# Run [5295](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/89ae3f495b218159dc8b05f050da6fa85599cc86/checks/5949777313)
+2023-08-23 21:53
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Visit record updated|**63976**|MothPlant|PURPLE|[157252494](https://www.inaturalist.org/observations/157252494)|
