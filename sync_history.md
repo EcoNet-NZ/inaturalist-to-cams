@@ -5786,3 +5786,13 @@
 |Sync Event|Object Id|Species|Status|iNaturalist Id|
 |----------|---------|-------|------|--------------|
 |Visit record updated|**65339**|BluePassionFlower|RED|[191717318](https://www.inaturalist.org/observations/191717318)|
+---
+
+# Run [7490](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/57eb6b055b8fe7a199870850ba847f24cad9f82e/checks/6962577288)
+2023-11-23 09:53
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Geolocation updated|**65318**|OldMansBeard|RED|[191617270](https://www.inaturalist.org/observations/191617270)|
+|Geolocation updated|**65319**|OldMansBeard|RED|[191617282](https://www.inaturalist.org/observations/191617282)|
+|New weed|**65350**|MothPlant|PURPLE|[159026040](https://www.inaturalist.org/observations/159026040)|
