@@ -5942,3 +5942,11 @@
 |----------|---------|-------|------|--------------|
 |Weed record updated, Visit record updated|**61340**|CathedralBells|PURPLE|[162099006](https://www.inaturalist.org/observations/162099006)|
 |Weed record updated, Visit record updated|**61388**|CathedralBells|PURPLE|[163065246](https://www.inaturalist.org/observations/163065246)|
+---
+
+# Run [7638](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/e9c9d1534a9a114bd252dc6ca974565ac334ec87/checks/7026896513)
+2023-11-29 14:44
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**65415**|MothPlant|RED|[192504438](https://www.inaturalist.org/observations/192504438)|
