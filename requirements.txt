@@ -1,5 +1,5 @@
 pyinaturalist==0.18.0
-arcgis==2.1.0.3
+arcgis==2.2.0
 urllib3==1.26.15  # Fix this version to avoid TypeError: __init__() got an unexpected keyword argument 'method_whitelist'
 jupyterlab==3.6.3  # Fix this version to hopefully overcome GitHub Actions taking 10 minutes to download dependencies since jupyterlab 4.0.0 was released
 func_timeout==4.3.5
