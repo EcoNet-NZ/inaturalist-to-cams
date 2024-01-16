@@ -7174,3 +7174,22 @@
 |----------|---------|-------|------|--------------|
 |Visit record updated|**66325**|OldMansBeard|RED|[196814584](https://www.inaturalist.org/observations/196814584)|
 |New weed|**66334**|OldMansBeard|RED|[196817676](https://www.inaturalist.org/observations/196817676)|
+---
+
+# Run [8800](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/e983542563fe467ba90e4afccd553a84f3e24604/checks/7539835336)
+2024-01-16 22:54
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Weed record updated, Visit record added|**57858**|OldMansBeard|GREEN|[80675374](https://www.inaturalist.org/observations/80675374)|
+|Weed record updated, Visit record added|**57859**|OldMansBeard|GREEN|[80675590](https://www.inaturalist.org/observations/80675590)|
+|Weed record updated, Visit record added|**57860**|OldMansBeard|GREEN|[80675750](https://www.inaturalist.org/observations/80675750)|
+|Weed record updated, Visit record added|**57861**|OldMansBeard|GREEN|[80677478](https://www.inaturalist.org/observations/80677478)|
+|Weed record updated, Visit record added|**57957**|OldMansBeard|GREEN|[99039401](https://www.inaturalist.org/observations/99039401)|
+|Weed record updated, Visit record added|**57958**|OldMansBeard|GREEN|[99039502](https://www.inaturalist.org/observations/99039502)|
+|Weed record updated, Visit record added|**57959**|OldMansBeard|GREEN|[99039574](https://www.inaturalist.org/observations/99039574)|
+|Weed record updated, Visit record added|**57992**|OldMansBeard|GREEN|[100903770](https://www.inaturalist.org/observations/100903770)|
+|Weed record updated, Visit record added|**57993**|OldMansBeard|GREEN|[100914074](https://www.inaturalist.org/observations/100914074)|
+|Weed record updated, Visit record added|**58873**|OldMansBeard|GREEN|[146654534](https://www.inaturalist.org/observations/146654534)|
+|Weed record updated, Visit record added|**58874**|OldMansBeard|GREEN|[146655384](https://www.inaturalist.org/observations/146655384)|
+|Weed record updated, Visit record added|**59116**|BananaPassionfruit|RED|[104902497](https://www.inaturalist.org/observations/104902497)|
