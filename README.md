@@ -280,3 +280,4 @@ The resultant reports are published as artifacts at the end of each [Run Tests](
 Unzipping the report file and opening the `behave_reports.html` file shows the status of each scenario:
 
 <img width="863" alt="image" src="https://github.com/EcoNet-NZ/inaturalist-to-cams/assets/144202/6b59e43f-c823-4986-b999-495167e8e397">
+
