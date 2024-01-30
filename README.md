@@ -224,9 +224,19 @@ In addition to these configuration files, the following environment variables ar
 
 ## Code
 
-The code is written in Python 3.9. *The `arcgis` package only supports up to Python3.9 as of 2022-11-23 (version 2.0.1 requires Python >=3.7, <3.10).*
+The code is written in Python 3.9. 
 
-It uses:
+### Dependencies
+
+The dependencies are frozen so that new transitive dependencies do not break the GitHub Actions workflows. To update the dependencies for GitHub Actions:
+
+1. create a fresh virtualenv locally
+2. `pip install -r requirements.txt`
+3. `pip freeze > requirements_lock.txt`
+
+*The `arcgis` package only supports up to Python3.11 as of 2023-09-25 (version 2.2.0 requires Python >=3.9, <3.11).*
+
+Dependencies include:
 
 * the awesome [pyinaturalist](https://pyinaturalist.readthedocs.io/) client for the [iNaturalist API](https://api.inaturalist.org/v1/docs/) to read the iNaturalist data.
 * the [ArcGIS REST API](https://developers.arcgis.com/rest/services-reference/enterprise/get-started-with-the-services-directory.htm) to write to the CAMS weed app. 
