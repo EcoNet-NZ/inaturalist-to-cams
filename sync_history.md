@@ -8123,3 +8123,11 @@
 |Sync Event|Object Id|Species|Status|iNaturalist Id|
 |----------|---------|-------|------|--------------|
 |Visit record updated|**67128**|MothPlant|RED|[198271958](https://www.inaturalist.org/observations/198271958)|
+---
+
+# Run [9244](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/40050726120e028d85c763c6e3443c8f23371294/checks/7768498080)
+2024-02-04 06:53
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Visit record updated|**67109**|MothPlant|RED|[198237442](https://www.inaturalist.org/observations/198237442)|
