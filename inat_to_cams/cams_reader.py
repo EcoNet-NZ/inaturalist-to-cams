@@ -63,9 +63,12 @@ class CamsReader:
 
         query_layer = f"GlobalID='{guid}'"
         rows = cams_interface.connection.query_weed_location_layer_wgs84(query_layer)
+        
         for featureRow in rows.features:
             location = cams_feature.WeedLocation()
+            logging.info(f'Found feature geolocation {featureRow.geometry}')
             logging.info(f'Found layer row {featureRow}')
+
             location.object_id = featureRow.attributes['OBJECTID']
             location.global_id = guid
             location.date_first_observed = self.as_datetime(featureRow.attributes['DateDiscovered'])
@@ -73,6 +76,8 @@ class CamsReader:
             location.data_source = cams_schema_config.cams_field_key('WeedLocations', 'DataSource', featureRow.attributes['SiteSource'])
             location.location_details = featureRow.attributes['LocationInfo']
             location.effort_to_control = featureRow.attributes['Urgency']
+            location.reported_longitude = featureRow.attributes['ReportedLongitude']
+            location.reported_latitude = featureRow.attributes['ReportedLatitude']
             location.current_status = cams_schema_config.cams_field_key('WeedLocations', 'CurrentStatus', featureRow.attributes['ParentStatusWithDomain'])
 
             # Temporarily until updated from weed visit by database trigger

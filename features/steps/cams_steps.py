@@ -21,6 +21,7 @@ from datetime import datetime
 from dateutils import today, yesterday, two_years_ago
 
 from inat_to_cams import exceptions
+from features.support import observation_factory
 
 
 @given(u'the visits table does not have a record with iNaturalist id {inat_id}')
@@ -44,6 +45,11 @@ def step_impl(context, cams_taxon):
     feature_attributes = context.connection.get_location_details(context.global_id)
     assert_that(feature_attributes['SpeciesDropDown'], equal_to(cams_taxon))
 
+@then(u'the CAMS weedlocation remains set to \'latitude\': {y:f}, \'longitude\': {x:f}')
+def step_impl(context, x, y):
+    location = context.connection.get_location_wgs84(context.global_id)
+    assert_that(location['x'], equal_to(x), "x")
+    assert_that(location['y'], equal_to(y), "y")
 
 @then(u'a WeedLocations feature is created at geopoint \'x\': {x:f}, \'y\': {y:f} in coordinate system EPSG:{epsg:d}')
 @then(u'a WeedLocations feature is set to geopoint \'x\': {x:f}, \'y\': {y:f} in coordinate system EPSG:{epsg:d}')
@@ -53,6 +59,13 @@ def step_impl(context, x, y, epsg):
     assert_that(location['y'], equal_to(y), "y")
     assert_that(location['spatialReference']['latestWkid'], equal_to(epsg), "epsg")
 
+
+@then(u'the reported location is recorded as \'latitude\': {y:f}, \'longitude\': {x:f}')
+def step_impl(context, x, y):
+    feature_attributes = context.connection.get_location_details(context.global_id)
+    assert_that(feature_attributes['ReportedLongitude'], equal_to(x), "x")
+    assert_that(feature_attributes['ReportedLatitude'], equal_to(y), "y")
+   
 
 @then(u'the visits table has {expected_count:d} record with iNaturalist id {inat_id}')
 def step_impl(context, expected_count, inat_id):
@@ -159,6 +172,26 @@ def step_impl(context):
 @given(u'we read the updated observation')
 def step_impl(context):
     context.updated_observation = context.reader.read_observation(context.observation.id)
+
+@given(u'the CAMS weedlocation is changed to \'latitude\': {lat:f}, \'longitude\': {lon:f}')
+def step_impl(context, lat, lon):
+  
+   #observation =  observation_factory.ObservationFactory() 
+   observation = context.observation
+   id = observation.id
+   #logging.info(f"New Observation: {observation}")
+   #synchroniser = synchronise_inat_to_cams.INatToCamsSynchroniser()
+   #context.synchroniser.sync_observation(observation)
+
+   reader = context.reader
+  # obs = reader.read_observation(observation.id)
+
+   writer = context.writer
+   writer.update_feature_geolocation(observation.id, 174.7628175, -41.2920665997)
+   logging.info("======================= Read after update ============")
+   reader.read_observation(observation.id)
+   #context.observation = context.reader.read_observation(id)
+   #context.updated_observation = context.writer.update_feature_geolocation(2000, lat, lon)
 
 
 @then(u'the updated observation is unchanged')

@@ -50,6 +50,14 @@
             "name": "iNatURL",
             "type": "String",
             "length": 256
+        },
+        "Reported Longitude":{
+            "name": "ReportedLongitude",
+            "type": "Double"
+        },
+        "Reported Latitude":{
+            "name": "ReportedLatitude",
+            "type": "Double"
         }
     },
     "Visits_Table": {

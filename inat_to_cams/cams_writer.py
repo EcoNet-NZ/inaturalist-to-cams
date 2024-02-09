@@ -16,7 +16,7 @@
 
 from datetime import datetime
 import logging
-
+from arcgis import geometry
 from inat_to_cams import cams_interface, cams_reader, config, summary_logger
 
 
@@ -125,7 +125,7 @@ class CamsWriter:
 
     def write_feature(self, cams_feature, inat_id, existing_feature, dry_run):
         global_id = None
-        logging.info(f'Writing feature to CAMS with iNaturalist id {inat_id}')
+        logging.info(f'Writing feature to CAMS with iNaturalist id {inat_id} geometry: {cams_feature.geolocation}')
         new_layer_row = [{
             'geometry': cams_feature.geolocation,
             'attributes': {
@@ -136,6 +136,8 @@ class CamsWriter:
             ('Species', cams_feature.weed_location.species),
             ('DataSource', cams_feature.weed_location.data_source),
             ('Location details', cams_feature.weed_location.location_details),
+            ('Reported Longitude', cams_feature.weed_location.reported_longitude),
+            ('Reported Latitude', cams_feature.weed_location.reported_latitude),
             ('Effort to control', cams_feature.weed_location.effort_to_control),
             ('CurrentStatus', cams_feature.weed_location.current_status),
             ('iNaturalistURL', cams_feature.weed_location.external_url)
@@ -151,6 +153,32 @@ class CamsWriter:
             else:
                 logging.info(f'Adding CAMS WeedLocations layer: {new_layer_row}')
                 global_id, object_id = cams_interface.connection.add_weed_location_layer_row(new_layer_row)
+        return global_id, object_id
+
+    def update_feature_geolocation(self, inat_id, lon, lat):
+        global_id = None
+        geometry = {'x': lon,
+                        'y': lat,
+                        'spatialReference': {'wkid': 4326, 'latestWkid': 4326}
+                    }
+        logging.info(f'Updating geolocation of CAMS feature with iNaturalist id {inat_id} geometry: {geometry}')
+        reader = cams_reader.CamsReader()
+        cams_feature = reader.read_observation(inat_id)
+        
+        new_layer_row = [{
+            'geometry': geometry,
+            'attributes': {
+            }
+        }]
+        
+        
+        global_id = cams_feature.weed_location.global_id
+        object_id = cams_feature.weed_location.object_id
+        new_layer_row[0]['attributes']['objectId'] = object_id
+        new_layer_row[0]['attributes']['globalId'] = global_id
+        logging.info(f'Updating CAMS WeedLocations layer with new geolocation: {new_layer_row}')
+        cams_interface.connection.update_weed_location_layer_row(new_layer_row)
+    
         return global_id, object_id
 
     def get_observation_value(self, observation, key):
