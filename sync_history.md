@@ -8615,3 +8615,55 @@
 |Geolocation updated, Weed record updated|**120962**|OldMansBeard|PURPLE|[2001](https://www.inaturalist.org/observations/2001)|
 |New weed|**120963**|OldMansBeard|PURPLE|[2002](https://www.inaturalist.org/observations/2002)|
 |Weed record updated, Visit record added|**120963**|OldMansBeard|RED|[2002](https://www.inaturalist.org/observations/2002)|
+---
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**120964**|OldMansBeard|PURPLE|[2000](https://www.inaturalist.org/observations/2000)|
+|New weed|**120965**|OldMansBeard|PURPLE|[2001](https://www.inaturalist.org/observations/2001)|
+|Geolocation updated, Weed record updated|**120965**|OldMansBeard|PURPLE|[2001](https://www.inaturalist.org/observations/2001)|
+|New weed|**120966**|OldMansBeard|PURPLE|[2002](https://www.inaturalist.org/observations/2002)|
+---
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**120967**|OldMansBeard|PURPLE|[2000](https://www.inaturalist.org/observations/2000)|
+|New weed|**120968**|OldMansBeard|PURPLE|[2001](https://www.inaturalist.org/observations/2001)|
+|Geolocation updated, Weed record updated|**120968**|OldMansBeard|PURPLE|[2001](https://www.inaturalist.org/observations/2001)|
+|New weed|**120969**|OldMansBeard|PURPLE|[2002](https://www.inaturalist.org/observations/2002)|
+---
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**120970**|OldMansBeard|PURPLE|[2000](https://www.inaturalist.org/observations/2000)|
+|New weed|**120971**|OldMansBeard|PURPLE|[2001](https://www.inaturalist.org/observations/2001)|
+|Geolocation updated, Weed record updated|**120971**|OldMansBeard|PURPLE|[2001](https://www.inaturalist.org/observations/2001)|
+|New weed|**120972**|OldMansBeard|PURPLE|[2002](https://www.inaturalist.org/observations/2002)|
+|Weed record updated, Visit record added|**120972**|OldMansBeard|RED|[2002](https://www.inaturalist.org/observations/2002)|
+---
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**120973**|OldMansBeard|PURPLE|[2000](https://www.inaturalist.org/observations/2000)|
+|New weed|**120974**|OldMansBeard|PURPLE|[2001](https://www.inaturalist.org/observations/2001)|
+|Geolocation updated, Weed record updated|**120974**|OldMansBeard|PURPLE|[2001](https://www.inaturalist.org/observations/2001)|
+|New weed|**120975**|OldMansBeard|PURPLE|[2002](https://www.inaturalist.org/observations/2002)|
+|Weed record updated, Visit record added|**120975**|OldMansBeard|RED|[2002](https://www.inaturalist.org/observations/2002)|
+---
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**120976**|OldMansBeard|PURPLE|[2000](https://www.inaturalist.org/observations/2000)|
+|New weed|**120977**|OldMansBeard|PURPLE|[2001](https://www.inaturalist.org/observations/2001)|
+|Geolocation updated, Weed record updated|**120977**|OldMansBeard|PURPLE|[2001](https://www.inaturalist.org/observations/2001)|
+|New weed|**120978**|OldMansBeard|PURPLE|[2002](https://www.inaturalist.org/observations/2002)|
+|Geolocation updated, Weed record updated, Visit record added|**120978**|OldMansBeard|RED|[2002](https://www.inaturalist.org/observations/2002)|
+---
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**120979**|OldMansBeard|PURPLE|[2000](https://www.inaturalist.org/observations/2000)|
+|New weed|**120980**|OldMansBeard|PURPLE|[2001](https://www.inaturalist.org/observations/2001)|
+|Geolocation updated, Weed record updated|**120980**|OldMansBeard|PURPLE|[2001](https://www.inaturalist.org/observations/2001)|
+|New weed|**120981**|OldMansBeard|PURPLE|[2002](https://www.inaturalist.org/observations/2002)|
+|Geolocation updated, Weed record updated, Visit record added|**120981**|OldMansBeard|RED|[2002](https://www.inaturalist.org/observations/2002)|

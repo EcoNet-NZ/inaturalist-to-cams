@@ -171,7 +171,6 @@ class CamsWriter:
             }
         }]
         
-        
         global_id = cams_feature.weed_location.global_id
         object_id = cams_feature.weed_location.object_id
         new_layer_row[0]['attributes']['objectId'] = object_id

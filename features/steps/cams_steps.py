@@ -175,25 +175,10 @@ def step_impl(context):
 
 @given(u'the CAMS weedlocation is changed to \'latitude\': {lat:f}, \'longitude\': {lon:f}')
 def step_impl(context, lat, lon):
-  
-   #observation =  observation_factory.ObservationFactory() 
    observation = context.observation
-   id = observation.id
-   #logging.info(f"New Observation: {observation}")
-   #synchroniser = synchronise_inat_to_cams.INatToCamsSynchroniser()
-   #context.synchroniser.sync_observation(observation)
-
-   reader = context.reader
-  # obs = reader.read_observation(observation.id)
-
    writer = context.writer
-   writer.update_feature_geolocation(observation.id, 174.7628175, -41.2920665997)
-   logging.info("======================= Read after update ============")
-   reader.read_observation(observation.id)
-   #context.observation = context.reader.read_observation(id)
-   #context.updated_observation = context.writer.update_feature_geolocation(2000, lat, lon)
-
-
+   writer.update_feature_geolocation(observation.id, lon, lat)
+  
 @then(u'the updated observation is unchanged')
 def step_impl(context):
     current_observation = context.reader.read_observation(context.observation.id)
