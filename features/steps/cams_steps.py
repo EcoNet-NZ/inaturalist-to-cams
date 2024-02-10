@@ -173,7 +173,7 @@ def step_impl(context):
 def step_impl(context):
     context.updated_observation = context.reader.read_observation(context.observation.id)
 
-@given(u'the CAMS weedlocation is changed to \'latitude\': {lat:f}, \'longitude\': {lon:f}')
+@given(u'the CAMS weedlocation has been manually updated to \'latitude\': {lat:f}, \'longitude\': {lon:f}')
 def step_impl(context, lat, lon):
    observation = context.observation
    writer = context.writer

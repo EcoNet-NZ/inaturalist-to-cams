@@ -231,6 +231,7 @@ def step_impl(context, date_field):
 
 @given(u"'{date_field}' = yesterday")
 @given(u"'{date_field}' is updated to yesterday")
+@given(u"the iNaturalist '{date_field}' is updated")
 def step_impl(context, date_field):
     ofv = pyinaturalist.ObservationFieldValue(name=date_field, value=yesterday().astimezone())
     context.observation.ofvs = context.observation.ofvs + [ofv]
