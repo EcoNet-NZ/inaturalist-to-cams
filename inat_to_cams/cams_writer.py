@@ -34,7 +34,9 @@ class CamsWriter:
                 logging.info('No relevant updates to observation')
                 return
 
-            weed_geolocation_modified = existing_feature.geolocation != cams_feature.geolocation
+            #weed_geolocation_modified = existing_feature.geolocation != cams_feature.geolocation
+            weed_geolocation_modified = (existing_feature.weed_location.reported_latitude != cams_feature.weed_location.reported_latitude) or (existing_feature.weed_location.reported_longitude != cams_feature.weed_location.reported_longitude)
+
             weed_location_modified = existing_feature.weed_location != cams_feature.weed_location
             weed_visit_modified = existing_feature.latest_weed_visit != cams_feature.latest_weed_visit
             logging.info('Updating existing feature')
@@ -48,7 +50,7 @@ class CamsWriter:
             weed_visit_modified = True
 
         if weed_geolocation_modified or weed_location_modified:
-            global_id, object_id = self.write_feature(cams_feature, inat_id, existing_feature, dry_run)
+            global_id, object_id = self.write_feature(cams_feature, inat_id, existing_feature, dry_run, weed_geolocation_modified)
         else:
             global_id = existing_feature.weed_location.global_id
             object_id = existing_feature.weed_location.object_id
@@ -123,7 +125,7 @@ class CamsWriter:
                 assert results['updateResults'][0]['success'], f"Error writing WeedVisits {results['updateResults'][0]}"
         return new_weed_visit_record
 
-    def write_feature(self, cams_feature, inat_id, existing_feature, dry_run):
+    def write_feature(self, cams_feature, inat_id, existing_feature, dry_run, weed_geolocation_modified):
         global_id = None
         logging.info(f'Writing feature to CAMS with iNaturalist id {inat_id} geometry: {cams_feature.geolocation}')
         new_layer_row = [{
@@ -142,6 +144,12 @@ class CamsWriter:
             ('CurrentStatus', cams_feature.weed_location.current_status),
             ('iNaturalistURL', cams_feature.weed_location.external_url)
         ]
+        if not weed_geolocation_modified:
+            fields.pop('Reported Longitude')
+            fields.pop('Reported Latitude')
+            new_layer_row[0].pop('geometry')
+            logging.info(f'Weed geolocation not modified in iNaturalist')
+
         [self.add_field(new_layer_row[0], 'WeedLocations', field) for field in fields]
         if not dry_run:
             if existing_feature:

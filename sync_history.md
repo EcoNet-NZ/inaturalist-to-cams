@@ -8338,3 +8338,18 @@
 |Geolocation updated, Weed record updated|**121175**|OldMansBeard|PURPLE|[2001](https://www.inaturalist.org/observations/2001)|
 |New weed|**121176**|OldMansBeard|PURPLE|[2002](https://www.inaturalist.org/observations/2002)|
 |Geolocation updated, Weed record updated, Visit record added|**121176**|OldMansBeard|RED|[2002](https://www.inaturalist.org/observations/2002)|
+---
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**121240**|OldMansBeard|PURPLE|[2000](https://www.inaturalist.org/observations/2000)|
+|New weed|**121241**|OldMansBeard|PURPLE|[2001](https://www.inaturalist.org/observations/2001)|
+|New weed|**121242**|OldMansBeard|PURPLE|[2002](https://www.inaturalist.org/observations/2002)|
+---
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**121243**|OldMansBeard|PURPLE|[2000](https://www.inaturalist.org/observations/2000)|
+|New weed|**121244**|OldMansBeard|PURPLE|[2001](https://www.inaturalist.org/observations/2001)|
+|Geolocation updated, Weed record updated|**121244**|OldMansBeard|PURPLE|[2001](https://www.inaturalist.org/observations/2001)|
+|New weed|**121245**|OldMansBeard|PURPLE|[2002](https://www.inaturalist.org/observations/2002)|
