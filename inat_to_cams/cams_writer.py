@@ -145,8 +145,8 @@ class CamsWriter:
             ('iNaturalistURL', cams_feature.weed_location.external_url)
         ]
         if not weed_geolocation_modified:
-            fields.pop('Reported Longitude')
-            fields.pop('Reported Latitude')
+            fields.remove(('Reported Longitude', cams_feature.weed_location.reported_longitude))
+            fields.remove (('Reported Latitude', cams_feature.weed_location.reported_latitude))
             new_layer_row[0].pop('geometry')
             logging.info(f'Weed geolocation not modified in iNaturalist')
 
