@@ -163,31 +163,6 @@ class CamsWriter:
                 global_id, object_id = cams_interface.connection.add_weed_location_layer_row(new_layer_row)
         return global_id, object_id
 
-    def update_feature_geolocation(self, inat_id, lon, lat):
-        global_id = None
-        geometry = {'x': lon,
-                        'y': lat,
-                        'spatialReference': {'wkid': 4326, 'latestWkid': 4326}
-                    }
-        logging.info(f'Updating geolocation of CAMS feature with iNaturalist id {inat_id} geometry: {geometry}')
-        reader = cams_reader.CamsReader()
-        cams_feature = reader.read_observation(inat_id)
-        
-        new_layer_row = [{
-            'geometry': geometry,
-            'attributes': {
-            }
-        }]
-        
-        global_id = cams_feature.weed_location.global_id
-        object_id = cams_feature.weed_location.object_id
-        new_layer_row[0]['attributes']['objectId'] = object_id
-        new_layer_row[0]['attributes']['globalId'] = global_id
-        logging.info(f'Updating CAMS WeedLocations layer with new geolocation: {new_layer_row}')
-        cams_interface.connection.update_weed_location_layer_row(new_layer_row)
-    
-        return global_id, object_id
-
     def get_observation_value(self, observation, key):
         if observation.ofvs:
             list_val = [x for x in observation.ofvs if x.name == key]

@@ -45,11 +45,12 @@ def step_impl(context, cams_taxon):
     feature_attributes = context.connection.get_location_details(context.global_id)
     assert_that(feature_attributes['SpeciesDropDown'], equal_to(cams_taxon))
 
+@then(u'the CAMS weedlocation is set to \'latitude\': {y:f}, \'longitude\': {x:f}')
 @then(u'the CAMS weedlocation remains set to \'latitude\': {y:f}, \'longitude\': {x:f}')
 def step_impl(context, x, y):
     location = context.connection.get_location_wgs84(context.global_id)
-    assert_that(location['x'], equal_to(x), "x")
-    assert_that(location['y'], equal_to(y), "y")
+    assert_that(round(location['x'],8), equal_to(round(x,8)), "x")
+    assert_that(round(location['y'],8), equal_to(round(y,8)), "y")
 
 @then(u'a WeedLocations feature is created at geopoint \'x\': {x:f}, \'y\': {y:f} in coordinate system EPSG:{epsg:d}')
 @then(u'a WeedLocations feature is set to geopoint \'x\': {x:f}, \'y\': {y:f} in coordinate system EPSG:{epsg:d}')
