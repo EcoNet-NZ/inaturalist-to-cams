@@ -8505,3 +8505,23 @@
 |----------|---------|-------|------|--------------|
 |Visit record updated|**59780**|OldMansBeard|PURPLE|[149610719](https://www.inaturalist.org/observations/149610719)|
 |Visit record updated|**67520**|OldMansBeard|RED|[199295518](https://www.inaturalist.org/observations/199295518)|
+---
+
+# Run [9525](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/5c680d69ea14b5b02d0ae6af9636c586bbefbff5/checks/7914025744)
+2024-02-15 22:53
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Weed record updated, Visit record added|**56528**|OldMansBeard|YELLOW|[2770947](https://www.inaturalist.org/observations/2770947)|
+|Weed record updated, Visit record added|**56907**|OldMansBeard|YELLOW|[2989008](https://www.inaturalist.org/observations/2989008)|
+|Weed record updated, Visit record added|**56909**|OldMansBeard|YELLOW|[2989039](https://www.inaturalist.org/observations/2989039)|
+|Weed record updated, Visit record added|**56911**|OldMansBeard|YELLOW|[2989066](https://www.inaturalist.org/observations/2989066)|
+|Weed record updated|**57067**|OldMansBeard|PURPLE|[3370016](https://www.inaturalist.org/observations/3370016)|
+|Weed record updated, Visit record added|**57964**|OldMansBeard|YELLOW|[99293279](https://www.inaturalist.org/observations/99293279)|
+|Weed record updated, Visit record added|**58519**|OldMansBeard|YELLOW|[113353204](https://www.inaturalist.org/observations/113353204)|
+|Weed record updated, Visit record added|**58520**|OldMansBeard|GREEN|[113353259](https://www.inaturalist.org/observations/113353259)|
+|Weed record updated, Visit record added|**58572**|OldMansBeard|GREEN|[117362070](https://www.inaturalist.org/observations/117362070)|
+|Weed record updated, Visit record added|**58909**|OldMansBeard|GREEN|[147245554](https://www.inaturalist.org/observations/147245554)|
+|Weed record updated, Visit record added|**58910**|OldMansBeard|YELLOW|[147245712](https://www.inaturalist.org/observations/147245712)|
+|Weed record updated, Visit record added|**58911**|OldMansBeard|YELLOW|[147245822](https://www.inaturalist.org/observations/147245822)|
+|Weed record updated, Visit record added|**59443**|OldMansBeard|YELLOW|[148360617](https://www.inaturalist.org/observations/148360617)|
