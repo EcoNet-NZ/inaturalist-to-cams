@@ -18,8 +18,6 @@ name: TEST - Synchronise iNaturalist observations to CAMS
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '50 * * * *'
 
 concurrency: non-concurrent
 
