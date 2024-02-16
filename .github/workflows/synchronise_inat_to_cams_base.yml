@@ -14,17 +14,27 @@
 #  limitations under the License.
 #  ====================================================================
 
-name: Synchronise iNaturalist observations to CAMS
+name: Reusable workflow for synchronising iNaturalist observations to CAMS
 
 on:
-  workflow_dispatch:
-  schedule:
-    - cron: '50 * * * *'
-
-concurrency: non-concurrent
-
+  workflow_call:
+    inputs:
+      ENV_TYPE:
+        description: 'The type of environment, eg PRODUCTION, DEVELOPMENT or TEST. Controls whether files are pushed back to GitHub (only if ENV_TYPE == PRODUCTION)'
+        required: true
+        type: string
+    secrets:
+      ARCGIS_URL:
+        required: true
+      ARCGIS_USERNAME:
+        required: true
+      ARCGIS_PASSWORD:
+        required: true
+      ARCGIS_FEATURE_LAYER_ID:
+        required: true
+      
 jobs:
-  build:
+  synchronise:
 
     runs-on: ubuntu-latest
     timeout-minutes: 120
@@ -63,9 +73,10 @@ jobs:
         ARCGIS_URL: ${{ secrets.ARCGIS_URL }}
         ARCGIS_USERNAME: ${{ secrets.ARCGIS_USERNAME }}
         ARCGIS_PASSWORD: ${{ secrets.ARCGIS_PASSWORD }}
-        ARCGIS_FEATURE_LAYER_ID: ${{ secrets.ARCGIS_FEATURE_LAYER_ID_PROD }}
+        ARCGIS_FEATURE_LAYER_ID: ${{ secrets.ARCGIS_FEATURE_LAYER_ID }}
 
     - name: Commit & Push
+      if: ${{ inputs.ENV_TYPE }} == "PRODUCTION"
       uses: actions-js/push@v1.4
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
