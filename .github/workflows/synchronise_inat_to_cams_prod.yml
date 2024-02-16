@@ -14,7 +14,7 @@
 #  limitations under the License.
 #  ====================================================================
 
-name: Synchronise iNaturalist observations to CAMS
+name: Prod - Synchronise iNaturalist observations to CAMS
 
 on:
   workflow_dispatch:
