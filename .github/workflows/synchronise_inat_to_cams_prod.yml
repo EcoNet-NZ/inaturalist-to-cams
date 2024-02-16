@@ -25,7 +25,7 @@ concurrency: non-concurrent
 
 jobs:
   call-reusable-synchronise:
-    uses: ./github/workflows/synchronise_inat_to_cams_base.yml
+    uses: ./github/workflows/synchronise_inat_to_cams_base.yml@refactor-workflows
     with:
       ENV_TYPE: 'PRODUCTION'
     secrets:
