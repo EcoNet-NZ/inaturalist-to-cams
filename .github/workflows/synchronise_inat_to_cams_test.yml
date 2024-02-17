@@ -14,7 +14,7 @@
 #  limitations under the License.
 #  ====================================================================
 
-name: TEST - Synchronise iNaturalist observations to CAMS
+name: Test - Synchronise iNaturalist observations to CAMS
 
 on:
   workflow_dispatch:

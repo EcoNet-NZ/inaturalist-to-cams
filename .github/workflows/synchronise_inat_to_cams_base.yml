@@ -76,7 +76,7 @@ jobs:
         ARCGIS_FEATURE_LAYER_ID: ${{ secrets.ARCGIS_FEATURE_LAYER_ID }}
 
     - name: Commit & Push
-      if: ${{ inputs.ENV_TYPE }} == "PRODUCTION"
+      if: ${{ inputs.ENV_TYPE == 'PRODUCTION' }}
       uses: actions-js/push@v1.4
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
