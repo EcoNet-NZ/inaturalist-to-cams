@@ -9,10 +9,10 @@
         "taxon_ids": ["285911", "51454", "77496", "1442036"],
         "place_ids": ["6868"]
     },
-    "Woolly nightshade - NZ": {
-        "file_prefix": "woolly_nightshade_nz",
+    "Woolly nightshade - Kaipatiki": {
+        "file_prefix": "woolly_nightshade_kaipatiki",
         "taxon_ids": ["133287"],
-        "place_ids": ["6803"]
+        "place_ids": ["123353"]
     },
     "Moth Plant - NZ": {
         "file_prefix": "moth_plant_nz",
