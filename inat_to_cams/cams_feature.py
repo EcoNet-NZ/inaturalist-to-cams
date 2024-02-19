@@ -26,13 +26,12 @@ class CamsFeature:
         self.geolocation = geolocation
         self.weed_location = weed_location
         self.latest_weed_visit = latest_weed_visit
+        normalise_geolocation(self.__dict__)
 
     def __eq__(self, other):
         if type(other) is type(self):
             self_dict = self.__dict__
-            other_dict = other.__dict__
-            normalise_geolocation(self_dict)
-            normalise_geolocation(other_dict)
+            other_dict = other.__dict__          
             return self_dict == other_dict
         return False
 

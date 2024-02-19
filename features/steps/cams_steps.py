@@ -49,8 +49,8 @@ def step_impl(context, cams_taxon):
 @then(u'the CAMS weedlocation remains set to \'latitude\': {y:f}, \'longitude\': {x:f}')
 def step_impl(context, x, y):
     location = context.connection.get_location_wgs84(context.global_id)
-    assert_that(round(location['x'],8), equal_to(round(x,8)), "x")
-    assert_that(round(location['y'],8), equal_to(round(y,8)), "y")
+    assert_that(round(location['x'],8), equal_to(round(x,6)), "x")
+    assert_that(round(location['y'],8), equal_to(round(y,6)), "y")
 
 @then(u'a WeedLocations feature is created at geopoint \'x\': {x:f}, \'y\': {y:f} in coordinate system EPSG:{epsg:d}')
 @then(u'a WeedLocations feature is set to geopoint \'x\': {x:f}, \'y\': {y:f} in coordinate system EPSG:{epsg:d}')

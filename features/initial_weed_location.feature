@@ -2,9 +2,9 @@ Feature: Processing a new iNaturalist observation populates a new WeedLocation f
 
 	Rule: WeedLocation feature is created at the correct location
 		Example: Correct location is set for new observations
-		Given iNaturalist has a new OMB observation at 'latitude': -41.2920665997, 'longitude': 174.7628175
+		Given iNaturalist has a new OMB observation at 'latitude': -41.292066, 'longitude': 174.762817
 		When we process the observation
-		Then a WeedLocations feature is created at geopoint 'x': 19454507.8536978, 'y': -5055517.338865108 in coordinate system EPSG:3857
+		Then a WeedLocations feature is created at geopoint 'x': 19454507.798038054, 'y': -5055517.250014626 in coordinate system EPSG:3857
 
 	Rule: The 'SiteSource' field is set to 'iNaturalist_v1'
 		Example: SiteSource is always set
