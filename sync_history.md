@@ -8903,3 +8903,22 @@
 |Sync Event|Object Id|Species|Status|iNaturalist Id|
 |----------|---------|-------|------|--------------|
 |Visit record updated|**67180**|OldMansBeard|RED|[198458834](https://www.inaturalist.org/observations/198458834)|
+---
+
+# Run [87](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/fd71c8ea6387da41ae72ba31ef8dcdf7e2b8ec06/checks/7970796432)
+2024-02-20 21:56
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Weed record updated, Visit record added|**57584**|OldMansBeard|GREEN|[66502727](https://www.inaturalist.org/observations/66502727)|
+|Weed record updated, Visit record added|**57585**|OldMansBeard|RED|[66639531](https://www.inaturalist.org/observations/66639531)|
+|Weed record updated, Visit record added|**57673**|OldMansBeard|GREEN|[70484152](https://www.inaturalist.org/observations/70484152)|
+|Weed record updated, Visit record added|**57943**|OldMansBeard|GREEN|[97857096](https://www.inaturalist.org/observations/97857096)|
+|Weed record updated, Visit record added|**58016**|OldMansBeard|GREEN|[101812022](https://www.inaturalist.org/observations/101812022)|
+|Weed record updated, Visit record added|**58777**|OldMansBeard|YELLOW|[143328346](https://www.inaturalist.org/observations/143328346)|
+|Weed record updated, Visit record added|**59733**|OldMansBeard|YELLOW|[149520367](https://www.inaturalist.org/observations/149520367)|
+|Weed record updated, Visit record added|**59734**|OldMansBeard|YELLOW|[149521471](https://www.inaturalist.org/observations/149521471)|
+|Weed record updated, Visit record added|**59949**|OldMansBeard|GREEN|[150272457](https://www.inaturalist.org/observations/150272457)|
+|Weed record updated, Visit record added|**60685**|OldMansBeard|YELLOW|[155236467](https://www.inaturalist.org/observations/155236467)|
+|Weed record updated, Visit record added|**59075**|BananaPassionfruit|GREEN|[66798990](https://www.inaturalist.org/observations/66798990)|
+|Weed record updated, Visit record added|**66082**|CathedralBells|YELLOW|[196182872](https://www.inaturalist.org/observations/196182872)|
