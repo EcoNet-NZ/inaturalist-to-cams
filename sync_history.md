@@ -8938,3 +8938,11 @@
 |Sync Event|Object Id|Species|Status|iNaturalist Id|
 |----------|---------|-------|------|--------------|
 |Visit record updated|**67807**|BlueMorningGlory|RED|[199919007](https://www.inaturalist.org/observations/199919007)|
+---
+
+# Run [99](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/7ad2e917f5c5998b4c1332a0cce4762497649409/checks/7979844903)
+2024-02-21 09:55
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Visit record updated|**67807**|BlueMorningGlory|RED|[199919007](https://www.inaturalist.org/observations/199919007)|
