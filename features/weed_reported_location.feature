@@ -16,6 +16,11 @@
 
 Feature: Processing iNaturalist observations populates the reported weed location correctly
 
+When an iNaturalist observation is synchronised with CAMS, it will store the originally reported location in CAMS. 
+This reported location is used to determine if the CAMS location has been updated manually. If it has, then 
+the synch should not synchronise the geolocation aspect of the iNat observation but only any other changed details.
+All iNat geolocations are rounded to 6 decimal places before being written to cams
+
     Rule: The reported location fields are at the correct latitude and longitude
         Example: Correct reported location is set for new observations
             Given iNaturalist has a new OMB observation at 'latitude': -41.2920665997, 'longitude': 174.7628175
