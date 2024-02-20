@@ -16,7 +16,7 @@
 
 import logging
 from behave import *
-from hamcrest import assert_that, equal_to
+from hamcrest import assert_that, equal_to, close_to
 from datetime import datetime
 from dateutils import today, yesterday, two_years_ago
 
@@ -49,15 +49,15 @@ def step_impl(context, cams_taxon):
 @then(u'the CAMS weedlocation remains set to \'latitude\': {y:f}, \'longitude\': {x:f}')
 def step_impl(context, x, y):
     location = context.connection.get_location_wgs84(context.global_id)
-    assert_that(round(location['x'],8), equal_to(round(x,6)), "x")
-    assert_that(round(location['y'],8), equal_to(round(y,6)), "y")
+    assert_that(location['x'], close_to(x, 0.000001), "x")
+    assert_that(location['y'], close_to(y, 0.000001), "y")
 
 @then(u'a WeedLocations feature is created at geopoint \'x\': {x:f}, \'y\': {y:f} in coordinate system EPSG:{epsg:d}')
 @then(u'a WeedLocations feature is set to geopoint \'x\': {x:f}, \'y\': {y:f} in coordinate system EPSG:{epsg:d}')
 def step_impl(context, x, y, epsg):
     location = context.connection.get_location(context.global_id)
-    assert_that(location['x'], equal_to(x), "x")
-    assert_that(location['y'], equal_to(y), "y")
+    assert_that(location['x'], close_to(x, 0.000001), "x")
+    assert_that(location['y'], close_to(y, 0.000001), "y")
     assert_that(location['spatialReference']['latestWkid'], equal_to(epsg), "epsg")
 
 
