@@ -22,7 +22,7 @@ from dateutils import today, yesterday, two_years_ago
 
 from inat_to_cams import exceptions
 from features.support import observation_factory
-
+FLOAT_DELTA = 0.00000001
 
 @given(u'the visits table does not have a record with iNaturalist id {inat_id}')
 def step_impl(context, inat_id):
@@ -49,15 +49,16 @@ def step_impl(context, cams_taxon):
 @then(u'the CAMS weedlocation remains set to \'latitude\': {y:f}, \'longitude\': {x:f}')
 def step_impl(context, x, y):
     location = context.connection.get_location_wgs84(context.global_id)
-    assert_that(location['x'], close_to(x, 0.000001), "x")
-    assert_that(location['y'], close_to(y, 0.000001), "y")
+    assert_that(location['x'], close_to(x, FLOAT_DELTA), "x")
+    assert_that(location['y'], close_to(y, FLOAT_DELTA), "y")
 
 @then(u'a WeedLocations feature is created at geopoint \'x\': {x:f}, \'y\': {y:f} in coordinate system EPSG:{epsg:d}')
 @then(u'a WeedLocations feature is set to geopoint \'x\': {x:f}, \'y\': {y:f} in coordinate system EPSG:{epsg:d}')
 def step_impl(context, x, y, epsg):
     location = context.connection.get_location(context.global_id)
-    assert_that(location['x'], close_to(x, 0.000001), "x")
-    assert_that(location['y'], close_to(y, 0.000001), "y")
+    assert_that(location['x'], close_to(x, FLOAT_DELTA), "x")
+    
+    assert_that(location['y'], close_to(y,  FLOAT_DELTA), "y")
     assert_that(location['spatialReference']['latestWkid'], equal_to(epsg), "epsg")
 
 
