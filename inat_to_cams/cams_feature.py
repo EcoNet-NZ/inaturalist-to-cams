@@ -13,11 +13,8 @@
 #  See the License for the specific language governing permissions and
 #  limitations under the License.
 #  ====================================================================
-
-def normalise_geolocation(geo_dict):
-    geo_dict['geolocation']['spatialReference'].pop('latestWkid', None)
-    geo_dict['geolocation']['x'] = round(geo_dict['geolocation']['x'], 6)
-    geo_dict['geolocation']['y'] = round(geo_dict['geolocation']['y'], 6)
+import logging
+FLOAT_DELTA = 1e-9
 
 
 class CamsFeature:
@@ -25,14 +22,16 @@ class CamsFeature:
     def __init__(self, geolocation, weed_location, latest_weed_visit):
         self.geolocation = geolocation
         self.weed_location = weed_location
-        self.latest_weed_visit = latest_weed_visit
-        normalise_geolocation(self.__dict__)
+        self.latest_weed_visit = latest_weed_visit        
+        self.__dict__['geolocation']['spatialReference'].pop('latestWkid', None)
 
     def __eq__(self, other):
         if type(other) is type(self):
-            self_dict = self.__dict__
-            other_dict = other.__dict__          
-            return self_dict == other_dict
+            geolocation_comparison = abs(self.geolocation['x'] - other.geolocation['x']) < FLOAT_DELTA and abs(self.geolocation['y'] - other.geolocation['y'])<FLOAT_DELTA
+            weed_location_comparison = self.weed_location == other.weed_location
+            latest_weed_visit_comparison = self.latest_weed_visit == other.latest_weed_visit
+            return geolocation_comparison and weed_location_comparison and latest_weed_visit_comparison
+ 
         return False
 
     def __hash__(self):

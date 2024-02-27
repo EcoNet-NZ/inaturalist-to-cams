@@ -42,7 +42,7 @@ Feature: Processing an updated iNaturalist observation populates the existing We
         And that observation has been synced
         And the geolocation is updated to 'latitude': -41.1234567, 'longitude': 174.7654321
         When we process the observation
-        Then a WeedLocations feature is set to geopoint 'x': 19454798.898506477, 'y': -5030568.632887149 in coordinate system EPSG:3857
+        Then a WeedLocations feature is set to geopoint 'x': 19454798.909638427, 'y': -5030568.588554074 in coordinate system EPSG:3857
 
 	Rule: The weed location record is updated with changes to relevant fields
 		Example: The location info is updated

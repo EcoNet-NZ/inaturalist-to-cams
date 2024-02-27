@@ -22,7 +22,7 @@ from dateutils import today, yesterday, two_years_ago
 
 from inat_to_cams import exceptions
 from features.support import observation_factory
-FLOAT_DELTA = 0.00000001
+FLOAT_DELTA = 1e-9
 
 @given(u'the visits table does not have a record with iNaturalist id {inat_id}')
 def step_impl(context, inat_id):
