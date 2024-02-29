@@ -66,7 +66,6 @@ class CamsReader:
         
         for featureRow in rows.features:
             location = cams_feature.WeedLocation()
-            logging.info(f'Found feature geolocation {featureRow.geometry}')
             logging.info(f'Found layer row {featureRow}')
 
             location.object_id = featureRow.attributes['OBJECTID']

@@ -96,7 +96,6 @@ class CamsConnection:
     @retry(delay=5, tries=3)
     def update_weed_location_layer_row(self, new_layer_row):
         results = self.layer.edit_features(updates=new_layer_row)
-        logging.info(f'Updating layer row results: {results}')
         assert len(results['updateResults']) == 1
         assert results['updateResults'][0]['success'], f"Error writing WeedLocation {results['updateResults'][0]}"
 

@@ -16,49 +16,53 @@
 
 Feature: Processing iNaturalist observations populates the reported weed location correctly
 
-When an iNaturalist observation is synchronised with CAMS, it will store the originally reported location in CAMS. 
-This reported location is used to determine if the CAMS location has been updated manually. If it has, then 
-the synch should not synchronise the geolocation aspect of the iNat observation but only any other changed details.
-All iNat geolocations are rounded to 6 decimal places before being written to cams
+On an initial synchronisation of an iNaturalist observation to CAMS, the location of the iNaturalist observation is saved to 
+the CAMS feature geolocation and to the "Reported Latitude" and "Reported Longitude" fields of the feature. 
+These latter two fields are referred to as the "reported location" below.
 
-    Rule: The reported location fields are at the correct latitude and longitude
-        Example: Correct reported location is set for new observations
-            Given iNaturalist has a new OMB observation at 'latitude': -41.2920665997, 'longitude': 174.7628175
-            When we process the observation
-            Then the reported location is recorded as 'latitude': -41.2920665997, 'longitude': 174.7628175
+After synchronising the observation to CAMS, a user may then update the geolocation of the weed feature on the CAMS map. 
+If this occurs, we don't want to overwrite the location updated by the CAMS user unless the iNaturalist user subsequently updates the location.
+The synchroniser reads the CAMS feature geolocation and compares it to the CAMS reported location fields to determine 
+whether the location has been updated by the user. If it has, the iNaturalist location will not override the CAMS geolocation.
+
+Rule: Whenever the iNaturalist location is updated, both the CAMS feature geolocation and the reported location fields are updated
+    Example: The CAMS reported location is set to the iNaturalist location for new observations
+        Given iNaturalist has a new observation at 'latitude': -41.2920665997, 'longitude': 174.7628175
+        When we process the observation
+        Then the reported location is recorded in CAMS as 'latitude': -41.2920665997, 'longitude': 174.7628175
+
+    Example: The CAMS reported location is updated when the iNaturalist location is changed
+        Given iNaturalist has an existing observation at 'latitude': -41.2920665997, 'longitude': 174.7628175
+        And that observation has been synced
+        And the geolocation is updated to 'latitude': -41.1234567, 'longitude': 174.7654321
+        When we process the observation
+        Then the reported location is recorded in CAMS as 'latitude': -41.1234567, 'longitude': 174.7654321
     
- 
-    Rule: The CAMS reported location is updated when the iNaturalist observation geolocation is changed
-        Example: The CAMS reported location is updated when the iNaturalist geolocation is changed
-            Given iNaturalist has an existing OMB observation at 'latitude': -41.2920665997, 'longitude': 174.7628175
-            And that observation has been synced
-            And the geolocation is updated to 'latitude': -41.1234567, 'longitude': 174.7654321
-            When we process the observation
-            Then the reported location is recorded as 'latitude': -41.1234567, 'longitude': 174.7654321
-       
-    Rule: Existing iNat observations whose geolocation matches the CAMS reported-location do not overwrite the CAMS geolocation when other details have changed
-        Example: The CAMS geolocation is not updated if the CAMS reported-location is the same as the inat-observation location       
-            Given iNaturalist has an existing OMB observation at 'latitude': -41.123456, 'longitude': 174.123456
-            And that observation has been synced
-            And the CAMS weedlocation has been manually updated to 'latitude': -41.123666, 'longitude': 174.123666
-            And the iNaturalist 'Date controlled' is updated 
-            When we process the observation       
-            Then the CAMS weedlocation remains set to 'latitude': -41.123666, 'longitude': 174.123666
+    Example: For an unchanged, existing CAMS feature, the CAMS geolocation and reported location are updated when the original iNaturalist location is changed
+        Given iNaturalist has an existing observation at 'latitude': -41.291111, 'longitude': 174.761111
+        And that observation has been synced
+        And the geolocation is updated to 'latitude': -41.292222, 'longitude': 174.762222
+        When we process the observation
+        Then the reported location is recorded in CAMS as 'latitude': -41.292222, 'longitude': 174.762222
+        And the CAMS geolocation is set to 'latitude': -41.292222, 'longitude': 174.762222
 
-    Rule: Both the CAMS geolocation and the CAMS reported-location are updated when the iNaturalist geolocation is changed
-        Example: For an unchanged CAMS feature, the CAMS geolocation and reported-location are updated when the original iNaturalist geolocation is changed
-            Given iNaturalist has an existing OMB observation at 'latitude': -41.291111, 'longitude': 174.761111
-            And that observation has been synced
-            And the geolocation is updated to 'latitude': -41.292222, 'longitude': 174.762222
-            When we process the observation
-            Then the reported location is recorded as 'latitude': -41.292222, 'longitude': 174.762222
-            And the CAMS weedlocation is set to 'latitude': -41.292222, 'longitude': 174.762222
+    Example: For a changed CAMS feature, the CAMS geolocation and reported location are updated when the iNaturalist location is changed
+        Given iNaturalist has an existing observation at 'latitude': -41.291111, 'longitude': 174.761111
+        And that observation has been synced
+        And the CAMS geolocation has been manually updated to 'latitude': -41.123666, 'longitude': 174.123666
+        And the geolocation is updated to 'latitude': -41.292222, 'longitude': 174.762222
+        When we process the observation
+        Then the reported location is recorded in CAMS as 'latitude': -41.292222, 'longitude': 174.762222
+        And the CAMS geolocation is set to 'latitude': -41.292222, 'longitude': 174.762222
 
-        Example: For a changed CAMS feature, the CAMS geolocation and reported-location are updated when the iNaturalist geolocation is changed
-            Given iNaturalist has an existing OMB observation at 'latitude': -41.291111, 'longitude': 174.761111
-            And that observation has been synced
-            And the CAMS weedlocation has been manually updated to 'latitude': -41.123666, 'longitude': 174.123666
-            And the geolocation is updated to 'latitude': -41.292222, 'longitude': 174.762222
-            When we process the observation
-            Then the reported location is recorded as 'latitude': -41.292222, 'longitude': 174.762222
-            And the CAMS weedlocation is set to 'latitude': -41.292222, 'longitude': 174.762222
+Rule: After the CAMS user updates the geolocation, it is not overwritten unless the iNaturalist location is subsequently updated
+    Example: The CAMS geolocation is not updated if the CAMS reported location is the same as the iNaturalist location       
+        Given iNaturalist has an existing observation at 'latitude': -41.123456, 'longitude': 174.123456
+        And that observation has been synced
+        And the CAMS geolocation has been manually updated to 'latitude': -41.123666, 'longitude': 174.123666
+        And the iNaturalist 'Date controlled' is updated 
+        When we process the observation       
+        Then the CAMS geolocation remains set to 'latitude': -41.123666, 'longitude': 174.123666
+
+
+        

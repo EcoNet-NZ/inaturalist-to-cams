@@ -45,6 +45,8 @@ def step_impl(context, cams_taxon):
     feature_attributes = context.connection.get_location_details(context.global_id)
     assert_that(feature_attributes['SpeciesDropDown'], equal_to(cams_taxon))
 
+@then(u'the CAMS geolocation is set to \'latitude\': {y:f}, \'longitude\': {x:f}')
+@then(u'the CAMS geolocation remains set to \'latitude\': {y:f}, \'longitude\': {x:f}')
 @then(u'the CAMS weedlocation is set to \'latitude\': {y:f}, \'longitude\': {x:f}')
 @then(u'the CAMS weedlocation remains set to \'latitude\': {y:f}, \'longitude\': {x:f}')
 def step_impl(context, x, y):
@@ -62,7 +64,7 @@ def step_impl(context, x, y, epsg):
     assert_that(location['spatialReference']['latestWkid'], equal_to(epsg), "epsg")
 
 
-@then(u'the reported location is recorded as \'latitude\': {y:f}, \'longitude\': {x:f}')
+@then(u'the reported location is recorded in CAMS as \'latitude\': {y:f}, \'longitude\': {x:f}')
 def step_impl(context, x, y):
     feature_attributes = context.connection.get_location_details(context.global_id)
     assert_that(feature_attributes['ReportedLongitude'], equal_to(x), "x")
@@ -175,7 +177,7 @@ def step_impl(context):
 def step_impl(context):
     context.updated_observation = context.reader.read_observation(context.observation.id)
 
-@given(u'the CAMS weedlocation has been manually updated to \'latitude\': {lat:f}, \'longitude\': {lon:f}')
+@given(u'the CAMS geolocation has been manually updated to \'latitude\': {lat:f}, \'longitude\': {lon:f}')
 def step_impl(context, lat, lon):
    observation = context.observation
    writer = context.writer
