@@ -60,12 +60,12 @@
             "type": "String",
             "length": 256
         },
-        "Reported Longitude":{
-            "name": "ReportedLongitude",
+        "iNaturalist Longitude":{
+            "name": "iNatLongitude",
             "type": "Double"
         },
-        "Reported Latitude":{
-            "name": "ReportedLatitude",
+        "iNaturalist Latitude":{
+            "name": "iNatLatitude",
             "type": "Double"
         }
     },

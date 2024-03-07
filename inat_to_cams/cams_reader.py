@@ -75,8 +75,8 @@ class CamsReader:
             location.data_source = cams_schema_config.cams_field_key('WeedLocations', 'DataSource', featureRow.attributes['SiteSource'])
             location.location_details = featureRow.attributes['LocationInfo']
             location.effort_to_control = featureRow.attributes['Urgency']
-            location.reported_longitude = featureRow.attributes['ReportedLongitude']
-            location.reported_latitude = featureRow.attributes['ReportedLatitude']
+            location.iNaturalist_longitude = featureRow.attributes['iNatLongitude']
+            location.iNaturalist_latitude = featureRow.attributes['iNatLatitude']
             location.current_status = cams_schema_config.cams_field_key('WeedLocations', 'CurrentStatus', featureRow.attributes['ParentStatusWithDomain'])
 
             # Temporarily until updated from weed visit by database trigger

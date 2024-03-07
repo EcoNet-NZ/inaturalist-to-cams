@@ -53,8 +53,8 @@ class WeedLocation:
         self.species = None
         self.data_source = None
         self.location_details = None
-        self.reported_longitude = None
-        self.reported_latitude = None
+        self.iNaturalist_longitude = None
+        self.iNaturalist_latitude = None
         self.effort_to_control = None
         self.current_status = None
         self.external_url = None

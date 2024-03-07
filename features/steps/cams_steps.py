@@ -64,11 +64,11 @@ def step_impl(context, x, y, epsg):
     assert_that(location['spatialReference']['latestWkid'], equal_to(epsg), "epsg")
 
 
-@then(u'the reported location is recorded in CAMS as \'latitude\': {y:f}, \'longitude\': {x:f}')
+@then(u'the iNaturalist location is recorded in CAMS as \'latitude\': {y:f}, \'longitude\': {x:f}')
 def step_impl(context, x, y):
     feature_attributes = context.connection.get_location_details(context.global_id)
-    assert_that(feature_attributes['ReportedLongitude'], equal_to(x), "x")
-    assert_that(feature_attributes['ReportedLatitude'], equal_to(y), "y")
+    assert_that(feature_attributes['iNatLongitude'], equal_to(x), "x")
+    assert_that(feature_attributes['iNatLatitude'], equal_to(y), "y")
    
 
 @then(u'the visits table has {expected_count:d} record with iNaturalist id {inat_id}')

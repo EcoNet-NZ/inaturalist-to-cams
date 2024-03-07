@@ -48,8 +48,8 @@ class INatToCamsTranslator:
         weed_location.species = cams_taxon
         weed_location.data_source = 'iNaturalist'
         weed_location.location_details = inat_observation.location_details
-        weed_location.reported_longitude = inat_observation.location.x
-        weed_location.reported_latitude = inat_observation.location.y
+        weed_location.iNaturalist_longitude = inat_observation.location.x
+        weed_location.iNaturalist_latitude = inat_observation.location.y
         effort_to_control = inat_observation.effort_to_control
         if effort_to_control:
             effort_to_control = int(effort_to_control[:1])

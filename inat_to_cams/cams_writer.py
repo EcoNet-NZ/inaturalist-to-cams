@@ -35,7 +35,7 @@ class CamsWriter:
                 return
 
             #weed_geolocation_modified = existing_feature.geolocation != cams_feature.geolocation
-            weed_geolocation_modified = (existing_feature.weed_location.reported_latitude != cams_feature.weed_location.reported_latitude) or (existing_feature.weed_location.reported_longitude != cams_feature.weed_location.reported_longitude)
+            weed_geolocation_modified = (existing_feature.weed_location.iNaturalist_latitude != cams_feature.weed_location.iNaturalist_latitude) or (existing_feature.weed_location.iNaturalist_longitude != cams_feature.weed_location.iNaturalist_longitude)
 
             weed_location_modified = existing_feature.weed_location != cams_feature.weed_location
             weed_visit_modified = existing_feature.latest_weed_visit != cams_feature.latest_weed_visit
@@ -142,8 +142,8 @@ class CamsWriter:
             ('iNaturalistURL', cams_feature.weed_location.external_url)
         ]
         if write_geolocation:
-            fields.append(('Reported Longitude', cams_feature.weed_location.reported_longitude))
-            fields.append(('Reported Latitude', cams_feature.weed_location.reported_latitude))
+            fields.append(('iNaturalist Longitude', cams_feature.weed_location.iNaturalist_longitude))
+            fields.append(('iNaturalist Latitude', cams_feature.weed_location.iNaturalist_latitude))
             new_layer_row[0]['geometry']=cams_feature.geolocation           
             logging.info(f'Weed geolocation has been modified in iNaturalist')
 
