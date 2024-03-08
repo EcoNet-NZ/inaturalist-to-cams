@@ -72,7 +72,7 @@ def step_impl(context, inat_id, observation_date):
 def step_impl(context, lat, lon):
     context.observation = observation_factory.ObservationFactory(location=(lat, lon))
 
-
+@given(u"the iNaturalist location is updated to 'latitude': {lat:f}, 'longitude': {lon:f}")
 @given(u"the geolocation is updated to 'latitude': {lat:f}, 'longitude': {lon:f}")
 def step_impl(context, lat, lon):
     context.observation.location = (lat, lon)

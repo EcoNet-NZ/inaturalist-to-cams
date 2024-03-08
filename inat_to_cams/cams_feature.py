@@ -23,7 +23,6 @@ class CamsFeature:
         self.geolocation = geolocation
         self.weed_location = weed_location
         self.latest_weed_visit = latest_weed_visit        
-        self.__dict__['geolocation']['spatialReference'].pop('latestWkid', None)
 
     def __eq__(self, other):
         if type(other) is type(self):

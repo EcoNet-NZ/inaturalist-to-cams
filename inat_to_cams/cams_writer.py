@@ -16,7 +16,6 @@
 
 from datetime import datetime
 import logging
-from arcgis import geometry
 from inat_to_cams import cams_interface, cams_reader, config, summary_logger
 
 
