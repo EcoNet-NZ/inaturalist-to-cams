@@ -39,10 +39,10 @@ Rule: Whenever the iNaturalist location is updated, both the CAMS feature geoloc
         When we process the observation
         Then the CAMS iNaturalist location is recorded as 'latitude': -41.1234567, 'longitude': 174.7654321
     
-    Example: For an unchanged, existing CAMS feature, the CAMS geolocation and iNaturalist location are updated when the original iNaturalist location is changed
+    Example: For an unchanged, existing CAMS feature, the CAMS geolocation and CAMS iNaturalist location are updated when the original iNaturalist location is changed
         Given iNaturalist has an existing observation at 'latitude': -41.291111, 'longitude': 174.761111
         And that observation has been synced
-        And the geolocation is updated to 'latitude': -41.292222, 'longitude': 174.762222
+        And the iNaturalist location is updated to 'latitude': -41.292222, 'longitude': 174.762222
         When we process the observation
         Then the CAMS iNaturalist location is recorded as 'latitude': -41.292222, 'longitude': 174.762222
         And the CAMS geolocation is set to 'latitude': -41.292222, 'longitude': 174.762222
