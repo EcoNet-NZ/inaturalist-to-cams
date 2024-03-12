@@ -224,7 +224,7 @@ In addition to these configuration files, the following environment variables ar
 
 ## Code
 
-The code is written in Python 3.9. 
+The code is written in Python 3.11. 
 
 ### Dependencies
 

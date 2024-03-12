@@ -16,7 +16,6 @@
 
 from datetime import datetime
 import logging
-
 from inat_to_cams import cams_interface, cams_reader, config, summary_logger
 
 
@@ -34,7 +33,9 @@ class CamsWriter:
                 logging.info('No relevant updates to observation')
                 return
 
-            weed_geolocation_modified = existing_feature.geolocation != cams_feature.geolocation
+            #weed_geolocation_modified = existing_feature.geolocation != cams_feature.geolocation
+            weed_geolocation_modified = (existing_feature.weed_location.iNaturalist_latitude != cams_feature.weed_location.iNaturalist_latitude) or (existing_feature.weed_location.iNaturalist_longitude != cams_feature.weed_location.iNaturalist_longitude)
+
             weed_location_modified = existing_feature.weed_location != cams_feature.weed_location
             weed_visit_modified = existing_feature.latest_weed_visit != cams_feature.latest_weed_visit
             logging.info('Updating existing feature')
@@ -48,7 +49,7 @@ class CamsWriter:
             weed_visit_modified = True
 
         if weed_geolocation_modified or weed_location_modified:
-            global_id, object_id = self.write_feature(cams_feature, inat_id, existing_feature, dry_run)
+            global_id, object_id = self.write_feature(cams_feature, inat_id, existing_feature, dry_run, weed_geolocation_modified)
         else:
             global_id = existing_feature.weed_location.global_id
             object_id = existing_feature.weed_location.object_id
@@ -123,11 +124,10 @@ class CamsWriter:
                 assert results['updateResults'][0]['success'], f"Error writing WeedVisits {results['updateResults'][0]}"
         return new_weed_visit_record
 
-    def write_feature(self, cams_feature, inat_id, existing_feature, dry_run):
+    def write_feature(self, cams_feature, inat_id, existing_feature, dry_run, write_geolocation):
         global_id = None
-        logging.info(f'Writing feature to CAMS with iNaturalist id {inat_id}')
-        new_layer_row = [{
-            'geometry': cams_feature.geolocation,
+        logging.info(f'Writing feature to CAMS with iNaturalist id {inat_id} geometry: {cams_feature.geolocation}')
+        new_layer_row = [{            
             'attributes': {
             }
         }]
@@ -135,11 +135,17 @@ class CamsWriter:
             ('Date First Observed', cams_feature.weed_location.date_first_observed),
             ('Species', cams_feature.weed_location.species),
             ('DataSource', cams_feature.weed_location.data_source),
-            ('Location details', cams_feature.weed_location.location_details),
+            ('Location details', cams_feature.weed_location.location_details),          
             ('Effort to control', cams_feature.weed_location.effort_to_control),
             ('CurrentStatus', cams_feature.weed_location.current_status),
             ('iNaturalistURL', cams_feature.weed_location.external_url)
         ]
+        if write_geolocation:
+            fields.append(('iNaturalist Longitude', cams_feature.weed_location.iNaturalist_longitude))
+            fields.append(('iNaturalist Latitude', cams_feature.weed_location.iNaturalist_latitude))
+            new_layer_row[0]['geometry']=cams_feature.geolocation           
+            logging.info(f'Weed geolocation has been modified in iNaturalist')
+
         [self.add_field(new_layer_row[0], 'WeedLocations', field) for field in fields]
         if not dry_run:
             if existing_feature:

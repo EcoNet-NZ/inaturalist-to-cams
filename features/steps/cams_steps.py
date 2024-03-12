@@ -16,12 +16,13 @@
 
 import logging
 from behave import *
-from hamcrest import assert_that, equal_to
+from hamcrest import assert_that, equal_to, close_to
 from datetime import datetime
 from dateutils import today, yesterday, two_years_ago
 
 from inat_to_cams import exceptions
 
+FLOAT_DELTA = 1e-9
 
 @given(u'the visits table does not have a record with iNaturalist id {inat_id}')
 def step_impl(context, inat_id):
@@ -44,15 +45,31 @@ def step_impl(context, cams_taxon):
     feature_attributes = context.connection.get_location_details(context.global_id)
     assert_that(feature_attributes['SpeciesDropDown'], equal_to(cams_taxon))
 
+@then(u'the CAMS geolocation is set to \'latitude\': {y:f}, \'longitude\': {x:f}')
+@then(u'the CAMS geolocation remains set to \'latitude\': {y:f}, \'longitude\': {x:f}')
+@then(u'the CAMS weedlocation is set to \'latitude\': {y:f}, \'longitude\': {x:f}')
+@then(u'the CAMS weedlocation remains set to \'latitude\': {y:f}, \'longitude\': {x:f}')
+def step_impl(context, x, y):
+    location = context.connection.get_location_wgs84(context.global_id)
+    assert_that(location['x'], close_to(x, FLOAT_DELTA), "x")
+    assert_that(location['y'], close_to(y, FLOAT_DELTA), "y")
 
 @then(u'a WeedLocations feature is created at geopoint \'x\': {x:f}, \'y\': {y:f} in coordinate system EPSG:{epsg:d}')
 @then(u'a WeedLocations feature is set to geopoint \'x\': {x:f}, \'y\': {y:f} in coordinate system EPSG:{epsg:d}')
 def step_impl(context, x, y, epsg):
     location = context.connection.get_location(context.global_id)
-    assert_that(location['x'], equal_to(x), "x")
-    assert_that(location['y'], equal_to(y), "y")
+    assert_that(location['x'], close_to(x, FLOAT_DELTA), "x")
+    
+    assert_that(location['y'], close_to(y,  FLOAT_DELTA), "y")
     assert_that(location['spatialReference']['latestWkid'], equal_to(epsg), "epsg")
 
+
+@then(u'the CAMS iNaturalist location is recorded as \'latitude\': {y:f}, \'longitude\': {x:f}')
+def step_impl(context, x, y):
+    feature_attributes = context.connection.get_location_details(context.global_id)
+    assert_that(feature_attributes['iNatLongitude'], equal_to(x), "x")
+    assert_that(feature_attributes['iNatLatitude'], equal_to(y), "y")
+   
 
 @then(u'the visits table has {expected_count:d} record with iNaturalist id {inat_id}')
 def step_impl(context, expected_count, inat_id):
@@ -160,7 +177,12 @@ def step_impl(context):
 def step_impl(context):
     context.updated_observation = context.reader.read_observation(context.observation.id)
 
-
+@given(u'the CAMS geolocation has been manually updated to \'latitude\': {lat:f}, \'longitude\': {lon:f}')
+def step_impl(context, lat, lon):
+   observation = context.observation
+   writer = context.writer
+   writer.update_feature_geolocation(observation.id, lon, lat)
+  
 @then(u'the updated observation is unchanged')
 def step_impl(context):
     current_observation = context.reader.read_observation(context.observation.id)

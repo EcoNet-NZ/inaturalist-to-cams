@@ -45,7 +45,7 @@ def step_impl(context, latitude, longitude):
     assert_that(context.observation.location[0], equal_to(latitude)), 'latitude'
     assert_that(context.observation.location[1], equal_to(longitude)), 'longitude'
 
-
+@given(u'iNaturalist has a new observation')
 @given(u'iNaturalist has a new OMB observation')
 def step_impl(context):
     context.observation = observation_factory.ObservationFactory()
@@ -65,13 +65,14 @@ def step_impl(context, observation_date):
 def step_impl(context, inat_id, observation_date):
     context.observation = observation_factory.ObservationFactory(id=inat_id, observed_on=observation_date)
 
-
+@given(u"iNaturalist has an existing observation at 'latitude': {lat:f}, 'longitude': {lon:f}")
+@given(u"iNaturalist has a new observation at 'latitude': {lat:f}, 'longitude': {lon:f}")
 @given(u"iNaturalist has a new OMB observation at 'latitude': {lat:f}, 'longitude': {lon:f}")
 @given(u"iNaturalist has an existing OMB observation at 'latitude': {lat:f}, 'longitude': {lon:f}")
 def step_impl(context, lat, lon):
     context.observation = observation_factory.ObservationFactory(location=(lat, lon))
 
-
+@given(u"the iNaturalist location is updated to 'latitude': {lat:f}, 'longitude': {lon:f}")
 @given(u"the geolocation is updated to 'latitude': {lat:f}, 'longitude': {lon:f}")
 def step_impl(context, lat, lon):
     context.observation.location = (lat, lon)
@@ -231,6 +232,7 @@ def step_impl(context, date_field):
 
 @given(u"'{date_field}' = yesterday")
 @given(u"'{date_field}' is updated to yesterday")
+@given(u"the iNaturalist '{date_field}' is updated")
 def step_impl(context, date_field):
     ofv = pyinaturalist.ObservationFieldValue(name=date_field, value=yesterday().astimezone())
     context.observation.ofvs = context.observation.ofvs + [ofv]

@@ -82,7 +82,9 @@ class CamsConnection:
 
     @retry(delay=5, tries=3)
     def query_weed_location_layer_wgs84(self, query_layer):
-        return self.layer.query(where=query_layer, out_sr=4326)
+        results = self.layer.query(where=query_layer, out_sr=4326)
+        #logging.info(f"Found Location Layer sgs84 {results}")
+        return results
 
     @retry(delay=5, tries=3)
     def add_weed_location_layer_row(self, new_layer_row):
@@ -193,7 +195,13 @@ class CamsConnection:
         feature_set = self.query_weed_location_layer(query)
         logging.info(f'Getting location {feature_set.features[0].geometry}')
         return feature_set.features[0].geometry
-
+    
+    def get_location_wgs84(self, global_id):
+        query = f"globalId='{global_id}'"
+        feature_set = self.query_weed_location_layer_wgs84(query)
+        logging.info(f'Getting location {feature_set.features[0].geometry}')
+        return feature_set.features[0].geometry
+    
     def get_location_details(self, global_id):
         query = f"globalId='{global_id}'"
         feature_set = self.query_weed_location_layer(query)

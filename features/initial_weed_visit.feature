@@ -86,9 +86,9 @@ Feature: Processing a new iNaturalist observation populates a new WeedVisits rec
 		Then the visits record has date 'DateForReturnVisit' set to '2022-12-01'
 
 		Example: Notes are set if provided
-		Given iNaturalist has a new OMB observation with description set to 'Weed climbing up Hīnau'
+		Given iNaturalist has a new OMB observation with description set to 'Weed climbing up Hinau'
 		When we process the observation
-		Then the visits record has 'NotesAndDetails' set to 'Weed climbing up Hīnau'
+		Then the visits record has 'NotesAndDetails' set to 'Weed climbing up Hinau'
 
 		Example: Site difficulty is set if provided
 		Given iNaturalist has a new OMB observation with 'Site difficulty' set to '1 Easy (for most people)'
