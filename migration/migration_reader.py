@@ -15,29 +15,33 @@
 #  ====================================================================
 
 import logging
-
-from inat_to_cams import cams_interface, cams_feature, config
-
+from inat_to_cams import cams_interface, cams_feature
 
 class CamsMigrationReader:
 
-    def read_observations(self):
-  
-        query_layer = f"(iNatLongitude='' OR iNatLongitude is null) AND (iNatURL is not null OR iNatURL ='')"
-        rows = cams_interface.connection.query_weed_location_layer_wgs84(query_layer)
+    def read_observations( self, query_layer, max_record_count):
+      
+        rows = cams_interface.connection.query_weed_location_layer_limit_records(query_layer, max_record_count)
         cams_items = []
-    
-       #@ logging.info(f"Found {len(rows.features)} CAMS features without iNatLong/Lat")
-        for featureRow in rows.features:         
+           
+        logging.info("++++CAMS ROWS----------------------")      
+        for featureRow in rows.features:            
+            logging.info(f"{featureRow}") 
+            logging.info("----------------------")                     
             location = cams_feature.WeedLocation()
-            location.object_id = featureRow.attributes['OBJECTID']
-          
+            location.object_id = featureRow.attributes['OBJECTID']          
             location.iNaturalist_longitude = featureRow.attributes['iNatLongitude']
-            location.iNaturalist_latitude = featureRow.attributes['iNatLatitude']
-           
-            location.external_url = featureRow.attributes['iNatURL']
-           
+            location.iNaturalist_latitude = featureRow.attributes['iNatLatitude']           
+            location.external_url = featureRow.attributes['iNatURL']           
             cams_items.append(cams_feature.CamsFeature(featureRow.geometry, location,{}))
         return cams_items
 
-    
+    def get_features_without_iNat_location(self, max_record_count):
+        query = f"(iNatLongitude='' OR iNatLongitude is null) AND (iNatURL LIKE 'https://www.inaturalist.org/observations%')"
+        existing_CAMS_feature = self.read_observations( query, max_record_count )
+        return existing_CAMS_feature
+
+    def get_feature_by_id(self, object_id):
+        query = f"OBJECTID={object_id}"
+        CAMS_feature = self.read_observations( query, 1 )
+        return CAMS_feature[0]

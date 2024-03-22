@@ -20,18 +20,23 @@ import pytz
 import sys
 from migration import migrate
 
+DEFAULT_MIGRATION_COUNT = 5
 
 
-
-def main():
-    #if len(sys.argv) > 2:
-        #server_timezone = pytz.timezone("Pacific/Auckland")
-        #server_time = datetime.datetime.now(server_timezone)  # you could pass *tz* directly
-        
+def main(how_many_records_to_migrate):
+    
+    logging.info(f'Running Migration for the first {how_many_records_to_migrate} records')
     copier = migrate.copyiNatLocationsToCAMS()
-    copy_count = copier.copyiNatLocations_to_existing_CAMS_features()
+    copy_count = copier.copyiNatLocations_to_existing_CAMS_features(how_many_records_to_migrate)
 
     logging.info(f'Completed location copy: {copy_count}')
-    
 
-main()
+
+
+args = sys.argv[1:]
+if len(args) >= 1:
+    param1 = args[0]
+else:
+    param1 = DEFAULT_MIGRATION_COUNT
+
+main(param1)

@@ -24,7 +24,7 @@ class CamsMigrationWriter:
         self.cams = cams_interface.connection
 
 
-    def write_feature(self, cams_feature,):
+    def write_feature(self, cams_feature):
         global_id = None
         logging.info(f'Updating CAMS iNaturalist Location {cams_feature.weed_location.external_url}')
         new_layer_row = [{            
@@ -41,7 +41,7 @@ class CamsMigrationWriter:
         object_id = cams_feature.weed_location.object_id
         new_layer_row[0]['attributes']['objectId'] = object_id
         logging.info(f'Updating CAMS WeedLocations layer: {new_layer_row}')
-       # cams_interface.connection.update_weed_location_layer_row(new_layer_row)
+        cams_interface.connection.update_weed_location_layer_row(new_layer_row)
         
         return 
 
