@@ -14,9 +14,7 @@
 #  limitations under the License.
 #  ====================================================================
 
-import datetime
 import logging
-import pytz
 import sys
 from migration import migrate
 
@@ -28,10 +26,7 @@ def main(how_many_records_to_migrate):
     logging.info(f'Running Migration for the first {how_many_records_to_migrate} records')
     copier = migrate.copyiNatLocationsToCAMS()
     copy_count = copier.copyiNatLocations_to_existing_CAMS_features(how_many_records_to_migrate)
-
     logging.info(f'Completed location copy: {copy_count}')
-
-
 
 args = sys.argv[1:]
 if len(args) >= 1:
