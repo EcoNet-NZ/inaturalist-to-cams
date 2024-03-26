@@ -18,6 +18,12 @@ name: One off migration
 
 on:
   workflow_dispatch:
+    inputs:
+      migrationCount:
+        description: 'How many records to migrate'
+        required: false
+        type: number
+        default: 1
 
 concurrency: non-concurrent  
 
@@ -56,7 +62,7 @@ jobs:
 
     - name: Run script
       run: |
-        python mainMigrate 1
+        python mainMigrate ${{ inputs.migrationCount }}
       env: 
         ARCGIS_URL: ${{ secrets.ARCGIS_URL }}
         ARCGIS_USERNAME: ${{ secrets.ARCGIS_USERNAME }}
