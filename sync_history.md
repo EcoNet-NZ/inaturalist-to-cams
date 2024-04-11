@@ -11183,3 +11183,11 @@
 |Sync Event|Object Id|Species|Status|iNaturalist Id|
 |----------|---------|-------|------|--------------|
 |Visit record updated|**68860**|MothPlant|RED|[206524801](https://www.inaturalist.org/observations/206524801)|
+---
+
+# Run [1320](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/ab7b3c0e8b2bb7bce12c14719b9c22db7975232a/checks/8653133686)
+2024-04-12 08:55
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Visit record updated|**68808**|MothPlant|RED|[206313011](https://www.inaturalist.org/observations/206313011)|
