@@ -11252,3 +11252,13 @@
 |New weed|**68892**|CathedralBells|RED|[207088841](https://www.inaturalist.org/observations/207088841)|
 |Visit record updated|**68891**|MothPlant|RED|[207064923](https://www.inaturalist.org/observations/207064923)|
 |New weed|**68893**|MothPlant|RED|[207069515](https://www.inaturalist.org/observations/207069515)|
+---
+
+# Run [1373](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/e36cb26fdead703b3f9126d06d813f3eedbb3ff3/checks/8678150596)
+2024-04-14 15:47
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Geolocation updated, Weed record updated, Visit record added|**66887**|BluePassionFlower|YELLOW|[197853583](https://www.inaturalist.org/observations/197853583)|
+|Visit record updated|**68892**|CathedralBells|RED|[207088841](https://www.inaturalist.org/observations/207088841)|
+|Visit record updated|**68893**|MothPlant|RED|[207069515](https://www.inaturalist.org/observations/207069515)|
