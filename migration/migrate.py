@@ -84,7 +84,7 @@ class copyiNatLocationsToCAMS():
                         message = f"iNaturalist observation {observationID} not found --- URL: {feature.weed_location.external_url}"
                         logging.error(message)
                         report.append(message)
-                    time.sleep(delay)
+                    time.sleep(int(delay))
                 else:
                     message = f"iNaturalist ID not found in this URL: {feature.weed_location.external_url} (SKIPPING FEATURE)"
                     logging.error(message)
