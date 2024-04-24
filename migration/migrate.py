@@ -42,7 +42,7 @@ class copyiNatLocationsToCAMS():
 
         return observation
     
-    def copyiNatLocations_to_existing_CAMS_features(self, migration_max_record_count):
+    def copyiNatLocations_to_existing_CAMS_features(self, migration_max_record_count, delay):
         update_count = 0
         report = []
         report.append("***************** Update Report **************")
@@ -84,7 +84,7 @@ class copyiNatLocationsToCAMS():
                         message = f"iNaturalist observation {observationID} not found --- URL: {feature.weed_location.external_url}"
                         logging.error(message)
                         report.append(message)
-                    time.sleep(0.2)
+                    time.sleep(delay)
                 else:
                     message = f"iNaturalist ID not found in this URL: {feature.weed_location.external_url} (SKIPPING FEATURE)"
                     logging.error(message)
