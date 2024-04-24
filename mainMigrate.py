@@ -21,17 +21,21 @@ from migration import migrate
 DEFAULT_MIGRATION_COUNT = 5
 
 
-def main(how_many_records_to_migrate):
+def main(how_many_records_to_migrate, delay):
     
-    logging.info(f'Running Migration for the first {how_many_records_to_migrate} records')
+    logging.info(f'Running Migration for the first {how_many_records_to_migrate} records and delay of {delay} seconds.')
     copier = migrate.copyiNatLocationsToCAMS()
-    copy_count = copier.copyiNatLocations_to_existing_CAMS_features(how_many_records_to_migrate)
+    copy_count = copier.copyiNatLocations_to_existing_CAMS_features(how_many_records_to_migrate, delay)
     logging.info(f'Completed location copy: {copy_count}')
 
 args = sys.argv[1:]
-if len(args) >= 1:
+
+if len(args) >= 2:
     param1 = args[0]
+    param2 = args[1]
 else:
     param1 = DEFAULT_MIGRATION_COUNT
+    param2 = 1
 
-main(param1)
+
+main(param1, param2)
