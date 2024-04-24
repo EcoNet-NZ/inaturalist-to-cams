@@ -73,4 +73,4 @@ jobs:
         ARCGIS_URL: ${{ secrets.ARCGIS_URL }}
         ARCGIS_USERNAME: ${{ secrets.ARCGIS_USERNAME }}
         ARCGIS_PASSWORD: ${{ secrets.ARCGIS_PASSWORD }}
-        ARCGIS_FEATURE_LAYER_ID: ${{ secrets.ARCGIS_FEATURE_LAYER_ID_DEV }}
+        ARCGIS_FEATURE_LAYER_ID: ${{ secrets.ARCGIS_FEATURE_LAYER_ID_PROD }}
