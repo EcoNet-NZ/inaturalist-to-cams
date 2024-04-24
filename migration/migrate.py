@@ -15,8 +15,10 @@
 #  ====================================================================
 
 import logging
+import time
 import re
 import pyinaturalist
+from pyinaturalist.exceptions import ObservationNotFound
 from migration import migration_reader, cams_migration_writer 
 
 class copyiNatLocationsToCAMS(): 
@@ -32,8 +34,12 @@ class copyiNatLocationsToCAMS():
             logging.warning(f"Malformed URL: {url}")
         return observation_id
 
-    def get_observation_from_id(self, observation_id):                
-        observation = pyinaturalist.get_observation(observation_id)       
+    def get_observation_from_id(self, observation_id):    
+        try:            
+            observation = pyinaturalist.get_observation(observation_id)       
+        except ObservationNotFound:
+            return None
+
         return observation
     
     def copyiNatLocations_to_existing_CAMS_features(self, migration_max_record_count):
@@ -50,37 +56,44 @@ class copyiNatLocationsToCAMS():
         logging.info(message)        
         report.append(message)
         
-        #For each CamsFeature, extract the iNat observation ID and get the Original iNat observation location     
-        for feature in existing_CAMS_features:
-            observationID = self.extract_observation_id(feature.weed_location.external_url)
-            if observationID != None:
-                
-                observation = self.get_observation_from_id(observationID)
-                if observation:
-                    report.append(f"CAMS Feature[{update_count+1}]: object_id:{feature.weed_location.object_id},  iNatID:{observationID} URL: {feature.weed_location.external_url}")
-                    location = observation['location']
-                    logging.info(f"Observation {observationID} found. Located at {location}")
-                    feature.weed_location.iNaturalist_latitude = location[0]
-                    feature.weed_location.iNaturalist_longitude = location[1]                              
+        #For each CamsFeature, extract the iNat observation ID and get the Original iNat observation location  
+        try:   
+            for feature in existing_CAMS_features:
+                observationID = self.extract_observation_id(feature.weed_location.external_url)
+                if observationID != None:
+                    
+                    observation = self.get_observation_from_id(observationID)
+                    if observation:
+                        report.append(f"CAMS Feature[{update_count+1}]: object_id:{feature.weed_location.object_id},  iNatID:{observationID} URL: {feature.weed_location.external_url}")
+                        location = observation['location']
+                        logging.info(f"[{update_count}] Observation {observationID} found. Located at {location}")
+                        feature.weed_location.iNaturalist_latitude = location[0]
+                        feature.weed_location.iNaturalist_longitude = location[1]                              
 
-                    #Now save the location to CAMS                                      
-                    cams_writer.write_feature(feature ) 
-                    report.append(f"Updated iNatLocation for CAMS object_id {feature.weed_location.object_id}")
+                        #Now save the location to CAMS                                      
+                        cams_writer.write_feature(feature ) 
+                        report.append(f"Updated iNatLocation for CAMS object_id {feature.weed_location.object_id}")
 
-                    #read it back to validate update
-                    updated_feature = camsReader.get_feature_by_id(feature.weed_location.object_id)
-                    assert updated_feature.weed_location.iNaturalist_latitude == location[0], f"iNatLocation(lat) for {feature.weed_location.object_id} ({updated_feature.weed_location.iNaturalist_latitude}) was not updated to {location[0]}"
-                    assert updated_feature.weed_location.iNaturalist_longitude == location[1],f"iNatLocation(long) for {feature.weed_location.object_id} ({updated_feature.weed_location.iNaturalist_longitude}) was not updated to {location[1]}"
-                    report.append("")
-                    update_count +=1
+                        #read it back to validate update
+                        updated_feature = camsReader.get_feature_by_id(feature.weed_location.object_id)
+                        assert updated_feature.weed_location.iNaturalist_latitude == location[0], f"iNatLocation(lat) for {feature.weed_location.object_id} ({updated_feature.weed_location.iNaturalist_latitude}) was not updated to {location[0]}"
+                        assert updated_feature.weed_location.iNaturalist_longitude == location[1],f"iNatLocation(long) for {feature.weed_location.object_id} ({updated_feature.weed_location.iNaturalist_longitude}) was not updated to {location[1]}"
+                        report.append("")
+                        update_count +=1
+                    else:
+                        message = f"iNaturalist observation {observationID} not found --- URL: {feature.weed_location.external_url}"
+                        logging.error(message)
+                        report.append(message)
+                    time.sleep(0.2)
                 else:
-                    message = f"iNaturalist observation {observationID} not found --- URL: {feature.weed_location.external_url}"
+                    message = f"iNaturalist ID not found in this URL: {feature.weed_location.external_url} (SKIPPING FEATURE)"
                     logging.error(message)
                     report.append(message)
-            else:
-                message = f"iNaturalist ID not found in this URL: {feature.weed_location.external_url} (SKIPPING FEATURE)"
-                logging.error(message)
-                report.append(message)        
+
+        except AssertionError as e:
+            report.append(f"Assertion Error: {e}")
+            report.append("RUN ABORTED at Feature count = {update_count}")
+            logging.error(f"Assertion Error: {e}")
 
         report.append(f"Updated {update_count} CAMS features successfully")
         report.append("*************** REPORT ENDS *******************")
