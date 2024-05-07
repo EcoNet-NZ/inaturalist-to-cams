@@ -12900,3 +12900,11 @@
 |Weed record updated|**69262**|CathedralBells|RED|[209378318](https://www.inaturalist.org/observations/209378318)|
 |Weed record updated|**69281**|CathedralBells|RED|[209786424](https://www.inaturalist.org/observations/209786424)|
 |Weed record updated|**69324**|CathedralBells|RED|[210493609](https://www.inaturalist.org/observations/210493609)|
+---
+
+# Run [1927](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/25baf87136f6ed55483abede7bb649af50a02af0/checks/8991465869)
+2024-05-08 07:55
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**69605**|BananaPassionfruit|RED|[211344954](https://www.inaturalist.org/observations/211344954)|
