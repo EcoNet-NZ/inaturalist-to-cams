@@ -33,7 +33,7 @@ jobs:
 
     steps:
     - name: Checkout
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
 
     - name: Install apt dependencies
       uses: awalsh128/cache-apt-pkgs-action@latest
@@ -42,7 +42,7 @@ jobs:
         version: 1.0
 
     - name: Set up Python
-      uses: actions/setup-python@v4
+      uses: actions/setup-python@v5
       with:
         python-version: '3.11'
         cache: 'pip'
@@ -53,10 +53,10 @@ jobs:
         python -m pip install wheel
         if [ -f requirements_lock.txt ]; then pip install -r requirements_lock.txt; fi      
 
-    - name: Set timezone   # so that we observations are stored to CAMS in NZ time
-      uses: zcong1993/setup-timezone@master
+    - name: Set timezone   # so that observations are stored to CAMS in NZ time
+      uses: MathRobin/timezone-action@v1.1
       with:
-        timezone: Pacific/Auckland
+        timezoneLinux: 'Pacific/Auckland'
 
     - name: Lint with flake8
       run: |
@@ -75,7 +75,7 @@ jobs:
         ARCGIS_FEATURE_LAYER_ID: ${{ secrets.ARCGIS_FEATURE_LAYER_ID_DEV }}        
 
     - name: Upload test reports
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: test reports
         path: |
