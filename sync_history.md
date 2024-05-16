@@ -13298,3 +13298,11 @@
 |Weed record updated|**69743**|OldMansBeard|RED|[216052783](https://www.inaturalist.org/observations/216052783)|
 |New weed|**69750**|OldMansBeard|RED|[216191996](https://www.inaturalist.org/observations/216191996)|
 |New weed|**69751**|BananaPassionfruit|RED|[216192724](https://www.inaturalist.org/observations/216192724)|
+---
+
+# Run [2146](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/d2ccd29252e861c72efddb1f9e56997efe18c864/checks/9120223322)
+2024-05-17 10:55
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Visit record updated|**69751**|BananaPassionfruit|RED|[216192724](https://www.inaturalist.org/observations/216192724)|
