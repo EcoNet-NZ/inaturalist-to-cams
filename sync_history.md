@@ -13589,3 +13589,11 @@
 |----------|---------|-------|------|--------------|
 |Visit record updated|**69812**|BananaPassionfruit|RED|[217199741](https://www.inaturalist.org/observations/217199741)|
 |New weed|**69813**|MothPlant|RED|[217214063](https://www.inaturalist.org/observations/217214063)|
+---
+
+# Run [2249](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/379ea623386a1d7cf0bff192f347a5ab31a34648/checks/9169565543)
+2024-05-21 17:55
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Visit record updated|**69813**|MothPlant|RED|[217214063](https://www.inaturalist.org/observations/217214063)|
