@@ -46,7 +46,7 @@ class INatToCamsTranslator:
         weed_location = cams_feature.WeedLocation()
         weed_location.date_first_observed = self.as_local_datetime(inat_observation.observed_on)
         weed_location.species = cams_taxon
-        weed_location.data_source = 'iNaturalist'
+        weed_location.data_source = 'iNaturalist_v1'
         weed_location.location_details = inat_observation.location_details
         weed_location.iNaturalist_longitude = inat_observation.location.x
         weed_location.iNaturalist_latitude = inat_observation.location.y

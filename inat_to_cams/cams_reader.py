@@ -72,7 +72,7 @@ class CamsReader:
             location.global_id = guid
             location.date_first_observed = self.as_datetime(featureRow.attributes['DateDiscovered'])
             location.species = featureRow.attributes['SpeciesDropDown']
-            location.data_source = cams_schema_config.cams_field_key('WeedLocations', 'DataSource', featureRow.attributes['SiteSource'])
+            location.data_source = featureRow.attributes['SiteSource']
             location.location_details = featureRow.attributes['LocationInfo']
             location.effort_to_control = featureRow.attributes['Urgency']
             location.iNaturalist_longitude = featureRow.attributes['iNatLongitude']

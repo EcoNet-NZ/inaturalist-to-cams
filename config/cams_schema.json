@@ -13,22 +13,7 @@
         "DataSource": {
             "name": "SiteSource",
             "type": "String",
-            "length": 39,
-            "values": {
-                "CAMSv1":             "CAMSv1",
-                "EcoTrack2021":       "EcoTrack2021",
-                "iNaturalist":        "iNaturalist_v1",
-                "STAMPv1":            "STAMPv1",
-                "CAMSv0.5-Field":     "CAMSv0p4Field",
-                "CAMSv0.5-Browser":   "CAMSv0p5Browser",
-                "CAMSv0p6-EB":        "CAMSv0p6EB",
-                "CAMSv0.6p-EB":       "CAMSv0.6p-EB",
-                "CAMSv0.6p-FDRes":    "CAMSv0.6p-FDRes",
-                "CAMSv0.6p-FDNonRes": "CAMSv0.6p-FDNonRes"
-            },
-            "legacy_values": {
-                "iNaturalist": "iNaturalist"
-            }
+            "length": 39
         },
         "Location details": {
             "name": "LocationInfo",
