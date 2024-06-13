@@ -1,8 +1,8 @@
 {
-    "Old Man's Beard Free Wellington": {
-        "file_prefix": "ombfw",
+    "Old Man's Beard - NZ": {
+        "file_prefix": "omb_nz",
         "taxon_ids": ["160697"],
-        "place_ids": ["6868"]
+        "place_ids": ["6803"]
     },
     "Other vines in Wellington": {
         "file_prefix": "other_vines_wellington",
