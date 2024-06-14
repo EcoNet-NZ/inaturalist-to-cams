@@ -4,10 +4,10 @@
         "taxon_ids": ["160697"],
         "place_ids": ["6803"]
     },
-    "Other vines in Wellington": {
-        "file_prefix": "other_vines_wellington",
+    "Some other vines in NZ": {
+        "file_prefix": "some_other_vines_nz",
         "taxon_ids": ["285911", "51454", "77496", "1442036"],
-        "place_ids": ["6868"]
+        "place_ids": ["6803"]
     },
     "Woolly nightshade - Kaipatiki": {
         "file_prefix": "woolly_nightshade_kaipatiki",
