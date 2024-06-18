@@ -19684,3 +19684,11 @@
 |Sync Event|Object Id|Species|Status|iNaturalist Id|
 |----------|---------|-------|------|--------------|
 |New weed|**73868**|MothPlant|RED|[223483978](https://www.inaturalist.org/observations/223483978)|
+---
+
+# Run [2917](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/97c2a7e09160122b058aac765e624ced1108200b/checks/9559731630)
+2024-06-18 17:55
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**73869**|MothPlant|RED|[223488772](https://www.inaturalist.org/observations/223488772)|
