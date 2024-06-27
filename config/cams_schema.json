@@ -137,7 +137,7 @@
         },
         "description": {
             "name": "NotesAndDetails",
-            "length": 5000,
+            "length": 2147483647,
             "type": "String"
         },
         "Follow-up (YYYY-MM)": {
