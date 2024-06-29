@@ -20181,3 +20181,11 @@
 |Sync Event|Object Id|Species|Status|iNaturalist Id|
 |----------|---------|-------|------|--------------|
 |New weed|**74028**|BananaPassionfruit|RED|[225886197](https://www.inaturalist.org/observations/225886197)|
+---
+
+# Run [3186](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/c0d3bb19440ce7215920916cedca5760f6f69bc9/checks/9723916090)
+2024-06-29 23:56
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Weed record updated, Visit record updated|**74025**|BlueMorningGlory|RED|[225868462](https://www.inaturalist.org/observations/225868462)|
