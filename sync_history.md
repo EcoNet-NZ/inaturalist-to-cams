@@ -20303,3 +20303,11 @@
 |Sync Event|Object Id|Species|Status|iNaturalist Id|
 |----------|---------|-------|------|--------------|
 ||**63592**|MothPlant|PURPLE|[104395070](https://www.inaturalist.org/observations/104395070)|
+---
+
+# Run [3261](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/93787e2d85ae55756f7d3d094563db55d9cdfd4b/checks/9764991901)
+2024-07-03 04:55
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**74086**|MothPlant|PURPLE|[226712215](https://www.inaturalist.org/observations/226712215)|
