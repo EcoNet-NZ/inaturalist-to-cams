@@ -16,6 +16,7 @@
 
 from datetime import date, datetime
 import logging
+import re
 import pytz
 
 from arcgis import geometry
@@ -64,7 +65,7 @@ class INatToCamsTranslator:
         weed_visit = cams_feature.WeedVisit()
         weed_visit.external_id = str(inat_observation.id)
         weed_visit.external_url = f'https://www.inaturalist.org/observations/{inat_observation.id}'
-        weed_visit.notes = inat_observation.description
+        weed_visit.notes = re.sub(r'<a\s+href="https://www\.google\.co\.nz/maps[^\"]*"', '<a href=""', inat_observation.description)
         weed_visit.height = inat_observation.height
         weed_visit.area = inat_observation.area
         weed_visit.radius_surveyed = inat_observation.radius_surveyed
