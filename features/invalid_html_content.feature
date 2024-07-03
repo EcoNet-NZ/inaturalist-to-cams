@@ -32,7 +32,7 @@ Feature: Processing iNaturalist observations sanitises invalid HTML links
 		When we process the observation
 		Then the visits record has 'NotesAndDetails' set to 'Link1: (INVALID URL DETECTED - see iNaturalist link for full notes) words here. Link2: (INVALID URL DETECTED - see iNaturalist link for full notes)'
 
-		Example: '=' not inside a link does not cause a warning
+		Example: '=' inside html but not inside a link does not cause a warning
 		Given iNaturalist has a new OMB observation with description set to '<div>words=morewords</div>'
 		When we process the observation
 		Then the visits record has 'NotesAndDetails' set to '<div>words=morewords</div>'
