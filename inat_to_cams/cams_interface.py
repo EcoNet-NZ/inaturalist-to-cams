@@ -13,19 +13,6 @@
 #  See the License for the specific language governing permissions and
 #  limitations under the License.
 #  ====================================================================
-#
-#   Licensed under the Apache License, Version 2.0 (the "License");
-#   you may not use this file except in compliance with the License.
-#   You may obtain a copy of the License at
-#
-#       http://www.apache.org/licenses/LICENSE-2.0
-#
-#   Unless required by applicable law or agreed to in writing, software
-#   distributed under the License is distributed on an "AS IS" BASIS,
-#   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-#   See the License for the specific language governing permissions and
-#   limitations under the License.
-# ====================================================================
 
 import logging
 import os
@@ -70,22 +57,27 @@ class CamsConnection:
 
     @retry(delay=5, tries=3)
     def query_weed_visits_table(self, query_table):
+        logging.info(f'query_weed_visits_table: {query_table}')
         return self.table.query(where=query_table, order_by_fields='OBJECTID')
 
     @retry(delay=5, tries=3)
     def query_weed_visits_table_ids(self, query_table):
+        logging.info(f'query_weed_visits_table_ids: {query_table}')
         return self.table.query(where=query_table, order_by_fields='OBJECTID', returnIdsOnly=True)
 
     @retry(delay=5, tries=3)
     def query_weed_location_layer(self, query_layer):
+        logging.info(f'query_weed_location_layer: {query_layer}')
         return self.layer.query(where=query_layer)
     
     @retry(delay=5, tries=3)
     def query_weed_location_layer_limit_records(self, query_layer, max_record_count):
+        logging.info(f'query_weed_location_layer_limit_records: {query_layer} {max_record_count}')
         return self.layer.query(where=query_layer, result_record_count=max_record_count, return_all_records=False)
 
     @retry(delay=5, tries=3)
     def query_weed_location_layer_wgs84(self, query_layer):
+        logging.info(f'query_weed_location_layer_wgs84: {query_layer}')
         results = self.layer.query(where=query_layer, out_sr=4326)
         #logging.info(f"Found Location Layer sgs84 {results}")
         return results
