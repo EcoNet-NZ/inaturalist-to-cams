@@ -16,6 +16,7 @@
 
 from datetime import date, datetime
 import logging
+import re
 import pytz
 
 from arcgis import geometry
@@ -24,6 +25,14 @@ from inat_to_cams import cams_feature, config, exceptions
 
 
 class INatToCamsTranslator:
+    @staticmethod
+    def sanitiseHTML(html):
+        if html is not None:
+            # issue #86: URLs with an '=' within are not supported. Remove the reference and add a warning.
+            html = re.sub(r'<a\s+href="[^"]*=[^"]*".*?>.*?</a>', '(INVALID URL DETECTED - see iNaturalist link for full notes)', html)
+
+        return html
+    
     def translate(self, inat_observation):
         geolocation = geometry.Point({'x': inat_observation.location.x,
                                       'y': inat_observation.location.y,
@@ -64,7 +73,7 @@ class INatToCamsTranslator:
         weed_visit = cams_feature.WeedVisit()
         weed_visit.external_id = str(inat_observation.id)
         weed_visit.external_url = f'https://www.inaturalist.org/observations/{inat_observation.id}'
-        weed_visit.notes = inat_observation.description
+        weed_visit.notes = INatToCamsTranslator.sanitiseHTML(inat_observation.description) 
         weed_visit.height = inat_observation.height
         weed_visit.area = inat_observation.area
         weed_visit.radius_surveyed = inat_observation.radius_surveyed
