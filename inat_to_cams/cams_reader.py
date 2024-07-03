@@ -36,7 +36,7 @@ class CamsReader:
         location_guid = None
 
         query_table = f"OBJECTID='{latest_object_id}'"
-        logging.info(f'Reading CAMS feature where {query_table}')
+        logging.info(f'Reading CAMS visits rows where {query_table}')
         visit_table_row = cams_interface.connection.query_weed_visits_table(query_table).features[0]
         logging.info(f'Found visit table row {visit_table_row}')
         visit = cams_feature.WeedVisit()
@@ -62,6 +62,7 @@ class CamsReader:
         guid = visit_table_row.attributes['GUID_visits']
 
         query_layer = f"GlobalID='{guid}'"
+        logging.info(f'Reading CAMS feature layer row where {query_layer}')
         rows = cams_interface.connection.query_weed_location_layer_wgs84(query_layer)
         
         for featureRow in rows.features:
