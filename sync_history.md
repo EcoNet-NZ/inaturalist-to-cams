@@ -20999,3 +20999,11 @@
 |New weed|**75552**|BluePassionFlower|PURPLE|[205765361](https://www.inaturalist.org/observations/205765361)|
 |Weed record updated|**75542**|WoollyNightshade|RED|[227033430](https://www.inaturalist.org/observations/227033430)|
 |Weed record updated, Visit record updated|**75535**|MothPlant|RED|[227052270](https://www.inaturalist.org/observations/227052270)|
+---
+
+# Run [3332](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/a87b71bb31b8fee7c5c290ebc0e551f3586941d0/checks/9807213688)
+2024-07-05 22:56
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**75553**|OldMansBeard|PURPLE|[227272306](https://www.inaturalist.org/observations/227272306)|
