@@ -17,28 +17,21 @@
 import logging
 from inat_to_cams import cams_interface, cams_feature
 
-class CamsMigrationReader:
+class CleanCAMSReader:
 
-    def read_observations( self, query_layer, max_record_count):
+    def read_observations( self, query_layer):
       
-        rows = cams_interface.connection.query_weed_location_layer_limit_records(query_layer, max_record_count)
+        rows = cams_interface.connection.query_weed_location_layer(query_layer)
         cams_items = []
            
-        logging.info("++++CAMS ROWS----------------------")      
-        for featureRow in rows.features:            
-            logging.info(f"{featureRow}") 
-            logging.info("----------------------")                     
-            location = cams_feature.WeedLocation()
-            location.object_id = featureRow.attributes['OBJECTID']          
-            location.iNaturalist_longitude = featureRow.attributes['iNatLongitude']
-            location.iNaturalist_latitude = featureRow.attributes['iNatLatitude']           
-            location.external_url = featureRow.attributes['iNatURL']           
-            cams_items.append(cams_feature.CamsFeature(featureRow.geometry, location,{}))
+        logging.info("++++CAMS Feature URLs----------------------")      
+        for featureRow in rows.features:                            
+            cams_items.append(featureRow.attributes['iNatURL']   )
         return cams_items
 
-    def get_features_without_iNat_location(self, max_record_count):
-        query = f"(iNatLongitude='' OR iNatLongitude is null) AND (iNatURL LIKE 'https://www.inaturalist.org/observations%')"
-        existing_CAMS_feature = self.read_observations( query, max_record_count )
+    def get_features_with_iNat_URL(self):
+        query = f"iNatURL LIKE 'https://www.inaturalist.org/observations%'"
+        existing_CAMS_feature = self.read_observations( query)
         return existing_CAMS_feature
 
     def get_feature_by_id(self, object_id):
