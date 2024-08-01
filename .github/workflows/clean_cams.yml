@@ -16,6 +16,8 @@
 
 name: Clean CAMS
 
+on:
+  workflow_dispatch:
 
 concurrency: non-concurrent  
 
