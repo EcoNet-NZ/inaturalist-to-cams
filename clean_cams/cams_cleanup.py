@@ -35,14 +35,10 @@ class cleanCAMS():
             logging.warning(f"Malformed URL: {url}")
         return observation_id 
 
-    def get_observation_from_id(self, observation_id):    
-        try:            
-            observation = pyinaturalist.get_observation(observation_id)       
-        except ObservationNotFound:
-            return None
-
-        return observation
-    
+    def logAndReport(self, report, message):
+        logging.info(message)        
+        report.append(message)
+      
     def clean(self):
         update_count = 0
         report = []
@@ -57,34 +53,32 @@ class cleanCAMS():
             existing_CAMS_features.append(self.extract_observation_id(url))
 
        
-        message = f"Found {len(existing_CAMS_features)} CAMS features "
-        logging.info(message)        
-        report.append(message)
-        
+        self.logAndReport( report, f"Found {len(existing_CAMS_features)} CAMS features ")
+                
         #Now get all the iNat observations
         obs = inat_observations.iNatObservations()
         existing_iNat_observations = obs.get_observations()
-        message = f"Found {len(existing_iNat_observations)} iNat observations"
-        logging.info(message)        
-        report.append(message)
-
+        self.logAndReport(report, f"Found {len(existing_iNat_observations)} iNat observations")
+       
         #subtract one list from the other to get CAMS features that are no longer in iNat
         setCams = set( existing_CAMS_features )
         setiNat = set( existing_iNat_observations)
 
-        logging.info(f"CAMS: {len(existing_CAMS_features)} in format: {existing_CAMS_features[0]}")
-        logging.info(f"iNat: {len(existing_iNat_observations)} in format: {existing_iNat_observations[0]}")
+        self.logAndReport(report, f"CAMS: {len(existing_CAMS_features)} in format: {existing_CAMS_features[0]}")
+       
+        self.logAndReport(report, f"iNat: {len(existing_iNat_observations)} in format: {existing_iNat_observations[0]}")
+        
         inCamsOnly = setCams - setiNat
         inINatOnly = setiNat - setCams
-        print (f"{len(inCamsOnly)} found only in CAMS")
-        print (f"{len(inINatOnly)} found only in iNatCAMS")
+        self.logAndReport(report, f"{len(inCamsOnly)} found only in CAMS")
+        self.logAndReport(report, f"{len(inINatOnly)} found only in iNatCAMS")
         
         print("--- Only in CAMS ---")
         print (inCamsOnly)
         print("--- Only in iNat ---")
         print (inINatOnly)
         
-        #report.append(f"Clea {clean_count} CAMS features successfully")
+        #report.append(f"Clean {clean_count} CAMS features successfully")
         report.append("*************** REPORT ENDS *******************")
 
         for line in report:

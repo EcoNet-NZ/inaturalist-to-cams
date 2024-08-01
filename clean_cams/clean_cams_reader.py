@@ -24,7 +24,7 @@ class CleanCAMSReader:
         rows = cams_interface.connection.query_weed_location_layer(query_layer)
         cams_items = []
            
-        logging.info("++++CAMS Feature URLs----------------------")      
+        logging.info(f"++++ Found {len(rows)} CAMS Features with an iNat URL----------------------")      
         for featureRow in rows.features:                            
             cams_items.append(featureRow.attributes['iNatURL']   )
         return cams_items
@@ -33,8 +33,3 @@ class CleanCAMSReader:
         query = f"iNatURL LIKE 'https://www.inaturalist.org/observations%'"
         existing_CAMS_feature = self.read_observations( query)
         return existing_CAMS_feature
-
-    def get_feature_by_id(self, object_id):
-        query = f"OBJECTID={object_id}"
-        CAMS_feature = self.read_observations( query, 1 )
-        return CAMS_feature[0]
