@@ -1,0 +1,62 @@
+#  ====================================================================
+#  Copyright 2023 EcoNet.NZ
+#
+#  Licensed under the Apache License, Version 2.0 (the "License");
+#  you may not use this file except in compliance with the License.
+#  You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+#  Unless required by applicable law or agreed to in writing, software
+#  distributed under the License is distributed on an "AS IS" BASIS,
+#  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+#  See the License for the specific language governing permissions and
+#  limitations under the License.
+#  ====================================================================
+
+name: Clean CAMS
+
+
+concurrency: non-concurrent  
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    - name: Install apt dependencies
+      uses: awalsh128/cache-apt-pkgs-action@latest
+      with:
+        packages: heimdal-dev   # Workaround for problem building gssapi wheel, see https://stackoverflow.com/questions/44449290/krb5-config-is-not-recognized-as-an-internal-or-external-command
+        version: 1.0
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+        cache: 'pip'
+
+    - name: Install pip dependencies
+      run: |
+        python -m pip install --upgrade pip
+        python -m pip install wheel
+        if [ -f requirements_lock.txt ]; then pip install -r requirements_lock.txt; fi      
+
+    - name: Set timezone   # so that we observations are stored to CAMS in NZ time
+      uses: zcong1993/setup-timezone@master
+      with:
+        timezone: Pacific/Auckland
+
+    - name: Run script
+      run: |
+        python mainClean_cams.py
+      env: 
+        ARCGIS_URL: ${{ secrets.ARCGIS_URL }}
+        ARCGIS_USERNAME: ${{ secrets.ARCGIS_USERNAME }}
+        ARCGIS_PASSWORD: ${{ secrets.ARCGIS_PASSWORD }}
+        ARCGIS_FEATURE_LAYER_ID: ${{ secrets.ARCGIS_FEATURE_LAYER_ID_PROD }}
