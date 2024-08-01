@@ -14,7 +14,7 @@
 #  limitations under the License.
 #  ====================================================================
 
-name: Clean CAMS
+name: Clean CAMS Workflow
 
 on: workflow_dispatch
 
