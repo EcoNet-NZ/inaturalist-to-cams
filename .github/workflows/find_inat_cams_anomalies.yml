@@ -16,7 +16,10 @@
 
 name: Find iNaturalist - CAMS anomalies
 
-on: workflow_dispatch
+on: 
+  workflow_dispatch:
+  schedule:
+    - cron: '50 12 * * 5'  # Friday at 12:50ish GMT
 
 concurrency: non-concurrent  
 
