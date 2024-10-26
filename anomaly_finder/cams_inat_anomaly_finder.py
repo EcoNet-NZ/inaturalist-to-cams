@@ -86,4 +86,4 @@ class CamsInatAnomalyFinder():
             print(line)
 
         anomaly_count = len(inCamsOnly) + len(inINatOnly)
-        return 1 if anomaly_count > 0 else 0
+        return anomaly_count
