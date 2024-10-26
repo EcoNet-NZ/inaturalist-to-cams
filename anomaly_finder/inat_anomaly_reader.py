@@ -15,6 +15,7 @@
 #  ====================================================================
 
 import datetime
+import func_timeout
 import logging
 
 from inat_to_cams import config, inaturalist_reader

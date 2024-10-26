@@ -14,7 +14,7 @@
 #  limitations under the License.
 #  ====================================================================
 
-name: Clean CAMS Workflow
+name: Find iNaturalist - CAMS anomalies
 
 on: workflow_dispatch
 
@@ -55,7 +55,7 @@ jobs:
 
     - name: Run script
       run: |
-        python mainClean_cams.py
+        python mainAnomalies.py
       env: 
         ARCGIS_URL: ${{ secrets.ARCGIS_URL }}
         ARCGIS_USERNAME: ${{ secrets.ARCGIS_USERNAME }}

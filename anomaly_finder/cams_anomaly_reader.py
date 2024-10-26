@@ -18,7 +18,7 @@ import logging
 from inat_to_cams import cams_interface
 
 
-class CleanCAMSReader:
+class CAMSAnomalyReader:
 
     def read_observations(self, query_layer, column):
 
