@@ -40,7 +40,6 @@ class CamsInatAnomalyFinder():
         report.append(message)
 
     def find_anomalies(self):
-        update_count = 0
         report = []
         existing_CAMS_features = []
         report.append("***************** Anomaly Report **************")
@@ -85,4 +84,6 @@ class CamsInatAnomalyFinder():
 
         for line in report:
             print(line)
-        return update_count
+
+        anomaly_count = inCamsOnly + inINatOnly
+        return 1 if anomaly_count > 0 else 0
