@@ -15,21 +15,26 @@
 #  ====================================================================
 
 import logging
-from inat_to_cams import cams_interface, cams_feature
+from inat_to_cams import cams_interface
+
 
 class CleanCAMSReader:
 
-    def read_observations( self, query_layer):
-      
+    def read_observations(self, query_layer, column):
+
         rows = cams_interface.connection.query_weed_location_layer(query_layer)
         cams_items = []
-           
-        logging.info(f"++++ Found {len(rows)} CAMS Features with an iNat URL----------------------")      
         for featureRow in rows.features:                            
-            cams_items.append(featureRow.attributes['iNatURL']   )
+            cams_items.append(featureRow.attributes[column])
         return cams_items
 
     def get_features_with_iNat_URL(self):
-        query = f"iNatURL LIKE 'https://www.inaturalist.org/observations%'"
-        existing_CAMS_feature = self.read_observations( query)
+        query = "iNatURL LIKE 'https://www.inaturalist.org/observations%'"
+        existing_CAMS_feature = self.read_observations(query, 'iNatURL')
+        logging.info(f"++++ Found {len(existing_CAMS_feature)} CAMS Features with an iNat URL----------------------")      
         return existing_CAMS_feature
+
+    def get_objectid_from_iNat_ID(self, id):
+        query = f"iNatURL = 'https://www.inaturalist.org/observations/{id}'"
+        feature = self.read_observations(query, 'OBJECTID')
+        return feature
