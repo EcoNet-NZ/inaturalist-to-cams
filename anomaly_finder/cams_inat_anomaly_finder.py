@@ -85,5 +85,5 @@ class CamsInatAnomalyFinder():
         for line in report:
             print(line)
 
-        anomaly_count = inCamsOnly + inINatOnly
+        anomaly_count = len(inCamsOnly) + len(inINatOnly)
         return 1 if anomaly_count > 0 else 0
