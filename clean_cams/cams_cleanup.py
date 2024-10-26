@@ -73,7 +73,7 @@ class cleanCAMS():
 
         print("--- Only in CAMS ---")
         print(inCamsOnly)
-        print('--- URLs (production Experience Builder) ---')
+        print('--- URLs (PRODUCTION Experience Builder) ---')
         for id in inCamsOnly:
             object_id = camsReader.get_objectid_from_iNat_ID(id)
             print(f"{base_URL}{'+'.join(map(str, object_id))}")

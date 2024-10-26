@@ -24,7 +24,7 @@ class CleanCAMSReader:
 
         rows = cams_interface.connection.query_weed_location_layer(query_layer)
         cams_items = []
-        for featureRow in rows.features:                            
+        for featureRow in rows.features:
             cams_items.append(featureRow.attributes[column])
         return cams_items
 
