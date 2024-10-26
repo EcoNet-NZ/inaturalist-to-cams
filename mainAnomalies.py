@@ -15,6 +15,7 @@
 #  ====================================================================
 
 import logging
+import sys
 from anomaly_finder import cams_inat_anomaly_finder
 
 
@@ -22,7 +23,8 @@ def main():
 
     logging.info('Finding anomalies between iNaturalist and CAMS, eg iNaturalist observation changes or deletions')
     anomaly_finder = cams_inat_anomaly_finder.CamsInatAnomalyFinder()
-    anomaly_finder.find_anomalies()
+    anomaly_count = anomaly_finder.find_anomalies()
+    sys.exit(1 if anomaly_count > 0 else 0)
 
 
 main()
