@@ -18,13 +18,13 @@ import logging
 from inat_to_cams import cams_interface
 
 
-class CleanCAMSReader:
+class CAMSAnomalyReader:
 
     def read_observations(self, query_layer, column):
 
         rows = cams_interface.connection.query_weed_location_layer(query_layer)
         cams_items = []
-        for featureRow in rows.features:                            
+        for featureRow in rows.features:
             cams_items.append(featureRow.attributes[column])
         return cams_items
 

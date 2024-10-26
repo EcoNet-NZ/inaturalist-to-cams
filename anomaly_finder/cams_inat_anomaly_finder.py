@@ -17,12 +17,12 @@
 import logging
 
 import re
-from clean_cams import clean_cams_reader, inat_observations
+from anomaly_finder import cams_anomaly_reader, inat_anomaly_reader
 
 base_URL = "https://experience.arcgis.com/experience/847c1702f6ae4b9daadba78dd58bef14/page/Weeds-Map-0_7k#data_s=id%3AdataSource_47-18a1109cdff-layer-9-18e49b73cdf-layer-45%3A"
 
 
-class cleanCAMS(): 
+class CamsInatAnomalyFinder():
 
     def extract_observation_id(self, url):
         observation_id = None
@@ -39,14 +39,14 @@ class cleanCAMS():
         logging.info(message)        
         report.append(message)
 
-    def clean(self):
+    def find_anomalies(self):
         update_count = 0
         report = []
         existing_CAMS_features = []
-        report.append("***************** Clean Up Report **************")
+        report.append("***************** Anomaly Report **************")
 
         # Get all the CAMS features with an iNaturalist URL
-        camsReader = clean_cams_reader.CleanCAMSReader()
+        camsReader = cams_anomaly_reader.CAMSAnomalyReader()
         all_synchronised_CAMS_features = camsReader.get_features_with_iNat_URL()
         for url in all_synchronised_CAMS_features:
             existing_CAMS_features.append(self.extract_observation_id(url))
@@ -54,7 +54,7 @@ class cleanCAMS():
         self.logAndReport(report, f"Found {len(existing_CAMS_features)} CAMS features ")
 
         # Now get all the iNat observations
-        obs = inat_observations.iNatObservations()
+        obs = inat_anomaly_reader.iNatObservations()
         existing_iNat_observations = obs.get_observations()
         self.logAndReport(report, f"Found {len(existing_iNat_observations)} iNat observations")
 
@@ -68,12 +68,12 @@ class cleanCAMS():
 
         inCamsOnly = setCams - setiNat
         inINatOnly = setiNat - setCams
-        self.logAndReport(report, f"{len(inCamsOnly)} found only in CAMS")
-        self.logAndReport(report, f"{len(inINatOnly)} found only in iNatCAMS")
+        self.logAndReport(report, f"{len(inCamsOnly)} found in CAMS and not iNaturalist")
+        self.logAndReport(report, f"{len(inINatOnly)} found in iNaturalist and not CAMS")
 
         print("--- Only in CAMS ---")
         print(inCamsOnly)
-        print('--- URLs (production Experience Builder) ---')
+        print('--- URLs (PRODUCTION Experience Builder) ---')
         for id in inCamsOnly:
             object_id = camsReader.get_objectid_from_iNat_ID(id)
             print(f"{base_URL}{'+'.join(map(str, object_id))}")
@@ -81,7 +81,6 @@ class cleanCAMS():
         print("--- Only in iNat ---")
         print(inINatOnly)
 
-        # report.append(f"Clean {clean_count} CAMS features successfully")
         report.append("*************** REPORT ENDS *******************")
 
         for line in report:

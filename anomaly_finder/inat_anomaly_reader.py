@@ -22,13 +22,13 @@ from inat_to_cams import config, inaturalist_reader
 
 
 class iNatObservations():
-   
+
     def get_observations(self):
         observations = []
 
         for config_name, values in config.sync_configuration.items():
-        
-            #pull in all observations by setting year 2000 timestamp
+
+            # pull in all observations by setting year 2000 timestamp
             timestamp = '2000-01-01T00:00:00+12:00'
 
             taxon_ids = values['taxon_ids']
@@ -38,16 +38,15 @@ class iNatObservations():
             logging.info(f"Finding '{config_name}' with taxon_ids '{taxon_ids}' and place_ids '{place_ids}' since {timestamp}")
 
             time_of_previous_update = datetime.datetime.fromisoformat(timestamp)
-            
+
             taxonObservations = func_timeout.func_timeout(
                 120,  # seconds
                 inaturalist_reader.INatReader().get_matching_observations_updated_since,
                 args=(place_ids, taxon_ids, time_of_previous_update)
             )
             logging.info(f"Found '{len(taxonObservations)}' observations from '{config_name}' with taxon_ids '{taxon_ids}' and place_ids '{place_ids}' since {timestamp}")
-            for obs in taxonObservations:
-                observations.append(str(obs.id))
+            for observation in taxonObservations:
+                if observation.location is not None and observation.observed_on:
+                    observations.append(str(observation.id))
 
-            
         return observations
-

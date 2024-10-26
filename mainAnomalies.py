@@ -15,15 +15,14 @@
 #  ====================================================================
 
 import logging
-from clean_cams import cams_cleanup
+from anomaly_finder import cams_inat_anomaly_finder
 
 
 def main():
-    
-    logging.info(f'Cleaing old and unused CAMS records for deleted or changed iNaturalist observations')
-    cleaner = cams_cleanup.cleanCAMS()
-    clean_count = cleaner.clean()
-    logging.info(f'Completed clean up. Removed {clean_count} CAMS records')
+
+    logging.info('Finding anomalies between iNaturalist and CAMS, eg iNaturalist observation changes or deletions')
+    anomaly_finder = cams_inat_anomaly_finder.CamsInatAnomalyFinder()
+    anomaly_finder.find_anomalies()
 
 
 main()
