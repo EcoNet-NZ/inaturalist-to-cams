@@ -28,6 +28,13 @@ class INatToCamsSynchroniser():
     #     observation_in_json = pyinaturalist.get_observation(inat_id)
     #     self.sync_observation(pyinaturalist.Observation.from_json(observation_in_json))
 
+    def sync_single_observation(self, observation_id):
+        observation = inaturalist_reader.INatReader().get_observation_with_id(observation_id)
+        try:
+            self.sync_observation(observation)
+        except exceptions.InvalidObservationError:
+            logging.info(f'Ignoring invalid observation {observation.id}')
+
     def sync_updated_observations(self):
         new_observations_by_project = {}
 
