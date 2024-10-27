@@ -46,7 +46,6 @@ class iNatObservations():
             )
             logging.info(f"Found '{len(taxonObservations)}' observations from '{config_name}' with taxon_ids '{taxon_ids}' and place_ids '{place_ids}' since {timestamp}")
             for observation in taxonObservations:
-                if observation.location is not None and observation.observed_on:
-                    observations.append(str(observation.id))
+                observations.append(str(observation.id))
 
         return observations
