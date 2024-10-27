@@ -134,3 +134,12 @@ class INatReader:
             per_page=200
         ).all()
         return observations
+
+    @staticmethod
+    @retry(delay=5, tries=3)
+    def get_observation_with_id(observation_id):
+        client = pyinaturalist.iNatClient()
+        observation = client.observations(observation_id)
+        if not observation:
+            raise ValueError(f'Observation with id {observation_id} not found')
+        return observation
