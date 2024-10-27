@@ -32,8 +32,13 @@ class INatReader:
             logging.exception(f'Skipping observation {observation.id} since it has no location set')
             raise exceptions.InvalidObservationError
 
-        if not observation.observed_on:   # could maybe use date submitted instead?
-            logging.warning(f'Skipping observation {observation.id} since it has no observation date set')
+        date_observed = observation.observed_on
+        if not date_observed:
+            logging.info('No observation date found, using creation date instead')
+            date_observed = observation.created_at
+
+        if not date_observed:
+            logging.warning(f'Skipping observation {observation.id} since it has no observation or creation date set')
             raise exceptions.InvalidObservationError
 
         inat_observation = inaturalist_observation.iNatObservation()
@@ -46,7 +51,7 @@ class INatReader:
         inat_observation.height = INatReader.get_observation_value(observation, 'Height (m)')
         inat_observation.area = INatReader.get_observation_value(observation, 'Area in square meters')
         inat_observation.radius_surveyed = INatReader.get_observation_value(observation, 'Radius (m) of area surveyed')
-        inat_observation.observed_on = observation.observed_on.isoformat()[0:-6]
+        inat_observation.observed_on = date_observed.isoformat()[0:-6]
 
         inat_observation.phenology = INatReader.get_observation_value(observation, 'Plant phenology->most common flowering/fruiting reproductive stage')
 
