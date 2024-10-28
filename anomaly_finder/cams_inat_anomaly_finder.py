@@ -47,6 +47,7 @@ class CamsInatAnomalyFinder():
         # Get all the CAMS features with an iNaturalist URL
         camsReader = cams_anomaly_reader.CAMSAnomalyReader()
         all_synchronised_CAMS_features = camsReader.get_features_with_iNat_URL()
+        duplicate_CAMS_features = find_duplicates(all_synchronised_CAMS_features)
         for url in all_synchronised_CAMS_features:
             existing_CAMS_features.append(self.extract_observation_id(url))
 
@@ -61,24 +62,31 @@ class CamsInatAnomalyFinder():
         setCams = set(existing_CAMS_features)
         setiNat = set(existing_iNat_observations)
 
-        self.logAndReport(report, f"CAMS: {len(existing_CAMS_features)} in format: {existing_CAMS_features[0]}")
-
-        self.logAndReport(report, f"iNat: {len(existing_iNat_observations)} in format: {existing_iNat_observations[0]}")
-
         inCamsOnly = setCams - setiNat
         inINatOnly = setiNat - setCams
+        self.logAndReport(report, f"{len(duplicate_CAMS_features)} features in CAMS with duplicate iNatURLs")
         self.logAndReport(report, f"{len(inCamsOnly)} found in CAMS and not iNaturalist")
         self.logAndReport(report, f"{len(inINatOnly)} found in iNaturalist and not CAMS")
 
-        print("--- Only in CAMS ---")
-        print(inCamsOnly)
-        print('--- URLs (PRODUCTION Experience Builder) ---')
-        for id in inCamsOnly:
-            object_id = camsReader.get_objectid_from_iNat_ID(id)
-            print(f"{base_URL}{'+'.join(map(str, object_id))}")
+        if duplicate_CAMS_features:
+            print("iNatURLs duplicated in CAMS features")
+            print(duplicate_CAMS_features)
+            print('--- URLs (PRODUCTION Experience Builder) ---')
+            for url in duplicate_CAMS_features:
+                object_id = camsReader.get_objectid_from_iNat_ID(self.extract_observation_id(url))
+                print(f"{base_URL}{'+'.join(map(str, object_id))}")
 
-        print("--- Only in iNat ---")
-        print(inINatOnly)
+        if inCamsOnly:
+            print("--- Only in CAMS ---")
+            print(inCamsOnly)
+            print('--- URLs (PRODUCTION Experience Builder) ---')
+            for id in inCamsOnly:
+                object_id = camsReader.get_objectid_from_iNat_ID(id)
+                print(f"{base_URL}{'+'.join(map(str, object_id))}")
+
+        if inINatOnly:
+            print("--- Only in iNat ---")
+            print(inINatOnly)
 
         report.append("*************** REPORT ENDS *******************")
 
@@ -87,3 +95,15 @@ class CamsInatAnomalyFinder():
 
         anomaly_count = len(inCamsOnly) + len(inINatOnly)
         return anomaly_count
+    
+def find_duplicates(lst):
+    seen = set()
+    duplicates = set()
+    
+    for item in lst:
+        if item in seen:
+            duplicates.add(item)
+        else:
+            seen.add(item)
+    
+    return list(duplicates)    
