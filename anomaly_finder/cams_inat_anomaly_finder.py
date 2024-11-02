@@ -93,17 +93,18 @@ class CamsInatAnomalyFinder():
         for line in report:
             print(line)
 
-        anomaly_count = len(inCamsOnly) + len(inINatOnly)
+        anomaly_count = len(duplicate_CAMS_features) + len(inCamsOnly) + len(inINatOnly)
         return anomaly_count
-    
+
+
 def find_duplicates(lst):
     seen = set()
     duplicates = set()
-    
+
     for item in lst:
         if item in seen:
             duplicates.add(item)
         else:
             seen.add(item)
-    
-    return list(duplicates)    
+
+    return list(duplicates)
