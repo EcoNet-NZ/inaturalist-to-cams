@@ -17,10 +17,12 @@
 import logging
 import sys
 from anomaly_finder import cams_inat_anomaly_finder
+from inat_to_cams.cams_reader import CamsReader
 
 
 def main():
 
+    # print(CamsReader().read_observation(199295518))
     logging.info('Finding anomalies between iNaturalist and CAMS, eg iNaturalist observation changes or deletions')
     anomaly_finder = cams_inat_anomaly_finder.CamsInatAnomalyFinder()
     anomaly_count = anomaly_finder.find_anomalies()
