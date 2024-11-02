@@ -133,5 +133,7 @@ class INatToCamsTranslator:
         elif visit_date == date_of_status_update:
             if inat_observation.status_update == 'Dead / Not Present':
                 visit_status = 'GREEN'
+            elif inat_observation.status_update == 'Duplicate':
+                visit_status = 'GRAY'
 
         return visit_date, visit_status

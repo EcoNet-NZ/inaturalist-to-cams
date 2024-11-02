@@ -27,13 +27,15 @@ class CamsConnection:
 
     @retry(delay=5, tries=3)
     def __init__(self):
-
+        print(f"Connecting to {os.environ['ARCGIS_URL']}")
         # self.gis = arcgis.GIS(profile='econet')
         self.gis = arcgis.GIS(url=os.environ['ARCGIS_URL'],
                               username=os.environ['ARCGIS_USERNAME'],
                               password=os.environ['ARCGIS_PASSWORD'])
+        print("Connecting to layer")
         # self.gis = arcgis.GIS(profile='econet_sync')
         self.item = self.gis.content.get(os.environ['ARCGIS_FEATURE_LAYER_ID'])
+        print("Connected")
 
         setup_logging.SetupLogging()
         logging.basicConfig(level=logging.INFO, format='%(asctime)s %(levelname)s %(message)s', datefmt='%Y-%m-%d %H:%M:%S', force=True)

@@ -87,3 +87,11 @@ Feature: Set Visit status (WeedVisitStatus)
          Given iNaturalist has a new OMB observation with 'Date of status update' = today and 'Status update' = 'Dead / Not Present'
             When we process the observation
             Then the visits record has 'WeedVisitStatus' set to 'GreenNoRegrowthThisYear'
+
+  	Rule:
+		* Else if the plant is updated that it is a duplicate, set the status to GRAY
+
+      Example: New observation updated today with Status update = Duplicate (GRAY)
+         Given iNaturalist has a new OMB observation with 'Date of status update' = today and 'Status update' = 'Duplicate'
+            When we process the observation
+            Then the visits record has 'WeedVisitStatus' set to 'GrayDuplicate'
