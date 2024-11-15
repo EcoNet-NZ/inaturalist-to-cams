@@ -69,24 +69,18 @@ class CamsInatAnomalyFinder():
         self.logAndReport(report, f"{len(inINatOnly)} found in iNaturalist and not CAMS")
 
         if duplicate_CAMS_features:
-            print("iNatURLs duplicated in CAMS features")
-            print(duplicate_CAMS_features)
-            print('--- URLs (PRODUCTION Experience Builder) ---')
             for url in duplicate_CAMS_features:
-                object_id = camsReader.get_objectid_from_iNat_ID(self.extract_observation_id(url))
-                print(f"{base_URL}{'+'.join(map(str, object_id))}")
+                iNat_id = self.extract_observation_id(url)
+                object_ids = camsReader.get_objectid_from_iNat_ID(iNat_id)
+                print(f"iNat observation {iNat_id} duplicated by CAMS weed instances with OBJECTID {object_ids}")
 
         if inCamsOnly:
-            print("--- Only in CAMS ---")
-            print(inCamsOnly)
-            print('--- URLs (PRODUCTION Experience Builder) ---')
-            for id in inCamsOnly:
-                object_id = camsReader.get_objectid_from_iNat_ID(id)
-                print(f"{base_URL}{'+'.join(map(str, object_id))}")
+            for iNat_id in inCamsOnly:
+                object_ids = camsReader.get_objectid_from_iNat_ID(iNat_id)
+                print(f"Weed instances in CAMS with OBJECTID {object_ids} not found in iNaturalist (iNat id = {iNat_id})")
 
         if inINatOnly:
-            print("--- Only in iNat ---")
-            print(inINatOnly)
+            print(f"Observations in iNaturalist with ids {inINatOnly} not found in CAMS")
 
         report.append("*************** REPORT ENDS *******************")
 
