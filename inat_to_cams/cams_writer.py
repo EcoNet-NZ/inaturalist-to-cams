@@ -138,7 +138,9 @@ class CamsWriter:
             ('Location details', cams_feature.weed_location.location_details),          
             ('Effort to control', cams_feature.weed_location.effort_to_control),
             ('CurrentStatus', cams_feature.weed_location.current_status),
-            ('iNaturalistURL', cams_feature.weed_location.external_url)
+            ('iNaturalistURL', cams_feature.weed_location.external_url),
+            ('Image URL', cams_feature.weed_location.image_url),
+            ('Image Attribution', cams_feature.weed_location.image_attribution)
         ]
         if write_geolocation:
             fields.append(('iNaturalist Longitude', cams_feature.weed_location.iNaturalist_longitude))

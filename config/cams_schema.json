@@ -52,6 +52,16 @@
         "iNaturalist Latitude":{
             "name": "iNatLatitude",
             "type": "Double"
+        },
+        "Image URL":{
+            "name": "ImageURL",
+            "type": "String",
+            "length": 256
+        },
+        "Image Attribution":{
+            "name": "ImageAttribution",
+            "type": "String",
+            "length": 256
         }
     },
     "Visits_Table": {

@@ -67,6 +67,9 @@ class INatToCamsTranslator:
 
         weed_location.effort_to_control = effort_to_control
         weed_location.current_status = visit_status
+        weed_location.image_url = inat_observation.image_url
+        weed_location.image_attribution = inat_observation.image_attribution
+
         weed_location.external_url = f'https://www.inaturalist.org/observations/{inat_observation.id}'
 
 

@@ -52,6 +52,11 @@ class INatReader:
         inat_observation.area = INatReader.get_observation_value(observation, 'Area in square meters')
         inat_observation.radius_surveyed = INatReader.get_observation_value(observation, 'Radius (m) of area surveyed')
         inat_observation.observed_on = date_observed.isoformat()[0:-6]
+        if observation.photos:
+            # Get the URL and attribution
+            first_photo = observation.photos[0]
+            inat_observation.image_url = first_photo.url.replace("square.", "large.")
+            inat_observation.image_attribution = first_photo.attribution
 
         inat_observation.phenology = INatReader.get_observation_value(observation, 'Plant phenology->most common flowering/fruiting reproductive stage')
 
