@@ -68,7 +68,7 @@ class CamsConnection:
     @retry(delay=5, tries=3)
     def query_weed_location_layer(self, query_layer):
         return self.layer.query(where=query_layer)
-    
+
     @retry(delay=5, tries=3)
     def query_weed_location_layer_limit_records(self, query_layer, max_record_count):
         return self.layer.query(where=query_layer, result_record_count=max_record_count, return_all_records=False)

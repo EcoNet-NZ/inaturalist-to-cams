@@ -18,18 +18,18 @@ name: One off migration
 
 on:
   workflow_dispatch:
-    inputs:
-      migrationCount:
-        description: 'How many records to migrate'
-        required: false
-        type: number
-        default: 1
+    # inputs:
+    #   migrationCount:
+    #     description: 'How many records to migrate'
+    #     required: false
+    #     type: number
+    #     default: 1
 
-      delay:
-        description: 'How many seconds to delay between each record'
-        required: false
-        type: number
-        default: 1
+    #   delay:
+    #     description: 'How many seconds to delay between each record'
+    #     required: false
+    #     type: number
+    #     default: 1
   
 concurrency: non-concurrent  
 
@@ -37,7 +37,7 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    # timeout-minutes: 30
 
     steps:
     - name: Checkout
@@ -68,7 +68,8 @@ jobs:
 
     - name: Run script
       run: |
-        python mainMigrate.py ${{ inputs.migrationCount }} ${{ inputs.delay }}
+        python mainMigrate.py
+#        python mainMigrate.py ${{ inputs.migrationCount }} ${{ inputs.delay }}
       env: 
         ARCGIS_URL: ${{ secrets.ARCGIS_URL }}
         ARCGIS_USERNAME: ${{ secrets.ARCGIS_USERNAME }}

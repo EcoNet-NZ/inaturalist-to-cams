@@ -44,6 +44,7 @@ class INatReader:
         inat_observation = inaturalist_observation.iNatObservation()
         inat_observation.id = observation.id
         inat_observation.location = inaturalist_observation.iNatPoint(observation.location[1], observation.location[0])
+        inat_observation.location_accuracy = observation.positional_accuracy
         inat_observation.location_details = INatReader.get_observation_value(observation, 'Location details')
         inat_observation.taxon_lineage = observation.taxon.ancestor_ids
         inat_observation.description = observation.description
@@ -52,6 +53,14 @@ class INatReader:
         inat_observation.area = INatReader.get_observation_value(observation, 'Area in square meters')
         inat_observation.radius_surveyed = INatReader.get_observation_value(observation, 'Radius (m) of area surveyed')
         inat_observation.observed_on = date_observed.isoformat()[0:-6]
+        if observation.photos:
+            # Get the URLs and attribution
+            photo_urls = []
+            for i in range(min(5, len(observation.photos))):
+                photo_url = observation.photos[i].url.replace("square.", "large.")
+                photo_urls.append(photo_url)
+            inat_observation.image_urls = ",".join(photo_urls)
+            inat_observation.image_attribution = observation.photos[0].attribution
 
         inat_observation.phenology = INatReader.get_observation_value(observation, 'Plant phenology->most common flowering/fruiting reproductive stage')
 

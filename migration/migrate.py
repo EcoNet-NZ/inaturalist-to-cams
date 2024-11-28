@@ -15,13 +15,16 @@
 #  ====================================================================
 
 import logging
-import time
+import datetime
+import func_timeout
 import re
 import pyinaturalist
 from pyinaturalist.exceptions import ObservationNotFound
-from migration import migration_reader, cams_migration_writer 
+from migration import migration_reader, cams_migration_writer
+from inat_to_cams import inaturalist_reader, config
 
-class copyiNatLocationsToCAMS(): 
+
+class CopyiNatDetailsToCAMS():
 
     def extract_observation_id(self, url):
         observation_id = None
@@ -34,72 +37,70 @@ class copyiNatLocationsToCAMS():
             logging.warning(f"Malformed URL: {url}")
         return observation_id
 
-    def get_observation_from_id(self, observation_id):    
-        try:            
-            observation = pyinaturalist.get_observation(observation_id)       
+    def get_observation_from_id(self, observation_id):
+        try:
+            # observation = pyinaturalist.get_observation(observation_id)
+            client = pyinaturalist.iNatClient()
+            observation = client.observations(observation_id)
+
         except ObservationNotFound:
             return None
 
         return observation
     
-    def copyiNatLocations_to_existing_CAMS_features(self, migration_max_record_count, delay):
+    def copyiNatDetails_to_existing_CAMS_features(self):
         update_count = 0
-        report = []
-        report.append("***************** Update Report **************")
-        cams_writer = cams_migration_writer.CamsMigrationWriter()
 
-        #Get the CAMS features with an empty iNaturalist Location and a valid iNatURL      
-        camsReader = migration_reader.CamsMigrationReader()       
-        existing_CAMS_features = camsReader.get_features_without_iNat_location(migration_max_record_count)
+        for config_name, values in config.sync_configuration.items():
 
-        message = f"Found {len(existing_CAMS_features)} CAMS feature without iNatLong/Lat"
-        logging.info(message)        
-        report.append(message)
-        
-        #For each CamsFeature, extract the iNat observation ID and get the Original iNat observation location  
-        try:   
-            for feature in existing_CAMS_features:
-                observationID = self.extract_observation_id(feature.weed_location.external_url)
-                if observationID != None:
-                    
-                    observation = self.get_observation_from_id(observationID)
-                    if observation:
-                        report.append(f"CAMS Feature[{update_count+1}]: object_id:{feature.weed_location.object_id},  iNatID:{observationID} URL: {feature.weed_location.external_url}")
-                        location = observation['location']
-                        logging.info(f"[{update_count}] Observation {observationID} found. Located at {location}")
-                        feature.weed_location.iNaturalist_latitude = location[0]
-                        feature.weed_location.iNaturalist_longitude = location[1]                              
+            # pull in all observations by setting year 2000 timestamp
+            timestamp = '2000-01-01T00:00:00+12:00'
 
-                        #Now save the location to CAMS                                      
-                        cams_writer.write_feature(feature ) 
-                        report.append(f"Updated iNatLocation for CAMS object_id {feature.weed_location.object_id}")
+            taxon_ids = values['taxon_ids']
+            place_ids = values['place_ids']
 
-                        #read it back to validate update
-                        updated_feature = camsReader.get_feature_by_id(feature.weed_location.object_id)
-                        assert updated_feature.weed_location.iNaturalist_latitude == location[0], f"iNatLocation(lat) for {feature.weed_location.object_id} ({updated_feature.weed_location.iNaturalist_latitude}) was not updated to {location[0]}"
-                        assert updated_feature.weed_location.iNaturalist_longitude == location[1],f"iNatLocation(long) for {feature.weed_location.object_id} ({updated_feature.weed_location.iNaturalist_longitude}) was not updated to {location[1]}"
-                        report.append("")
-                        update_count +=1
-                    else:
-                        message = f"iNaturalist observation {observationID} not found --- URL: {feature.weed_location.external_url}"
-                        logging.error(message)
-                        report.append(message)
-                    time.sleep(int(delay))
-                else:
-                    message = f"iNaturalist ID not found in this URL: {feature.weed_location.external_url} (SKIPPING FEATURE)"
-                    logging.error(message)
-                    report.append(message)
+            logging.info('=' * 80)
+            logging.info(f"Finding '{config_name}' with taxon_ids '{taxon_ids}' and place_ids '{place_ids}' since {timestamp}")
 
-        except AssertionError as e:
-            report.append(f"Assertion Error: {e}")
-            report.append("RUN ABORTED at Feature count = {update_count}")
-            logging.error(f"Assertion Error: {e}")
+            time_of_previous_update = datetime.datetime.fromisoformat(timestamp)
 
-        report.append(f"Updated {update_count} CAMS features successfully")
-        report.append("*************** REPORT ENDS *******************")
+            taxonObservations = func_timeout.func_timeout(
+                120,  # seconds
+                inaturalist_reader.INatReader().get_matching_observations_updated_since,
+                args=(place_ids, taxon_ids, time_of_previous_update)
+            )
 
-        for line in report:
-            print(line)
+            logging.info(f"Found '{len(taxonObservations)}' observations from '{config_name}' with taxon_ids '{taxon_ids}' and place_ids '{place_ids}' since {timestamp}")
+            for observation in taxonObservations:
+                update_count += self.update_cams_feature_from(observation)
+
+        print(f"Updated {update_count} CAMS features successfully")
+        print("*************** REPORT ENDS *******************")
+
         return update_count
-   
-locationCopier = copyiNatLocationsToCAMS()
+
+    def update_cams_feature_from(self, observation):
+        feature = migration_reader.CamsMigrationReader().get_feature_by_inat_id(observation.id)
+        if feature:
+            # print(observation)
+            # print('---')
+            feature.weed_location.location_accuracy = observation.positional_accuracy
+            logging.info(f"Updating location accuracy for CAMS object_id {feature.weed_location.object_id} with iNat id {observation.id} to {feature.weed_location.location_accuracy}")
+            if observation.photos:
+                # print(f"CAMS Feature: object_id:{feature.weed_location.object_id},  URL: {feature.weed_location.external_url}")
+                # Get the URLs and attribution
+                photo_urls = []
+                for i in range(min(5, len(observation.photos))):
+                    photo_url = observation.photos[i].url.replace("square.", "large.")
+                    photo_urls.append(photo_url)
+                feature.weed_location.image_urls = ",".join(photo_urls)
+                feature.weed_location.image_attribution = observation.photos[0].attribution
+
+                logging.info(f"Updating photos for CAMS object_id {feature.weed_location.object_id} with iNat id {observation.id} to {feature.weed_location.image_urls}")
+            else:
+                logging.info(f"No photo for inat id {observation.id}")
+            cams_migration_writer.CamsMigrationWriter().write_new_feature_fields(feature)
+            return 1
+        else:
+            logging.info(f"Feature not found for inat id {observation.id}")
+            return 0
