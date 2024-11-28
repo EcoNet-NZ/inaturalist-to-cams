@@ -79,8 +79,9 @@ class CamsReader:
             location.iNaturalist_longitude = featureRow.attributes['iNatLongitude']
             location.iNaturalist_latitude = featureRow.attributes['iNatLatitude']
             location.current_status = cams_schema_config.cams_field_key('WeedLocations', 'CurrentStatus', featureRow.attributes['ParentStatusWithDomain'])
-            location.image_url = featureRow.attributes['ImageURL']
+            location.image_urls = featureRow.attributes['ImageURLs']
             location.image_attribution = featureRow.attributes['ImageAttribution']
+            location.location_accuracy = featureRow.attributes['LocationAccuracy']
 
             # Temporarily until updated from weed visit by database trigger
             location.external_url = featureRow.attributes['iNatURL']

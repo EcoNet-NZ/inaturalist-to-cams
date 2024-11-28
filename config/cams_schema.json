@@ -53,15 +53,19 @@
             "name": "iNatLatitude",
             "type": "Double"
         },
-        "Image URL":{
-            "name": "ImageURL",
+        "Image URLs":{
+            "name": "ImageURLs",
             "type": "String",
-            "length": 256
+            "length": 512
         },
         "Image Attribution":{
             "name": "ImageAttribution",
             "type": "String",
             "length": 256
+        },
+        "Location Accuracy":{
+            "name": "LocationAccuracy",
+            "type": "Integer"
         }
     },
     "Visits_Table": {

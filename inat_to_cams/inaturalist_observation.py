@@ -27,6 +27,7 @@ class iNatObservation:
     def __init__(self):
         self.id = None
         self.location = None
+        self.location_accuracy = None
         self.location_details = None
         self.description = None
         self.quality_grade = None
@@ -36,7 +37,7 @@ class iNatObservation:
         self.observed_on = None
         self.taxon_lineage = None
         self.phenology = None
-        self.image_url = None
+        self.image_urls = None
         self.image_attribution = None
 
         self.effort_to_control = None

@@ -57,8 +57,9 @@ class WeedLocation:
         self.effort_to_control = None
         self.current_status = None
         self.external_url = None
-        self.image_url = None
+        self.image_urls = None
         self.image_attribution = None
+        self.location_accuracy = None
 
     def __eq__(self, other):
         if type(other) is type(self):

@@ -84,20 +84,23 @@ class CopyiNatDetailsToCAMS():
         if feature:
             # print(observation)
             # print('---')
+            feature.weed_location.location_accuracy = observation.positional_accuracy
+            logging.info(f"Updating location accuracy for CAMS object_id {feature.weed_location.object_id} with iNat id {observation.id} to {feature.weed_location.location_accuracy}")
             if observation.photos:
                 # print(f"CAMS Feature: object_id:{feature.weed_location.object_id},  URL: {feature.weed_location.external_url}")
-                # Get the URL and attribution
-                first_photo = observation.photos[0]
-                feature.weed_location.image_url = first_photo.url.replace("square.", "large.")
-                feature.weed_location.image_attribution = first_photo.attribution
+                # Get the URLs and attribution
+                photo_urls = []
+                for i in range(min(5, len(observation.photos))):
+                    photo_url = observation.photos[i].url.replace("square.", "large.")
+                    photo_urls.append(photo_url)
+                feature.weed_location.image_urls = ",".join(photo_urls)
+                feature.weed_location.image_attribution = observation.photos[0].attribution
 
-                # Now save the location to CAMS                                      
-                cams_migration_writer.CamsMigrationWriter().write_feature_image_fields(feature)
-                logging.info(f"Updated photo for CAMS object_id {feature.weed_location.object_id} with iNat id {observation.id} to {feature.weed_location.image_url}")
-                return 1
+                logging.info(f"Updating photos for CAMS object_id {feature.weed_location.object_id} with iNat id {observation.id} to {feature.weed_location.image_urls}")
             else:
                 logging.info(f"No photo for inat id {observation.id}")
-                return 0
+            cams_migration_writer.CamsMigrationWriter().write_new_feature_fields(feature)
+            return 1
         else:
             logging.info(f"Feature not found for inat id {observation.id}")
             return 0

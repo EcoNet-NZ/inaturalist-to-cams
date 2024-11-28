@@ -22,15 +22,16 @@ class CamsMigrationWriter:
     def __init__(self):
         self.cams = cams_interface.connection
 
-    def write_feature_image_fields(self, cams_feature):
+    def write_new_feature_fields(self, cams_feature):
         logging.info(f'Updating CAMS iNaturalist Location {cams_feature.weed_location.external_url}')
         new_layer_row = [{            
             'attributes': {
             }
         }]
         fields = [
-            ('Image URL', cams_feature.weed_location.image_url),
-            ('Image Attribution', cams_feature.weed_location.image_attribution)
+            ('Image URLs', cams_feature.weed_location.image_urls),
+            ('Image Attribution', cams_feature.weed_location.image_attribution),
+            ('Location Accuracy', cams_feature.weed_location.location_accuracy)
         ]
 
         [self.add_field(new_layer_row[0], 'WeedLocations', field) for field in fields]
