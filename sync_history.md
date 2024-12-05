@@ -29125,3 +29125,25 @@
 |Weed record updated, Visit record updated|**77922**|BananaPassionfruit|RED|[253664236](https://www.inaturalist.org/observations/253664236)|
 |Weed record updated|**77931**|BananaPassionfruit|RED|[253710871](https://www.inaturalist.org/observations/253710871)|
 |Weed record updated|**77948**|BananaPassionfruit|RED|[253931866](https://www.inaturalist.org/observations/253931866)|
+---
+
+# Run [6879](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/7a246e82dce10088aa4bfd523fdaad68db30c163/checks/12186223174)
+2024-12-06 07:55
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Weed record updated|**73728**|BananaPassionfruit|PURPLE|[209943405](https://www.inaturalist.org/observations/209943405)|
+|Weed record updated|**77894**|BananaPassionfruit|RED|[237565876](https://www.inaturalist.org/observations/237565876)|
+|Weed record updated|**77520**|BananaPassionfruit|RED|[241229132](https://www.inaturalist.org/observations/241229132)|
+|Weed record updated, Visit record updated|**77041**|BananaPassionfruit|PURPLE|[247876435](https://www.inaturalist.org/observations/247876435)|
+|Weed record updated|**77057**|BananaPassionfruit|RED|[248029740](https://www.inaturalist.org/observations/248029740)|
+|Weed record updated|**77058**|BananaPassionfruit|RED|[248030189](https://www.inaturalist.org/observations/248030189)|
+|Weed record updated|**77140**|BananaPassionfruit|RED|[248818913](https://www.inaturalist.org/observations/248818913)|
+|Weed record updated, Visit record updated|**77197**|BananaPassionfruit|RED|[248966534](https://www.inaturalist.org/observations/248966534)|
+|Weed record updated|**77207**|BananaPassionfruit|RED|[249080067](https://www.inaturalist.org/observations/249080067)|
+|Weed record updated|**77309**|BananaPassionfruit|RED|[249428933](https://www.inaturalist.org/observations/249428933)|
+|Weed record updated|**77337**|BananaPassionfruit|RED|[249705162](https://www.inaturalist.org/observations/249705162)|
+|Weed record updated|**77515**|BananaPassionfruit|RED|[250704588](https://www.inaturalist.org/observations/250704588)|
+|Weed record updated|**77663**|BananaPassionfruit|RED|[251133839](https://www.inaturalist.org/observations/251133839)|
+|Weed record updated|**77609**|BananaPassionfruit|RED|[251505854](https://www.inaturalist.org/observations/251505854)|
+|Weed record updated, Visit record updated|**77374**|MothPlant|RED|[250100947](https://www.inaturalist.org/observations/250100947)|
