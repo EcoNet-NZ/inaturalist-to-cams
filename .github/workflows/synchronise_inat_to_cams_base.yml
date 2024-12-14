@@ -40,7 +40,7 @@ jobs:
 
     steps:
     - name: Checkout
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
 
     - name: Install apt dependencies
       uses: awalsh128/cache-apt-pkgs-action@latest
@@ -49,7 +49,7 @@ jobs:
         version: 1.0
 
     - name: Set up Python
-      uses: actions/setup-python@v4
+      uses: actions/setup-python@v5
       with:
         python-version: '3.11'
         cache: 'pip'
@@ -76,7 +76,7 @@ jobs:
 
     - name: Commit & Push
       if: ${{ inputs.ENV_TYPE == 'PRODUCTION' }}
-      uses: actions-js/push@v1.4
+      uses: actions-js/push@v1.5
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         message: Updated by Github Actions ${{ github.run_number }}.${{ github.run_attempt }}
