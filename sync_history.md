@@ -30281,3 +30281,11 @@
 |Sync Event|Object Id|Species|Status|iNaturalist Id|
 |----------|---------|-------|------|--------------|
 |Weed record updated, Visit record updated|**78260**|WoollyNightshade|RED|[255573747](https://www.inaturalist.org/observations/255573747)|
+---
+
+# Run [7216](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/d606919a6ac624c98840a83429a12259f00030be/checks/12428449298)
+2024-12-20 21:55
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**78283**|CathedralBells|RED|[255660747](https://www.inaturalist.org/observations/255660747)|
