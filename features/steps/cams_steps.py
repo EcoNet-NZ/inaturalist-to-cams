@@ -103,9 +103,11 @@ def step_impl(context, field):
 def step_impl(context, field, date, index_str='first'):
     index = to_numeric(index_str)
     row = context.connection.visits_row(str(context.observation.id), index)
-    date_visit_made_ts = row[field]
-    date_visit_made = datetime.fromtimestamp(date_visit_made_ts // 1000)
-    assert_that(date_visit_made, equal_to(date))
+    actual_date_ts = row[field]
+    actual_date = None
+    if actual_date_ts:
+        actual_date = datetime.fromtimestamp(actual_date_ts // 1000)
+    assert_that(actual_date, equal_to(date))
 
 
 @then(u"the {index_str} visits record has date '{field}' set to {date_str}")

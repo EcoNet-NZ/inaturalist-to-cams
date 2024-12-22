@@ -241,6 +241,7 @@ def step_impl(context, date_field):
 @given(u"'{field}' = '{value}'")
 @given(u"the '{field}' are updated to '{value}'")
 @given(u"'{field}' is updated to '{value}'")
+@given(u"'{field}' is set to '{value}'")
 def step_impl(context, field, value):
     ofv = pyinaturalist.ObservationFieldValue(name=field, value=value)
     if context.observation.ofvs is None:

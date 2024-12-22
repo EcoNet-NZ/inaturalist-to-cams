@@ -140,7 +140,6 @@ Feature: Processing a new iNaturalist observation populates a new WeedVisits rec
 		When we process the observation
 		Then the visits record has 'Treated' set to 'Yes'
 
-		@wip
 		Example: New Treated field is preferred if both are provided
 		Given iNaturalist has a new OMB observation with  'Treated ?' set to 'Partially' and 'Is the pest controlled?' set to 'yes'
 		When we process the observation
