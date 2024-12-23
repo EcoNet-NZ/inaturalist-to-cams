@@ -46,21 +46,18 @@ Feature: DateVisitMade (DateCheck) and Follow-up dates are set correctly
 		Then the visits record has date 'DateCheck' set to '2022-12-22 19:33:44'
 
 	Rule:
-		If Follow-up in iNaturalist is set to Default, the Follow-up (YYYY-MM) field on the CAMS visit record is left blank
+		If Follow-up date in iNaturalist is not set, the Follow-up field on the CAMS visit record is left blank
 
-		Example: New observation with Follow-up set to Default
-		Given iNaturalist has a new OMB observation with 'Follow-up' set to 'Default'
+		@wip
+		Example: New observation with Follow-up date left blank
+		Given iNaturalist has a new OMB observation
 		When we process the observation
 		Then the visits record has 'DateForReturnVisit' set to None
 
 	Rule:
-		DateVisitMade is set to the latest of 'Date controlled' or 'Date of status update'.
-		If neither of these are set, DateVisitMade is set to the 'Observed at' date.
 
 		@wip
-		Example: Follow-up is 1 month after new observation without weed being controlled or status update
-		Given iNaturalist has a new OMB observation observed at 2024-05-09T12:23:34+12:00 with no date controlled and no date of status update
-		And 'Follow-up' is set to '1 month'
+		Example: Follow-up date is 2025-02-14
+		Given iNaturalist has a new OMB observation with 'Follow-up date' set to '2025-02-14'
 		When we process the observation
-		Then the visits record has date 'DateCheck' set to '2024-05-09 12:23:34'
-		And the visits record has date 'DateForReturnVisit' set to '2024-06-09'
+		Then the visits record has date 'DateForReturnVisit' set to '2025-02-14'

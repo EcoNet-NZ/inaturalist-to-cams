@@ -42,7 +42,6 @@ class iNatObservation:
 
         self.effort_to_control = None
         self.site_difficulty = None
-        self.follow_up_period = None
         self.follow_up_date = None
 
         self.treated = None

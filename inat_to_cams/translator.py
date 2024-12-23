@@ -85,10 +85,7 @@ class INatToCamsTranslator:
         weed_visit.date_visit_made = self.as_local_datetime(visit_date)
         weed_visit.observation_quality = inat_observation.quality_grade
         weed_visit.site_difficulty = inat_observation.site_difficulty
-        if inat_observation.follow_up_period:
-            weed_visit.follow_up_date = (weed_visit.date_visit_made + relativedelta(months=1)).date()
-        else:
-            weed_visit.follow_up_date = inat_observation.follow_up_date
+        weed_visit.follow_up_date = self.as_local_datetime(inat_observation.follow_up_date)
         weed_visit.phenology = inat_observation.phenology
         weed_visit.visit_status = visit_status
         weed_visit.treated = inat_observation.treated
@@ -101,6 +98,8 @@ class INatToCamsTranslator:
         return cams_feature.CamsFeature(geolocation, weed_location, weed_visit)
 
     def as_local_datetime(self, date_field):
+        if not date_field:
+            return None
         timestamp = datetime.fromisoformat(date_field)
         naive_datetime = timestamp.replace(tzinfo=None)
         assert naive_datetime.tzinfo is None
