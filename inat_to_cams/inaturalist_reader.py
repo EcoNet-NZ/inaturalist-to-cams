@@ -75,6 +75,11 @@ class INatReader:
         inat_observation.treatment_substance = INatReader.get_observation_value(observation, 'Treatment substance')
         inat_observation.treatment_details = INatReader.get_observation_value(observation, 'Treatment details')
 
+        inat_observation.follow_up_period = INatReader.get_observation_value(observation, 'Follow-up')
+        if (inat_observation.follow_up_period == 'Default'):
+            inat_observation.follow_up_period = None
+
+        # Legacy WMANZ observation fields
         follow_up = INatReader.get_observation_value(observation, 'Follow-up (YYYY-MM)')
         if follow_up and follow_up != '(undef.)':
             naive_datetime = datetime.datetime.strptime(follow_up + '-01', '%Y-%m-%d')
