@@ -75,7 +75,7 @@ class INatReader:
         inat_observation.treatment_substance = INatReader.get_observation_value(observation, 'Treatment substance')
         inat_observation.treatment_details = INatReader.get_observation_value(observation, 'Treatment details')
 
-        inat_observation.follow_up_date = INatReader.get_observation_value(observation, 'Follow-up date')
+        inat_observation.follow_up_date = INatReader.get_observation_value(observation, 'Date for next visit')
 
         # Legacy WMANZ observation fields
         if not inat_observation.follow_up_date:

@@ -154,7 +154,7 @@
             "length": 2147483647,
             "type": "String"
         },
-        "Follow-up (YYYY-MM)": {
+        "Date for next visit": {
             "name": "DateForReturnVisit",
             "type": "Date"
         },

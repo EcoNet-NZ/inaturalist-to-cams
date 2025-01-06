@@ -14,7 +14,7 @@
 #  limitations under the License.
 #  ====================================================================
 
-Feature: DateVisitMade (DateCheck) and Follow-up dates are set correctly
+Feature: DateVisitMade (DateCheck) and 'Date for next visit' (DateForReturnVisit) are set correctly
 
 	Rule:
 		DateVisitMade is set to the latest of 'Date controlled' or 'Date of status update'.
@@ -46,10 +46,10 @@ Feature: DateVisitMade (DateCheck) and Follow-up dates are set correctly
 		Then the visits record has date 'DateCheck' set to '2022-12-22 19:33:44'
 
 	Rule:
-		If Follow-up date in iNaturalist is not set, the Follow-up field on the CAMS visit record is left blank
+		If 'Date for next visit' in iNaturalist is not set, the 'Date for next visit' field on the CAMS visit record is left blank
 
 		@wip
-		Example: New observation with Follow-up date left blank
+		Example: New observation with 'Date for next visit' left blank
 		Given iNaturalist has a new OMB observation
 		When we process the observation
 		Then the visits record has 'DateForReturnVisit' set to None
@@ -57,7 +57,7 @@ Feature: DateVisitMade (DateCheck) and Follow-up dates are set correctly
 	Rule:
 
 		@wip
-		Example: Follow-up date is 2025-02-14
-		Given iNaturalist has a new OMB observation with 'Follow-up date' set to '2025-02-14'
+		Example: 'Date for next visit' is 2025-02-14
+		Given iNaturalist has a new OMB observation with 'Date for next visit' set to '2025-02-14'
 		When we process the observation
 		Then the visits record has date 'DateForReturnVisit' set to '2025-02-14'
