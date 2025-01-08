@@ -6,7 +6,7 @@ You can click on the ![image](https://user-images.githubusercontent.com/144202/2
 
 ## Overview
 
-The CAMS weed app enhances our ability to manage weeds across a location by mapping the current status of the weed. The status of each weed is reset annually (currently in July) to `Purple - Please Check`. As people visit the weed during the year, they update the status, typically to `Green - regrowth has not occurred this year` or `Red - growth is occurring, please kill it`. If the weed is controlled, details of the control method are added and the status is changed to `Yellow - growth has been killed this year` or `Orange - dead-headed`. The goal is to recheck all weed locations during the year and update the status, with the end goal of making all the weed locations `Green`.
+The CAMS weed app enhances our ability to manage weeds across a location by mapping the current status of the weed. The status of controlled weeds is reset annually (currently on 1st October) to `Purple - Please Check`. As people visit the weed during the year, they update the status, typically to `Green - regrowth has not occurred this year` or `Red - growth is occurring, please kill it`. If the weed is controlled, details of the control method are added and the status is changed to `Yellow - growth has been killed this year` or `Orange - dead-headed`. The goal is to recheck all weed locations during the year and update the status, with the end goal of making all the weed locations `Green`.
 
 The weed app shows a map with a marker at each weed location, coloured to show the current known status. Here's an example map:
 
@@ -38,9 +38,9 @@ Open the [Join Weed Management Aotearoa NZ Project page](https://www.inaturalist
 
 If you're not familiar with adding observations to iNaturalist see [this guide](https://www.inaturalist.org/pages/add-an-observation-nz). 
 
-When adding an observation, please check the location of the observation is accurate, and update it if necessary. This will help us to find the weed in future.
+When creating an observation, please check the location of the observation is accurate, and update it if necessary. This will help us to find the weed in future.
 
-**Note**: the mobile app does not currently allow you to add other users' observations to projects. You'll need to use the browser version to add other users' observations. 
+The easiest way to add an observation to the `Weed Management Aotearoa NZ` project is to use the [iNaturalist weed status updater](https://github.com/EcoNet-NZ/inaturalist-weed-status-updater), which is available when you click on the 'Update weed status' button from the CAMS weed pop-up.
 
 ### Using the Mobile app
 
@@ -48,7 +48,7 @@ When adding a new observation in iNaturalist, click on the `Add to project(s)` o
 
 When editing one of your observations in iNaturalist, click on the Edit (pencil) icon. (To get to the iNaturalist observation from CAMS, you can click on the weed location dot and then click on the iNaturalist URL.)
 
-Note if someone else created the observation, you'll currently need to use the Browser version to add it to the `Weed Management Aotearoa NZ` project and/or update the observation fields. 
+Note if someone else created the observation, you'll currently need to use the iNaturalist weed status updater](https://github.com/EcoNet-NZ/inaturalist-weed-status-updater) (or manually using the Browser interface to add it to the `Weed Management Aotearoa NZ` project and/or update the observation fields).
 
 Fill out the fields:
 
@@ -110,7 +110,7 @@ If you have done any control work on the weed, fill in these fields. This may be
 |How treated|Select the treatment you have used to control the weed|
 |Treatment substance|If using herbicide, select the herbicide which you have used|
 |Treatment details|Any additional details of how the weed was controlled|
-|Follow-up (YYYY-MM)|Recommended date for a follow-up check or control work|
+|Date for next visit|Recommended date for a follow-up check or control work|
 
 #### Status Updates
 

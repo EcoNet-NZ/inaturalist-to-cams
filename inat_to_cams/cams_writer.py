@@ -87,7 +87,7 @@ class CamsWriter:
             ('Height', weed_visit.height),
             ('Radius (m) of area surveyed', weed_visit.radius_surveyed),
             ('Site difficulty', weed_visit.site_difficulty),
-            ('Follow-up (YYYY-MM)', weed_visit.follow_up_date),
+            ('Date for next visit', weed_visit.follow_up_date),
             ('Plant phenology->most common flowering/fruiting reproductive stage', weed_visit.phenology),
             ('Treated', weed_visit.treated),
             ('How treated', weed_visit.how_treated),

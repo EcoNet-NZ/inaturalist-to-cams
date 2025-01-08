@@ -80,11 +80,6 @@ Feature: Processing a new iNaturalist observation populates a new WeedVisits rec
 		When we process the observation
 		Then the visits record has 'CheckedNearbyRadius' set to 17.5
 
-		Example: Next visit date is set if provided
-		Given iNaturalist has a new OMB observation with 'Follow-up (YYYY-MM)' set to '2022-12'
-		When we process the observation
-		Then the visits record has date 'DateForReturnVisit' set to '2022-12-01'
-
 		Example: Notes are set if provided
 		Given iNaturalist has a new OMB observation with description set to 'Weed climbing up Hinau'
 		When we process the observation
@@ -140,7 +135,6 @@ Feature: Processing a new iNaturalist observation populates a new WeedVisits rec
 		When we process the observation
 		Then the visits record has 'Treated' set to 'Yes'
 
-		@wip
 		Example: New Treated field is preferred if both are provided
 		Given iNaturalist has a new OMB observation with  'Treated ?' set to 'Partially' and 'Is the pest controlled?' set to 'yes'
 		When we process the observation

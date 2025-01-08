@@ -75,13 +75,15 @@ class INatReader:
         inat_observation.treatment_substance = INatReader.get_observation_value(observation, 'Treatment substance')
         inat_observation.treatment_details = INatReader.get_observation_value(observation, 'Treatment details')
 
-        follow_up = INatReader.get_observation_value(observation, 'Follow-up (YYYY-MM)')
-        if follow_up and follow_up != '(undef.)':
-            naive_datetime = datetime.datetime.strptime(follow_up + '-01', '%Y-%m-%d')
-            assert naive_datetime.tzinfo is None
-            inat_observation.follow_up_date = naive_datetime
-        else:
-            inat_observation.follow_up_date = None
+        inat_observation.follow_up_date = INatReader.get_observation_value(observation, 'Date for next visit')
+
+        # Legacy WMANZ observation fields
+        if not inat_observation.follow_up_date:
+            follow_up = INatReader.get_observation_value(observation, 'Follow-up (YYYY-MM)')
+            if follow_up and follow_up != '(undef.)':
+                inat_observation.follow_up_date = follow_up + '-01'
+            else:
+                inat_observation.follow_up_date = None
 
         # Legacy OMB Wellington observation fields
         if not inat_observation.treated:

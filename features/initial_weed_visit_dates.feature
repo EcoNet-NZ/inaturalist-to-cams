@@ -14,7 +14,7 @@
 #  limitations under the License.
 #  ====================================================================
 
-Feature: Set DateVisitMade (DateCheck)
+Feature: DateVisitMade (DateCheck) and 'Date for next visit' (DateForReturnVisit) are set correctly
 
 	Rule:
 		DateVisitMade is set to the latest of 'Date controlled' or 'Date of status update'.
@@ -44,3 +44,40 @@ Feature: Set DateVisitMade (DateCheck)
 		Given iNaturalist has a new OMB observation observed at 2022-11-09T12:23:34+12:00 with date controlled of 2022-12-22T19:33:44+12:00 and date of status update of 2022-11-12T09:10:11+12:00
 		When we process the observation
 		Then the visits record has date 'DateCheck' set to '2022-12-22 19:33:44'
+
+	Rule:
+		If 'Date for next visit' in iNaturalist is not set, the 'Date for next visit' field on the CAMS visit record is left blank
+
+		@wip
+		Example: New observation with 'Date for next visit' left blank
+		Given iNaturalist has a new OMB observation
+		When we process the observation
+		Then the visits record has 'DateForReturnVisit' set to None
+
+	Rule:
+		The 'Date for next visit' observation field value is used for DateForReturnVisit
+
+		Example: 'Date for next visit' is 2025-02-14
+		Given iNaturalist has a new OMB observation with 'Date for next visit' set to '2025-02-14'
+		When we process the observation
+		Then the visits record has date 'DateForReturnVisit' set to '2025-02-14'
+
+	Rule:
+		Legacy field. If the 'Date for next visit' observation field is blank, the 'Follow-up (YYYY-MM)' observation field value is used for DateForReturnVisit.
+		This field refers to the first day of the specified month.
+
+		Example: 'Follow-up (YYYY-MM)' set to '2022-12'
+		Given iNaturalist has a new OMB observation with 'Follow-up (YYYY-MM)' set to '2022-12'
+		When we process the observation
+		Then the visits record has date 'DateForReturnVisit' set to '2022-12-01'
+
+	Rule:
+		If both 'Date for next visit' and 'Follow-up (YYYY-MM)' are set, the 'Date for next visit' observation field value is used for DateForReturnVisit
+
+		Example: 'Date for next visit' is 2025-07-17 and Follow-up (YYYY-MM)' set to '2023-01'
+		Given iNaturalist has a new OMB observation with 'Follow-up (YYYY-MM)' set to '2023-01'
+		And 'Date for next visit' is set to '2025-02-14'
+		When we process the observation
+		Then the visits record has date 'DateForReturnVisit' set to '2025-02-14'
+
+		
