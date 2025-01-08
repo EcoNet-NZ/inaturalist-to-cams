@@ -85,7 +85,7 @@ class INatToCamsTranslator:
         weed_visit.date_visit_made = self.as_local_datetime(visit_date)
         weed_visit.observation_quality = inat_observation.quality_grade
         weed_visit.site_difficulty = inat_observation.site_difficulty
-        weed_visit.follow_up_date = self.as_local_datetime(inat_observation.follow_up_date)
+        weed_visit.follow_up_date = inat_observation.follow_up_date
         weed_visit.phenology = inat_observation.phenology
         weed_visit.visit_status = visit_status
         weed_visit.treated = inat_observation.treated
