@@ -23,6 +23,7 @@ import re
 from retry import retry
 
 from inat_to_cams import inaturalist_observation, exceptions
+from inat_to_cams.translator import INatToCamsTranslator
 
 
 class INatReader:
@@ -81,7 +82,7 @@ class INatReader:
         if not inat_observation.follow_up_date:
             follow_up = INatReader.get_observation_value(observation, 'Follow-up (YYYY-MM)')
             if follow_up and follow_up != '(undef.)':
-                inat_observation.follow_up_date = follow_up + '-01'
+                inat_observation.follow_up_date = INatToCamsTranslator().as_local_datetime(follow_up + '-01')
             else:
                 inat_observation.follow_up_date = None
 
