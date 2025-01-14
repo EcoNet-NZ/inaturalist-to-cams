@@ -48,3 +48,39 @@ class TestCamsWriter(CamsWriter):
         cams_interface.connection.update_weed_location_layer_row(new_layer_row)
     
         return global_id, object_id
+
+    def update_feature_geoprivacy(self, inat_id, new_value):
+        logging.info(f'Updating geoprivacy of CAMS feature with iNaturalist id {inat_id} to {new_value}')
+        reader = cams_reader.CamsReader()
+        cams_feature = reader.read_observation(inat_id)
+
+        new_layer_row = [{
+            'geometry': cams_feature.geolocation,
+            'attributes': {}
+        }]
+
+        global_id = cams_feature.weed_location.global_id
+        object_id = cams_feature.weed_location.object_id
+        new_layer_row[0]['attributes']['globalId'] = global_id
+        new_layer_row[0]['attributes']['objectId'] = object_id
+        new_layer_row[0]['attributes']['GeoPrivacy'] = new_value
+
+        cams_interface.connection.update_weed_location_layer_row(new_layer_row)
+
+    def update_feature_land_ownership(self, inat_id, new_value):
+        logging.info(f'Updating land ownership of CAMS feature with iNaturalist id {inat_id} to {new_value}')
+        reader = cams_reader.CamsReader()
+        cams_feature = reader.read_observation(inat_id)
+
+        new_layer_row = [{
+            'geometry': cams_feature.geolocation,
+            'attributes': {}
+        }]
+
+        global_id = cams_feature.weed_location.global_id
+        object_id = cams_feature.weed_location.object_id
+        new_layer_row[0]['attributes']['globalId'] = global_id
+        new_layer_row[0]['attributes']['objectId'] = object_id
+        new_layer_row[0]['attributes']['LandOwnership'] = new_value
+
+        cams_interface.connection.update_weed_location_layer_row(new_layer_row)

@@ -58,4 +58,3 @@ Feature: Processing an updated iNaturalist observation populates the existing We
 		When we process the observation
 		Then the visits table has 1 records for this observation
 		And the visits record has 'ObservationQuality' set to 'research_grade'
-

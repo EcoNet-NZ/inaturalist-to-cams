@@ -184,7 +184,19 @@ def step_impl(context, lat, lon):
    observation = context.observation
    writer = context.writer
    writer.update_feature_geolocation(observation.id, lon, lat)
-  
+
+@given(u"the CAMS geoprivacy has been updated in CAMS to '{new_value}'")
+def step_impl(context, new_value):
+   observation = context.observation
+   writer = context.writer
+   writer.update_feature_geoprivacy(observation.id, new_value)
+
+@given(u"the CAMS land ownership has been updated in CAMS to '{new_value}'")
+def step_impl(context, new_value):
+   observation = context.observation
+   writer = context.writer
+   writer.update_feature_land_ownership(observation.id, new_value)
+
 @then(u'the updated observation is unchanged')
 def step_impl(context):
     current_observation = context.reader.read_observation(context.observation.id)
