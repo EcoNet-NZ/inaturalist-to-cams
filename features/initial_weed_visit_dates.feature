@@ -48,7 +48,6 @@ Feature: DateVisitMade (DateCheck) and 'Date for next visit' (DateForReturnVisit
 	Rule:
 		If 'Date for next visit' in iNaturalist is not set, the 'Date for next visit' field on the CAMS visit record is left blank
 
-		@wip
 		Example: New observation with 'Date for next visit' left blank
 		Given iNaturalist has a new OMB observation
 		When we process the observation
@@ -57,7 +56,6 @@ Feature: DateVisitMade (DateCheck) and 'Date for next visit' (DateForReturnVisit
 	Rule:
 		The 'Date for next visit' observation field value is used for DateForReturnVisit
 
-		@wip
 		Example: 'Date for next visit' is 2025-02-14
 		Given iNaturalist has a new OMB observation with date 'Date for next visit' set to '2025-02-14'
 		When we process the observation
@@ -75,7 +73,6 @@ Feature: DateVisitMade (DateCheck) and 'Date for next visit' (DateForReturnVisit
 	Rule:
 		If both 'Date for next visit' and 'Follow-up (YYYY-MM)' are set, the 'Date for next visit' observation field value is used for DateForReturnVisit
 
-		@wip
 		Example: 'Date for next visit' is 2025-07-17 and Follow-up (YYYY-MM)' set to '2023-01'
 		Given iNaturalist has a new OMB observation with date 'Date for next visit' set to '2025-02-14'
 		And 'Follow-up (YYYY-MM)' is set to '2023-01'

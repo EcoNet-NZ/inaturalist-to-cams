@@ -66,6 +66,16 @@
         "Location Accuracy":{
             "name": "LocationAccuracy",
             "type": "Integer"
+        },
+        "GeoPrivacy":{
+            "name": "GeoPrivacy",
+            "type": "String",
+            "length": 20
+        },
+        "LandOwnership":{
+            "name": "LandOwnership",
+            "type": "String",
+            "length": 80
         }
     },
     "Visits_Table": {

@@ -149,6 +149,10 @@ class CamsWriter:
             new_layer_row[0]['geometry']=cams_feature.geolocation           
             logging.info(f'Weed geolocation has been modified in iNaturalist')
 
+        if not existing_feature:
+            fields.append(('GeoPrivacy', 'Open'))
+            fields.append(('LandOwnership', 'NotAvailable'))
+
         [self.add_field(new_layer_row[0], 'WeedLocations', field) for field in fields]
         if not dry_run:
             if existing_feature:
