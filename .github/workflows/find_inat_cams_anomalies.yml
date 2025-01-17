@@ -34,7 +34,7 @@ jobs:
       uses: actions/checkout@v4
 
     - name: Install apt dependencies
-      uses: awalsh128/cache-apt-pkgs-action@latest
+      uses: awalsh128/cache-apt-pkgs-action@v1.4.3
       with:
         packages: heimdal-dev   # Workaround for problem building gssapi wheel, see https://stackoverflow.com/questions/44449290/krb5-config-is-not-recognized-as-an-internal-or-external-command
         version: 1.0
