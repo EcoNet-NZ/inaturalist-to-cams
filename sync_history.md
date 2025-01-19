@@ -32914,3 +32914,12 @@
 |----------|---------|-------|------|--------------|
 |Geolocation updated, Weed record updated, Visit record updated|**79162**|BlueMorningGlory|RED|[258907931](https://www.inaturalist.org/observations/258907931)|
 |New weed|**79177**|MothPlant|RED|[258918788](https://www.inaturalist.org/observations/258918788)|
+---
+
+# Run [7916](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/7aa76dbf1764fd90f244998b6e7ee3f3f46b4ef5/checks/12852039324)
+2025-01-19 21:55
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**79181**|BananaPassionfruit|RED|[258922313](https://www.inaturalist.org/observations/258922313)|
+|New weed|**79182**|BlueMorningGlory|RED|[258922854](https://www.inaturalist.org/observations/258922854)|
