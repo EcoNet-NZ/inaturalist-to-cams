@@ -17,33 +17,6 @@
 Feature: Set Visit status (WeedVisitStatus)
 
   	Rule:
-		* Weeds are rolled over to PURPLE at the start of September, even if controlled or updated before then
-
-      Example: New observation without weed being controlled or status update last year (PURPLE)
-         Given iNaturalist has a new OMB observation with DateVisitMade before the previous 1st July
-            When we process the observation
-            Then the visits record has 'WeedVisitStatus' set to 'PurpleHistoric'
-
-      Example: New observation with weed being controlled last year (PURPLE)
-         Given iNaturalist has a new OMB observation with 'Date controlled' before the previous 1st July
-            When we process the observation
-            Then the visits record has 'WeedVisitStatus' set to 'PurpleHistoric'
-
-      Example: New observation with weed being updated last year (PURPLE)
-         Given iNaturalist has a new OMB observation with 'Date of status update' before the previous 1st July
-            When we process the observation
-            Then the visits record has 'WeedVisitStatus' set to 'PurpleHistoric'         
-
-  	Rule:
-      * Any weeds observed in the previous 2 months (ie since start July) are not rolled over
-		* By default, observation status is set to RED
-  
-      Example: New observation without weed being controlled or status update today (RED)
-         Given iNaturalist has a new OMB observation with DateVisitMade set to the previous 1st July
-            When we process the observation
-            Then the visits record has 'WeedVisitStatus' set to 'RedGrowth'
-
-  	Rule:
 		* If 'How treated' = 'Cut but roots remain', status is set to ORANGE
 
       Example: New observation controlled today with 'Cut but roots remain' (ORANGE)
@@ -95,3 +68,34 @@ Feature: Set Visit status (WeedVisitStatus)
          Given iNaturalist has a new OMB observation with 'Date of status update' = today and 'Status update' = 'Duplicate'
             When we process the observation
             Then the visits record has 'WeedVisitStatus' set to 'GrayDuplicate'
+
+  	Rule:
+		* Weeds are NOT rolled over to PURPLE at the start of September, even if controlled or updated before then
+
+      Example: New observation without weed being controlled or status update last year (RED)
+         Given iNaturalist has a new OMB observation with DateVisitMade before the previous 1st July
+            When we process the observation
+            Then the visits record has 'WeedVisitStatus' set to 'RedGrowth'
+
+      Example: New observation with weed being controlled last year (YELLOW)
+         Given iNaturalist has a new OMB observation with 'Date controlled' before the previous 1st July
+            And 'Treated ?' is set to 'Yes'
+            When we process the observation
+            Then the visits record has 'WeedVisitStatus' set to 'YellowKilledThisYear'
+
+      Example: New observation with weed being updated last year (GREEN)
+         Given iNaturalist has a new OMB observation with 'Date of status update' before the previous 1st July
+            And 'Status update' = 'Dead / Not Present'
+            When we process the observation
+            Then the visits record has 'WeedVisitStatus' set to 'GreenNoRegrowthThisYear'         
+
+  	Rule:
+      * Any weeds observed in the previous 2 months (ie since start July) are not rolled over
+		* By default, observation status is set to RED
+  
+      Example: New observation without weed being controlled or status update today (RED)
+         Given iNaturalist has a new OMB observation with DateVisitMade set to the previous 1st July
+            When we process the observation
+            Then the visits record has 'WeedVisitStatus' set to 'RedGrowth'
+
+

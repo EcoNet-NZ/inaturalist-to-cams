@@ -122,17 +122,8 @@ class INatToCamsTranslator:
         else:
             visit_date = date_first_observed
 
-        today = date.today()
-        if today.month >= 7:
-            year = today.year
-        else:
-            year = today.year - 1
-        start_of_this_weed_year = str(year) + '-07-01T00:00:00'
-
         visit_status = 'RED'   # Default value
-        if visit_date < start_of_this_weed_year:
-            visit_status = 'PURPLE'
-        elif visit_date == date_controlled:
+        if visit_date == date_controlled:
             if inat_observation.how_treated == 'Cut but roots remain':
                 visit_status = 'ORANGE'
             elif inat_observation.treated == 'Yes':
