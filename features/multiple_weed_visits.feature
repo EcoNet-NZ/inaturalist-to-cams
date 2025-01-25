@@ -58,7 +58,7 @@ Feature: Set Visit status for records with multiple visits (WeedVisitStatus)
 		  When we process the observation
 	      Then the WeedLocations feature has an associated record with 3 child visits record
 	      And the first visits record has date 'DateCheck' set to 2 years ago
-	      And the first visits record has 'WeedVisitStatus' set to 'PurpleHistoric'
+	      And the first visits record has 'WeedVisitStatus' set to 'RedGrowth'
 	      And the second visits record has date 'DateCheck' set to yesterday
 	      And the second visits record has 'WeedVisitStatus' set to 'YellowKilledThisYear'
 	      And the third visits record has date 'DateCheck' set to today
