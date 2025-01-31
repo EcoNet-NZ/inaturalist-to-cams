@@ -34204,3 +34204,21 @@
 |Weed record updated, Visit record added|**57447**|OldMansBeard|RED|[47493652](https://www.inaturalist.org/observations/47493652)|
 |Weed record updated, Visit record added|**58431**|OldMansBeard|GREEN|[111621861](https://www.inaturalist.org/observations/111621861)|
 |Weed record updated, Visit record added|**60694**|OldMansBeard|RED|[155251234](https://www.inaturalist.org/observations/155251234)|
+---
+
+# Run [8188](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/f703a5af2e3ab8c07c949c6bef0a802840b12a4b/checks/13065556022)
+2025-01-31 16:01
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Weed record updated, Visit record added|**57712**|OldMansBeard|GRAY|[73434726](https://www.inaturalist.org/observations/73434726)|
+|Weed record updated, Visit record added|**58133**|OldMansBeard|RED|[106139371](https://www.inaturalist.org/observations/106139371)|
+|Weed record updated, Visit record added|**58350**|OldMansBeard|GRAY|[109598862](https://www.inaturalist.org/observations/109598862)|
+|Weed record updated, Visit record added|**58428**|OldMansBeard|GREEN|[111621714](https://www.inaturalist.org/observations/111621714)|
+|Weed record updated, Visit record added|**58429**|OldMansBeard|RED|[111621748](https://www.inaturalist.org/observations/111621748)|
+|Weed record updated, Visit record added|**58430**|OldMansBeard|RED|[111621773](https://www.inaturalist.org/observations/111621773)|
+|Weed record updated|**58431**|OldMansBeard|GREEN|[111621861](https://www.inaturalist.org/observations/111621861)|
+|Weed record updated, Visit record added|**58823**|OldMansBeard|RED|[144455036](https://www.inaturalist.org/observations/144455036)|
+|Weed record updated, Visit record added|**59853**|OldMansBeard|GRAY|[149956896](https://www.inaturalist.org/observations/149956896)|
+|Weed record updated, Visit record added|**60742**|OldMansBeard|GRAY|[155704782](https://www.inaturalist.org/observations/155704782)|
+|Weed record updated, Visit record added|**69275**|OldMansBeard|GRAY|[209742944](https://www.inaturalist.org/observations/209742944)|
