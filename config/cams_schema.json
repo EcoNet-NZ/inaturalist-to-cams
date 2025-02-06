@@ -131,8 +131,16 @@
                 "CutNPaste MetGel"            : "CutNPasteMetGel ",
                 "CutNPaste Picloram Gel"      : "CutNPastePicloramGel",
                 "Dow Vigilant II"             : "DowVigilantII",
+                "Triumph Gel / Vigilant"      : "TriumphGel",
                 "Weed Weapon Invade Gel"      : "WeedWeaponInvadeGel",
                 "Weed Weapon Stump-Stop-Gel"  : "WeedWeaponStumpStopGel",
+                "OTHER GEL"                   : "OTHERGEL",
+                "Glyphosate Spray"            : "GlyphosateSpray",
+                "Haloxyfop Spray"             : "HaloxyfopSpray",
+                "MetSulf Spray"               : "MetSulfSpray",
+                "Triclopyr Spray"             : "TriclopyrSpray",
+                "OTHER LIQUID Herbicide"      : "OTHERLIQUIDHERBICIDE",
+                "Glyphosate Granules"         : "GlyphosateGranules",
                 "OTHER-TREATMENT"             : "OTHERTREATMENT"
             }
         },
