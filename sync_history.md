@@ -35512,3 +35512,28 @@
 |Weed record updated, Visit record updated|**80069**|MothPlant|RED|[260870586](https://www.inaturalist.org/observations/260870586)|
 |New weed|**80209**|MothPlant|RED|[261219701](https://www.inaturalist.org/observations/261219701)|
 |New weed|**80210**|MothPlant|RED|[261221896](https://www.inaturalist.org/observations/261221896)|
+---
+
+# Run [8426](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/182d354a994813e32a63b1074d336e7121ddc72e/checks/13236027515)
+2025-02-10 20:55
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Weed record updated, Visit record added|**56748**|OldMansBeard|GRAY|[2902268](https://www.inaturalist.org/observations/2902268)|
+|Weed record updated, Visit record added|**56750**|OldMansBeard|GRAY|[2902284](https://www.inaturalist.org/observations/2902284)|
+|Weed record updated, Visit record added|**56751**|OldMansBeard|GRAY|[2902310](https://www.inaturalist.org/observations/2902310)|
+|Weed record updated, Visit record added|**56857**|OldMansBeard|GRAY|[2961240](https://www.inaturalist.org/observations/2961240)|
+|Weed record updated, Visit record added|**57085**|OldMansBeard|GRAY|[3392713](https://www.inaturalist.org/observations/3392713)|
+|Weed record updated, Visit record added|**57832**|OldMansBeard|GRAY|[78674969](https://www.inaturalist.org/observations/78674969)|
+|Weed record updated, Visit record added|**58026**|OldMansBeard|YELLOW|[102501671](https://www.inaturalist.org/observations/102501671)|
+|Weed record updated, Visit record added|**58512**|OldMansBeard|GRAY|[113302639](https://www.inaturalist.org/observations/113302639)|
+|Weed record updated, Visit record added|**59740**|OldMansBeard|GREEN|[149525854](https://www.inaturalist.org/observations/149525854)|
+|Weed record updated, Visit record added|**66930**|OldMansBeard|GREEN|[197914187](https://www.inaturalist.org/observations/197914187)|
+|Weed record updated, Visit record added|**80108**|OldMansBeard|YELLOW|[260946155](https://www.inaturalist.org/observations/260946155)|
+|Weed record updated|**80164**|OldMansBeard|RED|[261173450](https://www.inaturalist.org/observations/261173450)|
+|Weed record updated, Visit record added|**80183**|OldMansBeard|YELLOW|[261189684](https://www.inaturalist.org/observations/261189684)|
+|Geolocation updated, Weed record updated, Visit record added|**80185**|OldMansBeard|YELLOW|[261189906](https://www.inaturalist.org/observations/261189906)|
+|Weed record updated|**80196**|OldMansBeard|YELLOW|[261205888](https://www.inaturalist.org/observations/261205888)|
+|Weed record updated|**80197**|OldMansBeard|YELLOW|[261206506](https://www.inaturalist.org/observations/261206506)|
+|Visit record updated|**80147**|BananaPassionfruit|RED|[261044349](https://www.inaturalist.org/observations/261044349)|
+|Weed record updated, Visit record updated|**80209**|MothPlant|RED|[261219701](https://www.inaturalist.org/observations/261219701)|
