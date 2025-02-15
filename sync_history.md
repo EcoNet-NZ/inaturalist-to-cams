@@ -36225,3 +36225,11 @@
 |Sync Event|Object Id|Species|Status|iNaturalist Id|
 |----------|---------|-------|------|--------------|
 |New weed|**80429**|MothPlant|RED|[261690725](https://www.inaturalist.org/observations/261690725)|
+---
+
+# Run [8539](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/3a896907c8128a60edc181673772606b6b8c4908/checks/13342325602)
+2025-02-15 18:55
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**80430**|CathedralBells|RED|[261695315](https://www.inaturalist.org/observations/261695315)|
