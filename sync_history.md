@@ -36766,3 +36766,11 @@
 |----------|---------|-------|------|--------------|
 |Weed record updated, Visit record updated|**80161**|BlueMorningGlory|RED|[261164763](https://www.inaturalist.org/observations/261164763)|
 |Weed record updated, Visit record updated|**80198**|BlueMorningGlory|RED|[261206244](https://www.inaturalist.org/observations/261206244)|
+---
+
+# Run [8691](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/c4a0449ed784c398ef6aace4d818ea3397f9572d/checks/13464214560)
+2025-02-22 08:56
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Weed record updated, Visit record added|**80595**|OldMansBeard|YELLOW|[262368894](https://www.inaturalist.org/observations/262368894)|
