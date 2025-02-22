@@ -72,12 +72,12 @@ class CamsInatAnomalyFinder():
             for url in duplicate_CAMS_features:
                 iNat_id = self.extract_observation_id(url)
                 object_ids = camsReader.get_objectid_from_iNat_ID(iNat_id)
-                print(f"iNat observation {iNat_id} duplicated by CAMS weed instances with OBJECTID {object_ids}")
+                print(f"iNat observation {iNatUrl(iNat_id)} duplicated by CAMS weed instances with OBJECTID {object_ids}")
 
         if inCamsOnly:
             for iNat_id in inCamsOnly:
-                object_ids = camsReader.get_objectid_from_iNat_ID(iNat_id)
-                print(f"Weed instances in CAMS with OBJECTID {object_ids} not found in iNaturalist (iNat id = {iNat_id})")
+                object_id = camsReader.get_objectid_from_iNat_ID(iNat_id)
+                print(f"Weed instance in CAMS  {camsUrl(object_id)} not found in iNaturalist {iNatUrl(iNat_id)}")
 
         if inINatOnly:
             print(f"Observations in iNaturalist with ids {inINatOnly} not found in CAMS")
@@ -90,6 +90,11 @@ class CamsInatAnomalyFinder():
         anomaly_count = len(duplicate_CAMS_features) + len(inCamsOnly) + len(inINatOnly)
         return anomaly_count
 
+def camsUrl(cams_id):
+    return f"https://cams.econet.nz/weed/{cams_id}"
+
+def iNatUrl(inat_id):
+    return f"https://inaturalist.org/observation/{inat_id}"
 
 def find_duplicates(lst):
     seen = set()
