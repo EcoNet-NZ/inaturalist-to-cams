@@ -80,7 +80,8 @@ class CamsInatAnomalyFinder():
                 print(f"Weed instance in CAMS  {camsUrl(object_ids[0])} not found in iNaturalist {iNatUrl(iNat_id)}")
 
         if inINatOnly:
-            print(f"Observations in iNaturalist with ids {inINatOnly} not found in CAMS")
+            for iNat_id in inINatOnly:
+                print(f"iNaturalist observations {iNatUrl(iNat_id)} not found in CAMS")
 
         report.append("*************** REPORT ENDS *******************")
 
