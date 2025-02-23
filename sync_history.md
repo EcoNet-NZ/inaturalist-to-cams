@@ -36912,3 +36912,16 @@
 |New weed|**80662**|CathedralBells|RED|[262761553](https://www.inaturalist.org/observations/262761553)|
 |New weed|**80663**|WoollyNightshade|RED|[262754886](https://www.inaturalist.org/observations/262754886)|
 |Weed record updated, Visit record updated|**80657**|MothPlant|RED|[262744368](https://www.inaturalist.org/observations/262744368)|
+---
+
+# Run [8720](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/33766193e8ceb053ea9f2c91a639c694d2e71cdb/checks/13479181972)
+2025-02-23 16:15
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Weed record updated|**80198**|BlueMorningGlory|RED|[261206244](https://www.inaturalist.org/observations/261206244)|
+|Weed record updated|**80277**|BlueMorningGlory|RED|[261308034](https://www.inaturalist.org/observations/261308034)|
+|Weed record updated|**80495**|BlueMorningGlory|RED|[261953558](https://www.inaturalist.org/observations/261953558)|
+|Weed record updated|**80562**|BlueMorningGlory|RED|[262255897](https://www.inaturalist.org/observations/262255897)|
+|Weed record updated|**80582**|BlueMorningGlory|RED|[262340427](https://www.inaturalist.org/observations/262340427)|
+|Weed record updated|**80655**|BlueMorningGlory|RED|[262747089](https://www.inaturalist.org/observations/262747089)|
