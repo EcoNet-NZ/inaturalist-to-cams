@@ -151,4 +151,4 @@ If the status has already been set on the weed, you may need to override the sta
     | `Status update` set to `Dead / Not Present` | `Green - regrowth has not occurred this year` |
     | `Status update` set to `Alive / Regrowth` | `Red - growth is occurring, please kill it` |
 
-    As stated at the top of this guide, the status is reset annually currently in July. If the status has already been updated in the 2 months prior, the status will not be reset.
+    As stated at the top of this guide, the status is reset annually currently in October. If the status has already been updated in the 2 months prior, the status will not be reset.
