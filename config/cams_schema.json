@@ -168,8 +168,8 @@
             "type": "Double"
         },
         "description": {
-            "name": "NotesAndDetails",
-            "length": 2147483647,
+            "name": "Notes",
+            "length": 3000,
             "type": "String"
         },
         "Date for next visit": {
