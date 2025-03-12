@@ -39118,3 +39118,21 @@
 |Weed record updated, Visit record updated|**81343**|OldMansBeard|RED|[265013413](https://www.inaturalist.org/observations/265013413)|
 |Weed record updated|**81282**|MothPlant|RED|[264774549](https://www.inaturalist.org/observations/264774549)|
 |Weed record updated|**81296**|MothPlant|RED|[264897812](https://www.inaturalist.org/observations/264897812)|
+---
+
+# Run [9119](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/b9332c10425b4bf5bd4b41e235b4f4a03e6c36ec/checks/13807346750)
+2025-03-12 21:56
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Weed record updated, Visit record added|**56908**|OldMansBeard|YELLOW|[2989025](https://www.inaturalist.org/observations/2989025)|
+|Weed record updated, Visit record added|**57503**|OldMansBeard|RED|[60303788](https://www.inaturalist.org/observations/60303788)|
+|Weed record updated, Visit record added|**58910**|OldMansBeard|YELLOW|[147245712](https://www.inaturalist.org/observations/147245712)|
+|Weed record updated, Visit record added|**77059**|OldMansBeard|GRAY|[248034546](https://www.inaturalist.org/observations/248034546)|
+|Weed record updated, Visit record added|**80361**|OldMansBeard|YELLOW|[261502467](https://www.inaturalist.org/observations/261502467)|
+|Weed record updated, Visit record added|**80791**|OldMansBeard|RED|[263129940](https://www.inaturalist.org/observations/263129940)|
+|Weed record updated, Visit record added|**81308**|OldMansBeard|YELLOW|[264912286](https://www.inaturalist.org/observations/264912286)|
+|Weed record updated, Visit record added|**81342**|OldMansBeard|YELLOW|[265012049](https://www.inaturalist.org/observations/265012049)|
+|Weed record updated, Visit record added|**81343**|OldMansBeard|RED|[265013413](https://www.inaturalist.org/observations/265013413)|
+|New weed|**81347**|OldMansBeard|RED|[265022534](https://www.inaturalist.org/observations/265022534)|
+|New weed|**81348**|MothPlant|RED|[265028855](https://www.inaturalist.org/observations/265028855)|
