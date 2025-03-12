@@ -57,7 +57,7 @@ class CamsReader:
         visit.treatment_details = visit_table_row.attributes['TreatmentDetails']
         visit.visit_status = cams_schema_config.cams_field_key('Visits_Table', 'WeedVisitStatus', visit_table_row.attributes['WeedVisitStatus'])
         visit.observation_quality = cams_schema_config.cams_field_key('Visits_Table', 'ObservationQuality', visit_table_row.attributes['ObservationQuality'])
-        visit.notes = visit_table_row.attributes['NotesAndDetails']
+        visit.notes = visit_table_row.attributes['Notes']
 
         guid = visit_table_row.attributes['GUID_visits']
 
