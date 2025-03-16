@@ -39593,3 +39593,30 @@
 |Sync Event|Object Id|Species|Status|iNaturalist Id|
 |----------|---------|-------|------|--------------|
 |New weed|**81435**|BlueMorningGlory|RED|[265590750](https://www.inaturalist.org/observations/265590750)|
+---
+
+# Run [9226](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/d274ab6eb5fe0455eff12ed4237552ccac10c03d/checks/13887287644)
+2025-03-17 09:55
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Weed record updated, Visit record updated|**72960**|BlueMorningGlory|RED|[94183101](https://www.inaturalist.org/observations/94183101)|
+|Weed record updated, Visit record updated|**73048**|BlueMorningGlory|RED|[105913138](https://www.inaturalist.org/observations/105913138)|
+|Weed record updated, Visit record updated|**73199**|BlueMorningGlory|RED|[139683492](https://www.inaturalist.org/observations/139683492)|
+|Weed record updated, Visit record updated|**73222**|BlueMorningGlory|RED|[143157302](https://www.inaturalist.org/observations/143157302)|
+|Weed record updated, Visit record updated|**73333**|BlueMorningGlory|RED|[154034287](https://www.inaturalist.org/observations/154034287)|
+|Weed record updated, Visit record updated|**73360**|BlueMorningGlory|RED|[157506615](https://www.inaturalist.org/observations/157506615)|
+|Visit record updated|**73431**|BlueMorningGlory|RED|[171102590](https://www.inaturalist.org/observations/171102590)|
+|Visit record updated|**73645**|BlueMorningGlory|RED|[200045132](https://www.inaturalist.org/observations/200045132)|
+|Visit record updated|**73715**|BlueMorningGlory|RED|[207699427](https://www.inaturalist.org/observations/207699427)|
+|Visit record updated|**73753**|BlueMorningGlory|RED|[212404055](https://www.inaturalist.org/observations/212404055)|
+|Visit record updated|**73757**|BlueMorningGlory|RED|[212448946](https://www.inaturalist.org/observations/212448946)|
+|Weed record updated, Visit record updated|**78490**|BlueMorningGlory|RED|[256837351](https://www.inaturalist.org/observations/256837351)|
+|Weed record updated|**80294**|BlueMorningGlory|RED|[261372860](https://www.inaturalist.org/observations/261372860)|
+|Weed record updated|**80639**|BlueMorningGlory|RED|[262649964](https://www.inaturalist.org/observations/262649964)|
+|Weed record updated|**80870**|BlueMorningGlory|RED|[263305691](https://www.inaturalist.org/observations/263305691)|
+|Weed record updated, Visit record updated|**81228**|BlueMorningGlory|RED|[264592391](https://www.inaturalist.org/observations/264592391)|
+|Weed record updated|**81398**|BlueMorningGlory|RED|[265348723](https://www.inaturalist.org/observations/265348723)|
+|Weed record updated, Visit record updated|**81400**|BlueMorningGlory|RED|[265352328](https://www.inaturalist.org/observations/265352328)|
+|Weed record updated|**81422**|BlueMorningGlory|RED|[265497694](https://www.inaturalist.org/observations/265497694)|
+|Weed record updated, Visit record updated|**81435**|BlueMorningGlory|RED|[265590750](https://www.inaturalist.org/observations/265590750)|
