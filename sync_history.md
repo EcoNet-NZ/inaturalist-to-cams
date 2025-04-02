@@ -41223,3 +41223,11 @@
 |Sync Event|Object Id|Species|Status|iNaturalist Id|
 |----------|---------|-------|------|--------------|
 |Weed record updated, Visit record updated|**63153**|MothPlant|RED|[33564100](https://www.inaturalist.org/observations/33564100)|
+---
+
+# Run [9613](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/93f4a0209f09e7f965284c91a2812ba50c1c9978/checks/14225227887)
+2025-04-03 05:57
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Weed record updated, Visit record updated|**73461**|BluePassionFlower|RED|[180588190](https://www.inaturalist.org/observations/180588190)|
