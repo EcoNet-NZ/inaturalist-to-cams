@@ -42539,3 +42539,25 @@
 |Sync Event|Object Id|Species|Status|iNaturalist Id|
 |----------|---------|-------|------|--------------|
 |Weed record updated|**78838**|OldMansBeard|RED|[258185364](https://www.inaturalist.org/observations/258185364)|
+---
+
+# Run [9828](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/5d41252431adb96c2e5db116711319ac129463dd/checks/14415158114)
+2025-04-12 14:15
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Weed record updated|**77657**|OldMansBeard|RED|[251940674](https://www.inaturalist.org/observations/251940674)|
+|Weed record updated|**78895**|OldMansBeard|YELLOW|[258296957](https://www.inaturalist.org/observations/258296957)|
+|Weed record updated|**78906**|OldMansBeard|YELLOW|[258312009](https://www.inaturalist.org/observations/258312009)|
+|Weed record updated|**81239**|OldMansBeard|RED|[264711421](https://www.inaturalist.org/observations/264711421)|
+|Weed record updated|**81257**|OldMansBeard|YELLOW|[264749140](https://www.inaturalist.org/observations/264749140)|
+|Weed record updated|**81258**|OldMansBeard|RED|[264750114](https://www.inaturalist.org/observations/264750114)|
+|Weed record updated|**81259**|OldMansBeard|YELLOW|[264750659](https://www.inaturalist.org/observations/264750659)|
+|Weed record updated|**81269**|OldMansBeard|RED|[264762384](https://www.inaturalist.org/observations/264762384)|
+|New weed|**83151**|OldMansBeard|RED|[269880019](https://www.inaturalist.org/observations/269880019)|
+|Weed record updated|**77659**|MothPlant|RED|[251946571](https://www.inaturalist.org/observations/251946571)|
+|Weed record updated|**78881**|MothPlant|RED|[258215367](https://www.inaturalist.org/observations/258215367)|
+|Weed record updated|**78882**|MothPlant|RED|[258215863](https://www.inaturalist.org/observations/258215863)|
+|Weed record updated|**78883**|MothPlant|RED|[258215888](https://www.inaturalist.org/observations/258215888)|
+|Weed record updated|**81237**|MothPlant|RED|[264698988](https://www.inaturalist.org/observations/264698988)|
+|New weed|**83152**|MothPlant|RED|[269889036](https://www.inaturalist.org/observations/269889036)|
