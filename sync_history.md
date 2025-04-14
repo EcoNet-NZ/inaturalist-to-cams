@@ -43281,3 +43281,11 @@
 |----------|---------|-------|------|--------------|
 |Weed record updated|**80102**|OldMansBeard|YELLOW|[260932176](https://www.inaturalist.org/observations/260932176)|
 |Weed record updated|**80108**|OldMansBeard|YELLOW|[260946155](https://www.inaturalist.org/observations/260946155)|
+---
+
+# Run [9891](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/5e764324aa20c64f03349180f4aebe26d3bedb5c/checks/14455562460)
+2025-04-15 08:55
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Weed record updated|**78112**|OldMansBeard|RED|[254702538](https://www.inaturalist.org/observations/254702538)|
