@@ -43997,3 +43997,12 @@
 |----------|---------|-------|------|--------------|
 |New weed|**83352**|BlueMorningGlory|RED|[271294893](https://www.inaturalist.org/observations/271294893)|
 |New weed|**83353**|BananaPassionfruit|RED|[271296104](https://www.inaturalist.org/observations/271296104)|
+---
+
+# Run [9985](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/5e83acc7fc66020ddfc109fe6d84c55d7ee8aeb9/checks/14542960786)
+2025-04-19 10:55
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**83365**|WoollyNightshade|RED|[271316748](https://www.inaturalist.org/observations/271316748)|
+|New weed|**83366**|MothPlant|RED|[271317169](https://www.inaturalist.org/observations/271317169)|
