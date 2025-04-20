@@ -82,6 +82,9 @@ class CamsWriter:
 
         if weed_visit_modified and update_visit_record:
             new_weed_visit_record = self.write_weed_visit(cams_feature, existing_feature, global_id, object_id, dry_run)
+
+            # write the feature as well as the visit so we don't have to wait for the visit status to be synced to the parent weed instance (currently via a webhook)
+            self.write_feature(cams_feature, inat_id, existing_feature, dry_run, weed_geolocation_modified)  
         else:
             new_weed_visit_record = False
 

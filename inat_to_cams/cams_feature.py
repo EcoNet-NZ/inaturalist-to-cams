@@ -64,7 +64,7 @@ class WeedLocation:
 
     def __eq__(self, other):
         if type(other) is type(self):
-            ignore_keys = ['object_id', 'global_id', 'audit_log']
+            ignore_keys = ['object_id', 'global_id', 'audit_log', "current_status", "effort_to_control"]
             ka = set(self.__dict__).difference(ignore_keys)
             kb = set(other.__dict__).difference(ignore_keys)
             return ka == kb and all(self.__dict__[k] == other.__dict__[k] for k in ka)
