@@ -183,6 +183,12 @@ class CamsConnection:
         logging.info(f'Global id {global_id}')
         return self.table.query(where=f"GUID_visits='{global_id}'", return_count_only=True)
 
+    @retry(delay=5, tries=3)
+    def get_feature_global_id(self, inat_id):
+        query = f"iNatRef='{inat_id}'"
+        row = self.query_weed_visits_table(query)
+        return row.features[0].attributes['GUID_visits']
+
     def get_location(self, global_id):
         query = f"globalId='{global_id}'"
         feature_set = self.query_weed_location_layer(query)

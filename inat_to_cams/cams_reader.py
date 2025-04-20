@@ -82,6 +82,7 @@ class CamsReader:
             location.image_urls = featureRow.attributes['ImageURLs']
             location.image_attribution = featureRow.attributes['ImageAttribution']
             location.location_accuracy = featureRow.attributes['LocationAccuracy']
+            location.audit_log = featureRow.attributes['audit_log']
 
             # Temporarily until updated from weed visit by database trigger
             location.external_url = featureRow.attributes['iNatURL']
