@@ -140,3 +140,6 @@ reports/
 #PyCharm
 .idea/
 playpen.py
+
+#asdf
+.tool-versions
