@@ -154,6 +154,13 @@ class INatReader:
 
     @staticmethod
     @retry(delay=5, tries=3)
+    def get_single_observation(observation_id):
+        client = pyinaturalist.iNatClient()
+        observations = client.observations.from_ids(observation_id).all()
+        return observations[0]
+
+    @staticmethod
+    @retry(delay=5, tries=3)
     def get_observation_with_id(observation_id):
         client = pyinaturalist.iNatClient()
         observation = client.observations(observation_id)
