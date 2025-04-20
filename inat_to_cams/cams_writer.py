@@ -28,6 +28,15 @@ class CamsWriter:
         inat_id = cams_feature.latest_weed_visit.external_id
         existing_feature = reader.read_observation(inat_id)
 
+        # Check if the latest visit record was created in CAMS. If so, we shouldn't update the visit record.
+        update_visit_record = True
+        if existing_feature and existing_feature.latest_weed_visit.date_visit_made > cams_feature.latest_weed_visit.date_visit_made:
+            logging.info(f'The existing CAMS visit date {existing_feature.latest_weed_visit.date_visit_made} is more recent than iNat visit date {cams_feature.latest_weed_visit.date_visit_made}')
+            # Preserve the existing status and effort_to_control values
+            cams_feature.weed_location.current_status = existing_feature.weed_location.current_status
+            cams_feature.weed_location.effort_to_control = existing_feature.weed_location.effort_to_control
+            update_visit_record = False
+
         if existing_feature:
             if existing_feature == cams_feature:
                 logging.info('No relevant updates to observation')
@@ -37,7 +46,7 @@ class CamsWriter:
             weed_geolocation_modified = (existing_feature.weed_location.iNaturalist_latitude != cams_feature.weed_location.iNaturalist_latitude) or (existing_feature.weed_location.iNaturalist_longitude != cams_feature.weed_location.iNaturalist_longitude)
 
             weed_location_modified = existing_feature.weed_location != cams_feature.weed_location
-            weed_visit_modified = existing_feature.latest_weed_visit != cams_feature.latest_weed_visit
+            weed_visit_modified = existing_feature.latest_weed_visit != cams_feature.latest_weed_visit and update_visit_record
             logging.info('Updating existing feature')
             logging.info(f'Weed geolocation modified? : {weed_geolocation_modified}')
             logging.info(f'Weed location modified? : {weed_location_modified}')
@@ -54,7 +63,7 @@ class CamsWriter:
             global_id = existing_feature.weed_location.global_id
             object_id = existing_feature.weed_location.object_id
 
-        if weed_visit_modified:
+        if weed_visit_modified and update_visit_record:
             new_weed_visit_record = self.write_weed_visit(cams_feature, existing_feature, global_id, object_id, dry_run)
         else:
             new_weed_visit_record = False
