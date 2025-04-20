@@ -64,3 +64,19 @@ Feature: Set Visit status for records with multiple visits (WeedVisitStatus)
 	      And the third visits record has date 'DateCheck' set to today
 	      And the third visits record has 'WeedVisitStatus' set to 'GreenNoRegrowthThisYear'
 	      And the feature has 'ParentStatusWithDomain' set to 'GreenNoRegrowthThisYear'
+
+		@wip
+	   Example: CAMS visit followed by iNaturalist verification doesn't create a new visit
+	      Given iNaturalist has a new OMB observation with 'observed_on' = 2 years ago
+	      And that observation has been synced
+	      Then the WeedLocations feature has an associated record with 1 child visits record
+	      Given a new visits record was created in CAMS with status 'YellowKilledThisYear' yesterday
+	      Then the WeedLocations feature has an associated record with 2 child visits record
+	      Given the OMB observation is verified by another user
+	      When we process the observation
+	      Then the WeedLocations feature has an associated record with 2 child visits record
+	      And the first visits record has date 'DateCheck' set to 2 years ago
+	      And the first visits record has 'WeedVisitStatus' set to 'RedGrowth'
+	      And the second visits record has date 'DateCheck' set to yesterday
+	      And the second visits record has 'WeedVisitStatus' set to 'YellowKilledThisYear'
+	      And the feature has 'ParentStatusWithDomain' set to 'YellowKilledThisYear'

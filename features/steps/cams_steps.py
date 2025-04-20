@@ -201,3 +201,34 @@ def step_impl(context, new_value):
 def step_impl(context):
     current_observation = context.reader.read_observation(context.observation.id)
     assert_that(current_observation, equal_to(context.updated_observation))
+
+@given(u"a new visits record was created in CAMS with status '{status}' yesterday")
+def step_impl(context, status):
+    # Get the existing weed location feature from CAMS
+    feature_attributes = context.connection.get_location_details(context.global_id)
+    
+    # Prepare a new visits record with yesterday's date
+    new_visits_record = [{
+        'attributes': {
+            'GUID_visits': context.global_id,
+            'DateCheck': yesterday().timestamp() * 1000,  # Convert to milliseconds timestamp
+            'iNatRef': str(context.observation.id),
+            'WeedVisitStatus': status
+        }
+    }]
+    
+    # Add the new visits record to CAMS
+    results = context.connection.table.edit_features(adds=new_visits_record)
+    assert len(results['addResults']) == 1
+    assert results['addResults'][0]['success'], f"Error writing WeedVisits {results['addResults'][0]}"
+    
+    # Update the parent feature status to match the new visit
+    update_feature = [{
+        'attributes': {
+            'GlobalID': context.global_id,
+            'OBJECTID': feature_attributes['OBJECTID'],
+            'ParentStatusWithDomain': 'YellowKilledThisYear'
+        }
+    }]
+    
+    context.connection.update_weed_location_layer_row(update_feature)
