@@ -76,11 +76,6 @@
             "name": "LandOwnership",
             "type": "String",
             "length": 80
-        },
-        "Rollover Audit Log":{
-            "name": "audit_log",
-            "type": "String",
-            "length": 256
         }
     },
     "Visits_Table": {
