@@ -33,7 +33,7 @@ Feature: Set Visit status (WeedVisitStatus)
             Then the visits record has 'WeedVisitStatus' set to 'YellowKilledThisYear'
 
   	Rule:
-		* If 'Treated ?' = 'No' or 'Partially', status is set to YELLOW
+		* If 'Treated ?' = 'No' or 'Partially', status is set to RED
 
       Example: New observation controlled today with 'Treated' = 'No' (RED)
          Given iNaturalist has a new OMB observation with 'Date controlled' = today and 'Treated ?' = 'No'
