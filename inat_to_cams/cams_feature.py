@@ -60,10 +60,11 @@ class WeedLocation:
         self.image_urls = None
         self.image_attribution = None
         self.location_accuracy = None
+        self.audit_log = None
 
     def __eq__(self, other):
         if type(other) is type(self):
-            ignore_keys = ['object_id', 'global_id']
+            ignore_keys = ['object_id', 'global_id', 'audit_log']
             ka = set(self.__dict__).difference(ignore_keys)
             kb = set(other.__dict__).difference(ignore_keys)
             return ka == kb and all(self.__dict__[k] == other.__dict__[k] for k in ka)

@@ -33,6 +33,8 @@ def step_impl(context, inat_id):
 def step_impl(context):
     try:
         cams_feature, context.global_id = context.synchroniser.sync_observation(context.observation)
+        if not context.global_id:
+            context.global_id = context.connection.get_feature_global_id(context.observation.id)
         context.exc = None
     except exceptions.InvalidObservationError as e:
         context.exc = e
@@ -228,6 +230,29 @@ def step_impl(context, status):
             'GlobalID': context.global_id,
             'OBJECTID': feature_attributes['OBJECTID'],
             'ParentStatusWithDomain': 'YellowKilledThisYear'
+        }
+    }]
+    
+    context.connection.update_weed_location_layer_row(update_feature)
+
+@given(u"the weed instance status was rolled over to '{status}' yesterday")
+def step_impl(context, status):
+    # Get the existing weed location feature from CAMS
+    feature_attributes = context.connection.get_location_details(context.global_id)
+    
+    # Format yesterday's date as YYYY-MM-DD
+    yesterday_formatted = yesterday().strftime('%Y-%m-%d')
+    
+    # Create audit log entry
+    audit_log = f"{yesterday_formatted} Updated from RedGrowth to Purple based on Next Visit Date"
+    
+    # Update the feature with the new status and audit log
+    update_feature = [{
+        'attributes': {
+            'GlobalID': context.global_id,
+            'OBJECTID': feature_attributes['OBJECTID'],
+            'ParentStatusWithDomain': status,
+            'audit_log': audit_log
         }
     }]
     

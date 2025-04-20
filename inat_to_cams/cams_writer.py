@@ -30,14 +30,31 @@ class CamsWriter:
 
         # Check if the latest visit record was created in CAMS. If so, we shouldn't update the visit record.
         update_visit_record = True
-        if existing_feature and existing_feature.latest_weed_visit.date_visit_made > cams_feature.latest_weed_visit.date_visit_made:
-            logging.info(f'The existing CAMS visit date {existing_feature.latest_weed_visit.date_visit_made} is more recent than iNat visit date {cams_feature.latest_weed_visit.date_visit_made}')
-            # Preserve the existing status and effort_to_control values
-            cams_feature.weed_location.current_status = existing_feature.weed_location.current_status
-            cams_feature.weed_location.effort_to_control = existing_feature.weed_location.effort_to_control
-            update_visit_record = False
-
         if existing_feature:
+            # Check for status rollover in audit_log
+            rollover_date = None
+            # Check the feature attributes for the Audit_Log field
+            if hasattr(existing_feature.weed_location, 'audit_log') and existing_feature.weed_location.audit_log:
+                try:
+                    # Extract the first 10 characters from audit_log (YYYY-MM-DD format)
+                    date_str = existing_feature.weed_location.audit_log[:10]
+                    # Parse the date string into a datetime object
+                    rollover_date = datetime.strptime(date_str, '%Y-%m-%d')
+                    logging.info(f'Found rollover date in audit_log: {rollover_date}')
+                except Exception as e:
+                    logging.info(f'Could not parse rollover date from audit_log: {e}')
+            
+            # Check if either the existing CAMS visit date or the rollover date is more recent than the iNat visit date
+            if existing_feature.latest_weed_visit.date_visit_made > cams_feature.latest_weed_visit.date_visit_made or \
+               (rollover_date is not None and rollover_date > cams_feature.latest_weed_visit.date_visit_made):
+                logging.info(f'Preserving CAMS status - visit date: {existing_feature.latest_weed_visit.date_visit_made}, rollover date: {rollover_date}, iNat date: {cams_feature.latest_weed_visit.date_visit_made}')
+                # Preserve the existing status and effort_to_control values
+                cams_feature.weed_location.current_status = existing_feature.weed_location.current_status
+                cams_feature.weed_location.effort_to_control = existing_feature.weed_location.effort_to_control
+                # Also preserve the audit_log
+                cams_feature.weed_location.audit_log = existing_feature.weed_location.audit_log
+                update_visit_record = False
+
             if existing_feature == cams_feature:
                 logging.info('No relevant updates to observation')
                 return

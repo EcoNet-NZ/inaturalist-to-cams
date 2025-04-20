@@ -77,3 +77,44 @@ Feature: Set Visit status for records with multiple visits (WeedVisitStatus)
 	      And the second visits record has date 'DateCheck' set to yesterday
 	      And the second visits record has 'WeedVisitStatus' set to 'YellowKilledThisYear'
 	      And the feature has 'ParentStatusWithDomain' set to 'YellowKilledThisYear'
+
+	   Example: CAMS visit followed by iNaturalist visit does create a new visit
+	      Given iNaturalist has a new OMB observation with 'observed_on' = 2 years ago
+	      And that observation has been synced
+	      And a new visits record was created in CAMS with status 'YellowKilledThisYear' yesterday
+  		  And 'Date of status update' is updated to today
+	      And 'Status update' is updated to 'Dead / Not Present'
+	      When we process the observation
+	      Then the WeedLocations feature has an associated record with 3 child visits record
+	      And the first visits record has date 'DateCheck' set to 2 years ago
+	      And the first visits record has 'WeedVisitStatus' set to 'RedGrowth'
+	      And the second visits record has date 'DateCheck' set to yesterday
+	      And the second visits record has 'WeedVisitStatus' set to 'YellowKilledThisYear'
+	      And the third visits record has date 'DateCheck' set to today
+	      And the third visits record has 'WeedVisitStatus' set to 'GreenNoRegrowthThisYear'
+	      And the feature has 'ParentStatusWithDomain' set to 'GreenNoRegrowthThisYear'
+
+	   Example: Weed status rollover followed by iNaturalist verification doesn't create a new visit
+	      Given iNaturalist has a new OMB observation with 'observed_on' = 2 years ago
+	      And that observation has been synced
+	      And the weed instance status was rolled over to 'PurpleHistoric' yesterday
+	      And the OMB observation is verified by another user
+	      When we process the observation
+	      Then the WeedLocations feature has an associated record with 1 child visits record
+	      And the first visits record has date 'DateCheck' set to 2 years ago
+	      And the first visits record has 'WeedVisitStatus' set to 'RedGrowth'
+	      And the feature has 'ParentStatusWithDomain' set to 'PurpleHistoric'
+
+	   Example: Weed status rollover followed by iNaturalist visit does create a new visit
+	      Given iNaturalist has a new OMB observation with 'observed_on' = 2 years ago
+	      And that observation has been synced
+	      And the weed instance status was rolled over to 'PurpleHistoric' yesterday
+  		  And 'Date of status update' is updated to today
+	      And 'Status update' is updated to 'Dead / Not Present'
+	      When we process the observation
+	      Then the WeedLocations feature has an associated record with 2 child visits record
+	      And the first visits record has date 'DateCheck' set to 2 years ago
+	      And the first visits record has 'WeedVisitStatus' set to 'RedGrowth'
+	      And the second visits record has date 'DateCheck' set to today
+	      And the second visits record has 'WeedVisitStatus' set to 'GreenNoRegrowthThisYear'
+	      And the feature has 'ParentStatusWithDomain' set to 'GreenNoRegrowthThisYear'
