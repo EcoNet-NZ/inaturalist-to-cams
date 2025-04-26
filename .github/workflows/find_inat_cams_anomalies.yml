@@ -58,7 +58,7 @@ jobs:
 
     - name: Run script
       run: |
-        python mainAnomalies.py
+        python mainAnomalies.py --delete-zero-visit-duplicates
       env: 
         ARCGIS_URL: ${{ secrets.ARCGIS_URL }}
         ARCGIS_USERNAME: ${{ secrets.ARCGIS_USERNAME }}
