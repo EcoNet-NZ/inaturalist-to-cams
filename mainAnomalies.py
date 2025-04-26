@@ -16,17 +16,34 @@
 
 import logging
 import sys
+import argparse
 from anomaly_finder import cams_inat_anomaly_finder
-from inat_to_cams.cams_reader import CamsReader
 
 
 def main():
+    parser = argparse.ArgumentParser(
+        description='Find anomalies between iNaturalist and CAMS'
+    )
+    parser.add_argument(
+        '--delete-zero-visit-duplicates', 
+        action='store_true',
+        help='Delete duplicate CAMS features with 0 visit records'
+    )
+    parser.add_argument(
+        '--no-dry-run', 
+        action='store_true',
+        help='Actually perform deletion (default is simulation only)'
+    )
+    args = parser.parse_args()
 
-    # print(CamsReader().read_observation(199295518))
-    logging.info('Finding anomalies between iNaturalist and CAMS, eg iNaturalist observation changes or deletions')
+    logging.info('Finding anomalies between iNaturalist and CAMS')
     anomaly_finder = cams_inat_anomaly_finder.CamsInatAnomalyFinder()
-    anomaly_count = anomaly_finder.find_anomalies()
+    anomaly_count = anomaly_finder.find_anomalies(
+        delete_zero_visit_duplicates=args.delete_zero_visit_duplicates,
+        dry_run=not args.no_dry_run
+    )
     sys.exit(1 if anomaly_count > 0 else 0)
 
 
-main()
+if __name__ == "__main__":
+    main()
