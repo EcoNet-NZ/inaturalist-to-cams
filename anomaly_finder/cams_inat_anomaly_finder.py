@@ -73,6 +73,16 @@ class CamsInatAnomalyFinder():
                 iNat_id = self.extract_observation_id(url)
                 object_ids = camsReader.get_objectid_from_iNat_ID(iNat_id)
                 print(f"iNat observation {iNatUrl(iNat_id)} duplicated by CAMS weed instances with OBJECTID {object_ids}")
+                
+                # For each object_id, get the visit records and print those with more than 1
+                for object_id in object_ids:
+                    visits_count = camsReader.get_visit_count_for_weed_location(object_id)
+                    status = camsReader.get_current_status_for_weed_location(object_id)
+                    if visits_count > 1:
+                        print(f"  - CAMS ObjectID {object_id} has {visits_count} visit records with status: {status}")
+                    else:
+                        print(f"  - CAMS ObjectID {object_id} has {visits_count} visit record with status: {status}")
+                
 
         if inCamsOnly:
             for iNat_id in inCamsOnly:
