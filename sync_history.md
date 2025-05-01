@@ -45610,3 +45610,11 @@
 |Visit record updated|**84051**|OldMansBeard|RED|[277305667](https://www.inaturalist.org/observations/277305667)|
 |Visit record updated|**84044**|BananaPassionfruit|RED|[277274871](https://www.inaturalist.org/observations/277274871)|
 |Visit record updated|**84048**|MothPlant|RED|[277295873](https://www.inaturalist.org/observations/277295873)|
+---
+
+# Run [10282](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/5350efe156a67e7ae1fd2c7789bed42d5e4fb5b5/checks/14774945547)
+2025-05-01 23:55
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Visit record updated|**84047**|MothPlant|RED|[277295144](https://www.inaturalist.org/observations/277295144)|
