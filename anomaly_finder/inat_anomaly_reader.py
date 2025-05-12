@@ -40,7 +40,7 @@ class iNatObservations():
             time_of_previous_update = datetime.datetime.fromisoformat(timestamp)
 
             taxonObservations = func_timeout.func_timeout(
-                120,  # seconds
+                300,  # seconds
                 inaturalist_reader.INatReader().get_matching_observations_updated_since,
                 args=(place_ids, taxon_ids, time_of_previous_update)
             )
