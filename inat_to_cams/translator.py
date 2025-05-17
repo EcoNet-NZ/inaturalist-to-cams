@@ -14,15 +14,13 @@
 #  limitations under the License.
 #  ====================================================================
 
-from datetime import date, datetime, timedelta
-from dateutil.relativedelta import relativedelta
+from datetime import datetime
 import logging
 import re
-import pytz
 
 from arcgis import geometry
 
-from inat_to_cams import cams_feature, config, exceptions
+from inat_to_cams import cams_feature, config
 
 
 class INatToCamsTranslator:
@@ -30,7 +28,10 @@ class INatToCamsTranslator:
     def sanitiseHTML(html):
         if html is not None:
             # issue #86: URLs with an '=' within are not supported. Remove the reference and add a warning.
-            html = re.sub(r'<a\s+href="[^"]*=[^"]*".*?>.*?</a>', '(INVALID URL DETECTED - see iNaturalist link for full notes)', html)
+            html = re.sub(
+                r'<a\s+href="[^"]*=[^"]*".*?>.*?</a>', 
+                '(INVALID URL DETECTED - see iNaturalist link for full notes)', 
+                html)
 
         return html
     
@@ -41,6 +42,8 @@ class INatToCamsTranslator:
                                       })
 
         cams_taxon = None
+        preferred_common_name = None
+        scientific_name = None
 
         for taxon in reversed(inat_observation.taxon_lineage):
             cams_taxon = config.taxon_mapping.get(str(taxon))
@@ -48,14 +51,35 @@ class INatToCamsTranslator:
                 break
 
         if cams_taxon is None:
-            logging.exception(f'Skipping observation {inat_observation.id} since it has unmapped taxon with lineage {inat_observation.taxon_lineage}')
-            raise exceptions.InvalidObservationError
+            # For unmapped taxa, use "OTHER" and store the details
+            logging.info(
+                f'Unmapped taxon for observation {inat_observation.id} '
+                f'with lineage {inat_observation.taxon_lineage}')
+            cams_taxon = "OTHER"
+            
+            # Get the taxon name details from the observation
+            if (hasattr(inat_observation, 'taxon_preferred_common_name') and 
+                    inat_observation.taxon_preferred_common_name):
+                preferred_common_name = inat_observation.taxon_preferred_common_name
+            
+            if (hasattr(inat_observation, 'taxon_name') and 
+                    inat_observation.taxon_name):
+                scientific_name = inat_observation.taxon_name
 
         (visit_date, visit_status) = self.calculate_visit_date_and_status(inat_observation)
 
         weed_location = cams_feature.WeedLocation()
         weed_location.date_first_observed = self.as_local_datetime(inat_observation.observed_on)
         weed_location.species = cams_taxon
+        # If using OTHER, store the details in OtherWeedDetails
+        if cams_taxon == "OTHER":
+            if preferred_common_name:
+                weed_location.other_weed_details = preferred_common_name
+            elif scientific_name:
+                weed_location.other_weed_details = scientific_name
+            else:
+                weed_location.other_weed_details = "Unknown species from iNaturalist"
+                
         weed_location.data_source = 'iNaturalist_v1'
         weed_location.location_details = inat_observation.location_details
         weed_location.iNaturalist_longitude = inat_observation.location.x

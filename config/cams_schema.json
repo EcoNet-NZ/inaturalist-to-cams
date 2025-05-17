@@ -10,6 +10,11 @@
             "length": 256,
             "ref" :   "taxon_mapping.json"
         },
+        "Other Weed Details": {
+            "name": "OtherWeedDetails",
+            "type": "String",
+            "length": 256
+        },
         "DataSource": {
             "name": "SiteSource",
             "type": "String",

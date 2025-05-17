@@ -175,6 +175,10 @@ class CamsWriter:
             ('Image Attribution', cams_feature.weed_location.image_attribution),
             ('Location Accuracy', cams_feature.weed_location.location_accuracy)
         ]
+        
+        if cams_feature.weed_location.other_weed_details:
+            fields.append(('Other Weed Details', cams_feature.weed_location.other_weed_details))
+            
         if write_geolocation:
             fields.append(('iNaturalist Longitude', cams_feature.weed_location.iNaturalist_longitude))
             fields.append(('iNaturalist Latitude', cams_feature.weed_location.iNaturalist_latitude))
