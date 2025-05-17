@@ -39,30 +39,53 @@ class INatToCamsSynchroniser():
         new_observations_by_project = {}
 
         for config_name, values in config.sync_configuration.items():
-            p = pathlib.Path(values['file_prefix'] + '_time_of_last_update.txt')
+            p = pathlib.Path(
+                values['file_prefix'] + '_time_of_last_update.txt')
 
             if p.exists():
                 timestamp = p.read_text()
             else:
                 timestamp = '2000-01-01T00:00:00+12:00'
 
-            taxon_ids = values['taxon_ids']
             place_ids = values['place_ids']
-
-            logging.info('=' * 80)
-            logging.info(f"Syncing '{config_name}' with taxon_ids '{taxon_ids}' and place_ids '{place_ids}' since {timestamp}")
+            is_project_based = 'project_id' in values
+            
+            if is_project_based:
+                project_id = values['project_id']
+                logging.info('=' * 80)
+                logging.info(
+                    f"Syncing project '{config_name}' with project_id '{project_id}' "
+                    f"and place_ids '{place_ids}' since {timestamp}")
+            else:
+                taxon_ids = values['taxon_ids']
+                logging.info('=' * 80)
+                logging.info(
+                    f"Syncing '{config_name}' with taxon_ids '{taxon_ids}' "
+                    f"and place_ids '{place_ids}' since {timestamp}")
 
             time_of_previous_update = datetime.datetime.fromisoformat(timestamp)
             logging.info("Previous update: " + str(time_of_previous_update))
             time_of_latest_update = time_of_previous_update
 
-            observations = func_timeout.func_timeout(
-                120,  # seconds
-                inaturalist_reader.INatReader().get_matching_observations_updated_since,
-                args=(place_ids, taxon_ids, time_of_previous_update)
-            )
+            try:
+                if is_project_based:
+                    observations = func_timeout.func_timeout(
+                        120,  # seconds
+                        inaturalist_reader.INatReader().get_project_observations_updated_since,
+                        args=(place_ids, project_id, time_of_previous_update)
+                    )
+                else:
+                    observations = func_timeout.func_timeout(
+                        120,  # seconds
+                        inaturalist_reader.INatReader().get_matching_observations_updated_since,
+                        args=(place_ids, taxon_ids, time_of_previous_update)
+                    )
+            except func_timeout.FunctionTimedOut:
+                logging.error(f"Timed out fetching observations for {config_name}")
+                continue
 
-            logging.info(f"{str(len(observations))} new or updated observations for {config_name}")
+            logging.info(
+                f"{str(len(observations))} new or updated observations for {config_name}")
             new_observations_by_project[config_name] = len(observations)
 
             self.setup_summary_log_to_print_config_name(config_name)
@@ -71,9 +94,11 @@ class INatToCamsSynchroniser():
                 try:
                     self.sync_observation(observation)
                 except exceptions.InvalidObservationError:
-                    logging.info(f'Ignoring invalid observation {observation.id}')
+                    logging.info(
+                        f'Ignoring invalid observation {observation.id}')
 
-                time_of_latest_update = max(time_of_latest_update, observation.updated_at)
+                time_of_latest_update = max(
+                    time_of_latest_update, observation.updated_at)
 
             if time_of_latest_update > time_of_previous_update:
                 p.write_text(time_of_latest_update.isoformat())

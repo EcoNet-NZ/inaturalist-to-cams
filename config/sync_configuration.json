@@ -18,5 +18,10 @@
         "file_prefix": "moth_plant_nz",
         "taxon_ids": ["75499"],
         "place_ids": ["6803"]
+    },
+    "Weed Management Aotearoa NZ": {
+        "file_prefix": "weed_management_aotearoa_nz",
+        "project_id": "147177",
+        "place_ids": ["6803"]
     }
 }

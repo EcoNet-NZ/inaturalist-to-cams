@@ -36,6 +36,8 @@ class iNatObservation:
         self.radius_surveyed = None
         self.observed_on = None
         self.taxon_lineage = None
+        self.taxon_name = None
+        self.taxon_preferred_common_name = None
         self.phenology = None
         self.image_urls = None
         self.image_attribution = None

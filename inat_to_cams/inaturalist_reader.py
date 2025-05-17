@@ -42,12 +42,23 @@ class INatReader:
             logging.warning(f'Skipping observation {observation.id} since it has no observation or creation date set')
             raise exceptions.InvalidObservationError
 
+        if not observation.taxon:
+            logging.warning(f'Skipping observation {observation.id} since it has no taxon associated with it')
+            raise exceptions.InvalidObservationError
+        
         inat_observation = inaturalist_observation.iNatObservation()
         inat_observation.id = observation.id
         inat_observation.location = inaturalist_observation.iNatPoint(observation.location[1], observation.location[0])
         inat_observation.location_accuracy = observation.positional_accuracy
         inat_observation.location_details = INatReader.get_observation_value(observation, 'Location details')
         inat_observation.taxon_lineage = observation.taxon.ancestor_ids
+        
+        # Add taxon name information for unmapped taxa
+        if hasattr(observation.taxon, 'name'):
+            inat_observation.taxon_name = observation.taxon.name
+        if hasattr(observation.taxon, 'preferred_common_name'):
+            inat_observation.taxon_preferred_common_name = observation.taxon.preferred_common_name
+            
         inat_observation.description = observation.description
         inat_observation.quality_grade = observation.quality_grade
         inat_observation.height = INatReader.get_observation_value(observation, 'Height (m)')
@@ -144,6 +155,21 @@ class INatReader:
         observations = client.observations.search(
             updated_since=time_of_previous_update + datetime.timedelta(seconds=1),
             taxon_id=taxon_ids,
+            place_id=place_ids,
+            geo=True,
+            geoprivacy='open',
+            page='all',
+            per_page=200
+        ).all()
+        return observations
+
+    @staticmethod
+    @retry(delay=5, tries=3)
+    def get_project_observations_updated_since(place_ids, project_id, time_of_previous_update):
+        client = pyinaturalist.iNatClient()
+        observations = client.observations.search(
+            updated_since=time_of_previous_update + datetime.timedelta(seconds=1),
+            project_id=project_id,
             place_id=place_ids,
             geo=True,
             geoprivacy='open',
