@@ -38,6 +38,19 @@ class INatToCamsSynchroniser():
     def sync_updated_observations(self):
         new_observations_by_project = {}
 
+        # First, collect all taxon_ids by place_id for non-project configurations
+        taxon_ids_by_place = {}
+        for config_name, values in config.sync_configuration.items():
+            is_project_based = 'project_id' in values
+            if not is_project_based and 'taxon_ids' in values:
+                place_ids = values['place_ids']
+                taxon_ids = values['taxon_ids']
+
+                for place_id in place_ids:
+                    if place_id not in taxon_ids_by_place:
+                        taxon_ids_by_place[place_id] = set()
+                    taxon_ids_by_place[place_id].update(taxon_ids)
+
         for config_name, values in config.sync_configuration.items():
             p = pathlib.Path(
                 values['file_prefix'] + '_time_of_last_update.txt')
@@ -49,13 +62,23 @@ class INatToCamsSynchroniser():
 
             place_ids = values['place_ids']
             is_project_based = 'project_id' in values
-            
+
             if is_project_based:
                 project_id = values['project_id']
+
+                # Collect taxon_ids to exclude for this project
+                not_taxon_ids = set()
+                for place_id in place_ids:
+                    if place_id in taxon_ids_by_place:
+                        not_taxon_ids.update(taxon_ids_by_place[place_id])
+
                 logging.info('=' * 80)
                 logging.info(
                     f"Syncing project '{config_name}' with project_id '{project_id}' "
                     f"and place_ids '{place_ids}' since {timestamp}")
+                if not_taxon_ids:
+                    logging.info(
+                        f"Excluding taxon_ids: {not_taxon_ids}")
             else:
                 taxon_ids = values['taxon_ids']
                 logging.info('=' * 80)
@@ -72,7 +95,8 @@ class INatToCamsSynchroniser():
                     observations = func_timeout.func_timeout(
                         120,  # seconds
                         inaturalist_reader.INatReader().get_project_observations_updated_since,
-                        args=(place_ids, project_id, time_of_previous_update)
+                        args=(place_ids, project_id, time_of_previous_update),
+                        kwargs={'not_taxon_ids': list(not_taxon_ids) if not_taxon_ids else None}
                     )
                 else:
                     observations = func_timeout.func_timeout(

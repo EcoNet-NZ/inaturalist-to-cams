@@ -165,17 +165,23 @@ class INatReader:
 
     @staticmethod
     @retry(delay=5, tries=3)
-    def get_project_observations_updated_since(place_ids, project_id, time_of_previous_update):
+    def get_project_observations_updated_since(place_ids, project_id, time_of_previous_update, not_taxon_ids=None):
         client = pyinaturalist.iNatClient()
-        observations = client.observations.search(
-            updated_since=time_of_previous_update + datetime.timedelta(seconds=1),
-            project_id=project_id,
-            place_id=place_ids,
-            geo=True,
-            geoprivacy='open',
-            page='all',
-            per_page=200
-        ).all()
+        params = {
+            'updated_since': time_of_previous_update + datetime.timedelta(seconds=1),
+            'project_id': project_id,
+            'place_id': place_ids,
+            'geo': True,
+            'geoprivacy': 'open',
+            'page': 'all',
+            'per_page': 200
+        }
+
+        # Add not_taxon_ids if provided
+        if not_taxon_ids:
+            params['without_taxon_id'] = not_taxon_ids
+
+        observations = client.observations.search(**params).all()
         return observations
 
     @staticmethod
