@@ -134,12 +134,17 @@ An example definition is:
             "file_prefix": "ombfw",
             "taxon_ids": ["160697"],
             "place_ids": ["6868"]
+        },
+        "Weed Management Aotearoa NZ": {
+            "file_prefix": "weed_management_aotearoa_nz",
+            "project_id": "147177",
+            "place_ids": ["6803"]
         }
     }
 
 where:
 
-* `"Old Man's Beard Free Wellington"`is the project name, which is only used for logging purposes
+* `"Old Man's Beard Free Wellington"` and `"Weed Management Aotearoa NZ"` are project names, which are only used for logging purposes
 * `"file_prefix"` is used as the file prefix for the last update timestamp file. For example, the above definition causes the [ombfw_time_of_last_update.txt](ombfw_time_of_last_update.txt) to contain the time of the last record updated for this definition.
 * `"taxon_ids"` contains a comma delimited list of iNaturalist taxa to be included. The [iNaturalist taxa](https://inaturalist.nz/taxa) page includes a search bar to allow you to find the relevant taxon id (after selecting the species, click on the `About` tab, scroll to the bottom and copy the 6 digit code after `iNaturalist`:).
     
@@ -147,9 +152,14 @@ where:
   The average volunteer won't be able to tell the difference and all of them need tackling!
 
   The taxon_ids must also be defined in the `taxon_mapping` file (see below).
+* `"project_id"` (alternative to `"taxon_ids"`) contains an iNaturalist project ID to be included. All observations from this project will be synchronized regardless of taxon. This is useful for syncing observations from specific iNaturalist projects like "Weed Management Aotearoa NZ". The project ID can be found by navigating to the project page on iNaturalist and looking at the numeric ID in the URL.
 * `"place_ids"` contains a comma delimited list of iNaturalist places to be included. The [iNaturalist places](https://www.inaturalist.org/places) page includes a search bar to allow you to find the relevant place (or you can create a new place if needed). Clicking on `Embed Place Widget` will show the place id in the URL.
 
-Observations that contain one of the `taxon_ids` within one of the `place_ids` will be synchronised. (Note that observations must have a location and date observed set as well as geoprivacy being set to Open for the observation to be synchronised.) 
+Observations that either:
+- contain one of the `taxon_ids` within one of the `place_ids`, or
+- belong to the specified `project_id` and are within one of the `place_ids`
+
+will be synchronised. (Note that observations must have a location and date observed set as well as geoprivacy being set to Open for the observation to be synchronised.) 
 
 #### Updating existing entries
 
@@ -162,6 +172,8 @@ CAMS updates are idempotent, only the new entries for taxon or place will be add
 ### Taxon mapping
 
 The [taxon_mapping](config/taxon_mapping.json) file contains a mapping from the iNaturalist taxon to the CAMS taxon. Note that all `taxon_ids` listed in the `sync_configuration` file must have a taxon mapping entry.
+
+For project-based synchronizations, unmapped taxa will be assigned to the "OTHER" species in CAMS, with the common name or scientific name stored in the OtherWeedDetails field.
 
 An example definition is:
 

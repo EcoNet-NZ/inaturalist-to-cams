@@ -61,6 +61,7 @@ class WeedLocation:
         self.image_attribution = None
         self.location_accuracy = None
         self.audit_log = None
+        self.other_weed_details = None
 
     def __eq__(self, other):
         if type(other) is type(self):
