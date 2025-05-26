@@ -47,16 +47,29 @@ class CamsInatAnomalyFinder():
         # Get all the CAMS features with an iNaturalist URL
         camsReader = cams_anomaly_reader.CAMSAnomalyReader()
         all_synchronised_CAMS_features = camsReader.get_features_with_iNat_URL()
+        
+        # Find duplicates in CAMS features
         duplicate_CAMS_features = find_duplicates(all_synchronised_CAMS_features)
+        
+        # Extract observation IDs from URLs
         for url in all_synchronised_CAMS_features:
-            existing_CAMS_features.append(self.extract_observation_id(url))
+            obs_id = self.extract_observation_id(url)
+            if obs_id:  # Only add if we got a valid ID
+                existing_CAMS_features.append(obs_id)
 
-        self.logAndReport(report, f"Found {len(existing_CAMS_features)} CAMS features ")
+        self.logAndReport(
+            report, 
+            f"Found {len(existing_CAMS_features)} CAMS features"
+        )
 
         # Now get all the iNat observations
+        # These are already filtered for None taxon and duplicates
         obs = inat_anomaly_reader.iNatObservations()
         existing_iNat_observations = obs.get_observations()
-        self.logAndReport(report, f"Found {len(existing_iNat_observations)} iNat observations")
+        self.logAndReport(
+            report, 
+            f"Found {len(existing_iNat_observations)} iNat observations"
+        )
 
         # subtract one list from the other to get CAMS features that are no longer in iNat
         setCams = set(existing_CAMS_features)
@@ -64,27 +77,49 @@ class CamsInatAnomalyFinder():
 
         inCamsOnly = setCams - setiNat
         inINatOnly = setiNat - setCams
-        self.logAndReport(report, f"{len(duplicate_CAMS_features)} features in CAMS with duplicate iNatURLs")
-        self.logAndReport(report, f"{len(inCamsOnly)} found in CAMS and not iNaturalist")
-        self.logAndReport(report, f"{len(inINatOnly)} found in iNaturalist and not CAMS")
+        
+        self.logAndReport(
+            report, 
+            f"{len(duplicate_CAMS_features)} features in CAMS with duplicate iNatURLs"
+        )
+        self.logAndReport(
+            report, 
+            f"{len(inCamsOnly)} found in CAMS and not iNaturalist"
+        )
+        self.logAndReport(
+            report, 
+            f"{len(inINatOnly)} found in iNaturalist and not CAMS"
+        )
 
         deleted_count = 0
         if duplicate_CAMS_features:
             for url in duplicate_CAMS_features:
                 iNat_id = self.extract_observation_id(url)
+                if not iNat_id:
+                    continue
+                    
                 object_ids = camsReader.get_objectid_from_iNat_ID(iNat_id)
-                print(f"iNat observation {iNatUrl(iNat_id)} duplicated by CAMS weed instances with OBJECTID {object_ids}")
+                print(
+                    f"iNat observation {iNatUrl(iNat_id)} duplicated by "
+                    f"CAMS weed instances with OBJECTID {object_ids}"
+                )
                 
-                # For each object_id, get the visit records and print those with more than 1
+                # For each object_id, get the visit records
                 objects_to_delete = []
                 for object_id in object_ids:
                     visits_count = camsReader.get_visit_count_for_weed_location(object_id)
                     status = camsReader.get_current_status_for_weed_location(object_id)
                     
                     if visits_count > 1:
-                        print(f"  - CAMS ObjectID {object_id} has {visits_count} visit records with status: {status}")
+                        print(
+                            f"  - CAMS ObjectID {object_id} has {visits_count} "
+                            f"visit records with status: {status}"
+                        )
                     else:
-                        print(f"  - CAMS ObjectID {object_id} has {visits_count} visit record with status: {status}")
+                        print(
+                            f"  - CAMS ObjectID {object_id} has {visits_count} "
+                            f"visit record with status: {status}"
+                        )
                         
                     # Keep track of objects with zero visits for deletion
                     if visits_count == 0 and delete_zero_visit_duplicates:
@@ -94,30 +129,43 @@ class CamsInatAnomalyFinder():
                 if objects_to_delete and delete_zero_visit_duplicates:
                     for object_id in objects_to_delete:
                         delete_mode = "Would delete" if dry_run else "Deleting"
-                        print(f"  - {delete_mode} CAMS ObjectID {object_id} with 0 visit records")
-                        deleted = camsReader.delete_cams_feature_by_object_id(object_id, dry_run)
+                        print(
+                            f"  - {delete_mode} CAMS ObjectID {object_id} "
+                            f"with 0 visit records"
+                        )
+                        deleted = camsReader.delete_cams_feature_by_object_id(
+                            object_id, dry_run
+                        )
                         if deleted and not dry_run:
                             deleted_count += 1
-                
 
         if inCamsOnly:
             for iNat_id in inCamsOnly:
                 object_ids = camsReader.get_objectid_from_iNat_ID(iNat_id)
-                print(f"Weed instance in CAMS  {camsUrl(object_ids[0])} not found in iNaturalist {iNatUrl(iNat_id)}")
+                print(
+                    f"Weed instance in CAMS {camsUrl(object_ids[0])} "
+                    f"not found in iNaturalist {iNatUrl(iNat_id)}"
+                )
 
         if inINatOnly:
             for iNat_id in inINatOnly:
-                print(f"iNaturalist observations {iNatUrl(iNat_id)} not found in CAMS")
+                print(
+                    f"iNaturalist observations {iNatUrl(iNat_id)} "
+                    f"not found in CAMS"
+                )
 
         if delete_zero_visit_duplicates:
             mode = "Dry run - would have deleted" if dry_run else "Actually deleted"
-            report.append(f"{mode} {deleted_count} duplicate CAMS features with 0 visit records")
+            report.append(
+                f"{mode} {deleted_count} duplicate CAMS features with 0 visit records"
+            )
             
         report.append("*************** REPORT ENDS *******************")
 
         for line in report:
             print(line)
 
+        # Calculate total anomalies
         anomaly_count = len(duplicate_CAMS_features) + len(inCamsOnly) + len(inINatOnly)
         return anomaly_count
 

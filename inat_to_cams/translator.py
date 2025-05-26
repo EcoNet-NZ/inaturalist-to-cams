@@ -75,12 +75,14 @@ class INatToCamsTranslator:
         if cams_taxon == "OTHER":
             if preferred_common_name:
                 weed_location.other_weed_details = preferred_common_name
+                if scientific_name:
+                    weed_location.other_weed_details += f" ({scientific_name})"
             elif scientific_name:
                 weed_location.other_weed_details = scientific_name
             else:
                 weed_location.other_weed_details = "Unknown species from iNaturalist"
                 
-        weed_location.data_source = 'iNaturalist_v1'
+        weed_location.data_source = 'iNaturalist_v2'
         weed_location.location_details = inat_observation.location_details
         weed_location.iNaturalist_longitude = inat_observation.location.x
         weed_location.iNaturalist_latitude = inat_observation.location.y

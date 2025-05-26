@@ -209,7 +209,7 @@ An example definition is:
                 "type": "String",
                 "length": 39,
                 "values": {
-                    "iNaturalist": "iNaturalist_v1"
+                    "iNaturalist": "iNaturalist_v2"
                 }
             },
             ...

@@ -50,8 +50,21 @@ def main():
     observation_counts = synchronise_inat_to_cams.synchroniser.sync_updated_observations()
 
     logging.info('Completed synchronisation: ')
-    for count in observation_counts.items():
-        logging.info(f'* {count[0]:<35}{count[1]:>20} observations synced')
+    logging.info('-' * 80)
+    logging.info('Per-configuration counts (only counting unique observations):')
+    
+    # First display all regular configuration counts
+    total_count = 0
+    for config_name, count in observation_counts.items():
+        # Skip the TOTAL entry for now
+        if config_name == 'TOTAL (unique observations)':
+            total_count = count
+            continue
+        logging.info(f'* {config_name:<35}{count:>20} observations synced')
+    
+    # Then display the total
+    logging.info('-' * 80)
+    logging.info(f'* {"TOTAL (unique observations)":<35}{total_count:>20} observations synced')
 
 
 main()
