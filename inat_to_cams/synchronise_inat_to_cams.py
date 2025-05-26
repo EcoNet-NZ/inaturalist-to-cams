@@ -37,6 +37,8 @@ class INatToCamsSynchroniser():
 
     def sync_updated_observations(self):
         new_observations_by_project = {}
+        # Keep track of all observation IDs to avoid double counting
+        all_processed_observation_ids = set()
 
         # First, collect all taxon_ids by place_id for non-project configurations
         taxon_ids_by_place = {}
@@ -108,13 +110,24 @@ class INatToCamsSynchroniser():
                 logging.error(f"Timed out fetching observations for {config_name}")
                 continue
 
+            # Filter out observations that have already been processed in other configs
+            unique_observations = []
+            for obs in observations:
+                if obs.id not in all_processed_observation_ids:
+                    unique_observations.append(obs)
+                    all_processed_observation_ids.add(obs.id)
+
             logging.info(
                 f"{str(len(observations))} new or updated observations for {config_name}")
-            new_observations_by_project[config_name] = len(observations)
+            logging.info(
+                f"{str(len(unique_observations))} unique observations (not in other configs)")
+            
+            # Store only the count of unique observations
+            new_observations_by_project[config_name] = len(unique_observations)
 
             self.setup_summary_log_to_print_config_name(config_name)
 
-            for observation in observations:
+            for observation in unique_observations:
                 try:
                     self.sync_observation(observation)
                 except exceptions.InvalidObservationError:
@@ -127,6 +140,9 @@ class INatToCamsSynchroniser():
             if time_of_latest_update > time_of_previous_update:
                 p.write_text(time_of_latest_update.isoformat())
 
+        # Add a total count of unique observations
+        new_observations_by_project['TOTAL (unique observations)'] = len(all_processed_observation_ids)
+        
         return new_observations_by_project
 
     def setup_summary_log_to_print_config_name(self, config_name):
