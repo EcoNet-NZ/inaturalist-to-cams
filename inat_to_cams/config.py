@@ -57,11 +57,26 @@ class SyncConfiguration:
         sync_configuration_file = open(configuration_json)
         self.sync_configuration = json.load(sync_configuration_file)
         for key, value in self.sync_configuration.items():
-            for name in ['file_prefix', 'taxon_ids', 'place_ids']:
-                assert name in value, f"'{name}' must be set for '{key}' in sync_configuration.json"
+            for name in ['file_prefix', 'place_ids']:
+                assert name in value, (
+                    f"'{name}' must be set for '{key}' in sync_configuration.json")
+            
+            # Either taxon_ids or project_id must be present, but not both
+            has_taxon_ids = 'taxon_ids' in value
+            has_project_id = 'project_id' in value
+            
+            assert has_taxon_ids or has_project_id, (
+                f"Either 'taxon_ids' or 'project_id' must be set for '{key}' in "
+                f"sync_configuration.json")
+            assert not (has_taxon_ids and has_project_id), (
+                f"Both 'taxon_ids' and 'project_id' cannot be set for '{key}' in "
+                f"sync_configuration.json")
 
-            for taxon_id in value['taxon_ids']:
-                assert taxon_id in taxon_mapping, f"Taxon id {taxon_id} must be mapped in taxon_mapping.json"
+            # For taxon-based configs, check that all taxon IDs are mapped
+            if has_taxon_ids:
+                for taxon_id in value['taxon_ids']:
+                    assert taxon_id in taxon_mapping, (
+                        f"Taxon id {taxon_id} must be mapped in taxon_mapping.json")
 
         logging.info(f'Loaded sync configuration: {self.sync_configuration}')
 

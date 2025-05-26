@@ -6,11 +6,11 @@ Feature: Processing a new iNaturalist observation populates a new WeedLocation f
 		When we process the observation
 		Then a WeedLocations feature is created at geopoint 'x': 19454507.8536978, 'y': -5055517.338865108 in coordinate system EPSG:3857
 
-	Rule: The 'SiteSource' field is set to 'iNaturalist_v1'
+	Rule: The 'SiteSource' field is set to 'iNaturalist_v2'
 		Example: SiteSource is always set
 		Given iNaturalist has a new OMB observation
 		When we process the observation
-		Then the feature has 'SiteSource' set to 'iNaturalist_v1'
+		Then the feature has 'SiteSource' set to 'iNaturalist_v2'
 
 	Rule: The Location address field is set to Location details if provided
 		Example: Location address is set if provided
