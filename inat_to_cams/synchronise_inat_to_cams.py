@@ -37,47 +37,112 @@ class INatToCamsSynchroniser():
 
     def sync_updated_observations(self):
         new_observations_by_project = {}
+        # Keep track of all observation IDs to avoid double counting
+        all_processed_observation_ids = set()
+
+        # First, collect all taxon_ids by place_id for non-project configurations
+        taxon_ids_by_place = {}
+        for config_name, values in config.sync_configuration.items():
+            is_project_based = 'project_id' in values
+            if not is_project_based and 'taxon_ids' in values:
+                place_ids = values['place_ids']
+                taxon_ids = values['taxon_ids']
+
+                for place_id in place_ids:
+                    if place_id not in taxon_ids_by_place:
+                        taxon_ids_by_place[place_id] = set()
+                    taxon_ids_by_place[place_id].update(taxon_ids)
 
         for config_name, values in config.sync_configuration.items():
-            p = pathlib.Path(values['file_prefix'] + '_time_of_last_update.txt')
+            p = pathlib.Path(
+                values['file_prefix'] + '_time_of_last_update.txt')
 
             if p.exists():
                 timestamp = p.read_text()
             else:
                 timestamp = '2000-01-01T00:00:00+12:00'
 
-            taxon_ids = values['taxon_ids']
             place_ids = values['place_ids']
+            is_project_based = 'project_id' in values
 
-            logging.info('=' * 80)
-            logging.info(f"Syncing '{config_name}' with taxon_ids '{taxon_ids}' and place_ids '{place_ids}' since {timestamp}")
+            if is_project_based:
+                project_id = values['project_id']
+
+                # Collect taxon_ids to exclude for this project
+                not_taxon_ids = set()
+                for place_id in place_ids:
+                    if place_id in taxon_ids_by_place:
+                        not_taxon_ids.update(taxon_ids_by_place[place_id])
+
+                logging.info('=' * 80)
+                logging.info(
+                    f"Syncing project '{config_name}' with project_id '{project_id}' "
+                    f"and place_ids '{place_ids}' since {timestamp}")
+                if not_taxon_ids:
+                    logging.info(
+                        f"Excluding taxon_ids: {not_taxon_ids}")
+            else:
+                taxon_ids = values['taxon_ids']
+                logging.info('=' * 80)
+                logging.info(
+                    f"Syncing '{config_name}' with taxon_ids '{taxon_ids}' "
+                    f"and place_ids '{place_ids}' since {timestamp}")
 
             time_of_previous_update = datetime.datetime.fromisoformat(timestamp)
             logging.info("Previous update: " + str(time_of_previous_update))
             time_of_latest_update = time_of_previous_update
 
-            observations = func_timeout.func_timeout(
-                120,  # seconds
-                inaturalist_reader.INatReader().get_matching_observations_updated_since,
-                args=(place_ids, taxon_ids, time_of_previous_update)
-            )
+            try:
+                if is_project_based:
+                    observations = func_timeout.func_timeout(
+                        120,  # seconds
+                        inaturalist_reader.INatReader().get_project_observations_updated_since,
+                        args=(place_ids, project_id, time_of_previous_update),
+                        kwargs={'not_taxon_ids': list(not_taxon_ids) if not_taxon_ids else None}
+                    )
+                else:
+                    observations = func_timeout.func_timeout(
+                        120,  # seconds
+                        inaturalist_reader.INatReader().get_matching_observations_updated_since,
+                        args=(place_ids, taxon_ids, time_of_previous_update)
+                    )
+            except func_timeout.FunctionTimedOut:
+                logging.error(f"Timed out fetching observations for {config_name}")
+                continue
 
-            logging.info(f"{str(len(observations))} new or updated observations for {config_name}")
-            new_observations_by_project[config_name] = len(observations)
+            # Filter out observations that have already been processed in other configs
+            unique_observations = []
+            for obs in observations:
+                if obs.id not in all_processed_observation_ids:
+                    unique_observations.append(obs)
+                    all_processed_observation_ids.add(obs.id)
+
+            logging.info(
+                f"{str(len(observations))} new or updated observations for {config_name}")
+            logging.info(
+                f"{str(len(unique_observations))} unique observations (not in other configs)")
+            
+            # Store only the count of unique observations
+            new_observations_by_project[config_name] = len(unique_observations)
 
             self.setup_summary_log_to_print_config_name(config_name)
 
-            for observation in observations:
+            for observation in unique_observations:
                 try:
                     self.sync_observation(observation)
                 except exceptions.InvalidObservationError:
-                    logging.info(f'Ignoring invalid observation {observation.id}')
+                    logging.info(
+                        f'Ignoring invalid observation {observation.id}')
 
-                time_of_latest_update = max(time_of_latest_update, observation.updated_at)
+                time_of_latest_update = max(
+                    time_of_latest_update, observation.updated_at)
 
             if time_of_latest_update > time_of_previous_update:
                 p.write_text(time_of_latest_update.isoformat())
 
+        # Add a total count of unique observations
+        new_observations_by_project['TOTAL (unique observations)'] = len(all_processed_observation_ids)
+        
         return new_observations_by_project
 
     def setup_summary_log_to_print_config_name(self, config_name):
