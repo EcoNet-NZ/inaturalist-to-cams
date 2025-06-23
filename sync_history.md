@@ -48818,3 +48818,25 @@
 |New weed|**85671**|MothPlant|RED|[291380019](https://www.inaturalist.org/observations/291380019)|
 |New weed|**85672**|MothPlant|RED|[292195455](https://www.inaturalist.org/observations/292195455)|
 |New weed|**85673**|MothPlant|RED|[292195704](https://www.inaturalist.org/observations/292195704)|
+---
+
+# Run [11514](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/c599120a5c098de54efc800e38cf98e734e01b74/checks/15836858123)
+2025-06-24 10:55
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Visit record updated|**85635**|BananaPassionfruit|RED|[291639789](https://www.inaturalist.org/observations/291639789)|
+|Visit record updated|**85671**|MothPlant|RED|[291380019](https://www.inaturalist.org/observations/291380019)|
+|New weed|**85674**|MothPlant|RED|[292195004](https://www.inaturalist.org/observations/292195004)|
+|New weed|**85675**|MothPlant|RED|[292195032](https://www.inaturalist.org/observations/292195032)|
+|New weed|**85676**|MothPlant|RED|[292195124](https://www.inaturalist.org/observations/292195124)|
+|New weed|**85677**|MothPlant|RED|[292195170](https://www.inaturalist.org/observations/292195170)|
+|New weed|**85678**|MothPlant|RED|[292195217](https://www.inaturalist.org/observations/292195217)|
+|New weed|**85679**|MothPlant|RED|[292195292](https://www.inaturalist.org/observations/292195292)|
+|New weed|**85680**|MothPlant|RED|[292195331](https://www.inaturalist.org/observations/292195331)|
+|New weed|**85681**|MothPlant|RED|[292195641](https://www.inaturalist.org/observations/292195641)|
+|New weed|**85682**|MothPlant|RED|[292200658](https://www.inaturalist.org/observations/292200658)|
+|New weed|**85683**|MothPlant|RED|[292200714](https://www.inaturalist.org/observations/292200714)|
+|New weed|**85684**|MothPlant|RED|[292200781](https://www.inaturalist.org/observations/292200781)|
+|New weed|**85685**|MothPlant|RED|[292200868](https://www.inaturalist.org/observations/292200868)|
+|New weed|**85686**|MothPlant|RED|[292200989](https://www.inaturalist.org/observations/292200989)|
