@@ -49074,3 +49074,11 @@
 |Weed record updated|**85613**|JapaneseHoneysuckle|RED|[287436115](https://www.inaturalist.org/observations/287436115)|
 |Weed record updated|**85614**|LadderFern|RED|[287443260](https://www.inaturalist.org/observations/287443260)|
 |Weed record updated, Visit record updated|**85615**|StinkingIris|RED|[287469260](https://www.inaturalist.org/observations/287469260)|
+---
+
+# Run [11664](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/c46f839c85a75bf3eed9f1060a8ffee2afbf029c/checks/15972195458)
+2025-06-30 23:55
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**85781**|OldMansBeard|RED|[294017545](https://www.inaturalist.org/observations/294017545)|
