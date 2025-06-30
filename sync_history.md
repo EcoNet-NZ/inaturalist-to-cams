@@ -49058,3 +49058,19 @@
 |Sync Event|Object Id|Species|Status|iNaturalist Id|
 |----------|---------|-------|------|--------------|
 |New weed|**85771**|OldMansBeard|RED|[293903291](https://www.inaturalist.org/observations/293903291)|
+---
+
+# Run [11655](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/4fdea50729f03c0a53fcae0df7c4d0e8a21c8bf9/checks/15963351673)
+2025-06-30 15:47
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Weed record updated|**85102**|MothPlant|RED|[287475241](https://www.inaturalist.org/observations/287475241)|
+|Weed record updated|**85608**|StinkingIris|RED|[287431289](https://www.inaturalist.org/observations/287431289)|
+|Weed record updated|**85609**|OTHER|RED|[287431430](https://www.inaturalist.org/observations/287431430)|
+|Weed record updated|**85610**|Rhamnus|RED|[287431520](https://www.inaturalist.org/observations/287431520)|
+|Weed record updated|**85611**|OTHER|RED|[287431659](https://www.inaturalist.org/observations/287431659)|
+|Weed record updated|**85612**|JapaneseHoneysuckle|RED|[287432034](https://www.inaturalist.org/observations/287432034)|
+|Weed record updated|**85613**|JapaneseHoneysuckle|RED|[287436115](https://www.inaturalist.org/observations/287436115)|
+|Weed record updated|**85614**|LadderFern|RED|[287443260](https://www.inaturalist.org/observations/287443260)|
+|Weed record updated, Visit record updated|**85615**|StinkingIris|RED|[287469260](https://www.inaturalist.org/observations/287469260)|
