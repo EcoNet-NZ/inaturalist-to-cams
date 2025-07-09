@@ -49457,3 +49457,14 @@
 |Visit record updated|**85610**|Rhamnus|RED|[287431520](https://www.inaturalist.org/observations/287431520)|
 |Weed record updated|**85611**|OTHER|RED|[287431659](https://www.inaturalist.org/observations/287431659)|
 |Weed record updated|**85616**|OTHER|RED|[287787629](https://www.inaturalist.org/observations/287787629)|
+---
+
+# Run [11861](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/99cf8a39754a06417d5990a836df6000e123b724/checks/16159791762)
+2025-07-09 15:45
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**85922**|Smilax|RED|[247565730](https://www.inaturalist.org/observations/247565730)|
+|New weed|**85923**|MileAMinute|ORANGE|[269406022](https://www.inaturalist.org/observations/269406022)|
+|New weed|**85924**|WildGinger|YELLOW|[296412400](https://www.inaturalist.org/observations/296412400)|
+|New weed|**85925**|BangalowPalm|RED|[296412976](https://www.inaturalist.org/observations/296412976)|
