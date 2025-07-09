@@ -49468,3 +49468,11 @@
 |New weed|**85923**|MileAMinute|ORANGE|[269406022](https://www.inaturalist.org/observations/269406022)|
 |New weed|**85924**|WildGinger|YELLOW|[296412400](https://www.inaturalist.org/observations/296412400)|
 |New weed|**85925**|BangalowPalm|RED|[296412976](https://www.inaturalist.org/observations/296412976)|
+---
+
+# Run [11863](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/ef9caf2425ce1cfcfc20115a37d74a79e255ac93/checks/16160757794)
+2025-07-09 17:03
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**85927**|WoollyNightshade|RED|[296430837](https://www.inaturalist.org/observations/296430837)|
