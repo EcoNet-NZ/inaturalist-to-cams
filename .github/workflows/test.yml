@@ -70,8 +70,8 @@ jobs:
         behave -f html -o reports/behave-report.html --junit
       env: 
         ARCGIS_URL: ${{ secrets.ARCGIS_URL }}
-        ARCGIS_USERNAME: ${{ secrets.ARCGIS_USERNAME }}
-        ARCGIS_PASSWORD: ${{ secrets.ARCGIS_PASSWORD }}
+        ARCGIS_USERNAME: ${{ secrets.ARCGIS_DEV_USERNAME }}
+        ARCGIS_PASSWORD: ${{ secrets.ARCGIS_DEV_PASSWORD }}
         ARCGIS_FEATURE_LAYER_ID: ${{ secrets.ARCGIS_FEATURE_LAYER_ID_DEV }}        
 
     - name: Upload test reports
