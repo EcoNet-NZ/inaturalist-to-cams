@@ -16,31 +16,32 @@
 
 Feature: Processing a new iNaturalist observation populates the correct taxon on the new WeedLocation feature
 
-	Rule: Taxon must exist in the mapping table
-		Example: An error is logged if taxon is not in the mapping file
-		Given iNaturalist has a new OMB observation with id 1001 for taxon 123456 with ancestors [123456]
+	@wip
+	Rule: Taxon is mapped to OTHER if it doesn't exist in the mapping table
+		Example: Taxon mapped to OTHER species when no match is found
+		Given iNaturalist has a new observation for taxon 123456 with ancestors [123456]
 		When we process the observation
-		Then the error "Skipping observation 1001 since it has unmapped taxon with lineage" is logged
+		Then a WeedLocations feature is created with species 'OTHER'
 
 	Rule: Species is populated with the mapped taxon
 		Example: Species is mapped correctly for new observations
-		Given iNaturalist has a new OMB observation for taxon 160697 with ancestors [160697]
+		Given iNaturalist has a new observation for taxon 160697 with ancestors [160697]
 		When we process the observation
 		Then a WeedLocations feature is created with species 'OldMansBeard'
 
 	Rule: Where the mapped taxon is a higher taxa, all descendents of that taxa are mapped
 		Example: Subgenus Tacsonia is mapped to BananaPassionfruit
-		Given iNaturalist has a new OMB observation for taxon 879226 with ancestors [878751,879226,133169,1442036]
+		Given iNaturalist has a new observation for taxon 879226 with ancestors [878751,879226,133169,1442036]
 		When we process the observation
 		Then a WeedLocations feature is created with species 'BananaPassionfruit'
 
 		Example: Passiflora tripartita (a grandchild of Subgenus Tacsonia) is also mapped to BananaPassionfruit
-		Given iNaturalist has a new OMB observation for taxon 133169 with ancestors [878751,879226,133169,1442036]
+		Given iNaturalist has a new observation for taxon 133169 with ancestors [878751,879226,133169,1442036]
 		When we process the observation
 		Then a WeedLocations feature is created with species 'BananaPassionfruit'
 
 		Example: Passiflora tripartita (a great-grandchild of Subgenus Tacsonia) is also mapped to BananaPassionfruit
-		Given iNaturalist has a new OMB observation for taxon 133171 with ancestors [878751,879226,133169,133171,1442036]
+		Given iNaturalist has a new observation for taxon 133171 with ancestors [878751,879226,133169,133171,1442036]
 		When we process the observation
 		Then a WeedLocations feature is created with species 'BananaPassionfruit'
 
