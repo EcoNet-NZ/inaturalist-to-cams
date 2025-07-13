@@ -8,6 +8,6 @@ tenacity==9.1.2
 git+https://github.com/behave/behave@v1.2.7.dev6
 behave_html_formatter==0.9.10
 pyhamcrest==2.0.4
-factory_boy==3.2.1
+factory_boy==3.3.0
 
 flake8==7.3.0
