@@ -25,7 +25,16 @@ class CamsReader:
     def read_observation(self, inat_id):
         query_table = f"iNatRef='{inat_id}'"
         row_ids = cams_interface.connection.query_weed_visits_table_ids(query_table)
-        object_ids = row_ids['objectIds']
+        
+        # For ArcGIS API 2.4.1+, query with returnIdsOnly=True returns a FeatureSet 
+        # Object IDs are in the features array, not in a separate objectIds attribute
+        object_ids = []
+        if hasattr(row_ids, 'features') and row_ids.features:
+            # Extract OBJECTID from each feature
+            object_ids = [feature.attributes[row_ids.object_id_field_name] for feature in row_ids.features]
+        
+        logging.info(f'Found {len(object_ids)} object_ids: {object_ids}')
+            
         if not object_ids:
             logging.info(f'No existing CAMS feature found for iNaturalist id {inat_id}')
             return None
