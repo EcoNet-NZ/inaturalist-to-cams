@@ -83,7 +83,7 @@ def step_impl(context, inat_id):
     context.observation = observation_factory.ObservationFactory(id=inat_id, location=None)
 
 
-@given(u'iNaturalist has a new OMB observation for taxon {inaturalist_taxon} with ancestors [{ancestor_list}]')
+@given(u'iNaturalist has a new observation for taxon {inaturalist_taxon} with ancestors [{ancestor_list}]')
 def step_impl(context, inaturalist_taxon, ancestor_list):
     taxon = pyinaturalist.Taxon()
     taxon.id = inaturalist_taxon
@@ -91,7 +91,7 @@ def step_impl(context, inaturalist_taxon, ancestor_list):
     context.observation = observation_factory.ObservationFactory(taxon=taxon)
 
 
-@given(u'iNaturalist has a new OMB observation with id {inat_id} for taxon {inaturalist_taxon} with ancestors [{ancestor_list}]')
+@given(u'iNaturalist has a new observation with id {inat_id} for taxon {inaturalist_taxon} with ancestors [{ancestor_list}]')
 def step_impl(context, inat_id, inaturalist_taxon, ancestor_list):
     taxon = pyinaturalist.Taxon()
     taxon.id = inaturalist_taxon
