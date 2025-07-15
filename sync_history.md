@@ -49761,3 +49761,11 @@
 |New weed|**85983**|TaiwanCherry|RED|[191545260](https://www.inaturalist.org/observations/191545260)|
 |New weed|**85984**|JapaneseSpindleberry|RED|[191821986](https://www.inaturalist.org/observations/191821986)|
 |New weed|**85985**|Cotoneaster|RED|[204989096](https://www.inaturalist.org/observations/204989096)|
+---
+
+# Run [11998](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/d3d083ce902362e547b79cd0c236a9be72405359/checks/16284675178)
+2025-07-15 17:13
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Weed record updated, Visit record updated|**81678**|OldMansBeard|RED|[266957586](https://www.inaturalist.org/observations/266957586)|
