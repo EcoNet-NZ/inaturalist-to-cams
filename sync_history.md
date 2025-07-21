@@ -50037,3 +50037,11 @@
 |Sync Event|Object Id|Species|Status|iNaturalist Id|
 |----------|---------|-------|------|--------------|
 |Weed record updated|**85455**|OTHER|RED|[212146310](https://www.inaturalist.org/observations/212146310)|
+---
+
+# Run [12144](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/9e6abe693cda55954f04c67a20d97b21b13bf3d4/checks/16424383255)
+2025-07-22 05:57
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Weed record updated|**85883**|OTHER|RED|[295537277](https://www.inaturalist.org/observations/295537277)|
