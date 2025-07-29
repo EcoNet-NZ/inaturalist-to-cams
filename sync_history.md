@@ -50440,3 +50440,14 @@
 |----------|---------|-------|------|--------------|
 |Visit record updated|**86098**|BlueMorningGlory|RED|[300580485](https://www.inaturalist.org/observations/300580485)|
 |Visit record updated|**86175**|BlueMorningGlory|RED|[301444575](https://www.inaturalist.org/observations/301444575)|
+---
+
+# Run [12326](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/f2731404b96ecff75d39ab096f950a68710c3e7d/checks/16609230977)
+2025-07-30 10:57
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**86211**|WildGinger|YELLOW|[302207038](https://www.inaturalist.org/observations/302207038)|
+|New weed|**86212**|MonkeyApple|YELLOW|[302208421](https://www.inaturalist.org/observations/302208421)|
+|New weed|**86213**|Tradescantia|RED|[302213302](https://www.inaturalist.org/observations/302213302)|
+|New weed|**86214**|WildGinger|RED|[302215079](https://www.inaturalist.org/observations/302215079)|
