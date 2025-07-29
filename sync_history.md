@@ -50431,3 +50431,12 @@
 |Visit record updated|**86201**|BananaPassionfruit|RED|[301987303](https://www.inaturalist.org/observations/301987303)|
 |Visit record updated|**86202**|BananaPassionfruit|RED|[301988252](https://www.inaturalist.org/observations/301988252)|
 |Visit record updated|**86203**|BananaPassionfruit|RED|[301992999](https://www.inaturalist.org/observations/301992999)|
+---
+
+# Run [12321](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/8c6244f04d3d7835d429db7d10b872c7c6d70ca1/checks/16603691142)
+2025-07-30 05:58
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Visit record updated|**86098**|BlueMorningGlory|RED|[300580485](https://www.inaturalist.org/observations/300580485)|
+|Visit record updated|**86175**|BlueMorningGlory|RED|[301444575](https://www.inaturalist.org/observations/301444575)|
