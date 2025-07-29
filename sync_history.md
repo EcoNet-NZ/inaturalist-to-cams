@@ -50451,3 +50451,14 @@
 |New weed|**86212**|MonkeyApple|YELLOW|[302208421](https://www.inaturalist.org/observations/302208421)|
 |New weed|**86213**|Tradescantia|RED|[302213302](https://www.inaturalist.org/observations/302213302)|
 |New weed|**86214**|WildGinger|RED|[302215079](https://www.inaturalist.org/observations/302215079)|
+---
+
+# Run [12327](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/7e3adcb2b27d9c67a2621217c33ff2de488b1a49/checks/16610010819)
+2025-07-30 11:56
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Weed record updated, Visit record updated|**84257**|OldMansBeard|RED|[278341935](https://www.inaturalist.org/observations/278341935)|
+|Weed record updated, Visit record updated|**85023**|OldMansBeard|RED|[285528423](https://www.inaturalist.org/observations/285528423)|
+|New weed|**86216**|WoollyNightshade|RED|[302216511](https://www.inaturalist.org/observations/302216511)|
+|Visit record updated|**86213**|Tradescantia|RED|[302213302](https://www.inaturalist.org/observations/302213302)|
