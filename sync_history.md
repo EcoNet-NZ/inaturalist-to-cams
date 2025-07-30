@@ -50490,3 +50490,12 @@
 |----------|---------|-------|------|--------------|
 |Visit record updated|**86212**|MonkeyApple|YELLOW|[302208421](https://www.inaturalist.org/observations/302208421)|
 |New weed|**86221**|Loquat|RED|[302212437](https://www.inaturalist.org/observations/302212437)|
+---
+
+# Run [12334](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/3b769f4ebb9f069a4c8bfc29f34ad4dfd8812551/checks/16618438058)
+2025-07-30 21:14
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Visit record updated|**86201**|BananaPassionfruit|RED|[301987303](https://www.inaturalist.org/observations/301987303)|
+|Visit record updated|**86205**|BananaPassionfruit|RED|[302000080](https://www.inaturalist.org/observations/302000080)|
