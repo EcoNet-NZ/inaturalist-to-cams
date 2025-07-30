@@ -50481,3 +50481,12 @@
 |Sync Event|Object Id|Species|Status|iNaturalist Id|
 |----------|---------|-------|------|--------------|
 |Geolocation updated, Weed record updated, Visit record updated|**86214**|WildGinger|RED|[302215079](https://www.inaturalist.org/observations/302215079)|
+---
+
+# Run [12331](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/e497697c96f97fd9beea2faca146e6f439eb2a77/checks/16614695150)
+2025-07-30 18:00
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Visit record updated|**86212**|MonkeyApple|YELLOW|[302208421](https://www.inaturalist.org/observations/302208421)|
+|New weed|**86221**|Loquat|RED|[302212437](https://www.inaturalist.org/observations/302212437)|
