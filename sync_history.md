@@ -50473,3 +50473,11 @@
 |Visit record updated|**86213**|Tradescantia|RED|[302213302](https://www.inaturalist.org/observations/302213302)|
 |New weed|**86217**|FruitSaladPlant|RED|[302214403](https://www.inaturalist.org/observations/302214403)|
 |Visit record updated|**86214**|WildGinger|RED|[302215079](https://www.inaturalist.org/observations/302215079)|
+---
+
+# Run [12329](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/94dc3e8a44fc2b8f84b6a34dec9c1f8a8390cad8/checks/16613518199)
+2025-07-30 16:33
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Geolocation updated, Weed record updated, Visit record updated|**86214**|WildGinger|RED|[302215079](https://www.inaturalist.org/observations/302215079)|
