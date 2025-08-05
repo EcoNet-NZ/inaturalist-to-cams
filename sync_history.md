@@ -50774,3 +50774,14 @@
 |Sync Event|Object Id|Species|Status|iNaturalist Id|
 |----------|---------|-------|------|--------------|
 |Visit record updated|**86326**|WoollyNightshade|RED|[303852811](https://www.inaturalist.org/observations/303852811)|
+---
+
+# Run [12462](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/8a496001d1d08f97aa1fb95797d030de87874fcf/checks/16740669610)
+2025-08-05 16:37
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Visit record updated|**86326**|WoollyNightshade|RED|[303852811](https://www.inaturalist.org/observations/303852811)|
+|New weed|**86338**|BangalowPalm|RED|[191898043](https://www.inaturalist.org/observations/191898043)|
+|New weed|**86339**|OTHER|RED|[191983901](https://www.inaturalist.org/observations/191983901)|
+|New weed|**86340**|PrivetTree|RED|[192018393](https://www.inaturalist.org/observations/192018393)|
