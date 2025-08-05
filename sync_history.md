@@ -50785,3 +50785,12 @@
 |New weed|**86338**|BangalowPalm|RED|[191898043](https://www.inaturalist.org/observations/191898043)|
 |New weed|**86339**|OTHER|RED|[191983901](https://www.inaturalist.org/observations/191983901)|
 |New weed|**86340**|PrivetTree|RED|[192018393](https://www.inaturalist.org/observations/192018393)|
+---
+
+# Run [12480](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/72737a38cb803b7a6ee0510b8a2e245822850ce4/checks/16762198401)
+2025-08-06 09:56
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**86341**|OldMansBeard|RED|[304079735](https://www.inaturalist.org/observations/304079735)|
+|New weed|**86342**|BananaPassionfruit|RED|[304074115](https://www.inaturalist.org/observations/304074115)|
