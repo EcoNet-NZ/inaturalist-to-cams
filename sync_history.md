@@ -51046,3 +51046,11 @@
 |----------|---------|-------|------|--------------|
 |Weed record updated|**85601**|OTHER|RED|[278879087](https://www.inaturalist.org/observations/278879087)|
 |New weed|**86369**|AsparagusClimbing|RED|[305162414](https://www.inaturalist.org/observations/305162414)|
+---
+
+# Run [12578](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/0e8d5cebde7b14313c682ff02727ab5aa407ba41/checks/16859527435)
+2025-08-10 20:57
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**86372**|OldMansBeard|RED|[305178253](https://www.inaturalist.org/observations/305178253)|
