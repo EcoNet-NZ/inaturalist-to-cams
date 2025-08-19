@@ -51395,3 +51395,11 @@
 |Sync Event|Object Id|Species|Status|iNaturalist Id|
 |----------|---------|-------|------|--------------|
 |Visit record updated|**86483**|WoollyNightshade|RED|[307443943](https://www.inaturalist.org/observations/307443943)|
+---
+
+# Run [12783](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/237f0559c20892dc3bdc020e1c5c26e3644dbba1/checks/17064697655)
+2025-08-19 20:58
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Visit record updated|**86476**|WoollyNightshade|RED|[307366072](https://www.inaturalist.org/observations/307366072)|
