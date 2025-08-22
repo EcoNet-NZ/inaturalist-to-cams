@@ -51596,3 +51596,13 @@
 |----------|---------|-------|------|--------------|
 |New weed|**86531**|ArumLily|YELLOW|[308294178](https://www.inaturalist.org/observations/308294178)|
 |New weed|**86532**|ArumLily|RED|[308294375](https://www.inaturalist.org/observations/308294375)|
+---
+
+# Run [12867](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/59151535164a73dcda51381eb8cf859d0a95e241/checks/17168421082)
+2025-08-23 11:56
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**86535**|ArumLily|RED|[308302985](https://www.inaturalist.org/observations/308302985)|
+|New weed|**86536**|Pampas|RED|[308303335](https://www.inaturalist.org/observations/308303335)|
+|New weed|**86537**|ArumLily|RED|[308303662](https://www.inaturalist.org/observations/308303662)|
