@@ -51606,3 +51606,11 @@
 |New weed|**86535**|ArumLily|RED|[308302985](https://www.inaturalist.org/observations/308302985)|
 |New weed|**86536**|Pampas|RED|[308303335](https://www.inaturalist.org/observations/308303335)|
 |New weed|**86537**|ArumLily|RED|[308303662](https://www.inaturalist.org/observations/308303662)|
+---
+
+# Run [12868](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/9f53e80a7b3f6ac8254eaa43e035f39b17763443/checks/17169949676)
+2025-08-23 14:17
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Weed record updated, Visit record updated|**73257**|BananaPassionfruit|RED|[145947119](https://www.inaturalist.org/observations/145947119)|
