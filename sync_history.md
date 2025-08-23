@@ -51622,3 +51622,11 @@
 |Sync Event|Object Id|Species|Status|iNaturalist Id|
 |----------|---------|-------|------|--------------|
 |Visit record updated|**86537**|ArumLily|RED|[308303662](https://www.inaturalist.org/observations/308303662)|
+---
+
+# Run [12874](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/3e0218815d86ba6d51f7c5caddae566e9c202341/checks/17173060094)
+2025-08-23 19:55
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Weed record updated|**86521**|OTHER|YELLOW|[308103995](https://www.inaturalist.org/observations/308103995)|
