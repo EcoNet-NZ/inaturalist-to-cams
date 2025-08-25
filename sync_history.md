@@ -51671,3 +51671,14 @@
 |Sync Event|Object Id|Species|Status|iNaturalist Id|
 |----------|---------|-------|------|--------------|
 |Visit record updated|**86069**|WoollyNightshade|RED|[299727907](https://www.inaturalist.org/observations/299727907)|
+---
+
+# Run [12927](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/810f5779e05e344153ed098f3c0abc39b462225a/checks/17212468870)
+2025-08-26 02:56
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Visit record updated|**85412**|AsparagusClimbing|RED|[198261841](https://www.inaturalist.org/observations/198261841)|
+|Visit record updated|**85414**|AsparagusClimbing|RED|[198261845](https://www.inaturalist.org/observations/198261845)|
+|Visit record updated|**85564**|AsparagusClimbing|RED|[270071820](https://www.inaturalist.org/observations/270071820)|
+|Visit record updated|**85565**|AsparagusClimbing|RED|[270074054](https://www.inaturalist.org/observations/270074054)|
