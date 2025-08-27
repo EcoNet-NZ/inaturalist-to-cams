@@ -51804,3 +51804,11 @@
 |----------|---------|-------|------|--------------|
 |New weed|**86618**|OldMansBeard|RED|[309591356](https://www.inaturalist.org/observations/309591356)|
 |New weed|**86619**|CathedralBells|RED|[309596709](https://www.inaturalist.org/observations/309596709)|
+---
+
+# Run [12982](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/1510b26631a48d885863204ec995a5de9266648a/checks/17281641201)
+2025-08-28 11:55
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**86620**|BluePassionFlower|RED|[309602076](https://www.inaturalist.org/observations/309602076)|
