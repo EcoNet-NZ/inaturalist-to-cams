@@ -51778,3 +51778,11 @@
 |Sync Event|Object Id|Species|Status|iNaturalist Id|
 |----------|---------|-------|------|--------------|
 |Visit record updated|**86612**|OldMansBeard|RED|[309465177](https://www.inaturalist.org/observations/309465177)|
+---
+
+# Run [12974](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/cbb7c9646a0e66b519fdc3b1ad8b66896adac20f/checks/17271938440)
+2025-08-28 03:56
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Visit record updated|**86610**|OldMansBeard|RED|[309438082](https://www.inaturalist.org/observations/309438082)|
