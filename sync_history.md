@@ -51880,3 +51880,11 @@
 |----------|---------|-------|------|--------------|
 |New weed|**86637**|BlueMorningGlory|RED|[309858589](https://www.inaturalist.org/observations/309858589)|
 |New weed|**86638**|WoollyNightshade|RED|[309865520](https://www.inaturalist.org/observations/309865520)|
+---
+
+# Run [13007](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/14fbb98031c7040281f966494e730754d7a6abd6/checks/17313797434)
+2025-08-29 15:26
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Visit record updated|**86638**|WoollyNightshade|RED|[309865520](https://www.inaturalist.org/observations/309865520)|
