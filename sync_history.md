@@ -51986,3 +51986,63 @@
 |Sync Event|Object Id|Species|Status|iNaturalist Id|
 |----------|---------|-------|------|--------------|
 |Visit record updated|**86659**|WoollyNightshade|RED|[310162823](https://www.inaturalist.org/observations/310162823)|
+---
+
+# Run [13052](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/8a582aad515687b7064838dd92462c3806251ccc/checks/17350903947)
+2025-08-31 13:30
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**86661**|Tradescantia|RED|[99125504](https://www.inaturalist.org/observations/99125504)|
+|New weed|**86662**|Tradescantia|RED|[113985538](https://www.inaturalist.org/observations/113985538)|
+|New weed|**86663**|ClimbingDock|RED|[113985738](https://www.inaturalist.org/observations/113985738)|
+|New weed|**86664**|IvyEnglish|RED|[114086470](https://www.inaturalist.org/observations/114086470)|
+|New weed|**86665**|IvyEnglish|RED|[145549380](https://www.inaturalist.org/observations/145549380)|
+|New weed|**86666**|ClimbingDock|RED|[156524013](https://www.inaturalist.org/observations/156524013)|
+|New weed|**86667**|ClimbingDock|RED|[156527383](https://www.inaturalist.org/observations/156527383)|
+|New weed|**86668**|IvyGerman|RED|[156529351](https://www.inaturalist.org/observations/156529351)|
+|New weed|**86669**|Tradescantia|RED|[156946641](https://www.inaturalist.org/observations/156946641)|
+|New weed|**86670**|Tradescantia|RED|[157373235](https://www.inaturalist.org/observations/157373235)|
+|New weed|**86671**|IvyEnglish|RED|[157377327](https://www.inaturalist.org/observations/157377327)|
+|New weed|**86672**|ClimbingDock|RED|[157435749](https://www.inaturalist.org/observations/157435749)|
+|New weed|**86673**|IvyGerman|RED|[157774958](https://www.inaturalist.org/observations/157774958)|
+|New weed|**86674**|Agapanthus|RED|[157794283](https://www.inaturalist.org/observations/157794283)|
+|New weed|**86675**|JapaneseHoneysuckle|RED|[158365113](https://www.inaturalist.org/observations/158365113)|
+|New weed|**86676**|IvyEnglish|RED|[166695834](https://www.inaturalist.org/observations/166695834)|
+|New weed|**86677**|JapaneseHoneysuckle|RED|[185855839](https://www.inaturalist.org/observations/185855839)|
+|New weed|**86678**|Tradescantia|RED|[191872709](https://www.inaturalist.org/observations/191872709)|
+|New weed|**86679**|Agapanthus|RED|[191969029](https://www.inaturalist.org/observations/191969029)|
+|New weed|**86680**|Tradescantia|RED|[192100690](https://www.inaturalist.org/observations/192100690)|
+|New weed|**86681**|IvyGerman|RED|[192265380](https://www.inaturalist.org/observations/192265380)|
+|New weed|**86682**|JapaneseHoneysuckle|RED|[207097831](https://www.inaturalist.org/observations/207097831)|
+|New weed|**86683**|IvyEnglish|RED|[210482703](https://www.inaturalist.org/observations/210482703)|
+|New weed|**86684**|Tradescantia|RED|[210640446](https://www.inaturalist.org/observations/210640446)|
+|New weed|**86685**|Tradescantia|RED|[210645085](https://www.inaturalist.org/observations/210645085)|
+|New weed|**86686**|Tradescantia|RED|[211189304](https://www.inaturalist.org/observations/211189304)|
+|New weed|**86687**|IvyEnglish|RED|[211880072](https://www.inaturalist.org/observations/211880072)|
+|New weed|**86688**|ClimbingDock|RED|[213321322](https://www.inaturalist.org/observations/213321322)|
+|New weed|**86689**|ClimbingDock|RED|[215141297](https://www.inaturalist.org/observations/215141297)|
+|New weed|**86690**|Tradescantia|RED|[224302842](https://www.inaturalist.org/observations/224302842)|
+|New weed|**86691**|Tradescantia|RED|[236008193](https://www.inaturalist.org/observations/236008193)|
+|New weed|**86692**|AfricanClubmoss|RED|[237772702](https://www.inaturalist.org/observations/237772702)|
+|New weed|**86693**|IvyEnglish|RED|[241556198](https://www.inaturalist.org/observations/241556198)|
+|New weed|**86694**|IvyEnglish|RED|[242836716](https://www.inaturalist.org/observations/242836716)|
+|New weed|**86695**|Agapanthus|RED|[242837264](https://www.inaturalist.org/observations/242837264)|
+|New weed|**86696**|Tradescantia|RED|[243006664](https://www.inaturalist.org/observations/243006664)|
+|New weed|**86697**|CapeHoneysuckle|RED|[244267595](https://www.inaturalist.org/observations/244267595)|
+|New weed|**86698**|JapaneseHoneysuckle|RED|[253708186](https://www.inaturalist.org/observations/253708186)|
+|New weed|**86699**|IvyEnglish|RED|[258094270](https://www.inaturalist.org/observations/258094270)|
+|New weed|**86700**|Elaeagnus|RED|[258094615](https://www.inaturalist.org/observations/258094615)|
+|New weed|**86701**|IvyEnglish|RED|[260298636](https://www.inaturalist.org/observations/260298636)|
+|New weed|**86702**|AfricanClubmoss|RED|[260941530](https://www.inaturalist.org/observations/260941530)|
+|New weed|**86703**|AfricanClubmoss|RED|[263795543](https://www.inaturalist.org/observations/263795543)|
+|New weed|**86704**|Tradescantia|RED|[264412140](https://www.inaturalist.org/observations/264412140)|
+|New weed|**86705**|ClimbingDock|RED|[274094435](https://www.inaturalist.org/observations/274094435)|
+|New weed|**86706**|Tradescantia|RED|[276932516](https://www.inaturalist.org/observations/276932516)|
+|New weed|**86707**|ClimbingDock|RED|[277876014](https://www.inaturalist.org/observations/277876014)|
+|New weed|**86708**|ClimbingDock|RED|[278666703](https://www.inaturalist.org/observations/278666703)|
+|New weed|**86709**|ClimbingDock|RED|[295021943](https://www.inaturalist.org/observations/295021943)|
+|New weed|**86710**|JapaneseHoneysuckle|RED|[295827874](https://www.inaturalist.org/observations/295827874)|
+|New weed|**86711**|Agapanthus|RED|[298631223](https://www.inaturalist.org/observations/298631223)|
+|New weed|**86712**|IvyEnglish|RED|[306179183](https://www.inaturalist.org/observations/306179183)|
+|New weed|**86713**|IvyEnglish|RED|[306584260](https://www.inaturalist.org/observations/306584260)|
