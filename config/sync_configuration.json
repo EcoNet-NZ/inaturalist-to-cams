@@ -19,6 +19,11 @@
         "taxon_ids": ["75499"],
         "place_ids": ["6803"]
     },
+    "Cashmere Park Reserve": {
+        "file_prefix": "cashmere_park_wgtn",
+        "taxon_ids": ["53208", "64696", "55882", "75751", "405771", "77835", "168763", "286772", "199324", "79382"],
+        "place_ids": ["211975"] 
+    },
     "Weed Management Aotearoa NZ": {
         "file_prefix": "weed_management_aotearoa_nz",
         "project_id": "147177",
