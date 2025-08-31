@@ -52046,3 +52046,11 @@
 |New weed|**86711**|Agapanthus|RED|[298631223](https://www.inaturalist.org/observations/298631223)|
 |New weed|**86712**|IvyEnglish|RED|[306179183](https://www.inaturalist.org/observations/306179183)|
 |New weed|**86713**|IvyEnglish|RED|[306584260](https://www.inaturalist.org/observations/306584260)|
+---
+
+# Run [13055](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/617d68bd015d067792b4839c61421ad28997e0ee/checks/17352233085)
+2025-08-31 15:57
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Weed record updated, Visit record updated|**86660**|OldMansBeard|RED|[310175376](https://www.inaturalist.org/observations/310175376)|
