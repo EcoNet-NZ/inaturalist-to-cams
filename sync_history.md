@@ -52105,3 +52105,12 @@
 |Weed record updated|**83937**|WoollyNightshade|RED|[276197933](https://www.inaturalist.org/observations/276197933)|
 |Weed record updated, Visit record updated|**63702**|MothPlant|RED|[114445169](https://www.inaturalist.org/observations/114445169)|
 |Weed record updated|**69351**|MothPlant|RED|[210995714](https://www.inaturalist.org/observations/210995714)|
+---
+
+# Run [13082](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/b3edf8421bedccec93cb467b8fb71376f9299011/checks/17370929971)
+2025-09-01 19:39
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**86730**|BayLaurel|RED|[306170660](https://www.inaturalist.org/observations/306170660)|
+|New weed|**86731**|BayLaurel|RED|[306173307](https://www.inaturalist.org/observations/306173307)|
