@@ -52070,3 +52070,38 @@
 |Sync Event|Object Id|Species|Status|iNaturalist Id|
 |----------|---------|-------|------|--------------|
 |Visit record updated|**86717**|WoollyNightshade|RED|[310439804](https://www.inaturalist.org/observations/310439804)|
+---
+
+# Run [13076](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/1ae4d7524c98effabe6cdf594ae5a4ebb0ba5bdd/checks/17366156798)
+2025-09-01 14:44
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Weed record updated, Visit record updated|**71539**|OldMansBeard|RED|[149361836](https://www.inaturalist.org/observations/149361836)|
+|Weed record updated|**71891**|OldMansBeard|RED|[209980787](https://www.inaturalist.org/observations/209980787)|
+|Weed record updated|**71893**|OldMansBeard|RED|[209982482](https://www.inaturalist.org/observations/209982482)|
+|Weed record updated, Visit record updated|**73110**|BananaPassionfruit|RED|[113959800](https://www.inaturalist.org/observations/113959800)|
+|Weed record updated, Visit record updated|**73113**|BlueMorningGlory|RED|[114446412](https://www.inaturalist.org/observations/114446412)|
+|Weed record updated, Visit record updated|**73353**|BluePassionFlower|RED|[156935728](https://www.inaturalist.org/observations/156935728)|
+|Weed record updated, Visit record updated|**73368**|BlueMorningGlory|RED|[158522798](https://www.inaturalist.org/observations/158522798)|
+|Weed record updated|**73727**|BlueMorningGlory|RED|[209842199](https://www.inaturalist.org/observations/209842199)|
+|Weed record updated|**83936**|BlueMorningGlory|RED|[276192724](https://www.inaturalist.org/observations/276192724)|
+|Weed record updated, Visit record updated|**74834**|WoollyNightshade|RED|[114444906](https://www.inaturalist.org/observations/114444906)|
+|Weed record updated, Visit record updated|**74987**|WoollyNightshade|RED|[156936842](https://www.inaturalist.org/observations/156936842)|
+|Weed record updated, Visit record updated|**74989**|WoollyNightshade|RED|[156969895](https://www.inaturalist.org/observations/156969895)|
+|Weed record updated, Visit record updated|**74991**|WoollyNightshade|RED|[157000077](https://www.inaturalist.org/observations/157000077)|
+|Weed record updated, Visit record updated|**74992**|WoollyNightshade|RED|[157011272](https://www.inaturalist.org/observations/157011272)|
+|Weed record updated, Visit record updated|**75020**|WoollyNightshade|RED|[157509072](https://www.inaturalist.org/observations/157509072)|
+|Weed record updated, Visit record updated|**75035**|WoollyNightshade|RED|[158521585](https://www.inaturalist.org/observations/158521585)|
+|Weed record updated, Visit record updated|**75416**|WoollyNightshade|RED|[209413719](https://www.inaturalist.org/observations/209413719)|
+|Weed record updated, Visit record updated|**75417**|WoollyNightshade|RED|[209413883](https://www.inaturalist.org/observations/209413883)|
+|Weed record updated, Visit record updated|**75421**|WoollyNightshade|RED|[209469585](https://www.inaturalist.org/observations/209469585)|
+|Weed record updated, Visit record updated|**75422**|WoollyNightshade|RED|[209839600](https://www.inaturalist.org/observations/209839600)|
+|Weed record updated, Visit record updated|**75427**|WoollyNightshade|RED|[209980914](https://www.inaturalist.org/observations/209980914)|
+|Weed record updated, Visit record updated|**75429**|WoollyNightshade|RED|[210022625](https://www.inaturalist.org/observations/210022625)|
+|Weed record updated, Visit record updated|**75431**|WoollyNightshade|RED|[210377743](https://www.inaturalist.org/observations/210377743)|
+|Weed record updated|**83608**|WoollyNightshade|RED|[272833822](https://www.inaturalist.org/observations/272833822)|
+|Weed record updated|**83662**|WoollyNightshade|RED|[272894779](https://www.inaturalist.org/observations/272894779)|
+|Weed record updated|**83937**|WoollyNightshade|RED|[276197933](https://www.inaturalist.org/observations/276197933)|
+|Weed record updated, Visit record updated|**63702**|MothPlant|RED|[114445169](https://www.inaturalist.org/observations/114445169)|
+|Weed record updated|**69351**|MothPlant|RED|[210995714](https://www.inaturalist.org/observations/210995714)|
