@@ -52114,3 +52114,11 @@
 |----------|---------|-------|------|--------------|
 |New weed|**86730**|BayLaurel|RED|[306170660](https://www.inaturalist.org/observations/306170660)|
 |New weed|**86731**|BayLaurel|RED|[306173307](https://www.inaturalist.org/observations/306173307)|
+---
+
+# Run [13100](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/0f9695406eb79a82f5c041c6340f9d40b4cfefa8/checks/17391362115)
+2025-09-02 14:20
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**86735**|MothPlant|RED|[310909273](https://www.inaturalist.org/observations/310909273)|
