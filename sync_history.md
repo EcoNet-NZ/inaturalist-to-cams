@@ -52399,3 +52399,11 @@
 |Sync Event|Object Id|Species|Status|iNaturalist Id|
 |----------|---------|-------|------|--------------|
 |New weed|**86916**|BananaPassionfruit|RED|[312142826](https://www.inaturalist.org/observations/312142826)|
+---
+
+# Run [13223](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/b09d792dff704930d5f86703441d83e44b6477e9/checks/17526989357)
+2025-09-07 21:56
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**86920**|BananaPassionfruit|RED|[312147688](https://www.inaturalist.org/observations/312147688)|
