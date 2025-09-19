@@ -52788,3 +52788,13 @@
 |----------|---------|-------|------|--------------|
 |New weed|**87094**|Boneseed|RED|[314935306](https://www.inaturalist.org/observations/314935306)|
 |New weed|**87095**|CapeHoneyFlower|RED|[314935450](https://www.inaturalist.org/observations/314935450)|
+---
+
+# Run [13493](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/935a99feeb4ca9e865f31f1689e5de888c8b0014/checks/17847998176)
+2025-09-19 15:56
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**87097**|Jasmine|RED|[314935905](https://www.inaturalist.org/observations/314935905)|
+|New weed|**87098**|BrushCherry|RED|[314936107](https://www.inaturalist.org/observations/314936107)|
+|New weed|**87099**|OTHER|RED|[314936250](https://www.inaturalist.org/observations/314936250)|
