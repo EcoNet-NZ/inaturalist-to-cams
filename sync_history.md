@@ -52823,3 +52823,12 @@
 |Sync Event|Object Id|Species|Status|iNaturalist Id|
 |----------|---------|-------|------|--------------|
 |Visit record updated|**87095**|CapeHoneyFlower|RED|[314935450](https://www.inaturalist.org/observations/314935450)|
+---
+
+# Run [13497](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/990aaa33e3f5c5c2a0129808eb82f40e95567101/checks/17852194650)
+2025-09-19 19:56
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Visit record updated|**87097**|Jasmine|RED|[314935905](https://www.inaturalist.org/observations/314935905)|
+|Weed record updated|**87099**|OTHER|RED|[314936250](https://www.inaturalist.org/observations/314936250)|
