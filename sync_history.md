@@ -52832,3 +52832,15 @@
 |----------|---------|-------|------|--------------|
 |Visit record updated|**87097**|Jasmine|RED|[314935905](https://www.inaturalist.org/observations/314935905)|
 |Weed record updated|**87099**|OTHER|RED|[314936250](https://www.inaturalist.org/observations/314936250)|
+---
+
+# Run [13498](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/832a0c5055864ff61625e7b2264f334af3741286/checks/17853573819)
+2025-09-19 20:56
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**87105**|BananaPassionfruit|RED|[314964913](https://www.inaturalist.org/observations/314964913)|
+|New weed|**87106**|BananaPassionfruit|RED|[314964914](https://www.inaturalist.org/observations/314964914)|
+|New weed|**87107**|BananaPassionfruit|RED|[314964916](https://www.inaturalist.org/observations/314964916)|
+|New weed|**87108**|BananaPassionfruit|RED|[314964921](https://www.inaturalist.org/observations/314964921)|
+|New weed|**87109**|BananaPassionfruit|RED|[314964945](https://www.inaturalist.org/observations/314964945)|
