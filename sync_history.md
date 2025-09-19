@@ -52798,3 +52798,11 @@
 |New weed|**87097**|Jasmine|RED|[314935905](https://www.inaturalist.org/observations/314935905)|
 |New weed|**87098**|BrushCherry|RED|[314936107](https://www.inaturalist.org/observations/314936107)|
 |New weed|**87099**|OTHER|RED|[314936250](https://www.inaturalist.org/observations/314936250)|
+---
+
+# Run [13494](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/875744eb837fd59ffd8fdd272b59e71b1424b17a/checks/17848869991)
+2025-09-19 16:56
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**87102**|MothPlant|RED|[314941155](https://www.inaturalist.org/observations/314941155)|
