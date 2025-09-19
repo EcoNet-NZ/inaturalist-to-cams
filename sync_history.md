@@ -52815,3 +52815,11 @@
 |----------|---------|-------|------|--------------|
 |Visit record updated|**87102**|MothPlant|RED|[314941155](https://www.inaturalist.org/observations/314941155)|
 |Visit record updated|**87094**|Boneseed|RED|[314935306](https://www.inaturalist.org/observations/314935306)|
+---
+
+# Run [13496](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/357b5c65f21746134ca4a444733be3ac5f7869d3/checks/17850954448)
+2025-09-19 18:56
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Visit record updated|**87095**|CapeHoneyFlower|RED|[314935450](https://www.inaturalist.org/observations/314935450)|
