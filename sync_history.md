@@ -52960,3 +52960,20 @@
 |Sync Event|Object Id|Species|Status|iNaturalist Id|
 |----------|---------|-------|------|--------------|
 |New weed|**87137**|OldMansBeard|RED|[315640595](https://www.inaturalist.org/observations/315640595)|
+---
+
+# Run [13558](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/59181839764808829f6529d193af5a3fbde7dcc2/checks/17900024673)
+2025-09-22 10:56
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**87142**|AsparagusBushy|RED|[314936384](https://www.inaturalist.org/observations/314936384)|
+|New weed|**87143**|JapaneseHoneysuckle|RED|[315650866](https://www.inaturalist.org/observations/315650866)|
+|New weed|**87144**|QueenOfTheNight|RED|[315651322](https://www.inaturalist.org/observations/315651322)|
+|New weed|**87145**|OTHER|RED|[315651712](https://www.inaturalist.org/observations/315651712)|
+|New weed|**87146**|WildGinger|RED|[315655385](https://www.inaturalist.org/observations/315655385)|
+|New weed|**87147**|WildGinger|RED|[315656398](https://www.inaturalist.org/observations/315656398)|
+|New weed|**87148**|Elaeagnus|RED|[315656825](https://www.inaturalist.org/observations/315656825)|
+|New weed|**87149**|MonkeyApple|RED|[315656938](https://www.inaturalist.org/observations/315656938)|
+|New weed|**87150**|AsparagusClimbing|RED|[315657404](https://www.inaturalist.org/observations/315657404)|
+|New weed|**87151**|Loquat|RED|[315658636](https://www.inaturalist.org/observations/315658636)|
