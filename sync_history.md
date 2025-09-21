@@ -52977,3 +52977,22 @@
 |New weed|**87149**|MonkeyApple|RED|[315656938](https://www.inaturalist.org/observations/315656938)|
 |New weed|**87150**|AsparagusClimbing|RED|[315657404](https://www.inaturalist.org/observations/315657404)|
 |New weed|**87151**|Loquat|RED|[315658636](https://www.inaturalist.org/observations/315658636)|
+---
+
+# Run [13559](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/e389f8fa4d9aac4ced6405fc71cbe658746b7532/checks/17900621997)
+2025-09-22 11:56
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Visit record updated|**85621**|MonkeyApple|RED|[291379106](https://www.inaturalist.org/observations/291379106)|
+|Visit record updated|**87143**|JapaneseHoneysuckle|RED|[315650866](https://www.inaturalist.org/observations/315650866)|
+|Visit record updated|**87144**|QueenOfTheNight|RED|[315651322](https://www.inaturalist.org/observations/315651322)|
+|Visit record updated|**87147**|WildGinger|RED|[315656398](https://www.inaturalist.org/observations/315656398)|
+|Visit record updated|**87149**|MonkeyApple|RED|[315656938](https://www.inaturalist.org/observations/315656938)|
+|Visit record updated|**87150**|AsparagusClimbing|RED|[315657404](https://www.inaturalist.org/observations/315657404)|
+|Visit record updated|**87151**|Loquat|RED|[315658636](https://www.inaturalist.org/observations/315658636)|
+|New weed|**87157**|BangalowPalm|RED|[315663863](https://www.inaturalist.org/observations/315663863)|
+|New weed|**87158**|TaiwanCherry|YELLOW|[315666094](https://www.inaturalist.org/observations/315666094)|
+|New weed|**87159**|OTHER|RED|[315666969](https://www.inaturalist.org/observations/315666969)|
+|New weed|**87160**|TaiwanCherry|RED|[315667887](https://www.inaturalist.org/observations/315667887)|
+|New weed|**87161**|AsparagusClimbing|RED|[315669240](https://www.inaturalist.org/observations/315669240)|
