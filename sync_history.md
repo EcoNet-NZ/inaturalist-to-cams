@@ -52996,3 +52996,16 @@
 |New weed|**87159**|OTHER|RED|[315666969](https://www.inaturalist.org/observations/315666969)|
 |New weed|**87160**|TaiwanCherry|RED|[315667887](https://www.inaturalist.org/observations/315667887)|
 |New weed|**87161**|AsparagusClimbing|RED|[315669240](https://www.inaturalist.org/observations/315669240)|
+---
+
+# Run [13560](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/c4c5d087de8580db97049f4fd464d1408de40e46/checks/17902665545)
+2025-09-22 14:23
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Visit record updated|**87137**|OldMansBeard|RED|[315640595](https://www.inaturalist.org/observations/315640595)|
+|New weed|**87163**|BananaPassionfruit|RED|[315677120](https://www.inaturalist.org/observations/315677120)|
+|New weed|**87164**|BananaPassionfruit|RED|[315694618](https://www.inaturalist.org/observations/315694618)|
+|New weed|**87165**|CathedralBells|RED|[315702329](https://www.inaturalist.org/observations/315702329)|
+|New weed|**87166**|MothPlant|RED|[315677263](https://www.inaturalist.org/observations/315677263)|
+|New weed|**87167**|MadeiraVine|RED|[315676258](https://www.inaturalist.org/observations/315676258)|
