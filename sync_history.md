@@ -53027,3 +53027,11 @@
 |Sync Event|Object Id|Species|Status|iNaturalist Id|
 |----------|---------|-------|------|--------------|
 |Visit record updated|**87167**|MadeiraVine|RED|[315676258](https://www.inaturalist.org/observations/315676258)|
+---
+
+# Run [13566](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/f363f9d8f71706853eba293ab5a6e0627a3b5483/checks/17908529277)
+2025-09-22 19:56
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**87171**|Prunus|RED|[315674934](https://www.inaturalist.org/observations/315674934)|
