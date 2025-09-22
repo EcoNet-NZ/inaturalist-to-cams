@@ -53059,3 +53059,11 @@
 |Sync Event|Object Id|Species|Status|iNaturalist Id|
 |----------|---------|-------|------|--------------|
 |Weed record updated|**84569**|BluePassionFlower|RED|[280361538](https://www.inaturalist.org/observations/280361538)|
+---
+
+# Run [13578](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/98adf932b8f854e0b58af949b5e5fe3cbb99c396/checks/17926838950)
+2025-09-23 07:56
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Visit record updated|**87165**|CathedralBells|RED|[315702329](https://www.inaturalist.org/observations/315702329)|
