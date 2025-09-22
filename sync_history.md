@@ -53009,3 +53009,13 @@
 |New weed|**87165**|CathedralBells|RED|[315702329](https://www.inaturalist.org/observations/315702329)|
 |New weed|**87166**|MothPlant|RED|[315677263](https://www.inaturalist.org/observations/315677263)|
 |New weed|**87167**|MadeiraVine|RED|[315676258](https://www.inaturalist.org/observations/315676258)|
+---
+
+# Run [13564](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/d16b06f4fc93a199ae7a89155132299f351b52c8/checks/17905982273)
+2025-09-22 17:56
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**87169**|BananaPassionfruit|RED|[315724115](https://www.inaturalist.org/observations/315724115)|
+|Visit record updated|**87146**|WildGinger|RED|[315655385](https://www.inaturalist.org/observations/315655385)|
+|Visit record updated|**87157**|BangalowPalm|RED|[315663863](https://www.inaturalist.org/observations/315663863)|
