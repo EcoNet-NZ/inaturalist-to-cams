@@ -53276,3 +53276,12 @@
 |New weed|**87265**|Gorse|RED|[317394725](https://www.inaturalist.org/observations/317394725)|
 |New weed|**87266**|Pampas|RED|[317395475](https://www.inaturalist.org/observations/317395475)|
 |New weed|**87267**|PineWilding|RED|[317396558](https://www.inaturalist.org/observations/317396558)|
+---
+
+# Run [13724](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/0cfe2762c7311ba05200fe94248e37632a274080/checks/18086206900)
+2025-09-29 17:55
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**87279**|OldMansBeard|RED|[317463312](https://www.inaturalist.org/observations/317463312)|
+|New weed|**87280**|MothPlant|RED|[317458484](https://www.inaturalist.org/observations/317458484)|
