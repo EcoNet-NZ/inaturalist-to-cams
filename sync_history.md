@@ -53362,3 +53362,16 @@
 |----------|---------|-------|------|--------------|
 |New weed|**87289**|FruitSaladPlant|RED|[317840831](https://www.inaturalist.org/observations/317840831)|
 |New weed|**87290**|Elaeagnus|YELLOW|[317851992](https://www.inaturalist.org/observations/317851992)|
+---
+
+# Run [13764](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/9d41ae219bdcaee926b4ded12c7224853a06297f/checks/18144502196)
+2025-10-01 10:56
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**87291**|MothPlant|RED|[317864162](https://www.inaturalist.org/observations/317864162)|
+|Visit record updated|**87290**|Elaeagnus|YELLOW|[317851992](https://www.inaturalist.org/observations/317851992)|
+|New weed|**87292**|Loquat|RED|[317853212](https://www.inaturalist.org/observations/317853212)|
+|New weed|**87293**|WildGinger|RED|[317853541](https://www.inaturalist.org/observations/317853541)|
+|New weed|**87294**|OTHER|RED|[317854716](https://www.inaturalist.org/observations/317854716)|
+|New weed|**87295**|FruitSaladPlant|RED|[317859822](https://www.inaturalist.org/observations/317859822)|
