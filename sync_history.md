@@ -53375,3 +53375,11 @@
 |New weed|**87293**|WildGinger|RED|[317853541](https://www.inaturalist.org/observations/317853541)|
 |New weed|**87294**|OTHER|RED|[317854716](https://www.inaturalist.org/observations/317854716)|
 |New weed|**87295**|FruitSaladPlant|RED|[317859822](https://www.inaturalist.org/observations/317859822)|
+---
+
+# Run [13765](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/91141a6199c9db363ee29b917817ff16c13ca262/checks/18145625313)
+2025-10-01 11:56
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Visit record updated|**87291**|MothPlant|RED|[317864162](https://www.inaturalist.org/observations/317864162)|
