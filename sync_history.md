@@ -53383,3 +53383,13 @@
 |Sync Event|Object Id|Species|Status|iNaturalist Id|
 |----------|---------|-------|------|--------------|
 |Visit record updated|**87291**|MothPlant|RED|[317864162](https://www.inaturalist.org/observations/317864162)|
+---
+
+# Run [13767](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/d2fd7fc4e15eec9d0d089e1171f319313c7f85b9/checks/18149279060)
+2025-10-01 15:25
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**87296**|MothPlant|RED|[317901145](https://www.inaturalist.org/observations/317901145)|
+|Weed record updated|**87294**|OTHER|RED|[317854716](https://www.inaturalist.org/observations/317854716)|
+|New weed|**87297**|Aristea|RED|[317860015](https://www.inaturalist.org/observations/317860015)|
