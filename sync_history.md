@@ -53514,3 +53514,12 @@
 |----------|---------|-------|------|--------------|
 |Visit record updated|**87296**|MothPlant|RED|[317901145](https://www.inaturalist.org/observations/317901145)|
 ||**87297**|Aristea|RED|[317860015](https://www.inaturalist.org/observations/317860015)|
+---
+
+# Run [13798](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/f80822ab30383700ddd5aa098e93d30720dfef8b/checks/18189651663)
+2025-10-02 22:56
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**87341**|OldMansBeard|RED|[315745383](https://www.inaturalist.org/observations/315745383)|
+|New weed|**87342**|OldMansBeard|RED|[318161549](https://www.inaturalist.org/observations/318161549)|
