@@ -53719,3 +53719,12 @@
 |New weed|**87387**|IvyGerman|RED|[318809839](https://www.inaturalist.org/observations/318809839)|
 |New weed|**87388**|JapaneseHoneysuckle|RED|[318809989](https://www.inaturalist.org/observations/318809989)|
 |Geolocation updated, Weed record updated, Visit record updated|**87309**|AsparagusClimbing|YELLOW|[316923384](https://www.inaturalist.org/observations/316923384)|
+---
+
+# Run [13864](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/faadab23b98d89b34c68e29ecca03332fb339216/checks/18255347379)
+2025-10-05 19:56
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Geolocation updated, Weed record updated, Visit record updated|**87290**|Elaeagnus|YELLOW|[317851992](https://www.inaturalist.org/observations/317851992)|
+|Geolocation updated, Weed record updated, Visit record updated|**87293**|WildGinger|RED|[317853541](https://www.inaturalist.org/observations/317853541)|
