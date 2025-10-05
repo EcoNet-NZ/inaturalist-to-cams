@@ -53699,3 +53699,11 @@
 |----------|---------|-------|------|--------------|
 ||**87297**|Aristea|RED|[317860015](https://www.inaturalist.org/observations/317860015)|
 |New weed|**87378**|OTHER|RED|[318751762](https://www.inaturalist.org/observations/318751762)|
+---
+
+# Run [13859](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/f8df8eba93ef771037f45f430de75675173ef9a2/checks/18252634110)
+2025-10-05 15:23
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**87380**|OldMansBeard|RED|[318763468](https://www.inaturalist.org/observations/318763468)|
