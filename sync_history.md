@@ -53728,3 +53728,12 @@
 |----------|---------|-------|------|--------------|
 |Geolocation updated, Weed record updated, Visit record updated|**87290**|Elaeagnus|YELLOW|[317851992](https://www.inaturalist.org/observations/317851992)|
 |Geolocation updated, Weed record updated, Visit record updated|**87293**|WildGinger|RED|[317853541](https://www.inaturalist.org/observations/317853541)|
+---
+
+# Run [13887](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/6b9c9a215f79cd09852e590161a28ce8b966c374/checks/18272623869)
+2025-10-06 19:57
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**87407**|BananaPassionfruit|RED|[319081455](https://www.inaturalist.org/observations/319081455)|
+|New weed|**87408**|BananaPassionfruit|RED|[319081531](https://www.inaturalist.org/observations/319081531)|
