@@ -53754,3 +53754,12 @@
 |----------|---------|-------|------|--------------|
 |New weed|**87415**|MothPlant|RED|[319227733](https://www.inaturalist.org/observations/319227733)|
 |Visit record updated|**86535**|ArumLily|RED|[308302985](https://www.inaturalist.org/observations/308302985)|
+---
+
+# Run [13906](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/78bcf8618474a51c5ec467b4d4108c8194c30ea1/checks/18301012967)
+2025-10-07 16:22
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**87418**|BlueMorningGlory|RED|[257741039](https://www.inaturalist.org/observations/257741039)|
+|New weed|**87419**|WoollyNightshade|RED|[319287225](https://www.inaturalist.org/observations/319287225)|
