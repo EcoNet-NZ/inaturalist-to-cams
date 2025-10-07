@@ -53803,3 +53803,14 @@
 |Sync Event|Object Id|Species|Status|iNaturalist Id|
 |----------|---------|-------|------|--------------|
 |New weed|**87430**|MonkeyApple|YELLOW|[319431914](https://www.inaturalist.org/observations/319431914)|
+---
+
+# Run [13925](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/d6f2f75812294a103ffe2f65e597956e5a6d0288/checks/18327258141)
+2025-10-08 10:56
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**87436**|WoollyNightshade|RED|[319444441](https://www.inaturalist.org/observations/319444441)|
+|New weed|**87437**|MothPlant|RED|[319446306](https://www.inaturalist.org/observations/319446306)|
+|New weed|**87438**|OTHER|RED|[319441068](https://www.inaturalist.org/observations/319441068)|
+|New weed|**87439**|AsparagusClimbing|RED|[319441806](https://www.inaturalist.org/observations/319441806)|
