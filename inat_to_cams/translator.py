@@ -124,7 +124,15 @@ class INatToCamsTranslator:
         
         # Add new fields for tracking updates
         weed_visit.recorded_by = inat_observation.recorded_by
-        weed_visit.recorded_date = self.as_local_datetime(inat_observation.recorded_date.isoformat() if inat_observation.recorded_date else None)
+        if inat_observation.recorded_date:
+            if hasattr(inat_observation.recorded_date, 'isoformat'):
+                # It's a datetime object
+                weed_visit.recorded_date = self.as_local_datetime(inat_observation.recorded_date.isoformat())
+            else:
+                # It's already a string
+                weed_visit.recorded_date = self.as_local_datetime(str(inat_observation.recorded_date))
+        else:
+            weed_visit.recorded_date = None
 
         return cams_feature.CamsFeature(geolocation, weed_location, weed_visit)
 
