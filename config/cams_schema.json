@@ -231,6 +231,15 @@
         "GUID_visits": {
             "name": "GUID_visits",
             "type": "GUID"
+        },
+        "RecordedBy": {
+            "name": "RecordedBy",
+            "type": "String",
+            "length": 128
+        },
+        "RecordedDate": {
+            "name": "RecordedDate",
+            "type": "Date"
         }
     }
 }

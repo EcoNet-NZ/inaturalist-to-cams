@@ -24,9 +24,42 @@ from retry import retry
 
 from inat_to_cams import inaturalist_observation, exceptions
 from inat_to_cams.translator import INatToCamsTranslator
+from inat_to_cams.username_cache import get_username_cache
 
 
 class INatReader:
+    @staticmethod
+    def get_most_recent_field_update_info(observation):
+        """Get the username and date of the most recent observation field update"""
+        if not observation.ofvs:
+            return None, None
+        
+        try:
+            # Find the most recently updated observation field
+            # Note: pyinaturalist may use 'created_at' or 'updated_at' depending on version
+            most_recent_ofv = max(observation.ofvs, 
+                                key=lambda x: getattr(x, 'updated_at', getattr(x, 'created_at', datetime.datetime.min)))
+            
+            # Get user information - pyinaturalist should provide user object
+            username = None
+            if hasattr(most_recent_ofv, 'user') and most_recent_ofv.user:
+                username = getattr(most_recent_ofv.user, 'login', None)
+                if not username:
+                    username = getattr(most_recent_ofv.user, 'name', None)
+            elif hasattr(most_recent_ofv, 'user_id') and most_recent_ofv.user_id:
+                # Fallback: if we only have user_id, fetch username using cache
+                cache = get_username_cache()
+                username = cache.get_username(most_recent_ofv.user_id)
+            
+            update_date = getattr(most_recent_ofv, 'updated_at', getattr(most_recent_ofv, 'created_at', None))
+            
+            return username, update_date
+                
+        except Exception as e:
+            logging.warning(f"Could not extract field update info: {e}")
+            
+        return None, None
+
     @staticmethod
     def flatten(observation):
         if observation.location is None:
@@ -125,6 +158,9 @@ class INatReader:
                 flowering = INatReader.get_observation_value(observation, 'Flowering')
                 if flowering and flowering == 'yes':
                     inat_observation.phenology = 'flowers'
+
+        # Add the new fields for tracking updates
+        inat_observation.recorded_by, inat_observation.recorded_date = INatReader.get_most_recent_field_update_info(observation)
 
         return inat_observation
 

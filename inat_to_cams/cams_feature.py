@@ -103,6 +103,10 @@ class WeedVisit:
         self.external_id = None
         self.external_url = None
         self.notes = None
+        
+        # New fields for tracking updates
+        self.recorded_by = None
+        self.recorded_date = None
 
     def __eq__(self, other):
         if type(other) is type(self):

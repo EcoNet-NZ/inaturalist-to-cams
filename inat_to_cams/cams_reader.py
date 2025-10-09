@@ -67,6 +67,8 @@ class CamsReader:
         visit.visit_status = cams_schema_config.cams_field_key('Visits_Table', 'WeedVisitStatus', visit_table_row.attributes['WeedVisitStatus'])
         visit.observation_quality = cams_schema_config.cams_field_key('Visits_Table', 'ObservationQuality', visit_table_row.attributes['ObservationQuality'])
         visit.notes = visit_table_row.attributes['Notes']
+        visit.recorded_by = visit_table_row.attributes.get('RecordedBy')
+        visit.recorded_date = self.as_datetime(visit_table_row.attributes['RecordedDate']) if visit_table_row.attributes.get('RecordedDate') else None
 
         guid = visit_table_row.attributes['GUID_visits']
 

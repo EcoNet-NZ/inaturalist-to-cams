@@ -128,7 +128,9 @@ class CamsWriter:
             ('WeedVisitStatus', weed_visit.visit_status),
             ('ObservationQuality', weed_visit.observation_quality),
             ('description', weed_visit.notes),
-            ('GUID_visits', global_id)
+            ('GUID_visits', global_id),
+            ('RecordedBy', weed_visit.recorded_by),
+            ('RecordedDate', weed_visit.recorded_date)
         ]
 
         [self.add_field(new_data[0], 'Visits_Table', field) for field in fields]
