@@ -80,15 +80,27 @@ python migration/update_recorded_by_fields.py --dry-run --limit 10
 
 ### Determining the "Most Recent" Update
 The system identifies the most recent observation field update by:
-1. Examining all observation field values (`ofvs`) in the iNaturalist observation
-2. Finding the one with the latest `updated_at` or `created_at` timestamp
-3. Extracting the user information and timestamp from that field value
+1. **Filtering to tracked fields**: Only examines observation field values that are in the `TRACKED_OBSERVATION_FIELDS` registry
+2. **Finding most recent**: Among tracked fields, finds the one with the latest `updated_at` or `created_at` timestamp
+3. **Extracting user info**: Gets the user information and timestamp from that specific field value
+4. **Fallback logic**: If no tracked fields exist, falls back to observation editor/creator information
 
 ### Username Resolution
 The system tries multiple approaches to get the username:
 1. **Direct user object**: If the observation field value has a `user` object with `login` field
 2. **User ID lookup**: If only `user_id` is available, lookup username via cache/API
 3. **Fallback**: If username cannot be resolved, uses format `user_{user_id}`
+
+### Fallback Strategy
+When no tracked observation fields exist, the system falls back to:
+1. **Last editor**: Uses observation's `user` and `updated_at` (most recent edit)
+2. **Creator**: Uses observation's `user` and `created_at` (original creation)
+
+### Field Filtering
+The system only considers observation fields that are in the `TRACKED_OBSERVATION_FIELDS` registry:
+- **Current fields**: All fields actively processed by the application
+- **Legacy fields**: Backward compatibility fields for older observations
+- **Maintainable**: Single source of truth for field tracking
 
 ### Caching Strategy
 - Usernames are cached in SQLite database (`inat_username_cache.sqlite`)
@@ -150,6 +162,26 @@ The system provides logging and statistics:
 - Error counts and details
 - Processing summaries
 
+## Maintainer Workflow
+
+### Adding New Observation Fields
+When adding a new observation field to the project:
+
+1. **Add the field processing code** (e.g., `get_observation_value()` call)
+2. **Update the registry**: Add the field name to `TRACKED_OBSERVATION_FIELDS` in `inaturalist_reader.py`
+3. **Run validation**: Execute `python test_recorded_by_implementation.py` to ensure completeness
+4. **Test the change**: Verify that the new field is included in RecordedBy tracking
+
+### Validation
+The system includes validation to ensure field registry completeness:
+```python
+# Test field registry completeness
+is_complete, missing_fields, extra_fields = INatReader.validate_tracked_fields()
+```
+
+### Maintainer Notes in Code
+Look for `MAINTAINER NOTE:` comments in the code for guidance on where to make changes.
+
 ## Future Enhancements
 
 Potential improvements for future versions:
@@ -158,3 +190,4 @@ Potential improvements for future versions:
 3. **User role information**: Include user roles/permissions from iNaturalist
 4. **Bulk cache warming**: Pre-populate cache with common users
 5. **Cache expiration**: Add TTL for cached usernames to handle username changes
+6. **Automated field discovery**: Scan code to automatically detect new fields
