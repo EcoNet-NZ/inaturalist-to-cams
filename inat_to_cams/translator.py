@@ -121,6 +121,10 @@ class INatToCamsTranslator:
         if weed_visit.treatment_substance == 'None':
             weed_visit.treatment_substance = None
         weed_visit.treatment_details = inat_observation.treatment_details
+        
+        # Add new fields for tracking updates
+        weed_visit.recorded_by = inat_observation.recorded_by
+        weed_visit.recorded_date = self.as_local_datetime(inat_observation.recorded_date.isoformat() if inat_observation.recorded_date else None)
 
         return cams_feature.CamsFeature(geolocation, weed_location, weed_visit)
 
