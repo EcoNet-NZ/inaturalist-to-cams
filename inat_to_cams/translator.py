@@ -123,8 +123,8 @@ class INatToCamsTranslator:
         weed_visit.treatment_details = inat_observation.treatment_details
         
         # Add new fields for tracking updates
-        # Store user_id directly in CAMS (from the date field calculation)
-        weed_visit.recorded_by = recorded_by_user_id
+        # Store user_id as string in CAMS (from the date field calculation)
+        weed_visit.recorded_by = str(recorded_by_user_id) if recorded_by_user_id else None
         if inat_observation.recorded_date:
             if hasattr(inat_observation.recorded_date, 'isoformat'):
                 # It's a datetime object

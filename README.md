@@ -310,7 +310,7 @@ The system tracks which iNaturalist user made the most relevant field update and
 ### Overview
 
 The system captures and stores:
-- **RecordedBy**: The iNaturalist user ID of the user who updated the most relevant observation field
+- **RecordedBy**: The iNaturalist user ID (as string) of the user who updated the most relevant observation field
 - **RecordedDate**: The date and time when the observation was last updated
 
 ### Implementation Details
@@ -335,7 +335,8 @@ The CAMS Visits table includes these fields:
 ```json
 "RecordedBy": {
     "name": "RecordedBy",
-    "type": "Integer"
+    "type": "String",
+    "length": 128
 },
 "RecordedDate": {
     "name": "RecordedDate",
@@ -382,7 +383,7 @@ python migration/update_recorded_by_fields.py --dry-run --limit 10
 For iNaturalist observation 8469298:
 - Has a 'Date controlled' field with updater ID 2589539
 - Has no 'Date of status update' field
-- Result: RecordedBy = 2589539 (from Date controlled field updater)
+- Result: RecordedBy = "2589539" (from Date controlled field updater)
 - RecordedDate = observation's updated_at timestamp
 
 If neither date field had values, it would fall back to the observation's user ID (59208).
