@@ -19,8 +19,12 @@
 Migration script to update existing CAMS records with RecordedBy and RecordedDate information.
 
 This script fetches existing CAMS records that don't have RecordedBy information,
-retrieves the corresponding iNaturalist observations, extracts the most recent
-observation field update information, and updates the CAMS records.
+retrieves the corresponding iNaturalist observations, and determines the user_id based on:
+1. The updater of the 'Date controlled' field (if it has a value)
+2. The updater of the 'Date of status update' field (if it has a value)
+3. The observation's user (fallback)
+
+The RecordedDate is set to the observation's updated_at or created_at timestamp.
 
 Usage:
     python migration/update_recorded_by_fields.py [--dry-run] [--batch-size N] [--limit N]
@@ -38,7 +42,6 @@ from datetime import datetime
 from typing import List, Optional, Tuple
 
 from inat_to_cams import cams_interface, inaturalist_reader, setup_logging
-from inat_to_cams.username_cache import get_username_cache
 
 
 class UpdateRecordedByMigration:
@@ -47,7 +50,6 @@ class UpdateRecordedByMigration:
     def __init__(self, dry_run: bool = False):
         self.dry_run = dry_run
         self.cams = cams_interface.connection
-        self.username_cache = get_username_cache()
         self.updated_count = 0
         self.error_count = 0
         self.skipped_count = 0
@@ -116,20 +118,34 @@ class UpdateRecordedByMigration:
             # Fetch fresh observation data from iNaturalist
             observation = inaturalist_reader.INatReader.get_observation_with_id(inat_ref)
             
-            # Extract the recorded by information
-            recorded_by, recorded_date = inaturalist_reader.INatReader.get_most_recent_field_update_info(observation)
+            # Extract the recorded by information using the new approach
+            # First flatten the observation to get the date fields
+            inat_observation = inaturalist_reader.INatReader.flatten(observation)
             
-            if recorded_by and recorded_date:
+            # Then use the translator to get the user_id
+            from inat_to_cams.translator import INatToCamsTranslator
+            translator_instance = INatToCamsTranslator()
+            visit_date, visit_status, user_id = translator_instance.calculate_visit_date_and_status_and_user(inat_observation, observation)
+            
+            # Get recorded_date from observation
+            if hasattr(observation, 'updated_at') and observation.updated_at:
+                recorded_date = observation.updated_at
+            elif hasattr(observation, 'created_at') and observation.created_at:
+                recorded_date = observation.created_at
+            else:
+                recorded_date = None
+            
+            if user_id and recorded_date:
                 # Update the CAMS record
                 if self.dry_run:
-                    logging.info(f"[DRY RUN] Would update record {object_id} with RecordedBy: {recorded_by}, RecordedDate: {recorded_date}")
+                    logging.info(f"[DRY RUN] Would update record {object_id} with RecordedBy: {user_id}, RecordedDate: {recorded_date}")
                 else:
-                    self.update_cams_record(object_id, recorded_by, recorded_date)
-                    logging.info(f"Updated record {object_id} with RecordedBy: {recorded_by}")
+                    self.update_cams_record(object_id, user_id, recorded_date)
+                    logging.info(f"Updated record {object_id} with RecordedBy: {user_id}")
                 
                 self.updated_count += 1
             else:
-                logging.info(f"No observation field updates found for record {object_id}, skipping")
+                logging.info(f"No user_id or recorded_date found for record {object_id}, skipping")
                 self.skipped_count += 1
                 
         except Exception as e:
@@ -164,8 +180,8 @@ class UpdateRecordedByMigration:
             logging.error(f"Error querying CAMS for records: {e}")
             raise
     
-    def update_cams_record(self, object_id: int, recorded_by: str, recorded_date: datetime):
-        """Update a specific CAMS record with RecordedBy information"""
+    def update_cams_record(self, object_id: int, recorded_by: int, recorded_date: datetime):
+        """Update a specific CAMS record with RecordedBy (user_id) and RecordedDate information"""
         
         try:
             # Prepare the update data
@@ -201,9 +217,7 @@ class UpdateRecordedByMigration:
         logging.info(f"Records with errors: {self.error_count}")
         logging.info(f"Total processed: {self.updated_count + self.skipped_count + self.error_count}")
         
-        # Print cache statistics
-        cache_stats = self.username_cache.get_cache_stats()
-        logging.info(f"Usernames cached: {cache_stats['cached_usernames']}")
+        # Note: RecordedBy now stores user_id directly, no username caching needed
         
         if self.dry_run:
             logging.info("This was a DRY RUN - no actual changes were made")

@@ -303,3 +303,117 @@ Unzipping the report file and opening the `behave_reports.html` file shows the s
 
 <img width="863" alt="image" src="https://github.com/EcoNet-NZ/inaturalist-to-cams/assets/144202/6b59e43f-c823-4986-b999-495167e8e397">
 
+## RecordedBy and RecordedDate Implementation
+
+The system tracks which iNaturalist user made the most relevant field update and when the observation was last modified.
+
+### Overview
+
+The system captures and stores:
+- **RecordedBy**: The iNaturalist user ID of the user who updated the most relevant observation field
+- **RecordedDate**: The date and time when the observation was last updated
+
+### Implementation Details
+
+#### User Determination Logic
+
+The system determines the user based on the following priority:
+1. If 'Date controlled' field has a value, use its updater's user ID
+2. If 'Date of status update' field has a value, use its updater's user ID  
+3. Otherwise, fall back to the observation's user ID
+
+This logic aligns with the visit date calculation in `calculate_visit_date_and_status()`, ensuring that the recorded user corresponds to the most relevant field update.
+
+#### Date Logic
+
+The RecordedDate is always set to the observation's `updated_at` timestamp, or `created_at` if `updated_at` is not available.
+
+#### Database Schema
+
+The CAMS Visits table includes these fields:
+
+```json
+"RecordedBy": {
+    "name": "RecordedBy",
+    "type": "Integer"
+},
+"RecordedDate": {
+    "name": "RecordedDate",
+    "type": "Date"
+}
+```
+
+#### Data Flow
+
+1. **INatReader** extracts user ID and date from iNaturalist observation
+2. **Translator** maps the data to CAMS format
+3. **CamsWriter** writes the fields to the CAMS Visits table (only when creating new visit records)
+4. **CamsReader** reads the fields back when loading existing records
+
+### Usage
+
+#### For New Observations
+The system automatically captures `RecordedBy` and `RecordedDate` information for all new observations processed through the normal synchronization flow.
+
+#### For Existing Records (Migration)
+Use the migration script to update existing records:
+
+```bash
+# Dry run to see what would be updated
+python migration/update_recorded_by_fields.py --dry-run
+
+# Update all records in batches of 25
+python migration/update_recorded_by_fields.py --batch-size 25
+
+# Update only first 100 records for testing
+python migration/update_recorded_by_fields.py --limit 100
+
+# Combination: dry run with limit
+python migration/update_recorded_by_fields.py --dry-run --limit 10
+```
+
+#### Migration Script Options
+- `--dry-run`: Show what would be updated without making changes
+- `--batch-size N`: Process N records at a time (default: 50)
+- `--limit N`: Limit to N total records (for testing)
+
+### Example
+
+For iNaturalist observation 8469298:
+- Has a 'Date controlled' field with updater ID 2589539
+- Has no 'Date of status update' field
+- Result: RecordedBy = 2589539 (from Date controlled field updater)
+- RecordedDate = observation's updated_at timestamp
+
+If neither date field had values, it would fall back to the observation's user ID (59208).
+
+### Files Modified
+
+#### Core Implementation
+- `inat_to_cams/inaturalist_observation.py` - Added new fields to data model
+- `inat_to_cams/inaturalist_reader.py` - Added field extraction logic
+- `inat_to_cams/translator.py` - Added field mapping
+- `inat_to_cams/cams_feature.py` - Added fields to WeedVisit class
+- `inat_to_cams/cams_writer.py` - Added fields to write operations
+- `inat_to_cams/cams_reader.py` - Added fields to read operations
+
+#### New Files
+- `migration/update_recorded_by_fields.py` - Migration script for existing records
+
+#### Configuration
+- `config/cams_schema.json` - Added new field definitions
+
+### Testing
+
+A test script is provided to verify the implementation:
+
+```bash
+python test_recorded_by_implementation.py
+```
+
+This script tests:
+- User ID extraction from Date controlled/Status update fields
+- Fallback to observation user
+- Date extraction logic
+- Edge cases (empty field values, etc.)
+

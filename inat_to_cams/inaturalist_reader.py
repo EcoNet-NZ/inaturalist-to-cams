@@ -24,7 +24,6 @@ from retry import retry
 
 from inat_to_cams import inaturalist_observation, exceptions
 from inat_to_cams.translator import INatToCamsTranslator
-from inat_to_cams.username_cache import get_username_cache
 
 
 class INatReader:
@@ -62,100 +61,7 @@ class INatReader:
         'Flowering',
     }
     
-    @staticmethod
-    def get_most_recent_field_update_info(observation):
-        """Get the username and date of the most recent tracked observation field update
-        
-        This method finds the most recently updated observation field from the fields
-        that this project processes (see TRACKED_OBSERVATION_FIELDS).
-        
-        If no tracked fields exist, falls back to:
-        1. Last editor of the observation (user + updated_at)
-        2. Creator of the observation (user + created_at)
-        
-        Returns:
-            tuple: (username, datetime) or (None, None) if no info available
-        """
-        if not observation.ofvs:
-            return INatReader._get_observation_fallback_info(observation)
-        
-        # Filter to only tracked observation fields
-        tracked_ofvs = [ofv for ofv in observation.ofvs 
-                       if ofv.name in INatReader.TRACKED_OBSERVATION_FIELDS]
-        
-        if not tracked_ofvs:
-            logging.info(f"No tracked observation fields found for observation {observation.id}, using fallback")
-            return INatReader._get_observation_fallback_info(observation)
-        
-        try:
-            # Find the most recently updated tracked observation field
-            # Use the field's own timestamp (when the field was updated)
-            most_recent_ofv = max(tracked_ofvs, 
-                                key=lambda x: getattr(x, 'updated_at', getattr(x, 'created_at', datetime.datetime.min)))
-            
-            # Get user information from the field
-            username = None
-            if hasattr(most_recent_ofv, 'user') and most_recent_ofv.user:
-                username = getattr(most_recent_ofv.user, 'login', None)
-                if not username:
-                    username = getattr(most_recent_ofv.user, 'name', None)
-            elif hasattr(most_recent_ofv, 'user_id') and most_recent_ofv.user_id:
-                # Fallback: if we only have user_id, fetch username using cache
-                cache = get_username_cache()
-                username = cache.get_username(most_recent_ofv.user_id)
-            
-            # Get the timestamp when this specific field was updated
-            update_date = getattr(most_recent_ofv, 'updated_at', getattr(most_recent_ofv, 'created_at', None))
-            
-            if username and update_date:
-                logging.debug(f"Found most recent field update: {most_recent_ofv.name} by {username} at {update_date}")
-                return username, update_date
-            else:
-                logging.warning(f"Could not extract user/date from field {most_recent_ofv.name}, using fallback")
-                return INatReader._get_observation_fallback_info(observation)
-                
-        except Exception as e:
-            logging.warning(f"Could not extract field update info: {e}")
-            return INatReader._get_observation_fallback_info(observation)
     
-    @staticmethod
-    def _get_observation_fallback_info(observation):
-        """Fallback: get observation editor/creator info when no tracked fields exist
-        
-        Priority:
-        1. Last editor (user + updated_at) 
-        2. Creator (user + created_at)
-        
-        Returns:
-            tuple: (username, datetime) or (None, None) if no info available
-        """
-        username = None
-        update_date = None
-        
-        # Try last editor first (updated_at)
-        if hasattr(observation, 'updated_at') and observation.updated_at:
-            if hasattr(observation, 'user') and observation.user:
-                username = getattr(observation.user, 'login', None)
-                if not username:
-                    username = getattr(observation.user, 'name', None)
-                if username:
-                    update_date = observation.updated_at
-                    logging.debug(f"Using observation last editor: {username} at {update_date}")
-                    return username, update_date
-        
-        # Fallback to creator (created_at)
-        if hasattr(observation, 'created_at') and observation.created_at:
-            if hasattr(observation, 'user') and observation.user:
-                username = getattr(observation.user, 'login', None)
-                if not username:
-                    username = getattr(observation.user, 'name', None)
-                if username:
-                    update_date = observation.created_at
-                    logging.debug(f"Using observation creator: {username} at {update_date}")
-                    return username, update_date
-        
-        logging.warning(f"Could not determine user info for observation {getattr(observation, 'id', 'unknown')}")
-        return None, None
 
     @staticmethod
     def validate_tracked_fields():
@@ -304,8 +210,13 @@ class INatReader:
                 if flowering and flowering == 'yes':
                     inat_observation.phenology = 'flowers'
 
-        # Add the new fields for tracking updates
-        inat_observation.recorded_by, inat_observation.recorded_date = INatReader.get_most_recent_field_update_info(observation)
+        # Add RecordedDate (RecordedBy is now handled in translator)
+        if hasattr(observation, 'updated_at') and observation.updated_at:
+            inat_observation.recorded_date = observation.updated_at
+        elif hasattr(observation, 'created_at') and observation.created_at:
+            inat_observation.recorded_date = observation.created_at
+        else:
+            inat_observation.recorded_date = None
 
         return inat_observation
 

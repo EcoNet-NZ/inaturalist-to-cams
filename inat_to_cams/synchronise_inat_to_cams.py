@@ -159,7 +159,7 @@ class INatToCamsSynchroniser():
             return
 
         inat_to_cams_translator = translator.INatToCamsTranslator()
-        cams_feature = inat_to_cams_translator.translate(inat_observation)
+        cams_feature = inat_to_cams_translator.translate(inat_observation, observation)
 
         if not cams_feature:
             return
