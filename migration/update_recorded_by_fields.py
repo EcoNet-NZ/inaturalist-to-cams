@@ -16,13 +16,21 @@
 #  ====================================================================
 
 """
-Migration script to update existing CAMS records with RecordedBy and RecordedDate information.
+Migration script to update existing CAMS records with RecordedByUserId, RecordedByUserName and RecordedDate information.
 
-This script fetches existing CAMS records that don't have RecordedBy information,
-retrieves the corresponding iNaturalist observations, and determines the user_id based on:
-1. The updater of the 'Date controlled' field (if it has a value)
-2. The updater of the 'Date of status update' field (if it has a value)
-3. The observation's user (fallback)
+This script selectively updates specific visit records for each weed instance:
+
+For each weed instance (iNaturalist observation):
+1. If only one visit record exists:
+   - Update it ONLY if WeedVisitStatus = 'RedGrowth'
+   - Use original observer (ignore observation fields)
+
+2. If multiple visit records exist:
+   - Update first (oldest) record if WeedVisitStatus = 'RedGrowth' (use original observer)
+   - Update most recent (last) record using field-based logic:
+     * Date controlled field user (if field has value)
+     * Date of status update field user (if field has value)  
+     * Observation user (fallback)
 
 The RecordedDate is set to the observation's updated_at or created_at timestamp.
 
@@ -45,7 +53,7 @@ from inat_to_cams import cams_interface, inaturalist_reader, setup_logging
 
 
 class UpdateRecordedByMigration:
-    """Migration class to update existing CAMS records with RecordedBy information"""
+    """Migration class to update existing CAMS records with RecordedByUserId and RecordedByUserName information"""
     
     def __init__(self, dry_run: bool = False):
         self.dry_run = dry_run
@@ -103,31 +111,23 @@ class UpdateRecordedByMigration:
         self.print_migration_summary()
     
     def process_record(self, record: dict):
-        """Process a single CAMS record"""
+        """Process a single CAMS record based on update rules"""
         object_id = record.get('OBJECTID')
         inat_ref = record.get('iNatRef')
+        update_rule = record.get('_update_rule', 'unknown')
         
         if not inat_ref:
             logging.warning(f"Record {object_id} has no iNatRef, skipping")
             self.skipped_count += 1
             return
         
-        logging.debug(f"Processing record {object_id} with iNaturalist ID {inat_ref}")
+        logging.debug(f"Processing record {object_id} with iNaturalist ID {inat_ref} using rule '{update_rule}'")
         
         try:
             # Fetch fresh observation data from iNaturalist
             observation = inaturalist_reader.INatReader.get_observation_with_id(inat_ref)
             
-            # Extract the recorded by information using the new approach
-            # First flatten the observation to get the date fields
-            inat_observation = inaturalist_reader.INatReader.flatten(observation)
-            
-            # Then use the translator to get the user_id
-            from inat_to_cams.translator import INatToCamsTranslator
-            translator_instance = INatToCamsTranslator()
-            visit_date, visit_status, user_id, username = translator_instance.calculate_visit_date_and_status_and_user(inat_observation, observation)
-            
-            # Get recorded_date from observation
+            # Get recorded_date from observation (same for both rules)
             if hasattr(observation, 'updated_at') and observation.updated_at:
                 recorded_date = observation.updated_at
             elif hasattr(observation, 'created_at') and observation.created_at:
@@ -135,13 +135,34 @@ class UpdateRecordedByMigration:
             else:
                 recorded_date = None
             
+            # Apply different logic based on update rule
+            if update_rule == 'first_red_growth':
+                # Rule 1: Use original observer only (don't check observation fields)
+                user_id = observation.user.id
+                username = observation.user.login
+                logging.debug(f"Using original observer for first RedGrowth record: {user_id} ({username})")
+                
+            elif update_rule == 'most_recent':
+                # Rule 2: Use the implemented logic (check Date controlled/Status update fields)
+                inat_observation = inaturalist_reader.INatReader.flatten(observation)
+                
+                from inat_to_cams.translator import INatToCamsTranslator
+                translator_instance = INatToCamsTranslator()
+                visit_date, visit_status, user_id, username = translator_instance.calculate_visit_date_and_status_and_user(inat_observation, observation)
+                logging.debug(f"Using field-based logic for most recent record: {user_id} ({username})")
+                
+            else:
+                logging.warning(f"Unknown update rule '{update_rule}' for record {object_id}, skipping")
+                self.skipped_count += 1
+                return
+            
             if user_id and username and recorded_date:
                 # Update the CAMS record
                 if self.dry_run:
-                    logging.info(f"[DRY RUN] Would update record {object_id} with RecordedByUserId: {user_id}, RecordedByUserName: {username}, RecordedDate: {recorded_date}")
+                    logging.info(f"[DRY RUN] Would update record {object_id} ({update_rule}) with RecordedByUserId: {user_id}, RecordedByUserName: {username}, RecordedDate: {recorded_date}")
                 else:
                     self.update_cams_record(object_id, user_id, username, recorded_date)
-                    logging.info(f"Updated record {object_id} with RecordedByUserId: {user_id}, RecordedByUserName: {username}")
+                    logging.info(f"Updated record {object_id} ({update_rule}) with RecordedByUserId: {user_id}, RecordedByUserName: {username}")
                 
                 self.updated_count += 1
             else:
@@ -153,28 +174,73 @@ class UpdateRecordedByMigration:
             raise
     
     def get_records_missing_recorded_by(self, limit: Optional[int] = None) -> List[dict]:
-        """Query CAMS for records where RecordedBy is null or empty"""
+        """Query CAMS for specific visit records that need updating per weed instance"""
         
-        # Query the Visits table for records without RecordedByUserId or RecordedByUserName
-        where_clause = "RecordedByUserId IS NULL OR RecordedByUserId = '' OR RecordedByUserName IS NULL OR RecordedByUserName = ''"
-        
-        if limit:
-            # Add a limit to the query for testing
-            where_clause += f" AND OBJECTID <= (SELECT MIN(OBJECTID) + {limit - 1} FROM Visits_Table WHERE {where_clause})"
-        
-        logging.info(f"Querying CAMS for records where: {where_clause}")
+        logging.info("Finding visit records that need RecordedByUserId/RecordedByUserName updates...")
         
         try:
-            # Query the visits table
+            # Get all visits that are missing the new fields
             visits_layer = self.cams.item.tables[0]  # Assuming visits table is the first table
-            query_result = visits_layer.query(where=where_clause, out_fields=['OBJECTID', 'iNatRef', 'RecordedByUserId', 'RecordedByUserName', 'RecordedDate'])
+            where_clause = "RecordedByUserId IS NULL OR RecordedByUserId = '' OR RecordedByUserName IS NULL OR RecordedByUserName = ''"
             
-            records = []
+            query_result = visits_layer.query(
+                where=where_clause, 
+                out_fields=['OBJECTID', 'iNatRef', 'RecordedByUserId', 'RecordedByUserName', 'RecordedDate', 'WeedVisitStatus'],
+                order_by_fields='iNatRef, OBJECTID'  # Group by observation, then by creation order
+            )
+            
+            all_records = []
             for feature in query_result.features:
-                records.append(feature.attributes)
+                all_records.append(feature.attributes)
             
-            logging.info(f"Found {len(records)} records missing RecordedByUserId or RecordedByUserName information")
-            return records
+            logging.info(f"Found {len(all_records)} total records missing RecordedBy information")
+            
+            # Group records by iNatRef (observation ID)
+            records_by_observation = {}
+            for record in all_records:
+                inat_ref = record.get('iNatRef')
+                if inat_ref:
+                    if inat_ref not in records_by_observation:
+                        records_by_observation[inat_ref] = []
+                    records_by_observation[inat_ref].append(record)
+            
+            # Select specific records to update for each observation
+            records_to_update = []
+            for inat_ref, observation_records in records_by_observation.items():
+                # Sort by OBJECTID to get chronological order
+                observation_records.sort(key=lambda x: x.get('OBJECTID', 0))
+                
+                if len(observation_records) == 1:
+                    # Only one record: use rule 1 (first/oldest row if RedGrowth status)
+                    record = observation_records[0]
+                    if record.get('WeedVisitStatus') == 'RedGrowth':
+                        record['_update_rule'] = 'first_red_growth'
+                        records_to_update.append(record)
+                        logging.debug(f"Selected single RedGrowth record for observation {inat_ref}: OBJECTID {record.get('OBJECTID')}")
+                    else:
+                        logging.debug(f"Skipping single non-RedGrowth record for observation {inat_ref}")
+                else:
+                    # Multiple records: use both rules
+                    # Rule 1: First (oldest) row if it has RedGrowth status
+                    first_record = observation_records[0]
+                    if first_record.get('WeedVisitStatus') == 'RedGrowth':
+                        first_record['_update_rule'] = 'first_red_growth'
+                        records_to_update.append(first_record)
+                        logging.debug(f"Selected first RedGrowth record for observation {inat_ref}: OBJECTID {first_record.get('OBJECTID')}")
+                    
+                    # Rule 2: Most recent (last) row
+                    last_record = observation_records[-1]
+                    last_record['_update_rule'] = 'most_recent'
+                    records_to_update.append(last_record)
+                    logging.debug(f"Selected most recent record for observation {inat_ref}: OBJECTID {last_record.get('OBJECTID')}")
+            
+            # Apply limit if specified
+            if limit and len(records_to_update) > limit:
+                records_to_update = records_to_update[:limit]
+                logging.info(f"Limited to first {limit} records")
+            
+            logging.info(f"Selected {len(records_to_update)} specific records to update across {len(records_by_observation)} observations")
+            return records_to_update
             
         except Exception as e:
             logging.error(f"Error querying CAMS for records: {e}")
@@ -230,7 +296,7 @@ def main():
     """Main entry point for the migration script"""
     
     parser = argparse.ArgumentParser(
-        description="Update existing CAMS records with RecordedBy and RecordedDate information"
+        description="Update existing CAMS records with RecordedByUserId, RecordedByUserName and RecordedDate information"
     )
     parser.add_argument(
         '--dry-run', 
