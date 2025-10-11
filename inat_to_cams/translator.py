@@ -187,13 +187,13 @@ class INatToCamsTranslator:
             # Find the observation field value for the winning field
             for ofv in original_observation.ofvs:
                 if ofv.name == winning_field and ofv.value:
-                    # Get updater_id from this field
-                    if hasattr(ofv, 'updater_id') and ofv.updater_id:
-                        recorded_by_user_id = ofv.updater_id
-                        logging.debug(f"Using {winning_field} field updater_id: {recorded_by_user_id}")
-                    elif hasattr(ofv, 'updater') and ofv.updater and hasattr(ofv.updater, 'id'):
-                        recorded_by_user_id = ofv.updater.id
-                        logging.debug(f"Using {winning_field} field updater.id: {recorded_by_user_id}")
+                    # Get user_id from this field (pyinaturalist exposes this)
+                    if hasattr(ofv, 'user_id') and ofv.user_id:
+                        recorded_by_user_id = ofv.user_id
+                        logging.debug(f"Using {winning_field} field user_id: {recorded_by_user_id}")
+                    elif hasattr(ofv, 'user') and ofv.user and hasattr(ofv.user, 'id'):
+                        recorded_by_user_id = ofv.user.id
+                        logging.debug(f"Using {winning_field} field user.id: {recorded_by_user_id}")
                     break
         
         # Fallback to observation user if no winning field or no updater found
