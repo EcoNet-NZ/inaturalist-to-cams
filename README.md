@@ -318,11 +318,11 @@ The system captures and stores:
 #### User Determination Logic
 
 The system determines the user based on the following priority:
-1. If 'Date controlled' field has a value, use its updater's user ID
-2. If 'Date of status update' field has a value, use its updater's user ID  
-3. Otherwise, fall back to the observation's user ID
+1. Compare the values of 'Date controlled' and 'Date of status update' fields
+2. Use the `user_id` from whichever field has the later date value
+3. If both fields are blank/empty, fall back to the observation's user ID
 
-This logic aligns with the visit date calculation in `calculate_visit_date_and_status()`, ensuring that the recorded user corresponds to the most relevant field update.
+This logic aligns with the visit date calculation in `calculate_visit_date_and_status_and_user()`, ensuring that the recorded user corresponds to the field that determines the visit date. The `user_id` from observation field values in the pyinaturalist library represents the user who last updated that specific field.
 
 #### Date Logic
 
@@ -381,12 +381,14 @@ python migration/update_recorded_by_fields.py --dry-run --limit 10
 ### Example
 
 For iNaturalist observation 8469298:
-- Has a 'Date controlled' field with updater ID 2589539
+- Has a 'Date controlled' field with value "2025-10-10" and user_id 2589539
 - Has no 'Date of status update' field
-- Result: RecordedBy = "2589539" (from Date controlled field updater)
+- Result: RecordedBy = "2589539" (from Date controlled field user_id)
 - RecordedDate = observation's updated_at timestamp
 
 If neither date field had values, it would fall back to the observation's user ID (59208).
+
+**Note**: The `user_id` in observation field values represents the user who last updated that field, which is exactly what we need for tracking field updates.
 
 ### Files Modified
 
@@ -413,8 +415,8 @@ python test_recorded_by_implementation.py
 ```
 
 This script tests:
-- User ID extraction from Date controlled/Status update fields
-- Fallback to observation user
-- Date extraction logic
+- User ID extraction from Date controlled/Status update field user_id values
+- Date comparison logic to determine which field "wins"
+- Fallback to observation user when no relevant fields exist
 - Edge cases (empty field values, etc.)
 
