@@ -310,7 +310,8 @@ The system tracks which iNaturalist user made the most relevant field update and
 ### Overview
 
 The system captures and stores:
-- **RecordedBy**: The iNaturalist user ID (as string) of the user who updated the most relevant observation field
+- **RecordedByUserId**: The iNaturalist user ID (as string) of the user who updated the most relevant observation field
+- **RecordedByUserName**: The iNaturalist username (as string) of the user who updated the most relevant observation field
 - **RecordedDate**: The date and time when the observation was last updated
 
 ### Implementation Details
@@ -333,10 +334,15 @@ The RecordedDate is always set to the observation's `updated_at` timestamp, or `
 The CAMS Visits table includes these fields:
 
 ```json
-"RecordedBy": {
-    "name": "RecordedBy",
+"RecordedByUserId": {
+    "name": "RecordedByUserId",
     "type": "String",
-    "length": 128
+    "length": 64
+},
+"RecordedByUserName": {
+    "name": "RecordedByUserName",
+    "type": "String",
+    "length": 64
 },
 "RecordedDate": {
     "name": "RecordedDate",
@@ -381,12 +387,18 @@ python migration/update_recorded_by_fields.py --dry-run --limit 10
 ### Example
 
 For iNaturalist observation 8469298:
-- Has a 'Date controlled' field with value "2025-10-10" and user_id 2589539
+- Has a 'Date controlled' field with value "2025-10-10" and user_id 2589539 (nigel_charman)
 - Has no 'Date of status update' field
-- Result: RecordedBy = "2589539" (from Date controlled field user_id)
-- RecordedDate = observation's updated_at timestamp
+- Result: 
+  - RecordedByUserId = "2589539" (from Date controlled field user_id)
+  - RecordedByUserName = "nigel_charman" (from Date controlled field username)
+  - RecordedDate = observation's updated_at timestamp
 
-If neither date field had values, it would fall back to the observation's user ID (59208).
+For iNaturalist observation 319441806 (no Date controlled/Status update fields):
+- Falls back to observation user: 138584 (keiths)
+- Result:
+  - RecordedByUserId = "138584" (observation user_id)
+  - RecordedByUserName = "keiths" (observation username)
 
 **Note**: The `user_id` in observation field values represents the user who last updated that field, which is exactly what we need for tracking field updates.
 
@@ -415,8 +427,9 @@ python test_recorded_by_implementation.py
 ```
 
 This script tests:
-- User ID extraction from Date controlled/Status update field user_id values
+- User ID and username extraction from Date controlled/Status update field values
 - Date comparison logic to determine which field "wins"
 - Fallback to observation user when no relevant fields exist
+- Both RecordedByUserId and RecordedByUserName field population
 - Edge cases (empty field values, etc.)
 

@@ -105,7 +105,8 @@ class WeedVisit:
         self.notes = None
         
         # New fields for tracking updates
-        self.recorded_by = None
+        self.recorded_by_user_id = None
+        self.recorded_by_username = None
         self.recorded_date = None
 
     def __eq__(self, other):

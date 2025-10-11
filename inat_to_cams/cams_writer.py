@@ -129,7 +129,8 @@ class CamsWriter:
             ('ObservationQuality', weed_visit.observation_quality),
             ('description', weed_visit.notes),
             ('GUID_visits', global_id),
-            ('RecordedBy', weed_visit.recorded_by),
+            ('RecordedByUserId', weed_visit.recorded_by_user_id),
+            ('RecordedByUserName', weed_visit.recorded_by_username),
             ('RecordedDate', weed_visit.recorded_date)
         ]
 

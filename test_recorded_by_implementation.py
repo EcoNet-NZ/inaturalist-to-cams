@@ -130,18 +130,26 @@ def test_recorded_by_implementation():
     # Then use the translator method
     from inat_to_cams.translator import INatToCamsTranslator
     translator = INatToCamsTranslator()
-    visit_date, visit_status, recorded_by = translator.calculate_visit_date_and_status_and_user(inat_observation, observation)
+    visit_date, visit_status, recorded_by_user_id, recorded_by_username = translator.calculate_visit_date_and_status_and_user(inat_observation, observation)
     
     print(f"   Visit date: {visit_date}")
     print(f"   Visit status: {visit_status}")
-    print(f"   Recorded by user_id: {recorded_by}")
+    print(f"   RecordedByUserId: {recorded_by_user_id}")
+    print(f"   RecordedByUserName: {recorded_by_username}")
     
-    # Should be the Date controlled field updater (user_id 789)
+    # Should be the Date controlled field user (user_id 789, username field_worker_bob)
     expected_user_id = 789
-    if recorded_by == expected_user_id:
-        print("   ✓ Correctly identified Date controlled updater")
+    expected_username = "field_worker_bob"
+    
+    if recorded_by_user_id == expected_user_id:
+        print("   ✓ Correctly identified Date controlled user_id")
     else:
-        print(f"   ✗ Expected {expected_user_id}, got {recorded_by}")
+        print(f"   ✗ Expected user_id {expected_user_id}, got {recorded_by_user_id}")
+    
+    if recorded_by_username == expected_username:
+        print("   ✓ Correctly identified Date controlled username")
+    else:
+        print(f"   ✗ Expected username {expected_username}, got {recorded_by_username}")
     
     # RecordedDate should come from observation updated_at
     recorded_date = observation.updated_at
@@ -155,14 +163,20 @@ def test_recorded_by_implementation():
     try:
         inat_obs = inaturalist_reader.INatReader.flatten(observation)
         
-        print(f"   iNat observation recorded_by: {inat_obs.recorded_by}")
+        print(f"   iNat observation recorded_by_user_id: {inat_obs.recorded_by_user_id}")
+        print(f"   iNat observation recorded_by_username: {inat_obs.recorded_by_username}")
         print(f"   iNat observation recorded_date: {inat_obs.recorded_date}")
         
-        # recorded_by should be None since it's now handled in translator
-        if inat_obs.recorded_by is None:
-            print("   ✓ Flatten method correctly left recorded_by as None")
+        # recorded_by fields should be None since they're now handled in translator
+        if inat_obs.recorded_by_user_id is None:
+            print("   ✓ Flatten method correctly left recorded_by_user_id as None")
         else:
-            print(f"   ✗ Flatten method: expected None, got {inat_obs.recorded_by}")
+            print(f"   ✗ Flatten method: expected None, got {inat_obs.recorded_by_user_id}")
+        
+        if inat_obs.recorded_by_username is None:
+            print("   ✓ Flatten method correctly left recorded_by_username as None")
+        else:
+            print(f"   ✗ Flatten method: expected None, got {inat_obs.recorded_by_username}")
         
         if inat_obs.recorded_date == base_time:
             print("   ✓ Flatten method correctly set recorded_date")
@@ -192,15 +206,21 @@ def test_recorded_by_implementation():
     
     # Test with new approach
     inat_obs_status = inaturalist_reader.INatReader.flatten(observation_status_only)
-    visit_date_status, visit_status_status, recorded_by_status = translator.calculate_visit_date_and_status_and_user(inat_obs_status, observation_status_only)
+    visit_date_status, visit_status_status, recorded_by_user_id_status, recorded_by_username_status = translator.calculate_visit_date_and_status_and_user(inat_obs_status, observation_status_only)
     
-    print(f"   Recorded by (status update): {recorded_by_status}")
+    print(f"   RecordedByUserId (status update): {recorded_by_user_id_status}")
+    print(f"   RecordedByUserName (status update): {recorded_by_username_status}")
     print(f"   Visit date: {visit_date_status}")
     
-    if recorded_by_status == 456:
-        print("   ✓ Correctly used Date of status update updater")
+    if recorded_by_user_id_status == 456:
+        print("   ✓ Correctly used Date of status update user_id")
     else:
-        print(f"   ✗ Expected 456, got {recorded_by_status}")
+        print(f"   ✗ Expected 456, got {recorded_by_user_id_status}")
+    
+    if recorded_by_username_status == "conservationist_jane":
+        print("   ✓ Correctly used Date of status update username")
+    else:
+        print(f"   ✗ Expected conservationist_jane, got {recorded_by_username_status}")
     
     # Test fallback to observation user
     print("\n4. Testing fallback to observation user...")
@@ -211,15 +231,21 @@ def test_recorded_by_implementation():
     
     # Test with new approach
     inat_obs_fallback = inaturalist_reader.INatReader.flatten(observation_fallback)
-    visit_date_fallback, visit_status_fallback, recorded_by_fallback = translator.calculate_visit_date_and_status_and_user(inat_obs_fallback, observation_fallback)
+    visit_date_fallback, visit_status_fallback, recorded_by_user_id_fallback, recorded_by_username_fallback = translator.calculate_visit_date_and_status_and_user(inat_obs_fallback, observation_fallback)
     
-    print(f"   Recorded by (fallback): {recorded_by_fallback}")
+    print(f"   RecordedByUserId (fallback): {recorded_by_user_id_fallback}")
+    print(f"   RecordedByUserName (fallback): {recorded_by_username_fallback}")
     print(f"   Visit date (fallback): {visit_date_fallback}")
     
-    if recorded_by_fallback == 777:
-        print("   ✓ Correctly fell back to observation user")
+    if recorded_by_user_id_fallback == 777:
+        print("   ✓ Correctly fell back to observation user_id")
     else:
-        print(f"   ✗ Expected 777, got {recorded_by_fallback}")
+        print(f"   ✗ Expected 777, got {recorded_by_user_id_fallback}")
+    
+    if recorded_by_username_fallback == "observation_creator":
+        print("   ✓ Correctly fell back to observation username")
+    else:
+        print(f"   ✗ Expected observation_creator, got {recorded_by_username_fallback}")
     
     
     print("\n5. Testing with empty Date fields...")
@@ -246,15 +272,21 @@ def test_recorded_by_implementation():
     
     # Test with new approach
     inat_obs_empty = inaturalist_reader.INatReader.flatten(observation_empty_dates)
-    visit_date_empty, visit_status_empty, recorded_by_empty_dates = translator.calculate_visit_date_and_status_and_user(inat_obs_empty, observation_empty_dates)
+    visit_date_empty, visit_status_empty, recorded_by_user_id_empty, recorded_by_username_empty = translator.calculate_visit_date_and_status_and_user(inat_obs_empty, observation_empty_dates)
     
-    print(f"   Recorded by (empty dates): {recorded_by_empty_dates}")
+    print(f"   RecordedByUserId (empty dates): {recorded_by_user_id_empty}")
+    print(f"   RecordedByUserName (empty dates): {recorded_by_username_empty}")
     print(f"   Visit date (empty dates): {visit_date_empty}")
     
-    if recorded_by_empty_dates == 777:
-        print("   ✓ Correctly ignored empty date fields and used observation user")
+    if recorded_by_user_id_empty == 777:
+        print("   ✓ Correctly ignored empty date fields and used observation user_id")
     else:
-        print(f"   ✗ Expected 777, got {recorded_by_empty_dates}")
+        print(f"   ✗ Expected 777, got {recorded_by_user_id_empty}")
+    
+    if recorded_by_username_empty == "observation_creator":
+        print("   ✓ Correctly ignored empty date fields and used observation username")
+    else:
+        print(f"   ✗ Expected observation_creator, got {recorded_by_username_empty}")
     
     
     print("\n" + "=" * 60)

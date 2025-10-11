@@ -56,5 +56,6 @@ class iNatObservation:
         self.date_of_status_update = None
         
         # New fields for tracking updates
-        self.recorded_by = None  # User ID (not username)
+        self.recorded_by_user_id = None  # User ID (integer)
+        self.recorded_by_username = None  # Username (string)
         self.recorded_date = None  # DateTime with time component
