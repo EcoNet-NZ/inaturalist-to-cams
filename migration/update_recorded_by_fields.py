@@ -188,7 +188,7 @@ class UpdateRecordedByMigration:
             update_data = [{
                 'attributes': {
                     'OBJECTID': object_id,
-                    'RecordedBy': recorded_by,
+                    'RecordedBy': str(recorded_by),
                     'RecordedDate': int(recorded_date.timestamp() * 1000)  # Convert to milliseconds for ArcGIS
                 }
             }]
