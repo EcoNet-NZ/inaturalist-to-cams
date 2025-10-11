@@ -35,7 +35,7 @@ class INatToCamsTranslator:
 
         return html
     
-    def translate(self, inat_observation):
+    def translate(self, inat_observation, original_observation):
         geolocation = geometry.Point({'x': inat_observation.location.x,
                                       'y': inat_observation.location.y,
                                       'spatialReference': {'wkid': 4326}
@@ -66,7 +66,7 @@ class INatToCamsTranslator:
                     inat_observation.taxon_name):
                 scientific_name = inat_observation.taxon_name
 
-        (visit_date, visit_status) = self.calculate_visit_date_and_status(inat_observation)
+        (visit_date, visit_status, recorded_by_user_id) = self.calculate_visit_date_and_status_and_user(inat_observation, original_observation)
 
         weed_location = cams_feature.WeedLocation()
         weed_location.date_first_observed = self.as_local_datetime(inat_observation.observed_on)
@@ -123,7 +123,8 @@ class INatToCamsTranslator:
         weed_visit.treatment_details = inat_observation.treatment_details
         
         # Add new fields for tracking updates
-        weed_visit.recorded_by = inat_observation.recorded_by
+        # Store user_id directly in CAMS (from the date field calculation)
+        weed_visit.recorded_by = recorded_by_user_id
         if inat_observation.recorded_date:
             if hasattr(inat_observation.recorded_date, 'isoformat'):
                 # It's a datetime object
@@ -144,23 +145,30 @@ class INatToCamsTranslator:
         assert naive_datetime.tzinfo is None
         return naive_datetime
 
-    def calculate_visit_date_and_status(self, inat_observation):
+    def calculate_visit_date_and_status_and_user(self, inat_observation, original_observation):
         date_first_observed = inat_observation.observed_on
         date_controlled = inat_observation.date_controlled
         date_of_status_update = inat_observation.date_of_status_update
 
+        # Determine which date to use (existing logic)
         if date_controlled and date_of_status_update:
             if date_controlled > date_of_status_update:
                 visit_date = date_controlled
+                winning_field = 'Date controlled'
             else:
                 visit_date = date_of_status_update
+                winning_field = 'Date of status update'
         elif date_controlled:
             visit_date = date_controlled
+            winning_field = 'Date controlled'
         elif date_of_status_update:
             visit_date = date_of_status_update
+            winning_field = 'Date of status update'
         else:
             visit_date = date_first_observed
+            winning_field = None
 
+        # Determine visit status (existing logic)
         visit_status = 'RED'   # Default value
         if visit_date == date_controlled:
             if inat_observation.how_treated == 'Cut but roots remain':
@@ -173,4 +181,25 @@ class INatToCamsTranslator:
             elif inat_observation.status_update == 'Duplicate':
                 visit_status = 'GRAY'
 
-        return visit_date, visit_status
+        # Determine user_id from the winning field
+        recorded_by_user_id = None
+        if winning_field and hasattr(original_observation, 'ofvs') and original_observation.ofvs:
+            # Find the observation field value for the winning field
+            for ofv in original_observation.ofvs:
+                if ofv.name == winning_field and ofv.value:
+                    # Get updater_id from this field
+                    if hasattr(ofv, 'updater_id') and ofv.updater_id:
+                        recorded_by_user_id = ofv.updater_id
+                        logging.debug(f"Using {winning_field} field updater_id: {recorded_by_user_id}")
+                    elif hasattr(ofv, 'updater') and ofv.updater and hasattr(ofv.updater, 'id'):
+                        recorded_by_user_id = ofv.updater.id
+                        logging.debug(f"Using {winning_field} field updater.id: {recorded_by_user_id}")
+                    break
+        
+        # Fallback to observation user if no winning field or no updater found
+        if not recorded_by_user_id:
+            if hasattr(original_observation, 'user') and original_observation.user and hasattr(original_observation.user, 'id'):
+                recorded_by_user_id = original_observation.user.id
+                logging.debug(f"Using observation user_id: {recorded_by_user_id}")
+
+        return visit_date, visit_status, recorded_by_user_id

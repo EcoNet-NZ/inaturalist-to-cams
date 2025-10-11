@@ -14,7 +14,6 @@ import os
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from inat_to_cams import inaturalist_observation, inaturalist_reader
-from inat_to_cams.username_cache import get_username_cache
 
 
 class MockUser:
@@ -24,11 +23,13 @@ class MockUser:
 
 
 class MockObservationFieldValue:
-    def __init__(self, name, value, user_id=None, user=None, updated_at=None):
+    def __init__(self, name, value, user_id=None, user=None, updater_id=None, updater=None, updated_at=None):
         self.name = name
         self.value = value
         self.user_id = user_id
         self.user = user
+        self.updater_id = updater_id
+        self.updater = updater
         self.updated_at = updated_at or datetime.datetime.now()
 
 
@@ -92,52 +93,66 @@ def test_recorded_by_implementation():
     # Add some observation field values with different timestamps
     base_time = datetime.datetime.now()
     
-    # Older field update
-    ofv1 = MockObservationFieldValue(
+    # Add a Date controlled field with an updater (this should be selected)
+    ofv_date_controlled = MockObservationFieldValue(
+        name="Date controlled",
+        value=base_time.isoformat(),
+        updater=MockUser(789, "field_worker_bob"),
+        updater_id=789,
+        updated_at=base_time
+    )
+    
+    # Add a Date of status update field (should be ignored since Date controlled exists)
+    ofv_status_update = MockObservationFieldValue(
+        name="Date of status update",
+        value=(base_time - datetime.timedelta(hours=1)).isoformat(),
+        updater=MockUser(456, "conservationist_jane"),
+        updater_id=456,
+        updated_at=base_time - datetime.timedelta(hours=1)
+    )
+    
+    # Add other field (should be ignored)
+    ofv_other = MockObservationFieldValue(
         name="Treated ?",
         value="Yes",
         user=MockUser(123, "user123"),
         updated_at=base_time - datetime.timedelta(days=2)
     )
     
-    # More recent field update (this should be the one selected)
-    ofv2 = MockObservationFieldValue(
-        name="Status update",
-        value="Dead / Not Present",
-        user=MockUser(456, "conservationist_jane"),
-        updated_at=base_time - datetime.timedelta(hours=1)
-    )
+    observation.ofvs = [ofv_other, ofv_status_update, ofv_date_controlled]
+    observation.updated_at = base_time
+    observation.user = MockUser(777, "observation_creator")
     
-    # Even more recent field update
-    ofv3 = MockObservationFieldValue(
-        name="Date controlled",
-        value=base_time.isoformat(),
-        user=MockUser(789, "field_worker_bob"),
-        updated_at=base_time
-    )
+    # Test the new calculate_visit_date_and_status_and_user method
+    print("1. Testing calculate_visit_date_and_status_and_user...")
     
-    observation.ofvs = [ofv1, ofv2, ofv3]
+    # First flatten the observation
+    inat_observation = inaturalist_reader.INatReader.flatten(observation)
     
-    # Test the get_most_recent_field_update_info method
-    print("1. Testing get_most_recent_field_update_info...")
-    recorded_by, recorded_date = inaturalist_reader.INatReader.get_most_recent_field_update_info(observation)
+    # Then use the translator method
+    from inat_to_cams.translator import INatToCamsTranslator
+    translator = INatToCamsTranslator()
+    visit_date, visit_status, recorded_by = translator.calculate_visit_date_and_status_and_user(inat_observation, observation)
     
-    print(f"   Most recent update by: {recorded_by}")
-    print(f"   Most recent update date: {recorded_date}")
+    print(f"   Visit date: {visit_date}")
+    print(f"   Visit status: {visit_status}")
+    print(f"   Recorded by user_id: {recorded_by}")
     
-    # Should be the most recent one (ofv3)
-    expected_user = "field_worker_bob"
-    if recorded_by == expected_user:
-        print("   ✓ Correctly identified most recent user")
+    # Should be the Date controlled field updater (user_id 789)
+    expected_user_id = 789
+    if recorded_by == expected_user_id:
+        print("   ✓ Correctly identified Date controlled updater")
     else:
-        print(f"   ✗ Expected {expected_user}, got {recorded_by}")
+        print(f"   ✗ Expected {expected_user_id}, got {recorded_by}")
     
+    # RecordedDate should come from observation updated_at
+    recorded_date = observation.updated_at
     if recorded_date == base_time:
-        print("   ✓ Correctly identified most recent date")
+        print("   ✓ Correctly identified observation updated_at")
     else:
         print(f"   ✗ Expected {base_time}, got {recorded_date}")
     
-    # Test the full flatten method
+    # Test the full flatten method (now only sets recorded_date)
     print("\n2. Testing full flatten method...")
     try:
         inat_obs = inaturalist_reader.INatReader.flatten(observation)
@@ -145,10 +160,11 @@ def test_recorded_by_implementation():
         print(f"   iNat observation recorded_by: {inat_obs.recorded_by}")
         print(f"   iNat observation recorded_date: {inat_obs.recorded_date}")
         
-        if inat_obs.recorded_by == expected_user:
-            print("   ✓ Flatten method correctly set recorded_by")
+        # recorded_by should be None since it's now handled in translator
+        if inat_obs.recorded_by is None:
+            print("   ✓ Flatten method correctly left recorded_by as None")
         else:
-            print(f"   ✗ Flatten method: expected {expected_user}, got {inat_obs.recorded_by}")
+            print(f"   ✗ Flatten method: expected None, got {inat_obs.recorded_by}")
         
         if inat_obs.recorded_date == base_time:
             print("   ✓ Flatten method correctly set recorded_date")
@@ -158,90 +174,90 @@ def test_recorded_by_implementation():
     except Exception as e:
         print(f"   ✗ Error in flatten method: {e}")
     
-    # Test username cache
-    print("\n3. Testing username cache...")
-    cache = get_username_cache()
-    stats = cache.get_cache_stats()
-    print(f"   Cache stats: {stats}")
+    # Test with Date of status update field (when no Date controlled)
+    print("\n3. Testing Date of status update priority...")
     
-    # Test with user_id only (no user object)
-    print("\n4. Testing with user_id only (cache fallback)...")
+    # Create observation with only Date of status update field
+    observation_status_only = MockObservation()
+    observation_status_only.updated_at = base_time
+    observation_status_only.user = MockUser(777, "observation_creator")
     
-    # Create observation field value with only user_id
-    ofv_with_id = MockObservationFieldValue(
-        name="Test field",
-        value="Test value",
-        user_id=999,
-        updated_at=base_time + datetime.timedelta(minutes=1)
+    ofv_status_only = MockObservationFieldValue(
+        name="Date of status update",
+        value=base_time.isoformat(),
+        updater=MockUser(456, "conservationist_jane"),
+        updater_id=456,
+        updated_at=base_time
     )
     
-    observation.ofvs = [ofv_with_id]
+    observation_status_only.ofvs = [ofv_status_only]
     
-    recorded_by_cached, recorded_date_cached = inaturalist_reader.INatReader.get_most_recent_field_update_info(observation)
-    print(f"   Recorded by (from cache): {recorded_by_cached}")
-    print(f"   Recorded date (from cache): {recorded_date_cached}")
+    # Test with new approach
+    inat_obs_status = inaturalist_reader.INatReader.flatten(observation_status_only)
+    visit_date_status, visit_status_status, recorded_by_status = translator.calculate_visit_date_and_status_and_user(inat_obs_status, observation_status_only)
     
-    # Test empty observation field values
-    print("\n5. Testing with no observation field values...")
-    observation.ofvs = []
+    print(f"   Recorded by (status update): {recorded_by_status}")
+    print(f"   Visit date: {visit_date_status}")
     
-    recorded_by_empty, recorded_date_empty = inaturalist_reader.INatReader.get_most_recent_field_update_info(observation)
-    print(f"   Recorded by (empty): {recorded_by_empty}")
-    print(f"   Recorded date (empty): {recorded_date_empty}")
-    
-    if recorded_by_empty is None and recorded_date_empty is None:
-        print("   ✓ Correctly handled empty observation field values")
+    if recorded_by_status == 456:
+        print("   ✓ Correctly used Date of status update updater")
     else:
-        print("   ✗ Should return None for both values when no OFVs present")
+        print(f"   ✗ Expected 456, got {recorded_by_status}")
     
-    # Test field filtering (only tracked fields should be considered)
-    print("\n6. Testing field filtering (only tracked fields)...")
+    # Test fallback to observation user
+    print("\n4. Testing fallback to observation user...")
+    observation_fallback = MockObservation()
+    observation_fallback.updated_at = base_time
+    observation_fallback.user = MockUser(777, "observation_creator")
+    observation_fallback.ofvs = []  # No relevant fields
     
-    # Add a non-tracked field that's more recent than tracked fields
-    non_tracked_ofv = MockObservationFieldValue(
-        name="Some Random Field Not In Our System",
-        value="Random value",
-        user=MockUser(999, "random_user"),
-        updated_at=base_time + datetime.timedelta(hours=2)  # Most recent
+    # Test with new approach
+    inat_obs_fallback = inaturalist_reader.INatReader.flatten(observation_fallback)
+    visit_date_fallback, visit_status_fallback, recorded_by_fallback = translator.calculate_visit_date_and_status_and_user(inat_obs_fallback, observation_fallback)
+    
+    print(f"   Recorded by (fallback): {recorded_by_fallback}")
+    print(f"   Visit date (fallback): {visit_date_fallback}")
+    
+    if recorded_by_fallback == 777:
+        print("   ✓ Correctly fell back to observation user")
+    else:
+        print(f"   ✗ Expected 777, got {recorded_by_fallback}")
+    
+    
+    print("\n5. Testing with empty Date fields...")
+    observation_empty_dates = MockObservation()
+    observation_empty_dates.updated_at = base_time
+    observation_empty_dates.user = MockUser(777, "observation_creator")
+    
+    # Add Date controlled and Date of status update fields with empty values
+    empty_date_controlled = MockObservationFieldValue(
+        name="Date controlled",
+        value="",  # Empty value
+        updater=MockUser(999, "should_be_ignored"),
+        updater_id=999
     )
     
-    # Add a tracked field that's older
-    tracked_ofv = MockObservationFieldValue(
-        name="Treated ?",  # This is in TRACKED_OBSERVATION_FIELDS
-        value="Yes",
-        user=MockUser(888, "tracked_user"),
-        updated_at=base_time + datetime.timedelta(hours=1)  # Less recent
+    empty_status_update = MockObservationFieldValue(
+        name="Date of status update", 
+        value=None,  # None value
+        updater=MockUser(888, "should_also_be_ignored"),
+        updater_id=888
     )
     
-    observation.ofvs = [non_tracked_ofv, tracked_ofv]
+    observation_empty_dates.ofvs = [empty_date_controlled, empty_status_update]
     
-    recorded_by_filtered, recorded_date_filtered = inaturalist_reader.INatReader.get_most_recent_field_update_info(observation)
-    print(f"   Most recent (filtered): {recorded_by_filtered} at {recorded_date_filtered}")
+    # Test with new approach
+    inat_obs_empty = inaturalist_reader.INatReader.flatten(observation_empty_dates)
+    visit_date_empty, visit_status_empty, recorded_by_empty_dates = translator.calculate_visit_date_and_status_and_user(inat_obs_empty, observation_empty_dates)
     
-    # Should use the tracked field, not the non-tracked one
-    if recorded_by_filtered == "tracked_user":
-        print("   ✅ Correctly filtered to tracked fields only")
+    print(f"   Recorded by (empty dates): {recorded_by_empty_dates}")
+    print(f"   Visit date (empty dates): {visit_date_empty}")
+    
+    if recorded_by_empty_dates == 777:
+        print("   ✓ Correctly ignored empty date fields and used observation user")
     else:
-        print(f"   ✗ Expected tracked_user, got {recorded_by_filtered}")
+        print(f"   ✗ Expected 777, got {recorded_by_empty_dates}")
     
-    # Test fallback to observation creator/editor
-    print("\n7. Testing fallback to observation creator/editor...")
-    
-    # Create observation with no tracked fields but with user info
-    observation_no_fields = MockObservation()
-    observation_no_fields.ofvs = [non_tracked_ofv]  # Only non-tracked field
-    observation_no_fields.user = MockUser(777, "observation_creator")
-    observation_no_fields.created_at = base_time - datetime.timedelta(days=1)
-    observation_no_fields.updated_at = base_time - datetime.timedelta(hours=2)
-    
-    recorded_by_fallback, recorded_date_fallback = inaturalist_reader.INatReader.get_most_recent_field_update_info(observation_no_fields)
-    print(f"   Fallback result: {recorded_by_fallback} at {recorded_date_fallback}")
-    
-    # Should use observation editor (updated_at) first, then creator (created_at)
-    if recorded_by_fallback == "observation_creator":
-        print("   ✅ Correctly used fallback to observation creator/editor")
-    else:
-        print(f"   ✗ Expected observation_creator, got {recorded_by_fallback}")
     
     print("\n" + "=" * 60)
     print("Test completed!")

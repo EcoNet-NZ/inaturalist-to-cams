@@ -234,8 +234,7 @@
         },
         "RecordedBy": {
             "name": "RecordedBy",
-            "type": "String",
-            "length": 128
+            "type": "Integer"
         },
         "RecordedDate": {
             "name": "RecordedDate",
