@@ -179,9 +179,9 @@ class UpdateRecordedByMigration:
         logging.info("Finding visit records that need RecordedByUserId/RecordedByUserName updates...")
         
         try:
-            # Get all visits that are missing the new fields
+            # Get all visits that are missing the new fields and have a valid iNatRef
             visits_layer = self.cams.item.tables[0]  # Assuming visits table is the first table
-            where_clause = "RecordedByUserId IS NULL OR RecordedByUserId = '' OR RecordedByUserName IS NULL OR RecordedByUserName = ''"
+            where_clause = "(RecordedByUserId IS NULL OR RecordedByUserId = '' OR RecordedByUserName IS NULL OR RecordedByUserName = '') AND iNatRef IS NOT NULL AND iNatRef <> ''"
             
             query_result = visits_layer.query(
                 where=where_clause, 
