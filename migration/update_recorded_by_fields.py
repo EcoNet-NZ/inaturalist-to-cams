@@ -125,7 +125,7 @@ class UpdateRecordedByMigration:
             # Then use the translator to get the user_id
             from inat_to_cams.translator import INatToCamsTranslator
             translator_instance = INatToCamsTranslator()
-            visit_date, visit_status, user_id = translator_instance.calculate_visit_date_and_status_and_user(inat_observation, observation)
+            visit_date, visit_status, user_id, username = translator_instance.calculate_visit_date_and_status_and_user(inat_observation, observation)
             
             # Get recorded_date from observation
             if hasattr(observation, 'updated_at') and observation.updated_at:
@@ -135,17 +135,17 @@ class UpdateRecordedByMigration:
             else:
                 recorded_date = None
             
-            if user_id and recorded_date:
+            if user_id and username and recorded_date:
                 # Update the CAMS record
                 if self.dry_run:
-                    logging.info(f"[DRY RUN] Would update record {object_id} with RecordedBy: {user_id}, RecordedDate: {recorded_date}")
+                    logging.info(f"[DRY RUN] Would update record {object_id} with RecordedByUserId: {user_id}, RecordedByUserName: {username}, RecordedDate: {recorded_date}")
                 else:
-                    self.update_cams_record(object_id, user_id, recorded_date)
-                    logging.info(f"Updated record {object_id} with RecordedBy: {user_id}")
+                    self.update_cams_record(object_id, user_id, username, recorded_date)
+                    logging.info(f"Updated record {object_id} with RecordedByUserId: {user_id}, RecordedByUserName: {username}")
                 
                 self.updated_count += 1
             else:
-                logging.info(f"No user_id or recorded_date found for record {object_id}, skipping")
+                logging.info(f"Missing user_id ({user_id}), username ({username}), or recorded_date ({recorded_date}) for record {object_id}, skipping")
                 self.skipped_count += 1
                 
         except Exception as e:
@@ -155,8 +155,8 @@ class UpdateRecordedByMigration:
     def get_records_missing_recorded_by(self, limit: Optional[int] = None) -> List[dict]:
         """Query CAMS for records where RecordedBy is null or empty"""
         
-        # Query the Visits table for records without RecordedBy
-        where_clause = "RecordedBy IS NULL OR RecordedBy = ''"
+        # Query the Visits table for records without RecordedByUserId or RecordedByUserName
+        where_clause = "RecordedByUserId IS NULL OR RecordedByUserId = '' OR RecordedByUserName IS NULL OR RecordedByUserName = ''"
         
         if limit:
             # Add a limit to the query for testing
@@ -167,28 +167,29 @@ class UpdateRecordedByMigration:
         try:
             # Query the visits table
             visits_layer = self.cams.item.tables[0]  # Assuming visits table is the first table
-            query_result = visits_layer.query(where=where_clause, out_fields=['OBJECTID', 'iNatRef', 'RecordedBy', 'RecordedDate'])
+            query_result = visits_layer.query(where=where_clause, out_fields=['OBJECTID', 'iNatRef', 'RecordedByUserId', 'RecordedByUserName', 'RecordedDate'])
             
             records = []
             for feature in query_result.features:
                 records.append(feature.attributes)
             
-            logging.info(f"Found {len(records)} records missing RecordedBy information")
+            logging.info(f"Found {len(records)} records missing RecordedByUserId or RecordedByUserName information")
             return records
             
         except Exception as e:
             logging.error(f"Error querying CAMS for records: {e}")
             raise
     
-    def update_cams_record(self, object_id: int, recorded_by: int, recorded_date: datetime):
-        """Update a specific CAMS record with RecordedBy (user_id) and RecordedDate information"""
+    def update_cams_record(self, object_id: int, user_id: int, username: str, recorded_date: datetime):
+        """Update a specific CAMS record with RecordedByUserId, RecordedByUserName and RecordedDate information"""
         
         try:
             # Prepare the update data
             update_data = [{
                 'attributes': {
                     'OBJECTID': object_id,
-                    'RecordedBy': str(recorded_by),
+                    'RecordedByUserId': str(user_id),
+                    'RecordedByUserName': username,
                     'RecordedDate': int(recorded_date.timestamp() * 1000)  # Convert to milliseconds for ArcGIS
                 }
             }]

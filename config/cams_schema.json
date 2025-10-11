@@ -232,10 +232,15 @@
             "name": "GUID_visits",
             "type": "GUID"
         },
-        "RecordedBy": {
-            "name": "RecordedBy",
+        "RecordedByUserId": {
+            "name": "RecordedByUserId",
             "type": "String",
-            "length": 128
+            "length": 64
+        },
+        "RecordedByUserName": {
+            "name": "RecordedByUserName",
+            "type": "String",
+            "length": 64
         },
         "RecordedDate": {
             "name": "RecordedDate",
