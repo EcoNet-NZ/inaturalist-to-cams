@@ -23,13 +23,11 @@ class MockUser:
 
 
 class MockObservationFieldValue:
-    def __init__(self, name, value, user_id=None, user=None, updater_id=None, updater=None, updated_at=None):
+    def __init__(self, name, value, user_id=None, user=None, updated_at=None):
         self.name = name
         self.value = value
         self.user_id = user_id
         self.user = user
-        self.updater_id = updater_id
-        self.updater = updater
         self.updated_at = updated_at or datetime.datetime.now()
 
 
@@ -93,12 +91,12 @@ def test_recorded_by_implementation():
     # Add some observation field values with different timestamps
     base_time = datetime.datetime.now()
     
-    # Add a Date controlled field with an updater (this should be selected)
+    # Add a Date controlled field with a user_id (this should be selected)
     ofv_date_controlled = MockObservationFieldValue(
         name="Date controlled",
         value=base_time.isoformat(),
-        updater=MockUser(789, "field_worker_bob"),
-        updater_id=789,
+        user_id=789,
+        user=MockUser(789, "field_worker_bob"),
         updated_at=base_time
     )
     
@@ -106,8 +104,8 @@ def test_recorded_by_implementation():
     ofv_status_update = MockObservationFieldValue(
         name="Date of status update",
         value=(base_time - datetime.timedelta(hours=1)).isoformat(),
-        updater=MockUser(456, "conservationist_jane"),
-        updater_id=456,
+        user_id=456,
+        user=MockUser(456, "conservationist_jane"),
         updated_at=base_time - datetime.timedelta(hours=1)
     )
     
@@ -185,8 +183,8 @@ def test_recorded_by_implementation():
     ofv_status_only = MockObservationFieldValue(
         name="Date of status update",
         value=base_time.isoformat(),
-        updater=MockUser(456, "conservationist_jane"),
-        updater_id=456,
+        user_id=456,
+        user=MockUser(456, "conservationist_jane"),
         updated_at=base_time
     )
     
@@ -233,15 +231,15 @@ def test_recorded_by_implementation():
     empty_date_controlled = MockObservationFieldValue(
         name="Date controlled",
         value="",  # Empty value
-        updater=MockUser(999, "should_be_ignored"),
-        updater_id=999
+        user_id=999,
+        user=MockUser(999, "should_be_ignored")
     )
     
     empty_status_update = MockObservationFieldValue(
         name="Date of status update", 
         value=None,  # None value
-        updater=MockUser(888, "should_also_be_ignored"),
-        updater_id=888
+        user_id=888,
+        user=MockUser(888, "should_also_be_ignored")
     )
     
     observation_empty_dates.ofvs = [empty_date_controlled, empty_status_update]
