@@ -54095,3 +54095,11 @@
 |Visit record updated|**87521**|WoollyNightshade|RED|[320039953](https://www.inaturalist.org/observations/320039953)|
 |Visit record updated|**87530**|WoollyNightshade|RED|[320329842](https://www.inaturalist.org/observations/320329842)|
 |Visit record updated|**87531**|WoollyNightshade|RED|[320330936](https://www.inaturalist.org/observations/320330936)|
+---
+
+# Run [14027](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/1e280a9c41451b2db1456a3ac289288a4331cc60/checks/18441748941)
+2025-10-12 21:56
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Weed record updated|**87267**|PinusRadiata|RED|[317396558](https://www.inaturalist.org/observations/317396558)|
