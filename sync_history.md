@@ -54103,3 +54103,11 @@
 |Sync Event|Object Id|Species|Status|iNaturalist Id|
 |----------|---------|-------|------|--------------|
 |Weed record updated|**87267**|PinusRadiata|RED|[317396558](https://www.inaturalist.org/observations/317396558)|
+---
+
+# Run [14039](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/dca268cfff75fdfad48f8963f26e5d4015859425/checks/18449373386)
+2025-10-13 09:56
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Weed record updated|**87496**|MothPlant|RED|[319830384](https://www.inaturalist.org/observations/319830384)|
