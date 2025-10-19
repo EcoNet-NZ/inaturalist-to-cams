@@ -54460,3 +54460,15 @@
 |New weed|**87649**|Sycamore|YELLOW|[321718830](https://www.inaturalist.org/observations/321718830)|
 |New weed|**87650**|AsparagusClimbing|YELLOW|[321718847](https://www.inaturalist.org/observations/321718847)|
 |New weed|**87651**|JapaneseHoneysuckle|YELLOW|[321718906](https://www.inaturalist.org/observations/321718906)|
+---
+
+# Run [14181](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/e1c2c6fa84746c2253543a2a75058bb063789419/checks/18624157715)
+2025-10-19 15:28
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**87664**|OldMansBeard|RED|[321746303](https://www.inaturalist.org/observations/321746303)|
+|New weed|**87665**|BananaPassionfruit|RED|[321731164](https://www.inaturalist.org/observations/321731164)|
+|New weed|**87666**|BananaPassionfruit|RED|[321731515](https://www.inaturalist.org/observations/321731515)|
+|New weed|**87667**|BananaPassionfruit|RED|[321731539](https://www.inaturalist.org/observations/321731539)|
+|New weed|**87668**|BananaPassionfruit|RED|[321731579](https://www.inaturalist.org/observations/321731579)|
