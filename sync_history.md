@@ -54601,3 +54601,14 @@
 |Sync Event|Object Id|Species|Status|iNaturalist Id|
 |----------|---------|-------|------|--------------|
 |Weed record updated, Visit record updated|**87716**|PrivetChinese|RED|[321940273](https://www.inaturalist.org/observations/321940273)|
+---
+
+# Run [14212](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/2607022fe3dee853ea29c8ae6f363c00554e7e59/checks/18648471307)
+2025-10-20 22:55
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**87727**|OldMansBeard|RED|[322017594](https://www.inaturalist.org/observations/322017594)|
+|New weed|**87728**|OldMansBeard|RED|[322017904](https://www.inaturalist.org/observations/322017904)|
+|New weed|**87729**|OldMansBeard|RED|[322018233](https://www.inaturalist.org/observations/322018233)|
+|New weed|**87730**|OldMansBeard|RED|[322018650](https://www.inaturalist.org/observations/322018650)|
