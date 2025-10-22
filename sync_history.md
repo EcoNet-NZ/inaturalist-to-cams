@@ -54787,3 +54787,11 @@
 |New weed|**87756**|OTHER|RED|[312075891](https://www.inaturalist.org/observations/312075891)|
 |New weed|**87757**|OTHER|RED|[322477696](https://www.inaturalist.org/observations/322477696)|
 |New weed|**87758**|StinkingIris|RED|[322477715](https://www.inaturalist.org/observations/322477715)|
+---
+
+# Run [14271](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/265465639f38e35727d6e1c885d251a754fffe2b/checks/18732117650)
+2025-10-23 11:56
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**87761**|Rhamnus|RED|[322489053](https://www.inaturalist.org/observations/322489053)|
