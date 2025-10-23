@@ -54828,3 +54828,13 @@
 |Sync Event|Object Id|Species|Status|iNaturalist Id|
 |----------|---------|-------|------|--------------|
 |Weed record updated|**85608**|StinkingIris|PURPLE|[287431289](https://www.inaturalist.org/observations/287431289)|
+---
+
+# Run [14277](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/6b75a1af9c519a11aec7fbd6a554e24ab9be372e/checks/18738958446)
+2025-10-23 18:56
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**87772**|OldMansBeard|RED|[322533256](https://www.inaturalist.org/observations/322533256)|
+|New weed|**87773**|OldMansBeard|RED|[322534058](https://www.inaturalist.org/observations/322534058)|
+|Weed record updated, Visit record updated|**87769**|Rhamnus|YELLOW|[322504938](https://www.inaturalist.org/observations/322504938)|
