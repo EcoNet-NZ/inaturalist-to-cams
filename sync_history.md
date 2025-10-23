@@ -54856,3 +54856,11 @@
 |Sync Event|Object Id|Species|Status|iNaturalist Id|
 |----------|---------|-------|------|--------------|
 |Visit record updated|**86711**|Agapanthus|RED|[298631223](https://www.inaturalist.org/observations/298631223)|
+---
+
+# Run [14281](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/0949d6647bf662fe29f48bd620e7028a1005b002/checks/18744585211)
+2025-10-23 22:56
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Geolocation updated, Weed record updated|**87768**|Rhamnus|RED|[322499193](https://www.inaturalist.org/observations/322499193)|
