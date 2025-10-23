@@ -54864,3 +54864,11 @@
 |Sync Event|Object Id|Species|Status|iNaturalist Id|
 |----------|---------|-------|------|--------------|
 |Geolocation updated, Weed record updated|**87768**|Rhamnus|RED|[322499193](https://www.inaturalist.org/observations/322499193)|
+---
+
+# Run [14282](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/b56018648b12119224766cdafe1375d71abba01d/checks/18746056672)
+2025-10-23 23:56
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**87774**|StinkingIris|RED|[322501631](https://www.inaturalist.org/observations/322501631)|
