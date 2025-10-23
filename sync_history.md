@@ -54872,3 +54872,11 @@
 |Sync Event|Object Id|Species|Status|iNaturalist Id|
 |----------|---------|-------|------|--------------|
 |New weed|**87774**|StinkingIris|RED|[322501631](https://www.inaturalist.org/observations/322501631)|
+---
+
+# Run [14293](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/3ab282fbf1560ca7b7bdc35162e42dcf2a69bd7e/checks/18763055974)
+2025-10-24 10:56
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**87776**|WoollyNightshade|RED|[322640316](https://www.inaturalist.org/observations/322640316)|
