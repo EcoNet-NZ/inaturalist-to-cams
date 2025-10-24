@@ -54944,3 +54944,11 @@
 |Sync Event|Object Id|Species|Status|iNaturalist Id|
 |----------|---------|-------|------|--------------|
 |New weed|**87799**|Tradescantia|RED|[322707083](https://www.inaturalist.org/observations/322707083)|
+---
+
+# Run [14313](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/2f715d864e1af7168ec375bb7d0b64c1bfefc3ea/checks/18789298521)
+2025-10-25 07:57
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**87800**|BananaPassionfruit|RED|[322813715](https://www.inaturalist.org/observations/322813715)|
