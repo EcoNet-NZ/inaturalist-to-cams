@@ -55790,3 +55790,11 @@
 |Sync Event|Object Id|Species|Status|iNaturalist Id|
 |----------|---------|-------|------|--------------|
 |Weed record updated, Visit record updated|**87799**|Tradescantia|RED|[322707083](https://www.inaturalist.org/observations/322707083)|
+---
+
+# Run [14566](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/2ea4e8898e444d5aa0e7ddad2c60f5fcba489093/checks/19079656615)
+2025-11-05 07:56
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**88038**|BlueMorningGlory|RED|[324901281](https://www.inaturalist.org/observations/324901281)|
