@@ -55845,3 +55845,16 @@
 |Sync Event|Object Id|Species|Status|iNaturalist Id|
 |----------|---------|-------|------|--------------|
 |Visit record updated|**87907**|WildGinger|YELLOW|[323883970](https://www.inaturalist.org/observations/323883970)|
+---
+
+# Run [14575](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/89a76cb7e75224fa128f2a7c28f82640ee47cec1/checks/19091717958)
+2025-11-05 17:56
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Weed record updated, Visit record updated|**87743**|OldMansBeard|RED|[322341533](https://www.inaturalist.org/observations/322341533)|
+|Geolocation updated, Weed record updated|**88020**|OldMansBeard|RED|[324767346](https://www.inaturalist.org/observations/324767346)|
+|Weed record updated, Visit record updated|**87617**|MothPlant|RED|[321352822](https://www.inaturalist.org/observations/321352822)|
+|Weed record updated, Visit record updated|**88041**|MothPlant|RED|[324937670](https://www.inaturalist.org/observations/324937670)|
+|New weed|**88047**|MothPlant|YELLOW|[324981245](https://www.inaturalist.org/observations/324981245)|
+|Visit record added|**85370**|AsparagusClimbing|GREEN|[146242496](https://www.inaturalist.org/observations/146242496)|
