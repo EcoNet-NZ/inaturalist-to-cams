@@ -55837,3 +55837,11 @@
 |New weed|**88046**|MothPlant|RED|[324964984](https://www.inaturalist.org/observations/324964984)|
 |Visit record updated|**88042**|WildGinger|RED|[324937213](https://www.inaturalist.org/observations/324937213)|
 |Visit record updated|**88043**|PalmGrass|RED|[324938087](https://www.inaturalist.org/observations/324938087)|
+---
+
+# Run [14573](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/1cd8853e180b044b1b1c3077d9ed2d7ce884664f/checks/19090420992)
+2025-11-05 16:36
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Visit record updated|**87907**|WildGinger|YELLOW|[323883970](https://www.inaturalist.org/observations/323883970)|
