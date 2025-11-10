@@ -56205,3 +56205,13 @@
 |----------|---------|-------|------|--------------|
 |New weed|**88124**|WildGinger|RED|[325766799](https://www.inaturalist.org/observations/325766799)|
 |New weed|**88125**|PalmGrass|RED|[325772262](https://www.inaturalist.org/observations/325772262)|
+---
+
+# Run [14692](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/5bf7ca988d8015ca9e0629462655d808c00fc525/checks/19223389999)
+2025-11-10 19:59
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**88131**|OldMansBeard|RED|[262615507](https://www.inaturalist.org/observations/262615507)|
+|Visit record updated|**88105**|OldMansBeard|RED|[325613926](https://www.inaturalist.org/observations/325613926)|
+|New weed|**88132**|WoollyNightshade|RED|[325831892](https://www.inaturalist.org/observations/325831892)|
