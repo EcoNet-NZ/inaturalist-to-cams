@@ -56532,3 +56532,11 @@
 |Sync Event|Object Id|Species|Status|iNaturalist Id|
 |----------|---------|-------|------|--------------|
 |Visit record updated|**87769**|Rhamnus|YELLOW|[322504938](https://www.inaturalist.org/observations/322504938)|
+---
+
+# Run [14750](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/c54405b3960b7667d085eb78932370a1c856f251/checks/19308565221)
+2025-11-13 07:57
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**88193**|WildGinger|RED|[326082238](https://www.inaturalist.org/observations/326082238)|
