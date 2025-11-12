@@ -56540,3 +56540,11 @@
 |Sync Event|Object Id|Species|Status|iNaturalist Id|
 |----------|---------|-------|------|--------------|
 |New weed|**88193**|WildGinger|RED|[326082238](https://www.inaturalist.org/observations/326082238)|
+---
+
+# Run [14751](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/cfac529b6449ee91ef0a43827c1f56ee9a53ae65/checks/19310070107)
+2025-11-13 08:56
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Visit record added|**88175**|OldMansBeard|YELLOW|[326127953](https://www.inaturalist.org/observations/326127953)|
