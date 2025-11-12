@@ -56476,3 +56476,21 @@
 |New weed|**88173**|OldMansBeard|YELLOW|[326115679](https://www.inaturalist.org/observations/326115679)|
 |New weed|**88174**|WoollyNightshade|RED|[322861755](https://www.inaturalist.org/observations/322861755)|
 |Visit record updated|**87876**|WoollyNightshade|RED|[322861799](https://www.inaturalist.org/observations/322861799)|
+---
+
+# Run [14734](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/d466f2d7d53167b13b69ab8fb655bde4d08d0f72/checks/19285522166)
+2025-11-12 16:37
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Weed record updated, Visit record added|**60880**|OldMansBeard|GREEN|[156682590](https://www.inaturalist.org/observations/156682590)|
+|Weed record updated, Visit record added|**60881**|OldMansBeard|YELLOW|[156684166](https://www.inaturalist.org/observations/156684166)|
+|Weed record updated, Visit record added|**61213**|OldMansBeard|GREEN|[160494593](https://www.inaturalist.org/observations/160494593)|
+|Weed record updated, Visit record added|**61217**|OldMansBeard|GREEN|[161138389](https://www.inaturalist.org/observations/161138389)|
+|Weed record updated, Visit record added|**76910**|OldMansBeard|GREEN|[246854366](https://www.inaturalist.org/observations/246854366)|
+|Weed record updated, Visit record added|**78153**|OldMansBeard|YELLOW|[254930963](https://www.inaturalist.org/observations/254930963)|
+|Weed record updated, Visit record added|**78154**|OldMansBeard|YELLOW|[254933158](https://www.inaturalist.org/observations/254933158)|
+|Weed record updated, Visit record added|**78239**|OldMansBeard|GREEN|[255449560](https://www.inaturalist.org/observations/255449560)|
+|Weed record updated, Visit record added|**80356**|OldMansBeard|GREEN|[261494481](https://www.inaturalist.org/observations/261494481)|
+|New weed|**88175**|OldMansBeard|RED|[326127953](https://www.inaturalist.org/observations/326127953)|
+|Visit record updated|**88156**|Jasmine|RED|[326083264](https://www.inaturalist.org/observations/326083264)|
