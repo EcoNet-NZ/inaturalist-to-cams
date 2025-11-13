@@ -56607,3 +56607,13 @@
 |Sync Event|Object Id|Species|Status|iNaturalist Id|
 |----------|---------|-------|------|--------------|
 |Visit record updated|**88152**|Jasmine|RED|[326078360](https://www.inaturalist.org/observations/326078360)|
+---
+
+# Run [14761](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/a836c7e9543c2704a7dac2bac6a9d12102adfb93/checks/19323251841)
+2025-11-13 19:59
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Visit record updated|**88199**|OldMansBeard|RED|[326267561](https://www.inaturalist.org/observations/326267561)|
+|Visit record updated|**88124**|WildGinger|RED|[325766799](https://www.inaturalist.org/observations/325766799)|
+|Visit record updated|**88125**|PalmGrass|RED|[325772262](https://www.inaturalist.org/observations/325772262)|
