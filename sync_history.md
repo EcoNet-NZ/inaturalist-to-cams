@@ -56816,3 +56816,11 @@
 |New weed|**88270**|PalmGrass|RED|[326865359](https://www.inaturalist.org/observations/326865359)|
 |New weed|**88271**|OTHER|RED|[326865415](https://www.inaturalist.org/observations/326865415)|
 |New weed|**88272**|MonkeyApple|YELLOW|[326865750](https://www.inaturalist.org/observations/326865750)|
+---
+
+# Run [14847](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/41ceaf0ca84f98ea3e4c1a0b0dcf72da2f2b4209/checks/19414073217)
+2025-11-17 12:55
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Visit record updated|**88270**|PalmGrass|RED|[326865359](https://www.inaturalist.org/observations/326865359)|
