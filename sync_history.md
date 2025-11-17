@@ -56824,3 +56824,11 @@
 |Sync Event|Object Id|Species|Status|iNaturalist Id|
 |----------|---------|-------|------|--------------|
 |Visit record updated|**88270**|PalmGrass|RED|[326865359](https://www.inaturalist.org/observations/326865359)|
+---
+
+# Run [14850](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/33aac896675bb3130f43cf2f17f480062a07cb09/checks/19418167401)
+2025-11-17 17:15
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Visit record added|**87629**|OldMansBeard|RED|[321507052](https://www.inaturalist.org/observations/321507052)|
