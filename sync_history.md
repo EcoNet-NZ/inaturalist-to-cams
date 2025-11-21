@@ -57181,3 +57181,23 @@
 |Sync Event|Object Id|Species|Status|iNaturalist Id|
 |----------|---------|-------|------|--------------|
 |Weed record updated, Visit record added|**60095**|OldMansBeard|YELLOW|[150979037](https://www.inaturalist.org/observations/150979037)|
+---
+
+# Run [14947](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/bfd0ba503a0333ea0af580de6d59d23d594310ef/checks/19565259592)
+2025-11-21 21:58
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Weed record updated, Visit record updated|**84535**|BlueMorningGlory|RED|[151964178](https://www.inaturalist.org/observations/151964178)|
+|Visit record updated|**86006**|BlueMorningGlory|RED|[157506658](https://www.inaturalist.org/observations/157506658)|
+|Visit record updated|**86007**|BlueMorningGlory|RED|[157506727](https://www.inaturalist.org/observations/157506727)|
+|Weed record updated|**73749**|BlueMorningGlory|RED|[211431215](https://www.inaturalist.org/observations/211431215)|
+|Weed record updated, Visit record updated|**84980**|BlueMorningGlory|RED|[244438714](https://www.inaturalist.org/observations/244438714)|
+|Visit record updated|**87418**|BlueMorningGlory|RED|[257741039](https://www.inaturalist.org/observations/257741039)|
+|Weed record updated, Visit record updated|**78807**|BlueMorningGlory|RED|[258079647](https://www.inaturalist.org/observations/258079647)|
+|Weed record updated, Visit record updated|**83217**|BlueMorningGlory|RED|[270325902](https://www.inaturalist.org/observations/270325902)|
+|Weed record updated, Visit record updated|**85030**|BlueMorningGlory|RED|[285563982](https://www.inaturalist.org/observations/285563982)|
+|Visit record updated|**85938**|BlueMorningGlory|RED|[296725949](https://www.inaturalist.org/observations/296725949)|
+|Visit record updated|**87782**|BlueMorningGlory|RED|[322680652](https://www.inaturalist.org/observations/322680652)|
+|Visit record updated|**87783**|BlueMorningGlory|RED|[322680653](https://www.inaturalist.org/observations/322680653)|
+|Visit record updated|**87997**|BlueMorningGlory|RED|[324472764](https://www.inaturalist.org/observations/324472764)|
