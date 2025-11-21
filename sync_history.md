@@ -57201,3 +57201,12 @@
 |Visit record updated|**87782**|BlueMorningGlory|RED|[322680652](https://www.inaturalist.org/observations/322680652)|
 |Visit record updated|**87783**|BlueMorningGlory|RED|[322680653](https://www.inaturalist.org/observations/322680653)|
 |Visit record updated|**87997**|BlueMorningGlory|RED|[324472764](https://www.inaturalist.org/observations/324472764)|
+---
+
+# Run [14957](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/57e17b0efd40f9efe675e1f866119c9af8ea3904/checks/19580507369)
+2025-11-22 07:56
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Weed record updated, Visit record updated|**88271**|Elaeagnus|RED|[326865415](https://www.inaturalist.org/observations/326865415)|
+|Visit record updated|**88272**|MonkeyApple|YELLOW|[326865750](https://www.inaturalist.org/observations/326865750)|
