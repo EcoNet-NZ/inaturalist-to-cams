@@ -57210,3 +57210,12 @@
 |----------|---------|-------|------|--------------|
 |Weed record updated, Visit record updated|**88271**|Elaeagnus|RED|[326865415](https://www.inaturalist.org/observations/326865415)|
 |Visit record updated|**88272**|MonkeyApple|YELLOW|[326865750](https://www.inaturalist.org/observations/326865750)|
+---
+
+# Run [14961](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/690642d35163764156c76b46986f46bcb027a3c5/checks/19585730794)
+2025-11-22 11:56
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**88380**|OldMansBeard|RED|[327572196](https://www.inaturalist.org/observations/327572196)|
+|New weed|**88381**|BananaPassionfruit|RED|[327569874](https://www.inaturalist.org/observations/327569874)|
