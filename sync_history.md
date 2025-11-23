@@ -57318,3 +57318,11 @@
 |New weed|**88411**|MothPlant|RED|[327795709](https://www.inaturalist.org/observations/327795709)|
 |New weed|**88412**|MothPlant|RED|[327795864](https://www.inaturalist.org/observations/327795864)|
 |New weed|**88413**|MothPlant|RED|[327795888](https://www.inaturalist.org/observations/327795888)|
+---
+
+# Run [14990](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/52302b4e37bae42e186280c8dd1aa9cde77c0547/checks/19606803816)
+2025-11-23 18:56
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**88416**|BluePassionFlower|RED|[327805097](https://www.inaturalist.org/observations/327805097)|
