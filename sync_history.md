@@ -57606,3 +57606,22 @@
 |Sync Event|Object Id|Species|Status|iNaturalist Id|
 |----------|---------|-------|------|--------------|
 |New weed|**88491**|MothPlant|RED|[328258244](https://www.inaturalist.org/observations/328258244)|
+---
+
+# Run [15057](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/013b8dda12ab24f2bd8eaa5b7d2085a0f75b0b57/checks/19692276166)
+2025-11-26 17:14
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Visit record updated|**86189**|MothPlant|RED|[28271678](https://www.inaturalist.org/observations/28271678)|
+|Visit record updated|**86190**|MothPlant|RED|[28715564](https://www.inaturalist.org/observations/28715564)|
+|Weed record updated, Visit record updated|**63164**|MothPlant|RED|[35436043](https://www.inaturalist.org/observations/35436043)|
+|Weed record updated|**65359**|MothPlant|GREEN|[37834913](https://www.inaturalist.org/observations/37834913)|
+|Weed record updated, Visit record updated|**63269**|MothPlant|RED|[53121043](https://www.inaturalist.org/observations/53121043)|
+|Weed record updated, Visit record updated|**63961**|MothPlant|RED|[156155207](https://www.inaturalist.org/observations/156155207)|
+|Weed record updated, Visit record updated|**64796**|MothPlant|RED|[186773465](https://www.inaturalist.org/observations/186773465)|
+|Weed record updated|**64894**|MothPlant|PURPLE|[187946441](https://www.inaturalist.org/observations/187946441)|
+|Weed record updated, Visit record updated|**65640**|MothPlant|RED|[193820000](https://www.inaturalist.org/observations/193820000)|
+|Weed record updated|**65658**|MothPlant|GREEN|[193909607](https://www.inaturalist.org/observations/193909607)|
+|Weed record updated, Visit record updated|**65687**|MothPlant|RED|[193974915](https://www.inaturalist.org/observations/193974915)|
+|Weed record updated|**67659**|MothPlant|PURPLE|[199535229](https://www.inaturalist.org/observations/199535229)|
