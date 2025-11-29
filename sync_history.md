@@ -57873,3 +57873,11 @@
 |New weed|**88551**|Rhamnus|RED|[328824096](https://www.inaturalist.org/observations/328824096)|
 |New weed|**88552**|BangalowPalm|RED|[328824817](https://www.inaturalist.org/observations/328824817)|
 |New weed|**88553**|JapaneseHoneysuckle|RED|[328825156](https://www.inaturalist.org/observations/328825156)|
+---
+
+# Run [15146](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/220d2abfe12d3845fb0924f1b0c03aeed74f7fe0/checks/19791022741)
+2025-11-30 12:55
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Weed record updated, Visit record added|**66066**|OldMansBeard|RED|[196168529](https://www.inaturalist.org/observations/196168529)|
