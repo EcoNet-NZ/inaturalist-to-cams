@@ -57862,3 +57862,14 @@
 |Sync Event|Object Id|Species|Status|iNaturalist Id|
 |----------|---------|-------|------|--------------|
 |New weed|**88549**|MothPlant|RED|[328815046](https://www.inaturalist.org/observations/328815046)|
+---
+
+# Run [15145](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/71d5188f6a70cf0fbb92e233f8e09bdc7806d6c9/checks/19790421525)
+2025-11-30 11:56
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Weed record updated, Visit record added|**57444**|OldMansBeard|GREEN|[47493231](https://www.inaturalist.org/observations/47493231)|
+|New weed|**88551**|Rhamnus|RED|[328824096](https://www.inaturalist.org/observations/328824096)|
+|New weed|**88552**|BangalowPalm|RED|[328824817](https://www.inaturalist.org/observations/328824817)|
+|New weed|**88553**|JapaneseHoneysuckle|RED|[328825156](https://www.inaturalist.org/observations/328825156)|
