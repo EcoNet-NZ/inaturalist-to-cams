@@ -57975,3 +57975,24 @@
 |Sync Event|Object Id|Species|Status|iNaturalist Id|
 |----------|---------|-------|------|--------------|
 |New weed|**88580**|WattleSydneyGolden|YELLOW|[328993583](https://www.inaturalist.org/observations/328993583)|
+---
+
+# Run [15171](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/6b085a6294cfdc9b1cd4962e4986c183cdb93a2c/checks/19811436523)
+2025-12-01 17:39
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Weed record updated, Visit record added|**57943**|OldMansBeard|GREEN|[97857096](https://www.inaturalist.org/observations/97857096)|
+|Weed record updated, Visit record added|**57991**|OldMansBeard|YELLOW|[100903578](https://www.inaturalist.org/observations/100903578)|
+|Weed record updated, Visit record added|**57992**|OldMansBeard|GREEN|[100903770](https://www.inaturalist.org/observations/100903770)|
+|Weed record updated, Visit record added|**57993**|OldMansBeard|GREEN|[100914074](https://www.inaturalist.org/observations/100914074)|
+|Weed record updated, Visit record added|**58873**|OldMansBeard|RED|[146654534](https://www.inaturalist.org/observations/146654534)|
+|Weed record updated, Visit record added|**58874**|OldMansBeard|YELLOW|[146655384](https://www.inaturalist.org/observations/146655384)|
+|Weed record updated, Visit record added|**66996**|OldMansBeard|YELLOW|[198027201](https://www.inaturalist.org/observations/198027201)|
+|Weed record updated, Visit record added|**76506**|OldMansBeard|YELLOW|[241751409](https://www.inaturalist.org/observations/241751409)|
+|Weed record updated, Visit record added|**76971**|OldMansBeard|GREEN|[247405525](https://www.inaturalist.org/observations/247405525)|
+|Weed record updated, Visit record added|**77067**|OldMansBeard|GREEN|[248163051](https://www.inaturalist.org/observations/248163051)|
+|Weed record updated, Visit record added|**77563**|OldMansBeard|GREEN|[251254823](https://www.inaturalist.org/observations/251254823)|
+|Visit record added|**88220**|OldMansBeard|YELLOW|[326428767](https://www.inaturalist.org/observations/326428767)|
+|New weed|**88583**|OldMansBeard|RED|[329019672](https://www.inaturalist.org/observations/329019672)|
+|New weed|**88584**|WoollyNightshade|RED|[329023296](https://www.inaturalist.org/observations/329023296)|
