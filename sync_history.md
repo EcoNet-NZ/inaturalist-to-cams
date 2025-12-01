@@ -57967,3 +57967,11 @@
 |Sync Event|Object Id|Species|Status|iNaturalist Id|
 |----------|---------|-------|------|--------------|
 |New weed|**88577**|WattleSydneyGolden|YELLOW|[328984425](https://www.inaturalist.org/observations/328984425)|
+---
+
+# Run [15170](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/be05a5139db242dfd47b049da233900b957278b0/checks/19809744469)
+2025-12-01 16:00
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**88580**|WattleSydneyGolden|YELLOW|[328993583](https://www.inaturalist.org/observations/328993583)|
