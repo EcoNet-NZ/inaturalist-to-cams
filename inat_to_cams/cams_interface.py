@@ -52,7 +52,7 @@ class CamsConnection:
         actual_table_name = self.table.properties.name
         assert actual_table_name == expected_table_name, f'Expected table name to be {expected_table_name} but found {actual_table_name}'
 
-        self.test_schema = ['iNat_to_CAMS_Dev']
+        self.test_schema = ['iNat_to_CAMS_Dev', 'XXX Nigel_Updated_EasyEditor_DEV - clone of CAMS Weeds (FL_BASE ALL)' ]
 
     def is_test_schema(self):
         return self.item.title in self.test_schema
