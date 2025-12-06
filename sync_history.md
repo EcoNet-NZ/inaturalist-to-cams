@@ -58451,3 +58451,11 @@
 |----------|---------|-------|------|--------------|
 |Weed record updated, Visit record updated|**88743**|Elaeagnus|YELLOW|[329641060](https://www.inaturalist.org/observations/329641060)|
 |New weed|**88749**|OTHER|RED|[329648501](https://www.inaturalist.org/observations/329648501)|
+---
+
+# Run [15303](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/f68fe985d2e7b29aa5673600766d1a627edc549b/checks/19994140407)
+2025-12-07 09:56
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**88750**|OTHER|RED|[329739787](https://www.inaturalist.org/observations/329739787)|
