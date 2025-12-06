@@ -58459,3 +58459,18 @@
 |Sync Event|Object Id|Species|Status|iNaturalist Id|
 |----------|---------|-------|------|--------------|
 |New weed|**88750**|OTHER|RED|[329739787](https://www.inaturalist.org/observations/329739787)|
+---
+
+# Run [15304](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/90d258c4353833623c04f112abbdc56a652d290f/checks/19994785772)
+2025-12-07 10:56
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**88756**|WoollyNightshade|RED|[326865468](https://www.inaturalist.org/observations/326865468)|
+|Visit record updated|**88271**|Elaeagnus|RED|[326865415](https://www.inaturalist.org/observations/326865415)|
+|Geolocation updated, Weed record updated, Visit record updated|**88272**|MonkeyApple|YELLOW|[326865750](https://www.inaturalist.org/observations/326865750)|
+|Visit record updated|**88285**|WildGinger|RED|[326866324](https://www.inaturalist.org/observations/326866324)|
+|Weed record updated, Visit record updated|**88458**|FruitSaladPlant|RED|[326869625](https://www.inaturalist.org/observations/326869625)|
+|New weed|**88757**|Prunus|RED|[328259952](https://www.inaturalist.org/observations/328259952)|
+|New weed|**88758**|OTHER|RED|[329742360](https://www.inaturalist.org/observations/329742360)|
+|New weed|**88759**|OTHER|RED|[329742427](https://www.inaturalist.org/observations/329742427)|
