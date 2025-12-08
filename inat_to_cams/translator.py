@@ -271,6 +271,26 @@ class INatToCamsTranslator:
         recorded_by_user_id = None
         ofvs = self._get_attr(original_observation, 'ofvs')
         
+        # Check if we need complete data (iNatClient doesn't include updater_id in OFVs)
+        # Only fetch if we have a winning field and current data lacks updater_id
+        needs_complete_data = False
+        if winning_field and ofvs and not isinstance(original_observation, dict):
+            # Check if any OFV has updater_id (dict responses have it, objects don't)
+            for ofv in ofvs:
+                if hasattr(ofv, 'updater_id') or (isinstance(ofv, dict) and 'updater_id' in ofv):
+                    break
+            else:
+                # No updater_id found, need to fetch complete data
+                needs_complete_data = True
+                logging.debug("OFVs lack updater_id, fetching complete observation data...")
+                from inat_to_cams import inaturalist_reader
+                obs_id = self._get_attr(original_observation, 'id')
+                try:
+                    original_observation = inaturalist_reader.INatReader.get_observation_complete_data(obs_id)
+                    ofvs = self._get_attr(original_observation, 'ofvs')
+                except Exception as e:
+                    logging.warning(f"Failed to fetch complete data for observation {obs_id}: {e}")
+        
         if winning_field and ofvs:
             # Find the observation field value for the winning field
             for ofv in ofvs:

@@ -146,9 +146,13 @@ class UpdateRecordedByMigration:
                 # Rule 2: Use the implemented logic (check Date controlled/Status update fields)
                 inat_observation = inaturalist_reader.INatReader.flatten(observation)
                 
+                # Get complete observation data with updater_id for accurate tracking
+                # (pyinaturalist iNatClient doesn't include updater_id in OFVs)
+                observation_complete = inaturalist_reader.INatReader.get_observation_complete_data(inat_ref)
+                
                 from inat_to_cams.translator import INatToCamsTranslator
                 translator_instance = INatToCamsTranslator()
-                visit_date, visit_status, user_id, username = translator_instance.calculate_visit_date_and_status_and_user(inat_observation, observation)
+                visit_date, visit_status, user_id, username = translator_instance.calculate_visit_date_and_status_and_user(inat_observation, observation_complete)
                 logging.debug(f"Using field-based logic for most recent record: {user_id} ({username})")
                 
             else:
