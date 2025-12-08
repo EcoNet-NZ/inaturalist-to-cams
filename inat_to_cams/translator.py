@@ -188,14 +188,8 @@ class INatToCamsTranslator:
             # Find the observation field value for the winning field
             for ofv in original_observation.ofvs:
                 if ofv.name == winning_field and ofv.value:
-                    # Prioritize updater_id/updater.id over user_id/user.id
-                    if hasattr(ofv, 'updater_id') and ofv.updater_id:
-                        recorded_by_user_id = ofv.updater_id
-                        logging.debug(f"Using {winning_field} field updater_id: {recorded_by_user_id}")
-                    elif hasattr(ofv, 'updater') and ofv.updater and hasattr(ofv.updater, 'id'):
-                        recorded_by_user_id = ofv.updater.id
-                        logging.debug(f"Using {winning_field} field updater.id: {recorded_by_user_id}")
-                    elif hasattr(ofv, 'user_id') and ofv.user_id:
+                    # Get user_id from this field (pyinaturalist exposes this)
+                    if hasattr(ofv, 'user_id') and ofv.user_id:
                         recorded_by_user_id = ofv.user_id
                         logging.debug(f"Using {winning_field} field user_id: {recorded_by_user_id}")
                     elif hasattr(ofv, 'user') and ofv.user and hasattr(ofv.user, 'id'):
@@ -203,15 +197,9 @@ class INatToCamsTranslator:
                         logging.debug(f"Using {winning_field} field user.id: {recorded_by_user_id}")
                     break
         
-        # Fallback to observation updater/user if no winning field or no updater found
+        # Fallback to observation user if no winning field or no updater found
         if not recorded_by_user_id:
-            if hasattr(original_observation, 'updater_id') and original_observation.updater_id:
-                recorded_by_user_id = original_observation.updater_id
-                logging.debug(f"Using observation updater_id: {recorded_by_user_id}")
-            elif hasattr(original_observation, 'updater') and original_observation.updater and hasattr(original_observation.updater, 'id'):
-                recorded_by_user_id = original_observation.updater.id
-                logging.debug(f"Using observation updater.id: {recorded_by_user_id}")
-            elif hasattr(original_observation, 'user') and original_observation.user and hasattr(original_observation.user, 'id'):
+            if hasattr(original_observation, 'user') and original_observation.user and hasattr(original_observation.user, 'id'):
                 recorded_by_user_id = original_observation.user.id
                 logging.debug(f"Using observation user_id: {recorded_by_user_id}")
 
@@ -220,20 +208,14 @@ class INatToCamsTranslator:
         if winning_field and recorded_by_user_id and hasattr(original_observation, 'ofvs') and original_observation.ofvs:
             for ofv in original_observation.ofvs:
                 if ofv.name == winning_field and ofv.value:
-                    if hasattr(ofv, 'updater') and ofv.updater and hasattr(ofv.updater, 'login'):
-                        recorded_by_username = ofv.updater.login
-                        logging.debug(f"Using {winning_field} field updater username: {recorded_by_username}")
-                    elif hasattr(ofv, 'user') and ofv.user and hasattr(ofv.user, 'login'):
+                    if hasattr(ofv, 'user') and ofv.user and hasattr(ofv.user, 'login'):
                         recorded_by_username = ofv.user.login
                         logging.debug(f"Using {winning_field} field username: {recorded_by_username}")
                     break
         
-        # Fallback to observation updater/user for username if no field username found
+        # Fallback to observation user for username if no field username found
         if not recorded_by_username and recorded_by_user_id:
-            if hasattr(original_observation, 'updater') and original_observation.updater and hasattr(original_observation.updater, 'login'):
-                recorded_by_username = original_observation.updater.login
-                logging.debug(f"Using observation updater username: {recorded_by_username}")
-            elif hasattr(original_observation, 'user') and original_observation.user and hasattr(original_observation.user, 'login'):
+            if hasattr(original_observation, 'user') and original_observation.user and hasattr(original_observation.user, 'login'):
                 recorded_by_username = original_observation.user.login
                 logging.debug(f"Using observation username: {recorded_by_username}")
 
