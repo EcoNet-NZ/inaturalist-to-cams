@@ -19,6 +19,7 @@ import logging
 import re
 
 from arcgis import geometry
+from pyinaturalist import get_user_by_id
 
 from inat_to_cams import cams_feature, config
 
@@ -146,6 +147,90 @@ class INatToCamsTranslator:
         assert naive_datetime.tzinfo is None
         return naive_datetime
 
+    @staticmethod
+    def _get_attr(obj, attr_name, default=None):
+        """Helper to get attribute from either dict or object"""
+        if isinstance(obj, dict):
+            return obj.get(attr_name, default)
+        else:
+            return getattr(obj, attr_name, default)
+    
+    def _get_user_id_from_item(self, item, context=""):
+        """Extract user_id from an OFV or observation, prioritizing updater_id over user_id"""
+        # Try updater_id first
+        updater_id = self._get_attr(item, 'updater_id')
+        if updater_id:
+            logging.debug(f"Using {context}updater_id: {updater_id}")
+            return updater_id
+        
+        # Try updater.id
+        updater = self._get_attr(item, 'updater')
+        if updater:
+            updater_id = self._get_attr(updater, 'id')
+            if updater_id:
+                logging.debug(f"Using {context}updater.id: {updater_id}")
+                return updater_id
+        
+        # Try user_id
+        user_id = self._get_attr(item, 'user_id')
+        if user_id:
+            logging.debug(f"Using {context}user_id: {user_id}")
+            return user_id
+        
+        # Try user.id
+        user = self._get_attr(item, 'user')
+        if user:
+            user_id = self._get_attr(user, 'id')
+            if user_id:
+                logging.debug(f"Using {context}user.id: {user_id}")
+                return user_id
+        
+        return None
+    
+    def _get_username_for_user_id(self, user_id, original_observation):
+        """Find username for a given user_id by scanning OFVs and observation"""
+        ofvs = self._get_attr(original_observation, 'ofvs')
+        
+        # Scan OFVs to find one where user_id matches (user object refers to user_id, not updater_id)
+        if ofvs:
+            for ofv in ofvs:
+                ofv_user_id = self._get_attr(ofv, 'user_id')
+                if ofv_user_id == user_id:
+                    user = self._get_attr(ofv, 'user')
+                    if user:
+                        login = self._get_attr(user, 'login')
+                        if login:
+                            logging.debug(f"Found username for user_id {user_id}: {login}")
+                            return login
+        
+        # Check observation-level updater
+        updater = self._get_attr(original_observation, 'updater')
+        if updater and self._get_attr(updater, 'id') == user_id:
+            login = self._get_attr(updater, 'login')
+            if login:
+                logging.debug(f"Using observation updater username: {login}")
+                return login
+        
+        # Check observation-level user
+        user = self._get_attr(original_observation, 'user')
+        if user and self._get_attr(user, 'id') == user_id:
+            login = self._get_attr(user, 'login')
+            if login:
+                logging.debug(f"Using observation username: {login}")
+                return login
+        
+        # Final fallback: fetch from API
+        try:
+            user_data = get_user_by_id(user_id)
+            if user_data and 'login' in user_data:
+                username = user_data['login']
+                logging.debug(f"Fetched username from API for user_id {user_id}: {username}")
+                return username
+        except Exception as e:
+            logging.warning(f"Failed to fetch username for user_id {user_id}: {e}")
+        
+        return None
+    
     def calculate_visit_date_and_status_and_user(self, inat_observation, original_observation):
         date_first_observed = inat_observation.observed_on
         date_controlled = inat_observation.date_controlled
@@ -184,57 +269,24 @@ class INatToCamsTranslator:
 
         # Determine user_id from the winning field
         recorded_by_user_id = None
-        if winning_field and hasattr(original_observation, 'ofvs') and original_observation.ofvs:
+        ofvs = self._get_attr(original_observation, 'ofvs')
+        
+        if winning_field and ofvs:
             # Find the observation field value for the winning field
-            for ofv in original_observation.ofvs:
-                if ofv.name == winning_field and ofv.value:
-                    # Prioritize updater_id/updater.id over user_id/user.id
-                    if hasattr(ofv, 'updater_id') and ofv.updater_id:
-                        recorded_by_user_id = ofv.updater_id
-                        logging.debug(f"Using {winning_field} field updater_id: {recorded_by_user_id}")
-                    elif hasattr(ofv, 'updater') and ofv.updater and hasattr(ofv.updater, 'id'):
-                        recorded_by_user_id = ofv.updater.id
-                        logging.debug(f"Using {winning_field} field updater.id: {recorded_by_user_id}")
-                    elif hasattr(ofv, 'user_id') and ofv.user_id:
-                        recorded_by_user_id = ofv.user_id
-                        logging.debug(f"Using {winning_field} field user_id: {recorded_by_user_id}")
-                    elif hasattr(ofv, 'user') and ofv.user and hasattr(ofv.user, 'id'):
-                        recorded_by_user_id = ofv.user.id
-                        logging.debug(f"Using {winning_field} field user.id: {recorded_by_user_id}")
+            for ofv in ofvs:
+                ofv_name = self._get_attr(ofv, 'name')
+                ofv_value = self._get_attr(ofv, 'value')
+                if ofv_name == winning_field and ofv_value:
+                    recorded_by_user_id = self._get_user_id_from_item(ofv, f"{winning_field} field ")
                     break
         
-        # Fallback to observation updater/user if no winning field or no updater found
+        # Fallback to observation-level user if no winning field found
         if not recorded_by_user_id:
-            if hasattr(original_observation, 'updater_id') and original_observation.updater_id:
-                recorded_by_user_id = original_observation.updater_id
-                logging.debug(f"Using observation updater_id: {recorded_by_user_id}")
-            elif hasattr(original_observation, 'updater') and original_observation.updater and hasattr(original_observation.updater, 'id'):
-                recorded_by_user_id = original_observation.updater.id
-                logging.debug(f"Using observation updater.id: {recorded_by_user_id}")
-            elif hasattr(original_observation, 'user') and original_observation.user and hasattr(original_observation.user, 'id'):
-                recorded_by_user_id = original_observation.user.id
-                logging.debug(f"Using observation user_id: {recorded_by_user_id}")
+            recorded_by_user_id = self._get_user_id_from_item(original_observation, "observation ")
 
-        # Also get the username from the winning field
+        # Get the username for the recorded_by_user_id
         recorded_by_username = None
-        if winning_field and recorded_by_user_id and hasattr(original_observation, 'ofvs') and original_observation.ofvs:
-            for ofv in original_observation.ofvs:
-                if ofv.name == winning_field and ofv.value:
-                    if hasattr(ofv, 'updater') and ofv.updater and hasattr(ofv.updater, 'login'):
-                        recorded_by_username = ofv.updater.login
-                        logging.debug(f"Using {winning_field} field updater username: {recorded_by_username}")
-                    elif hasattr(ofv, 'user') and ofv.user and hasattr(ofv.user, 'login'):
-                        recorded_by_username = ofv.user.login
-                        logging.debug(f"Using {winning_field} field username: {recorded_by_username}")
-                    break
-        
-        # Fallback to observation updater/user for username if no field username found
-        if not recorded_by_username and recorded_by_user_id:
-            if hasattr(original_observation, 'updater') and original_observation.updater and hasattr(original_observation.updater, 'login'):
-                recorded_by_username = original_observation.updater.login
-                logging.debug(f"Using observation updater username: {recorded_by_username}")
-            elif hasattr(original_observation, 'user') and original_observation.user and hasattr(original_observation.user, 'login'):
-                recorded_by_username = original_observation.user.login
-                logging.debug(f"Using observation username: {recorded_by_username}")
+        if recorded_by_user_id:
+            recorded_by_username = self._get_username_for_user_id(recorded_by_user_id, original_observation)
 
         return visit_date, visit_status, recorded_by_user_id, recorded_by_username
