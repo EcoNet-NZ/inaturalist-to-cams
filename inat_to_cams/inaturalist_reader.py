@@ -293,3 +293,13 @@ class INatReader:
         if not observation:
             raise ValueError(f'Observation with id {observation_id} not found')
         return observation
+    
+    @staticmethod
+    @retry(delay=5, tries=3)
+    def get_observation_complete_data(observation_id):
+        """Get complete observation data including updater_id fields using raw API"""
+        from pyinaturalist import get_observation
+        observation = get_observation(observation_id)
+        if not observation:
+            raise ValueError(f'Observation with id {observation_id} not found')
+        return observation

@@ -158,8 +158,12 @@ class INatToCamsSynchroniser():
         if not inat_observation:
             return
 
+        # Get complete observation data with updater_id for accurate RecordedBy tracking
+        observation_id = observation.id if hasattr(observation, 'id') else observation.get('id')
+        observation_complete = inaturalist_reader.INatReader.get_observation_complete_data(observation_id)
+
         inat_to_cams_translator = translator.INatToCamsTranslator()
-        cams_feature = inat_to_cams_translator.translate(inat_observation, observation)
+        cams_feature = inat_to_cams_translator.translate(inat_observation, observation_complete)
 
         if not cams_feature:
             return
