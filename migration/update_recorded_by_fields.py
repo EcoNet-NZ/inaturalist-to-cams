@@ -147,6 +147,7 @@ class UpdateRecordedByMigration:
                 inat_observation = inaturalist_reader.INatReader.flatten(observation)
                 
                 # Get complete observation data with updater_id for accurate tracking
+                # (pyinaturalist iNatClient doesn't include updater_id in OFVs)
                 observation_complete = inaturalist_reader.INatReader.get_observation_complete_data(inat_ref)
                 
                 from inat_to_cams.translator import INatToCamsTranslator
