@@ -268,25 +268,26 @@ class INatToCamsTranslator:
                 visit_status = 'GRAY'
 
         # Determine user_id from the winning field
+        # TODO: The updater is not returned by the iNatClient observation we are using, we need to find another way to read the observations
         recorded_by_user_id = None
-        ofvs = self._get_attr(original_observation, 'ofvs')
+        # ofvs = self._get_attr(original_observation, 'ofvs')
         
-        if winning_field and ofvs:
-            # Find the observation field value for the winning field
-            for ofv in ofvs:
-                ofv_name = self._get_attr(ofv, 'name')
-                ofv_value = self._get_attr(ofv, 'value')
-                if ofv_name == winning_field and ofv_value:
-                    recorded_by_user_id = self._get_user_id_from_item(ofv, f"{winning_field} field ")
-                    break
+        # if winning_field and ofvs:
+        #     # Find the observation field value for the winning field
+        #     for ofv in ofvs:
+        #         ofv_name = self._get_attr(ofv, 'name')
+        #         ofv_value = self._get_attr(ofv, 'value')
+        #         if ofv_name == winning_field and ofv_value:
+        #             recorded_by_user_id = self._get_user_id_from_item(ofv, f"{winning_field} field ")
+        #             break
         
-        # Fallback to observation-level user if no winning field found
-        if not recorded_by_user_id:
-            recorded_by_user_id = self._get_user_id_from_item(original_observation, "observation ")
+        # # Fallback to observation-level user if no winning field found
+        # if not recorded_by_user_id:
+        #     recorded_by_user_id = self._get_user_id_from_item(original_observation, "observation ")
 
         # Get the username for the recorded_by_user_id
         recorded_by_username = None
-        if recorded_by_user_id:
-            recorded_by_username = self._get_username_for_user_id(recorded_by_user_id, original_observation)
+        # if recorded_by_user_id:
+        #     recorded_by_username = self._get_username_for_user_id(recorded_by_user_id, original_observation)
 
         return visit_date, visit_status, recorded_by_user_id, recorded_by_username
