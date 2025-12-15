@@ -59541,3 +59541,16 @@
 |Sync Event|Object Id|Species|Status|iNaturalist Id|
 |----------|---------|-------|------|--------------|
 |Visit record updated|**89052**|ClimbingDock|YELLOW|[330689485](https://www.inaturalist.org/observations/330689485)|
+---
+
+# Run [15512](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/085e63a6b9e26adecdda034dc2a03dfaa1333919/checks/20244068747)
+2025-12-16 08:02
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Visit record updated|**89086**|OldMansBeard|YELLOW|[330833446](https://www.inaturalist.org/observations/330833446)|
+|Visit record updated|**89040**|MothPlant|RED|[330633069](https://www.inaturalist.org/observations/330633069)|
+|Visit record updated|**89041**|MothPlant|RED|[330633790](https://www.inaturalist.org/observations/330633790)|
+|Visit record updated|**89042**|MothPlant|RED|[330633894](https://www.inaturalist.org/observations/330633894)|
+|Visit record updated|**89049**|MothPlant|RED|[330648760](https://www.inaturalist.org/observations/330648760)|
+|Visit record updated|**89050**|MothPlant|RED|[330648821](https://www.inaturalist.org/observations/330648821)|
