@@ -58643,3 +58643,858 @@
 |Sync Event|Object Id|Species|Status|iNaturalist Id|
 |----------|---------|-------|------|--------------|
 |Visit record updated|**88840**|OldMansBeard|YELLOW|[329952638](https://www.inaturalist.org/observations/329952638)|
+---
+
+# Run [15351](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/d736f61a15b4b58dcff26a4b734885fff91d520d/checks/20040936665)
+2025-12-09 08:56
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Visit record added|**88815**|OldMansBeard|YELLOW|[329903986](https://www.inaturalist.org/observations/329903986)|
+|New weed|**88842**|BlueMorningGlory|RED|[330013167](https://www.inaturalist.org/observations/330013167)|
+|Visit record updated|**88789**|MothPlant|RED|[329879248](https://www.inaturalist.org/observations/329879248)|
+---
+
+# Run [15352](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/397fac066ff3779a2d786322b6264af30fbd0232/checks/20042520488)
+2025-12-09 09:56
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**88844**|OldMansBeard|RED|[330019510](https://www.inaturalist.org/observations/330019510)|
+---
+
+# Run [15355](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/c139f3d96b141a86bc49b5c91b9a6eab0a0a7ff7/checks/20046844193)
+2025-12-09 12:56
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Visit record updated|**88842**|BlueMorningGlory|RED|[330013167](https://www.inaturalist.org/observations/330013167)|
+---
+
+# Run [15356](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/db43d8b0119bfb1aa470700d5f9fa740b43476bd/checks/20049777070)
+2025-12-09 15:28
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Visit record updated|**88844**|OldMansBeard|RED|[330019510](https://www.inaturalist.org/observations/330019510)|
+|New weed|**88858**|OldMansBeard|RED|[330050625](https://www.inaturalist.org/observations/330050625)|
+---
+
+# Run [15359](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/b48e3867a407b5adc74c5199b89e0b4836ec0a63/checks/20052450828)
+2025-12-09 17:58
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Visit record updated|**88858**|OldMansBeard|RED|[330050625](https://www.inaturalist.org/observations/330050625)|
+---
+
+# Run [15360](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/3f4efb895c7dc11070d1334bd6d74b0a0c255c8c/checks/20053527668)
+2025-12-09 18:56
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**88873**|OldMansBeard|RED|[330069806](https://www.inaturalist.org/observations/330069806)|
+|New weed|**88874**|BlueMorningGlory|RED|[330068892](https://www.inaturalist.org/observations/330068892)|
+|New weed|**88875**|BlueMorningGlory|RED|[330068898](https://www.inaturalist.org/observations/330068898)|
+|New weed|**88876**|BlueMorningGlory|RED|[330068929](https://www.inaturalist.org/observations/330068929)|
+---
+
+# Run [15361](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/14e60be899cb8442f7d8a9a8e3724a29a18f59cf/checks/20054835939)
+2025-12-09 20:01
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**88879**|OldMansBeard|RED|[330069079](https://www.inaturalist.org/observations/330069079)|
+|Visit record updated|**88873**|OldMansBeard|RED|[330069806](https://www.inaturalist.org/observations/330069806)|
+|New weed|**88880**|OldMansBeard|RED|[330074766](https://www.inaturalist.org/observations/330074766)|
+|Visit record updated|**88842**|BlueMorningGlory|RED|[330013167](https://www.inaturalist.org/observations/330013167)|
+|Visit record updated|**88874**|BlueMorningGlory|RED|[330068892](https://www.inaturalist.org/observations/330068892)|
+|Visit record updated|**88875**|BlueMorningGlory|RED|[330068898](https://www.inaturalist.org/observations/330068898)|
+|Visit record updated|**88876**|BlueMorningGlory|RED|[330068929](https://www.inaturalist.org/observations/330068929)|
+---
+
+# Run [15362](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/37cf7a5169081d331c8f8cb23b1478f01e032ca3/checks/20056049600)
+2025-12-09 20:56
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Visit record updated|**88880**|OldMansBeard|RED|[330074766](https://www.inaturalist.org/observations/330074766)|
+|Visit record updated|**87736**|MothPlant|RED|[322144626](https://www.inaturalist.org/observations/322144626)|
+|Visit record updated|**88833**|MothPlant|RED|[329944441](https://www.inaturalist.org/observations/329944441)|
+---
+
+# Run [15363](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/4e9b4584da96eaf15d67409ee7601a7397accc35/checks/20057705753)
+2025-12-09 22:01
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Visit record updated|**88879**|OldMansBeard|RED|[330069079](https://www.inaturalist.org/observations/330069079)|
+---
+
+# Run [15364](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/4beb3bb3dfdf30fb1def5827789b1f24c8ce2877/checks/20059293337)
+2025-12-09 22:56
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**88883**|WoollyNightshade|RED|[330084668](https://www.inaturalist.org/observations/330084668)|
+---
+
+# Run [15365](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/20108a56a0cfb48560f655c0fe22ad735ae7fd6d/checks/20061012734)
+2025-12-09 23:57
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Visit record updated|**88883**|WoollyNightshade|RED|[330084668](https://www.inaturalist.org/observations/330084668)|
+---
+
+# Run [15368](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/7e519f0f2049cafe67bfc2a22c7f5c792f7feb9b/checks/20066023005)
+2025-12-10 02:59
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Visit record updated|**88514**|CathedralBells|RED|[328244197](https://www.inaturalist.org/observations/328244197)|
+---
+
+# Run [15371](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/2dc6f14e8f63563e15becc88f8cee2f9a8660381/checks/20071770171)
+2025-12-10 06:02
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**88884**|OldMansBeard|RED|[330118806](https://www.inaturalist.org/observations/330118806)|
+|New weed|**88885**|OldMansBeard|RED|[330118897](https://www.inaturalist.org/observations/330118897)|
+---
+
+# Run [15374](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/6acaa4d7c420eef78238a6b3ff1b04ab6d50e81c/checks/20076633371)
+2025-12-10 08:56
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**88886**|WoollyNightshade|RED|[330131924](https://www.inaturalist.org/observations/330131924)|
+|New weed|**88887**|WoollyNightshade|RED|[330131989](https://www.inaturalist.org/observations/330131989)|
+---
+
+# Run [15375](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/6f3dfa67fb485a8d96a76ba0ccdc0982974fc95e/checks/20078224367)
+2025-12-10 09:55
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Visit record updated|**88601**|BananaPassionfruit|RED|[329175800](https://www.inaturalist.org/observations/329175800)|
+|Weed record updated, Visit record added|**63592**|MothPlant|RED|[104395070](https://www.inaturalist.org/observations/104395070)|
+---
+
+# Run [15376](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/4dfc21caf26403dce78d976a47bf92745ded2765/checks/20079743180)
+2025-12-10 10:56
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Visit record updated|**88886**|WoollyNightshade|RED|[330131924](https://www.inaturalist.org/observations/330131924)|
+|Visit record updated|**88789**|MothPlant|RED|[329879248](https://www.inaturalist.org/observations/329879248)|
+---
+
+# Run [15377](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/b3bf65eb6580bb1cdae4cfc09b0f0917b6d7272f/checks/20081152242)
+2025-12-10 11:55
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Visit record updated|**88884**|OldMansBeard|RED|[330118806](https://www.inaturalist.org/observations/330118806)|
+|Visit record updated|**88885**|OldMansBeard|RED|[330118897](https://www.inaturalist.org/observations/330118897)|
+|New weed|**88892**|OldMansBeard|RED|[330153088](https://www.inaturalist.org/observations/330153088)|
+---
+
+# Run [15378](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/ee7778c72c396b7d2b96676637963b4804f3f1d2/checks/20082373057)
+2025-12-10 12:55
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Visit record updated|**88815**|OldMansBeard|YELLOW|[329903986](https://www.inaturalist.org/observations/329903986)|
+|New weed|**88893**|OldMansBeard|RED|[330159005](https://www.inaturalist.org/observations/330159005)|
+|New weed|**88894**|BluePassionFlower|RED|[330158148](https://www.inaturalist.org/observations/330158148)|
+---
+
+# Run [15379](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/bd929631df9daa5b01565a50162a1a04b4443e70/checks/20085267188)
+2025-12-10 15:30
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Weed record updated, Visit record added|**58771**|OldMansBeard|GREEN|[142494135](https://www.inaturalist.org/observations/142494135)|
+|Weed record updated, Visit record added|**59624**|OldMansBeard|YELLOW|[148951511](https://www.inaturalist.org/observations/148951511)|
+|Weed record updated, Visit record added|**77600**|OldMansBeard|YELLOW|[251418585](https://www.inaturalist.org/observations/251418585)|
+|Weed record updated, Visit record added|**77601**|OldMansBeard|GREEN|[251418646](https://www.inaturalist.org/observations/251418646)|
+|Weed record updated, Visit record added|**84733**|OldMansBeard|YELLOW|[281634293](https://www.inaturalist.org/observations/281634293)|
+|Visit record updated|**88892**|OldMansBeard|RED|[330153088](https://www.inaturalist.org/observations/330153088)|
+|Visit record updated|**88894**|BluePassionFlower|RED|[330158148](https://www.inaturalist.org/observations/330158148)|
+---
+
+# Run [15380](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/cc151bea99879c74253a2e12faf385a5529ef2f3/checks/20086603158)
+2025-12-10 16:48
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Weed record updated, Visit record added|**61326**|OldMansBeard|YELLOW|[162063757](https://www.inaturalist.org/observations/162063757)|
+|Weed record updated, Visit record added|**65571**|OldMansBeard|YELLOW|[193529437](https://www.inaturalist.org/observations/193529437)|
+|Visit record added|**79797**|OldMansBeard|YELLOW|[260249846](https://www.inaturalist.org/observations/260249846)|
+|New weed|**88906**|WoollyNightshade|RED|[330175559](https://www.inaturalist.org/observations/330175559)|
+---
+
+# Run [15381](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/a2882f36e09341f4b0b6e2048310311c34b527f2/checks/20087206957)
+2025-12-10 17:21
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**88907**|OldMansBeard|RED|[330169809](https://www.inaturalist.org/observations/330169809)|
+|Visit record updated|**88906**|WoollyNightshade|RED|[330175559](https://www.inaturalist.org/observations/330175559)|
+|New weed|**88908**|WoollyNightshade|RED|[330183662](https://www.inaturalist.org/observations/330183662)|
+|New weed|**88909**|WoollyNightshade|RED|[330183737](https://www.inaturalist.org/observations/330183737)|
+|New weed|**88910**|WoollyNightshade|RED|[330184422](https://www.inaturalist.org/observations/330184422)|
+---
+
+# Run [15383](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/64f20c70d25afda820f27a602ade0860a108a492/checks/20088876308)
+2025-12-10 18:56
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**88911**|BluePassionFlower|RED|[330189191](https://www.inaturalist.org/observations/330189191)|
+|New weed|**88912**|WoollyNightshade|RED|[330189514](https://www.inaturalist.org/observations/330189514)|
+---
+
+# Run [15384](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/ea8d15d5fdffdd8f27a42449c513d322627b7c1b/checks/20090179119)
+2025-12-10 20:02
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Weed record updated, Visit record updated|**73675**|CathedralBells|RED|[202366406](https://www.inaturalist.org/observations/202366406)|
+---
+
+# Run [15385](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/239ade0f06e876ef788264c5932c857663d88108/checks/20091363865)
+2025-12-10 20:55
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Weed record updated, Visit record added|**57043**|OldMansBeard|YELLOW|[3239470](https://www.inaturalist.org/observations/3239470)|
+|Weed record updated, Visit record added|**59623**|OldMansBeard|YELLOW|[148951221](https://www.inaturalist.org/observations/148951221)|
+|Weed record updated, Visit record added|**61325**|OldMansBeard|YELLOW|[162063086](https://www.inaturalist.org/observations/162063086)|
+|Weed record updated, Visit record added|**61875**|OldMansBeard|YELLOW|[165405373](https://www.inaturalist.org/observations/165405373)|
+|Weed record updated, Visit record added|**62023**|OldMansBeard|GREEN|[166933647](https://www.inaturalist.org/observations/166933647)|
+|Weed record updated, Visit record added|**62027**|OldMansBeard|GREEN|[166958238](https://www.inaturalist.org/observations/166958238)|
+|Weed record updated, Visit record added|**62291**|OldMansBeard|GRAY|[171291207](https://www.inaturalist.org/observations/171291207)|
+|Weed record updated, Visit record added|**65490**|OldMansBeard|YELLOW|[192997246](https://www.inaturalist.org/observations/192997246)|
+|Weed record updated|**77054**|OldMansBeard|PURPLE|[248031484](https://www.inaturalist.org/observations/248031484)|
+|New weed|**88914**|OldMansBeard|RED|[330197127](https://www.inaturalist.org/observations/330197127)|
+---
+
+# Run [15386](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/ab878a43707b7a21f63bba782eeaa86cb37b3976/checks/20092987404)
+2025-12-10 22:01
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Weed record updated, Visit record updated|**57334**|OldMansBeard|GREEN|[38876812](https://www.inaturalist.org/observations/38876812)|
+|Weed record updated, Visit record added|**58290**|OldMansBeard|YELLOW|[108347343](https://www.inaturalist.org/observations/108347343)|
+|Visit record updated|**88893**|OldMansBeard|RED|[330159005](https://www.inaturalist.org/observations/330159005)|
+|New weed|**88918**|OldMansBeard|RED|[330203264](https://www.inaturalist.org/observations/330203264)|
+---
+
+# Run [15387](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/ece7d27bd465cedfd3f92125c882be362e6dcffb/checks/20094512437)
+2025-12-10 22:57
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Visit record updated|**88918**|OldMansBeard|RED|[330203264](https://www.inaturalist.org/observations/330203264)|
+---
+
+# Run [15388](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/511e843d518c113b97bb6fb7d913515a2be8922b/checks/20096206213)
+2025-12-10 23:58
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**88919**|OldMansBeard|RED|[330210130](https://www.inaturalist.org/observations/330210130)|
+---
+
+# Run [15389](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/7de86a5c8511e945dfbdac421181962128944952/checks/20097723710)
+2025-12-11 00:56
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**88920**|OTHER|RED|[329894516](https://www.inaturalist.org/observations/329894516)|
+---
+
+# Run [15395](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/43f0b8975ad89a8c4672a495868aa06478dab16f/checks/20108302539)
+2025-12-11 06:57
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Weed record updated, Visit record added|**65490**|OldMansBeard|RED|[192997246](https://www.inaturalist.org/observations/192997246)|
+|Visit record added|**77054**|OldMansBeard|GREEN|[248031484](https://www.inaturalist.org/observations/248031484)|
+|Weed record updated|**83448**|OldMansBeard|PURPLE|[271672774](https://www.inaturalist.org/observations/271672774)|
+---
+
+# Run [15396](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/27e95b2685fce63170da1a937afea502f80cbb7c/checks/20110007545)
+2025-12-11 08:00
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**88921**|OTHER|RED|[329735195](https://www.inaturalist.org/observations/329735195)|
+---
+
+# Run [15397](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/4667253c31acc04f975543a4721533480410ff5f/checks/20111486848)
+2025-12-11 08:56
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Weed record updated, Visit record added|**57191**|OldMansBeard|RED|[11283128](https://www.inaturalist.org/observations/11283128)|
+|Weed record updated, Visit record added|**58227**|OldMansBeard|RED|[107458006](https://www.inaturalist.org/observations/107458006)|
+|Visit record added|**83448**|OldMansBeard|YELLOW|[271672774](https://www.inaturalist.org/observations/271672774)|
+|New weed|**88922**|BananaPassionfruit|RED|[330256576](https://www.inaturalist.org/observations/330256576)|
+---
+
+# Run [15398](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/e907ee883cd38d90e0f26faca1b3dcc930923010/checks/20113064276)
+2025-12-11 09:59
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Visit record updated|**67346**|OldMansBeard|RED|[198963243](https://www.inaturalist.org/observations/198963243)|
+|Visit record updated|**87461**|OldMansBeard|ORANGE|[319639578](https://www.inaturalist.org/observations/319639578)|
+|Visit record updated|**88884**|OldMansBeard|RED|[330118806](https://www.inaturalist.org/observations/330118806)|
+|Visit record updated|**88893**|OldMansBeard|RED|[330159005](https://www.inaturalist.org/observations/330159005)|
+|New weed|**88923**|OldMansBeard|RED|[330255195](https://www.inaturalist.org/observations/330255195)|
+|New weed|**88924**|OldMansBeard|RED|[330260433](https://www.inaturalist.org/observations/330260433)|
+|New weed|**88925**|OldMansBeard|RED|[330261174](https://www.inaturalist.org/observations/330261174)|
+|New weed|**88926**|OldMansBeard|YELLOW|[330261964](https://www.inaturalist.org/observations/330261964)|
+---
+
+# Run [15399](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/f082f9f5109e3dc34ebff4e163c5b5639cb7fc4a/checks/20114485269)
+2025-12-11 10:56
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Weed record updated, Visit record added|**77061**|OldMansBeard|GREEN|[248143275](https://www.inaturalist.org/observations/248143275)|
+|Visit record updated|**88923**|OldMansBeard|RED|[330255195](https://www.inaturalist.org/observations/330255195)|
+|New weed|**88929**|OldMansBeard|YELLOW|[330267077](https://www.inaturalist.org/observations/330267077)|
+---
+
+# Run [15401](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/d396669655928d4c6fd54ea9e1214785053e6750/checks/20117111969)
+2025-12-11 12:55
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**88932**|OldMansBeard|RED|[330279064](https://www.inaturalist.org/observations/330279064)|
+---
+
+# Run [15402](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/c302a21a5f7e94a6587d856f19a76705dafaf570/checks/20119985164)
+2025-12-11 15:33
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**88934**|OldMansBeard|RED|[330283381](https://www.inaturalist.org/observations/330283381)|
+|Weed record updated, Visit record updated|**83969**|WoollyNightshade|RED|[276510895](https://www.inaturalist.org/observations/276510895)|
+|New weed|**88935**|WoollyNightshade|RED|[330288715](https://www.inaturalist.org/observations/330288715)|
+---
+
+# Run [15405](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/69fe267b1e45b3d7d78344e0b88d68aa0f6d8146/checks/20122525811)
+2025-12-11 18:02
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Visit record updated|**88929**|OldMansBeard|YELLOW|[330267077](https://www.inaturalist.org/observations/330267077)|
+|Visit record updated|**88932**|OldMansBeard|RED|[330279064](https://www.inaturalist.org/observations/330279064)|
+|New weed|**88937**|OldMansBeard|RED|[330306542](https://www.inaturalist.org/observations/330306542)|
+|Visit record updated|**88935**|WoollyNightshade|RED|[330288715](https://www.inaturalist.org/observations/330288715)|
+---
+
+# Run [15406](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/2bd535cf2ebacff259851828b11d7166241e12b0/checks/20123501310)
+2025-12-11 18:56
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**88939**|BlueMorningGlory|RED|[330309797](https://www.inaturalist.org/observations/330309797)|
+|New weed|**88940**|WoollyNightshade|RED|[330309781](https://www.inaturalist.org/observations/330309781)|
+---
+
+# Run [15407](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/043bd086b2e1faa3523380372c16b858c7a72dd8/checks/20124784718)
+2025-12-11 20:02
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Visit record updated|**88937**|OldMansBeard|RED|[330306542](https://www.inaturalist.org/observations/330306542)|
+|Visit record updated|**88939**|BlueMorningGlory|RED|[330309797](https://www.inaturalist.org/observations/330309797)|
+|New weed|**88946**|MothPlant|RED|[330313968](https://www.inaturalist.org/observations/330313968)|
+---
+
+# Run [15408](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/4b3b0178bc4e3ab311f78d1f3a81f5c141b21ce0/checks/20125948740)
+2025-12-11 20:56
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Visit record added|**78282**|OldMansBeard|ORANGE|[255651592](https://www.inaturalist.org/observations/255651592)|
+|Visit record added|**79659**|OldMansBeard|ORANGE|[259926854](https://www.inaturalist.org/observations/259926854)|
+|New weed|**88953**|WoollyNightshade|RED|[330318038](https://www.inaturalist.org/observations/330318038)|
+---
+
+# Run [15409](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/bef91f2e176b4901aafc21544ebce3a85a7df2ba/checks/20127550825)
+2025-12-11 22:02
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Visit record updated|**88929**|OldMansBeard|YELLOW|[330267077](https://www.inaturalist.org/observations/330267077)|
+---
+
+# Run [15420](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/80a1f6e1af31f4ffd7b1b74152b10635b0ba822e/checks/20145601381)
+2025-12-12 08:56
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Visit record updated|**83448**|OldMansBeard|YELLOW|[271672774](https://www.inaturalist.org/observations/271672774)|
+|New weed|**88955**|OldMansBeard|RED|[330372053](https://www.inaturalist.org/observations/330372053)|
+|New weed|**88956**|WoollyNightshade|RED|[330372972](https://www.inaturalist.org/observations/330372972)|
+---
+
+# Run [15421](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/2717a9b46b38ef2ac7318b11882e2de02443a717/checks/20147146608)
+2025-12-12 09:55
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Visit record updated|**88924**|OldMansBeard|RED|[330260433](https://www.inaturalist.org/observations/330260433)|
+|Visit record updated|**88925**|OldMansBeard|RED|[330261174](https://www.inaturalist.org/observations/330261174)|
+|Visit record updated|**88926**|OldMansBeard|YELLOW|[330261964](https://www.inaturalist.org/observations/330261964)|
+|Visit record updated|**88929**|OldMansBeard|YELLOW|[330267077](https://www.inaturalist.org/observations/330267077)|
+|Visit record updated|**88932**|OldMansBeard|RED|[330279064](https://www.inaturalist.org/observations/330279064)|
+---
+
+# Run [15422](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/86ea657a5f42a0eb7f8acaac04e4b9172ea0d65c/checks/20148647785)
+2025-12-12 10:56
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Visit record updated|**88934**|OldMansBeard|RED|[330283381](https://www.inaturalist.org/observations/330283381)|
+|New weed|**88957**|MothPlant|RED|[330380165](https://www.inaturalist.org/observations/330380165)|
+|New weed|**88958**|MothPlant|RED|[330381600](https://www.inaturalist.org/observations/330381600)|
+---
+
+# Run [15424](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/b8367efa66550eef07597103ede71650dc6cc98a/checks/20151302987)
+2025-12-12 12:56
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Visit record updated|**88955**|OldMansBeard|RED|[330372053](https://www.inaturalist.org/observations/330372053)|
+---
+
+# Run [15426](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/cb3df05681d3b364a42ddccc3a6c06a78cdae669/checks/20155616081)
+2025-12-12 16:49
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**88965**|OldMansBeard|RED|[330419966](https://www.inaturalist.org/observations/330419966)|
+|New weed|**88966**|OldMansBeard|RED|[330419991](https://www.inaturalist.org/observations/330419991)|
+---
+
+# Run [15429](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/2a6bf1bf81b336aecfe385b6f6a0e9d5ee35bf64/checks/20157787800)
+2025-12-12 18:56
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Weed record updated, Visit record added|**56675**|OldMansBeard|RED|[2860021](https://www.inaturalist.org/observations/2860021)|
+|Weed record updated, Visit record added|**56704**|OldMansBeard|RED|[2869890](https://www.inaturalist.org/observations/2869890)|
+|Weed record updated, Visit record added|**69951**|OldMansBeard|YELLOW|[219014619](https://www.inaturalist.org/observations/219014619)|
+|Visit record updated|**88965**|OldMansBeard|RED|[330419966](https://www.inaturalist.org/observations/330419966)|
+|Visit record updated|**88956**|WoollyNightshade|RED|[330372972](https://www.inaturalist.org/observations/330372972)|
+|Visit record updated|**88957**|MothPlant|RED|[330380165](https://www.inaturalist.org/observations/330380165)|
+---
+
+# Run [15430](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/30de34c75281fd3cb9b2f14ecb14b62a3bee2df6/checks/20159030175)
+2025-12-12 20:02
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Visit record updated|**88940**|WoollyNightshade|RED|[330309781](https://www.inaturalist.org/observations/330309781)|
+---
+
+# Run [15431](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/ce0b1d7cae882a2b126f6941bd40d53db09b37ee/checks/20160126285)
+2025-12-12 20:55
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**88968**|MothPlant|RED|[330437552](https://www.inaturalist.org/observations/330437552)|
+---
+
+# Run [15434](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/3979580c27ea2cd5df972c7d11916468610359af/checks/20164571333)
+2025-12-12 23:57
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**88969**|BananaPassionfruit|RED|[330447933](https://www.inaturalist.org/observations/330447933)|
+---
+
+# Run [15440](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/92962de45788b9c4e2e12b9f4e8cca34d8a21232/checks/20173886607)
+2025-12-13 05:57
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Visit record updated|**88968**|MothPlant|RED|[330437552](https://www.inaturalist.org/observations/330437552)|
+---
+
+# Run [15443](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/91f9f4412de6ee72df0c9bea7218f2ef5b02d6c0/checks/20178266104)
+2025-12-13 08:56
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**88970**|BlueMorningGlory|RED|[330491218](https://www.inaturalist.org/observations/330491218)|
+|Visit record added|**79562**|MothPlant|RED|[259737907](https://www.inaturalist.org/observations/259737907)|
+---
+
+# Run [15444](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/3c501188a54f8ec7acded70c9118d8a4c5dec4c9/checks/20179641054)
+2025-12-13 09:56
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Visit record updated|**88970**|BlueMorningGlory|RED|[330491218](https://www.inaturalist.org/observations/330491218)|
+|Visit record updated|**87776**|WoollyNightshade|RED|[322640316](https://www.inaturalist.org/observations/322640316)|
+|Weed record updated, Visit record updated|**86221**|Loquat|RED|[302212437](https://www.inaturalist.org/observations/302212437)|
+---
+
+# Run [15446](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/137ddf0136252578180ea1532299529e2f3a6af0/checks/20182179828)
+2025-12-13 11:56
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**88972**|BananaPassionfruit|RED|[330504968](https://www.inaturalist.org/observations/330504968)|
+---
+
+# Run [15448](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/ceeb3411ffbd957f2611bd4b6de5fb911842403c/checks/20185328130)
+2025-12-13 15:25
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**88974**|OldMansBeard|RED|[330523237](https://www.inaturalist.org/observations/330523237)|
+|New weed|**88975**|WoollyNightshade|RED|[330521981](https://www.inaturalist.org/observations/330521981)|
+|New weed|**88976**|WoollyNightshade|RED|[330522158](https://www.inaturalist.org/observations/330522158)|
+|New weed|**88977**|MothPlant|RED|[330518602](https://www.inaturalist.org/observations/330518602)|
+|New weed|**88978**|MothPlant|RED|[330526067](https://www.inaturalist.org/observations/330526067)|
+---
+
+# Run [15449](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/a5f60854aeb08666a771de3d19fe59560c141364/checks/20186240590)
+2025-12-13 16:41
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Visit record updated|**88975**|WoollyNightshade|RED|[330521981](https://www.inaturalist.org/observations/330521981)|
+---
+
+# Run [15451](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/30e338016388fe82c86a81b6743a7395f8177b6c/checks/20187131753)
+2025-12-13 17:57
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Visit record updated|**88974**|OldMansBeard|RED|[330523237](https://www.inaturalist.org/observations/330523237)|
+|New weed|**88988**|WoollyNightshade|RED|[330540537](https://www.inaturalist.org/observations/330540537)|
+|Visit record updated|**88719**|MothPlant|RED|[329617811](https://www.inaturalist.org/observations/329617811)|
+---
+
+# Run [15452](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/b8ad71c1e4f2cea75f5b170f1354dcfd0853398f/checks/20187793224)
+2025-12-13 18:55
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**88993**|OldMansBeard|RED|[330545169](https://www.inaturalist.org/observations/330545169)|
+|New weed|**88994**|OldMansBeard|RED|[330545196](https://www.inaturalist.org/observations/330545196)|
+|Visit record updated|**88978**|MothPlant|RED|[330526067](https://www.inaturalist.org/observations/330526067)|
+---
+
+# Run [15453](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/2cbea10a5f5027267b454d8d7095cabace61fde5/checks/20188489992)
+2025-12-13 19:58
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Visit record updated|**88993**|OldMansBeard|RED|[330545169](https://www.inaturalist.org/observations/330545169)|
+---
+
+# Run [15456](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/4e96bd971d79b07c54e63a4c60c96e0fd98d06c4/checks/20190409479)
+2025-12-13 22:56
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**88995**|OldMansBeard|RED|[330559486](https://www.inaturalist.org/observations/330559486)|
+---
+
+# Run [15464](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/ea13323a802d19c7b938fb4a6a00130976eb450a/checks/20195717653)
+2025-12-14 06:55
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**88996**|OldMansBeard|RED|[330602020](https://www.inaturalist.org/observations/330602020)|
+---
+
+# Run [15465](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/2de2fa7c72ea46d17a439b7cd82dfe307a44a380/checks/20196413763)
+2025-12-14 07:56
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Visit record updated|**88996**|OldMansBeard|RED|[330602020](https://www.inaturalist.org/observations/330602020)|
+|Visit record updated|**88743**|Elaeagnus|YELLOW|[329641060](https://www.inaturalist.org/observations/329641060)|
+|Weed record updated, Visit record updated|**88749**|OTHER|RED|[329648501](https://www.inaturalist.org/observations/329648501)|
+|Weed record updated, Visit record updated|**88921**|AppleOfSodom|RED|[329735195](https://www.inaturalist.org/observations/329735195)|
+|Weed record updated, Visit record updated|**88750**|OTHER|RED|[329739787](https://www.inaturalist.org/observations/329739787)|
+---
+
+# Run [15467](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/314925f1d394fdf13cd6e3fe5fe7fff5d3fe060a/checks/20197734625)
+2025-12-14 09:56
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**89000**|WoollyNightshade|RED|[330623763](https://www.inaturalist.org/observations/330623763)|
+|New weed|**89001**|WoollyNightshade|RED|[330623776](https://www.inaturalist.org/observations/330623776)|
+|New weed|**89002**|WoollyNightshade|RED|[330623799](https://www.inaturalist.org/observations/330623799)|
+|New weed|**89003**|WoollyNightshade|RED|[330623821](https://www.inaturalist.org/observations/330623821)|
+|New weed|**89004**|WoollyNightshade|RED|[330623866](https://www.inaturalist.org/observations/330623866)|
+|New weed|**89005**|WoollyNightshade|RED|[330623882](https://www.inaturalist.org/observations/330623882)|
+|New weed|**89006**|WoollyNightshade|RED|[330623899](https://www.inaturalist.org/observations/330623899)|
+|New weed|**89007**|WoollyNightshade|RED|[330623916](https://www.inaturalist.org/observations/330623916)|
+|New weed|**89008**|WoollyNightshade|RED|[330623949](https://www.inaturalist.org/observations/330623949)|
+|New weed|**89009**|WoollyNightshade|RED|[330623961](https://www.inaturalist.org/observations/330623961)|
+|New weed|**89010**|WoollyNightshade|RED|[330624179](https://www.inaturalist.org/observations/330624179)|
+|New weed|**89011**|WoollyNightshade|RED|[330624226](https://www.inaturalist.org/observations/330624226)|
+|New weed|**89012**|WoollyNightshade|RED|[330624237](https://www.inaturalist.org/observations/330624237)|
+|New weed|**89013**|WoollyNightshade|RED|[330624254](https://www.inaturalist.org/observations/330624254)|
+|New weed|**89014**|WoollyNightshade|RED|[330624410](https://www.inaturalist.org/observations/330624410)|
+|New weed|**89015**|WoollyNightshade|RED|[330624448](https://www.inaturalist.org/observations/330624448)|
+|New weed|**89016**|MothPlant|RED|[330623788](https://www.inaturalist.org/observations/330623788)|
+|New weed|**89017**|MothPlant|RED|[330623995](https://www.inaturalist.org/observations/330623995)|
+|New weed|**89018**|MothPlant|RED|[330624015](https://www.inaturalist.org/observations/330624015)|
+|New weed|**89019**|MothPlant|RED|[330624063](https://www.inaturalist.org/observations/330624063)|
+---
+
+# Run [15468](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/5ada9c749366b0af3257360e7701ea7a7de2ab75/checks/20198405061)
+2025-12-14 10:56
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**89025**|BlueMorningGlory|RED|[330631153](https://www.inaturalist.org/observations/330631153)|
+|Visit record updated|**89007**|WoollyNightshade|RED|[330623916](https://www.inaturalist.org/observations/330623916)|
+|Visit record updated|**89009**|WoollyNightshade|RED|[330623961](https://www.inaturalist.org/observations/330623961)|
+|Visit record updated|**89010**|WoollyNightshade|RED|[330624179](https://www.inaturalist.org/observations/330624179)|
+|New weed|**89026**|WoollyNightshade|RED|[330624210](https://www.inaturalist.org/observations/330624210)|
+|Visit record updated|**89012**|WoollyNightshade|RED|[330624237](https://www.inaturalist.org/observations/330624237)|
+|New weed|**89027**|WoollyNightshade|RED|[330625557](https://www.inaturalist.org/observations/330625557)|
+|New weed|**89028**|WoollyNightshade|RED|[330625654](https://www.inaturalist.org/observations/330625654)|
+|New weed|**89029**|WoollyNightshade|RED|[330625673](https://www.inaturalist.org/observations/330625673)|
+|New weed|**89030**|WoollyNightshade|RED|[330625705](https://www.inaturalist.org/observations/330625705)|
+|New weed|**89031**|WoollyNightshade|RED|[330626340](https://www.inaturalist.org/observations/330626340)|
+|New weed|**89032**|WoollyNightshade|RED|[330629359](https://www.inaturalist.org/observations/330629359)|
+|New weed|**89033**|WoollyNightshade|RED|[330629511](https://www.inaturalist.org/observations/330629511)|
+|New weed|**89034**|MothPlant|RED|[330625624](https://www.inaturalist.org/observations/330625624)|
+|New weed|**89035**|MothPlant|RED|[330625720](https://www.inaturalist.org/observations/330625720)|
+---
+
+# Run [15469](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/7b150d7a49effeb9561ac1c1461593702f6258b0/checks/20199052435)
+2025-12-14 11:56
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Visit record added|**65582**|OldMansBeard|YELLOW|[192394082](https://www.inaturalist.org/observations/192394082)|
+|New weed|**89039**|BlueMorningGlory|RED|[330636372](https://www.inaturalist.org/observations/330636372)|
+|New weed|**89040**|MothPlant|RED|[330633069](https://www.inaturalist.org/observations/330633069)|
+|New weed|**89041**|MothPlant|RED|[330633790](https://www.inaturalist.org/observations/330633790)|
+|New weed|**89042**|MothPlant|RED|[330633894](https://www.inaturalist.org/observations/330633894)|
+|New weed|**89043**|MothPlant|RED|[330638075](https://www.inaturalist.org/observations/330638075)|
+---
+
+# Run [15470](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/325481801c522d5c7a89bf92fb7741f32659c406/checks/20199688314)
+2025-12-14 12:56
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**89044**|WoollyNightshade|RED|[330643664](https://www.inaturalist.org/observations/330643664)|
+---
+
+# Run [15471](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/ef9d4f437ff02f8d94a5357fe74e0df840a74b81/checks/20201585481)
+2025-12-14 15:50
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Weed record updated, Visit record added|**57337**|OldMansBeard|YELLOW|[38953904](https://www.inaturalist.org/observations/38953904)|
+|Visit record updated|**89044**|WoollyNightshade|RED|[330643664](https://www.inaturalist.org/observations/330643664)|
+|Weed record updated, Visit record updated|**89043**|MothPlant|RED|[330638075](https://www.inaturalist.org/observations/330638075)|
+|New weed|**89049**|MothPlant|RED|[330648760](https://www.inaturalist.org/observations/330648760)|
+|New weed|**89050**|MothPlant|RED|[330648821](https://www.inaturalist.org/observations/330648821)|
+---
+
+# Run [15473](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/65c5e78ccab5f48b7ec7c82a967d789e54e9adf3/checks/20202977650)
+2025-12-14 18:00
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Visit record updated|**89025**|BlueMorningGlory|RED|[330631153](https://www.inaturalist.org/observations/330631153)|
+|Visit record updated|**89039**|BlueMorningGlory|RED|[330636372](https://www.inaturalist.org/observations/330636372)|
+---
+
+# Run [15474](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/2f6b19353022683dbcc65af6e3f010ef43ee4942/checks/20203592905)
+2025-12-14 18:56
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Weed record updated, Visit record added|**86099**|MothPlant|GREEN|[300570854](https://www.inaturalist.org/observations/300570854)|
+---
+
+# Run [15477](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/1851ffdadc6007e37356e7c0113ba06586347d16/checks/20205564139)
+2025-12-14 21:57
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Weed record updated, Visit record added|**58823**|OldMansBeard|RED|[144455036](https://www.inaturalist.org/observations/144455036)|
+|Visit record added|**86660**|OldMansBeard|GRAY|[310175376](https://www.inaturalist.org/observations/310175376)|
+|Visit record added|**88884**|OldMansBeard|GRAY|[330118806](https://www.inaturalist.org/observations/330118806)|
+|Visit record added|**88885**|OldMansBeard|GRAY|[330118897](https://www.inaturalist.org/observations/330118897)|
+|Visit record updated|**88996**|OldMansBeard|RED|[330602020](https://www.inaturalist.org/observations/330602020)|
+|New weed|**89052**|ClimbingDock|YELLOW|[330689485](https://www.inaturalist.org/observations/330689485)|
+---
+
+# Run [15479](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/e610282820d9af922280dcb3e6c9ffa92e3aa30d/checks/20206903652)
+2025-12-14 23:56
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**89054**|OldMansBeard|RED|[330697679](https://www.inaturalist.org/observations/330697679)|
+---
+
+# Run [15485](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/5f9214df9bd46af07ba9700bb4ff2cd1af996368/checks/20211164755)
+2025-12-15 05:56
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Visit record updated|**89054**|OldMansBeard|RED|[330697679](https://www.inaturalist.org/observations/330697679)|
+---
+
+# Run [15487](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/d3e751903bf2f670009be8dcf62e599a314ee3b5/checks/20212623725)
+2025-12-15 07:57
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Weed record updated, Visit record updated|**88966**|OldMansBeard|RED|[330419991](https://www.inaturalist.org/observations/330419991)|
+|New weed|**89055**|OldMansBeard|RED|[330746261](https://www.inaturalist.org/observations/330746261)|
+|New weed|**89056**|OldMansBeard|RED|[330747218](https://www.inaturalist.org/observations/330747218)|
+---
+
+# Run [15488](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/687dee0f5261556ca94d608c2dee0f19241329d2/checks/20213303193)
+2025-12-15 08:55
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Weed record updated, Visit record updated|**89049**|MothPlant|RED|[330648760](https://www.inaturalist.org/observations/330648760)|
+|Weed record updated, Visit record updated|**89050**|MothPlant|RED|[330648821](https://www.inaturalist.org/observations/330648821)|
+---
+
+# Run [15489](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/86cf53018285f5bd53e8407dd0118abc9ebc49f6/checks/20214008094)
+2025-12-15 09:55
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**89057**|OldMansBeard|RED|[330760595](https://www.inaturalist.org/observations/330760595)|
+|New weed|**89058**|WoollyNightshade|RED|[330757536](https://www.inaturalist.org/observations/330757536)|
+---
+
+# Run [15491](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/9901433597fbcb4e95b96dcbabb1cf50a7745626/checks/20215407181)
+2025-12-15 11:56
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Visit record updated|**88966**|OldMansBeard|RED|[330419991](https://www.inaturalist.org/observations/330419991)|
+|Visit record updated|**88994**|OldMansBeard|RED|[330545196](https://www.inaturalist.org/observations/330545196)|
+|Visit record updated|**89056**|OldMansBeard|RED|[330747218](https://www.inaturalist.org/observations/330747218)|
+|New weed|**89061**|WoollyNightshade|RED|[330773093](https://www.inaturalist.org/observations/330773093)|
+|New weed|**89062**|WoollyNightshade|RED|[330773782](https://www.inaturalist.org/observations/330773782)|
+|New weed|**89063**|WoollyNightshade|RED|[330773849](https://www.inaturalist.org/observations/330773849)|
+---
+
+# Run [15492](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/d459022d460f82c93ae4c63f36228104d19d412a/checks/20216124633)
+2025-12-15 12:55
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Weed record updated, Visit record added|**58123**|OldMansBeard|RED|[106059463](https://www.inaturalist.org/observations/106059463)|
+|New weed|**89064**|OldMansBeard|RED|[330779617](https://www.inaturalist.org/observations/330779617)|
+|New weed|**89065**|OldMansBeard|RED|[330780175](https://www.inaturalist.org/observations/330780175)|
+|Visit record updated|**89058**|WoollyNightshade|RED|[330757536](https://www.inaturalist.org/observations/330757536)|
+|Visit record updated|**89061**|WoollyNightshade|RED|[330773093](https://www.inaturalist.org/observations/330773093)|
+|Visit record updated|**89062**|WoollyNightshade|RED|[330773782](https://www.inaturalist.org/observations/330773782)|
+|Visit record updated|**89063**|WoollyNightshade|RED|[330773849](https://www.inaturalist.org/observations/330773849)|
+---
+
+# Run [15493](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/8ae94614fa9809139147339ee36c32a30926a214/checks/20218871203)
+2025-12-15 15:50
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Weed record updated, Visit record added|**57120**|OldMansBeard|YELLOW|[4459283](https://www.inaturalist.org/observations/4459283)|
+|Weed record updated, Visit record added|**80057**|OldMansBeard|YELLOW|[260851110](https://www.inaturalist.org/observations/260851110)|
+|Visit record added|**88192**|OldMansBeard|YELLOW|[326160288](https://www.inaturalist.org/observations/326160288)|
+---
+
+# Run [15494](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/a8be316fcdfd9ec4e34aba827e9682ab1deff9da/checks/20219951297)
+2025-12-15 16:58
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**89072**|OldMansBeard|RED|[330804597](https://www.inaturalist.org/observations/330804597)|
+|New weed|**89073**|BananaPassionfruit|RED|[330662201](https://www.inaturalist.org/observations/330662201)|
+---
+
+# Run [15495](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/a8964166d943234cfbd538c1f26f40159e88b232/checks/20221260569)
+2025-12-15 18:14
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Weed record updated, Visit record updated|**89065**|OldMansBeard|RED|[330780175](https://www.inaturalist.org/observations/330780175)|
+|New weed|**89077**|BlueMorningGlory|RED|[330812824](https://www.inaturalist.org/observations/330812824)|
+|Visit record updated|**89032**|WoollyNightshade|RED|[330629359](https://www.inaturalist.org/observations/330629359)|
+|Visit record updated|**89033**|WoollyNightshade|RED|[330629511](https://www.inaturalist.org/observations/330629511)|
+|New weed|**89078**|WoollyNightshade|RED|[330815612](https://www.inaturalist.org/observations/330815612)|
+|New weed|**89079**|WoollyNightshade|RED|[330816263](https://www.inaturalist.org/observations/330816263)|
+---
+
+# Run [15496](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/70f11c7e5a8c38282ece1a5aa26b5408111e64a0/checks/20222048700)
+2025-12-15 18:57
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Weed record updated, Visit record added|**78066**|OldMansBeard|YELLOW|[254571669](https://www.inaturalist.org/observations/254571669)|
+|New weed|**89080**|BlueMorningGlory|RED|[330815598](https://www.inaturalist.org/observations/330815598)|
+|Visit record updated|**89079**|WoollyNightshade|RED|[330816263](https://www.inaturalist.org/observations/330816263)|
+|New weed|**89081**|MothPlant|RED|[330819199](https://www.inaturalist.org/observations/330819199)|
+---
+
+# Run [15497](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/f52136cbd882244ae3eb66e2ad11371aa3c73946/checks/20223380174)
+2025-12-15 20:03
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Visit record updated|**89065**|OldMansBeard|RED|[330780175](https://www.inaturalist.org/observations/330780175)|
+|Visit record updated|**89078**|WoollyNightshade|RED|[330815612](https://www.inaturalist.org/observations/330815612)|
+---
+
+# Run [15498](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/20ae38c339639313e240fd43ca972f3cfc61a415/checks/20224568323)
+2025-12-15 20:56
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**89083**|OldMansBeard|RED|[330826492](https://www.inaturalist.org/observations/330826492)|
+---
+
+# Run [15499](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/e94324482a6f3d0244f41e217163189c5616ea6e/checks/20226703019)
+2025-12-15 22:17
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Weed record updated, Visit record added|**78063**|OldMansBeard|GREEN|[254570186](https://www.inaturalist.org/observations/254570186)|
+|Weed record updated, Visit record added|**78067**|OldMansBeard|GREEN|[254572118](https://www.inaturalist.org/observations/254572118)|
+|Weed record updated|**89072**|OldMansBeard|RED|[330804597](https://www.inaturalist.org/observations/330804597)|
+|Visit record updated|**89083**|OldMansBeard|RED|[330826492](https://www.inaturalist.org/observations/330826492)|
+---
+
+# Run [15500](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/a6ecfca75b8c8bd7f9593e880b867e9f9f380ffe/checks/20227187129)
+2025-12-15 22:33
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Weed record updated|**67487**|OldMansBeard|PURPLE|[199232714](https://www.inaturalist.org/observations/199232714)|
+|New weed|**89084**|OldMansBeard|RED|[330833069](https://www.inaturalist.org/observations/330833069)|
+|New weed|**89085**|OldMansBeard|YELLOW|[330833147](https://www.inaturalist.org/observations/330833147)|
+|New weed|**89086**|OldMansBeard|YELLOW|[330833446](https://www.inaturalist.org/observations/330833446)|
+|New weed|**89087**|BananaPassionfruit|YELLOW|[330833507](https://www.inaturalist.org/observations/330833507)|
