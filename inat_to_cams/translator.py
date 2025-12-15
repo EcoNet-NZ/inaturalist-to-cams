@@ -235,6 +235,8 @@ class INatToCamsTranslator:
         date_first_observed = inat_observation.observed_on
         date_controlled = inat_observation.date_controlled
         date_of_status_update = inat_observation.date_of_status_update
+        
+        logging.info(f'DEBUG calculate_visit_date: date_first_observed={date_first_observed}, date_controlled={date_controlled}, date_of_status_update={date_of_status_update}')
 
         # Determine which date to use (existing logic)
         if date_controlled and date_of_status_update:
@@ -290,4 +292,5 @@ class INatToCamsTranslator:
         # if recorded_by_user_id:
         #     recorded_by_username = self._get_username_for_user_id(recorded_by_user_id, original_observation)
 
+        logging.info(f'DEBUG calculate_visit_date result: visit_date={visit_date}, visit_status={visit_status}')
         return visit_date, visit_status, recorded_by_user_id, recorded_by_username

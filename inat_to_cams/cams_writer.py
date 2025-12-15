@@ -45,6 +45,7 @@ class CamsWriter:
                     logging.info(f'Could not parse rollover date from audit_log: {e}')
             
             # Check if either the existing CAMS visit date or the rollover date is more recent than the iNat visit date
+            logging.info(f'DEBUG: Comparing dates - existing CAMS visit: {existing_feature.latest_weed_visit.date_visit_made}, rollover: {rollover_date}, new iNat visit: {cams_feature.latest_weed_visit.date_visit_made}')
             if existing_feature.latest_weed_visit.date_visit_made > cams_feature.latest_weed_visit.date_visit_made or \
                (rollover_date is not None and rollover_date > cams_feature.latest_weed_visit.date_visit_made):
                 logging.info(f'Preserving CAMS status - visit date: {existing_feature.latest_weed_visit.date_visit_made}, rollover date: {rollover_date}, iNat date: {cams_feature.latest_weed_visit.date_visit_made}')

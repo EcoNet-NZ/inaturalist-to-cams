@@ -113,6 +113,14 @@ class INatReader:
 
     @staticmethod
     def flatten(observation):
+        # Debug: Log observation field values
+        if hasattr(observation, 'ofvs') and observation.ofvs:
+            logging.info(f'DEBUG: Observation {observation.id} has {len(observation.ofvs)} observation field values')
+            for ofv in observation.ofvs:
+                logging.info(f'DEBUG: OFV: name={ofv.name}, value={ofv.value}')
+        else:
+            logging.info(f'DEBUG: Observation {observation.id} has no observation field values')
+        
         if observation.location is None:
             logging.exception(f'Skipping observation {observation.id} since it has no location set')
             raise exceptions.InvalidObservationError
@@ -164,7 +172,9 @@ class INatReader:
         inat_observation.site_difficulty = INatReader.get_observation_value(observation, 'Site difficulty')
 
         inat_observation.date_controlled = INatReader.get_date_observation_value(observation, 'Date controlled')
+        logging.info(f'DEBUG: date_controlled from observation fields: {inat_observation.date_controlled}')
         inat_observation.date_of_status_update = INatReader.get_date_observation_value(observation, 'Date of status update')
+        logging.info(f'DEBUG: date_of_status_update from observation fields: {inat_observation.date_of_status_update}')
         inat_observation.how_treated = INatReader.get_observation_value(observation, 'How treated')
         inat_observation.treated = INatReader.get_observation_value(observation, 'Treated ?')
         inat_observation.status_update = INatReader.get_observation_value(observation, 'Status update')
@@ -236,17 +246,23 @@ class INatReader:
         # to ensure it's included in RecordedBy tracking
         date = INatReader.get_observation_value(observation, key)
         if date:
+            logging.info(f'DEBUG get_date_observation_value: key={key}, value={date}, type={type(date)}')
             # Handle both datetime objects and string values
             if hasattr(date, 'isoformat'):
                 formatted_date = date.isoformat()
+                logging.info(f'DEBUG get_date_observation_value: after isoformat()={formatted_date}')
             else:
                 formatted_date = str(date)
+                logging.info(f'DEBUG get_date_observation_value: after str()={formatted_date}')
             
             timezone_pattern = re.compile(r'.*\+\d{2}:\d{2}')
 
             if timezone_pattern.match(formatted_date):
-                return formatted_date[0:-6]
+                result = formatted_date[0:-6]
+                logging.info(f'DEBUG get_date_observation_value: stripped timezone, result={result}')
+                return result
             else:
+                logging.info(f'DEBUG get_date_observation_value: no timezone, result={formatted_date}')
                 return formatted_date
 
     @staticmethod
