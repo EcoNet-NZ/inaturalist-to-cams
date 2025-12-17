@@ -59741,3 +59741,19 @@
 |----------|---------|-------|------|--------------|
 |Weed record updated, Visit record updated|**86873**|BlueMorningGlory|RED|[312015976](https://www.inaturalist.org/observations/312015976)|
 |New weed|**89135**|WoollyNightshade|RED|[331049531](https://www.inaturalist.org/observations/331049531)|
+---
+
+# Run [15545](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/4fd0a8b38b92780792655904607bd05270b052d3/checks/20293173939)
+2025-12-17 18:56
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**89139**|OldMansBeard|RED|[330999309](https://www.inaturalist.org/observations/330999309)|
+|Visit record updated|**89129**|OldMansBeard|RED|[331041325](https://www.inaturalist.org/observations/331041325)|
+|New weed|**89140**|BlueMorningGlory|RED|[331023904](https://www.inaturalist.org/observations/331023904)|
+|New weed|**89141**|BananaPassionfruit|RED|[331051643](https://www.inaturalist.org/observations/331051643)|
+|Visit record updated|**89130**|WoollyNightshade|RED|[331048551](https://www.inaturalist.org/observations/331048551)|
+|Visit record updated|**89135**|WoollyNightshade|RED|[331049531](https://www.inaturalist.org/observations/331049531)|
+|New weed|**89142**|WoollyNightshade|RED|[331052142](https://www.inaturalist.org/observations/331052142)|
+|New weed|**89143**|WoollyNightshade|RED|[331052957](https://www.inaturalist.org/observations/331052957)|
+|New weed|**89144**|WoollyNightshade|RED|[331053027](https://www.inaturalist.org/observations/331053027)|
