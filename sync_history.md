@@ -59961,3 +59961,16 @@
 |Visit record updated|**89196**|BlueMorningGlory|RED|[331269893](https://www.inaturalist.org/observations/331269893)|
 |Visit record updated|**89199**|WoollyNightshade|RED|[331278275](https://www.inaturalist.org/observations/331278275)|
 |Visit record updated|**89200**|WoollyNightshade|RED|[331279933](https://www.inaturalist.org/observations/331279933)|
+---
+
+# Run [15594](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/2c9dac2b7e3ae06f57186e14d3cf27ee5614dfbd/checks/20365052787)
+2025-12-19 22:01
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Visit record updated|**88939**|BlueMorningGlory|RED|[330309797](https://www.inaturalist.org/observations/330309797)|
+|Visit record updated|**89039**|BlueMorningGlory|RED|[330636372](https://www.inaturalist.org/observations/330636372)|
+|Visit record updated|**89077**|BlueMorningGlory|RED|[330812824](https://www.inaturalist.org/observations/330812824)|
+|Visit record updated|**89080**|BlueMorningGlory|RED|[330815598](https://www.inaturalist.org/observations/330815598)|
+|Visit record updated|**89120**|BlueMorningGlory|RED|[331023912](https://www.inaturalist.org/observations/331023912)|
+|Visit record updated|**89128**|BlueMorningGlory|RED|[331028437](https://www.inaturalist.org/observations/331028437)|
