@@ -60105,3 +60105,26 @@
 |New weed|**89233**|OldMansBeard|RED|[331504433](https://www.inaturalist.org/observations/331504433)|
 |New weed|**89234**|OldMansBeard|RED|[331504952](https://www.inaturalist.org/observations/331504952)|
 |New weed|**89235**|OldMansBeard|RED|[331505107](https://www.inaturalist.org/observations/331505107)|
+---
+
+# Run [15636](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/fa145e85cc9103235c0d78676546f87a9abb7581/checks/20405552397)
+2025-12-21 18:55
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Visit record updated|**88250**|WoollyNightshade|RED|[326710894](https://www.inaturalist.org/observations/326710894)|
+|Visit record updated|**88953**|WoollyNightshade|RED|[330318038](https://www.inaturalist.org/observations/330318038)|
+|Visit record updated|**89000**|WoollyNightshade|RED|[330623763](https://www.inaturalist.org/observations/330623763)|
+|Visit record updated|**89001**|WoollyNightshade|RED|[330623776](https://www.inaturalist.org/observations/330623776)|
+|Visit record updated|**89002**|WoollyNightshade|RED|[330623799](https://www.inaturalist.org/observations/330623799)|
+|Visit record updated|**89003**|WoollyNightshade|RED|[330623821](https://www.inaturalist.org/observations/330623821)|
+|Visit record updated|**89004**|WoollyNightshade|RED|[330623866](https://www.inaturalist.org/observations/330623866)|
+|Visit record updated|**89005**|WoollyNightshade|RED|[330623882](https://www.inaturalist.org/observations/330623882)|
+|Visit record updated|**89006**|WoollyNightshade|RED|[330623899](https://www.inaturalist.org/observations/330623899)|
+|Visit record updated|**89008**|WoollyNightshade|RED|[330623949](https://www.inaturalist.org/observations/330623949)|
+|Visit record updated|**89026**|WoollyNightshade|RED|[330624210](https://www.inaturalist.org/observations/330624210)|
+|Visit record updated|**89014**|WoollyNightshade|RED|[330624410](https://www.inaturalist.org/observations/330624410)|
+|Visit record updated|**89015**|WoollyNightshade|RED|[330624448](https://www.inaturalist.org/observations/330624448)|
+|Visit record updated|**89028**|WoollyNightshade|RED|[330625654](https://www.inaturalist.org/observations/330625654)|
+|Visit record updated|**89029**|WoollyNightshade|RED|[330625673](https://www.inaturalist.org/observations/330625673)|
+|Visit record updated|**88921**|AppleOfSodom|RED|[329735195](https://www.inaturalist.org/observations/329735195)|
