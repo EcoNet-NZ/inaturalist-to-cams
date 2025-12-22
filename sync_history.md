@@ -60397,3 +60397,11 @@
 |Sync Event|Object Id|Species|Status|iNaturalist Id|
 |----------|---------|-------|------|--------------|
 |New weed|**89302**|Elaeagnus|RED|[315674472](https://www.inaturalist.org/observations/315674472)|
+---
+
+# Run [15674](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/72fa7ff92d3a0c1a2eeb102397a5ae2bcac70ceb/checks/20444974186)
+2025-12-23 10:55
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Visit record added|**78895**|OldMansBeard|GREEN|[258296957](https://www.inaturalist.org/observations/258296957)|
