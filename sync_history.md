@@ -60324,3 +60324,23 @@
 |Visit record updated|**89255**|OldMansBeard|RED|[331623571](https://www.inaturalist.org/observations/331623571)|
 |Visit record updated|**89281**|OldMansBeard|RED|[331654574](https://www.inaturalist.org/observations/331654574)|
 |New weed|**89293**|OldMansBeard|RED|[331656525](https://www.inaturalist.org/observations/331656525)|
+---
+
+# Run [15663](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/ca8daf97cbf97cac2ef4f24dbed7013c6ac3b9ba/checks/20429832920)
+2025-12-22 23:57
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Visit record updated|**89277**|OldMansBeard|RED|[331650413](https://www.inaturalist.org/observations/331650413)|
+|Visit record updated|**89278**|OldMansBeard|RED|[331650997](https://www.inaturalist.org/observations/331650997)|
+|Visit record updated|**89279**|OldMansBeard|RED|[331651092](https://www.inaturalist.org/observations/331651092)|
+|Visit record updated|**89281**|OldMansBeard|RED|[331654574](https://www.inaturalist.org/observations/331654574)|
+|New weed|**89294**|OldMansBeard|RED|[331660958](https://www.inaturalist.org/observations/331660958)|
+|New weed|**89295**|WoollyNightshade|RED|[331659875](https://www.inaturalist.org/observations/331659875)|
+|New weed|**89296**|WoollyNightshade|RED|[331659913](https://www.inaturalist.org/observations/331659913)|
+|New weed|**89297**|WoollyNightshade|RED|[331659929](https://www.inaturalist.org/observations/331659929)|
+|New weed|**89298**|WoollyNightshade|RED|[331659939](https://www.inaturalist.org/observations/331659939)|
+|New weed|**89299**|WoollyNightshade|RED|[331659945](https://www.inaturalist.org/observations/331659945)|
+|New weed|**89300**|WoollyNightshade|RED|[331659988](https://www.inaturalist.org/observations/331659988)|
+|New weed|**89301**|WoollyNightshade|RED|[331660100](https://www.inaturalist.org/observations/331660100)|
+|Weed record updated, Visit record updated|**89290**|MothPlant|RED|[331651824](https://www.inaturalist.org/observations/331651824)|
