@@ -60357,3 +60357,20 @@
 |Visit record updated|**89298**|WoollyNightshade|RED|[331659939](https://www.inaturalist.org/observations/331659939)|
 |Visit record updated|**89299**|WoollyNightshade|RED|[331659945](https://www.inaturalist.org/observations/331659945)|
 |Visit record updated|**89300**|WoollyNightshade|RED|[331659988](https://www.inaturalist.org/observations/331659988)|
+---
+
+# Run [15669](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/2f9a319994b380426880a0ce78cc2911449cee66/checks/20438523996)
+2025-12-23 06:00
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Visit record updated|**89283**|OldMansBeard|RED|[331655067](https://www.inaturalist.org/observations/331655067)|
+|Visit record updated|**89293**|OldMansBeard|RED|[331656525](https://www.inaturalist.org/observations/331656525)|
+|Visit record updated|**89294**|OldMansBeard|RED|[331660958](https://www.inaturalist.org/observations/331660958)|
+|Visit record updated|**89284**|WoollyNightshade|RED|[331651784](https://www.inaturalist.org/observations/331651784)|
+|Visit record updated|**89285**|WoollyNightshade|RED|[331651804](https://www.inaturalist.org/observations/331651804)|
+|Visit record updated|**89286**|WoollyNightshade|RED|[331651808](https://www.inaturalist.org/observations/331651808)|
+|Visit record updated|**89287**|WoollyNightshade|RED|[331651816](https://www.inaturalist.org/observations/331651816)|
+|Visit record updated|**85924**|WildGinger|YELLOW|[296412400](https://www.inaturalist.org/observations/296412400)|
+|Visit record updated|**88193**|WildGinger|RED|[326082238](https://www.inaturalist.org/observations/326082238)|
+|Visit record updated|**88285**|WildGinger|RED|[326866324](https://www.inaturalist.org/observations/326866324)|
