@@ -60629,3 +60629,11 @@
 |Sync Event|Object Id|Species|Status|iNaturalist Id|
 |----------|---------|-------|------|--------------|
 |Visit record updated|**89360**|JapaneseHoneysuckle|RED|[332015750](https://www.inaturalist.org/observations/332015750)|
+---
+
+# Run [15742](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/8ff8cab9644c242d28bea9f348b2280bc989f76e/checks/20512051553)
+2025-12-26 11:56
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**89361**|OldMansBeard|RED|[332075344](https://www.inaturalist.org/observations/332075344)|
