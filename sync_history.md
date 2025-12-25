@@ -60621,3 +60621,11 @@
 |Visit record updated|**89357**|JapaneseHoneysuckle|RED|[332015747](https://www.inaturalist.org/observations/332015747)|
 |Visit record updated|**89358**|JapaneseHoneysuckle|RED|[332015748](https://www.inaturalist.org/observations/332015748)|
 |Visit record updated|**89359**|JapaneseHoneysuckle|RED|[332015749](https://www.inaturalist.org/observations/332015749)|
+---
+
+# Run [15738](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/3544d1db0391658c7135ef8aae9c9b58685de0da/checks/20509551893)
+2025-12-26 07:59
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Visit record updated|**89360**|JapaneseHoneysuckle|RED|[332015750](https://www.inaturalist.org/observations/332015750)|
