@@ -60690,3 +60690,12 @@
 |Visit record updated|**89358**|JapaneseHoneysuckle|RED|[332015748](https://www.inaturalist.org/observations/332015748)|
 |Visit record updated|**89359**|JapaneseHoneysuckle|RED|[332015749](https://www.inaturalist.org/observations/332015749)|
 |Visit record updated|**89360**|JapaneseHoneysuckle|RED|[332015750](https://www.inaturalist.org/observations/332015750)|
+---
+
+# Run [15750](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/3917fcd8ed956abd33e44b87fefc0572fa470089/checks/20518704630)
+2025-12-26 20:56
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Weed record updated, Visit record updated|**89116**|OTHER|RED|[331013857](https://www.inaturalist.org/observations/331013857)|
+|Geolocation updated, Weed record updated, Visit record updated|**89117**|BeggarsTicks|RED|[331013907](https://www.inaturalist.org/observations/331013907)|
