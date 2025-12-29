@@ -60951,3 +60951,12 @@
 |Sync Event|Object Id|Species|Status|iNaturalist Id|
 |----------|---------|-------|------|--------------|
 |New weed|**89448**|BlueMorningGlory|RED|[332494624](https://www.inaturalist.org/observations/332494624)|
+---
+
+# Run [15812](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/75f091d715336bd5840fa5865d76fe55d821fbc9/checks/20563596791)
+2025-12-29 15:58
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**89455**|OldMansBeard|RED|[332522495](https://www.inaturalist.org/observations/332522495)|
+|New weed|**89456**|WoollyNightshade|RED|[332534806](https://www.inaturalist.org/observations/332534806)|
