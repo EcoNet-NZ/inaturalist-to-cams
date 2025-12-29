@@ -61012,3 +61012,11 @@
 |Visit record updated|**87804**|CathedralBells|RED|[322870122](https://www.inaturalist.org/observations/322870122)|
 |Visit record updated|**87871**|CathedralBells|RED|[323401751](https://www.inaturalist.org/observations/323401751)|
 |Visit record updated|**89468**|WoollyNightshade|RED|[332573067](https://www.inaturalist.org/observations/332573067)|
+---
+
+# Run [15829](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/f04223009cb0279ce0b6994fb9cae0eb7a00726b/checks/20581469642)
+2025-12-30 08:56
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Visit record updated|**89467**|WoollyNightshade|RED|[332561736](https://www.inaturalist.org/observations/332561736)|
