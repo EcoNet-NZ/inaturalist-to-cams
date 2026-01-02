@@ -61321,3 +61321,11 @@
 |----------|---------|-------|------|--------------|
 |Visit record updated|**89586**|OldMansBeard|RED|[333130993](https://www.inaturalist.org/observations/333130993)|
 |Visit record updated|**89582**|WoollyNightshade|RED|[333127053](https://www.inaturalist.org/observations/333127053)|
+---
+
+# Run [15917](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/5f4470414ef27bebcbe5777846c3bb05613cae6d/checks/20665555345)
+2026-01-03 08:56
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Visit record updated|**89578**|CathedralBells|RED|[333128502](https://www.inaturalist.org/observations/333128502)|
