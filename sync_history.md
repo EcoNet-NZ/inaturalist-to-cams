@@ -61510,3 +61510,76 @@
 |----------|---------|-------|------|--------------|
 |New weed|**89707**|BlueMorningGlory|RED|[333057972](https://www.inaturalist.org/observations/333057972)|
 |Visit record updated|**89690**|BananaPassionfruit|RED|[333435556](https://www.inaturalist.org/observations/333435556)|
+---
+
+# Run [15967](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/5a69dd43ec3b786c08a7e7aed0624b34ec65ac85/checks/20703762366)
+2026-01-05 16:02
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Visit record updated|**89695**|OldMansBeard|RED|[333480348](https://www.inaturalist.org/observations/333480348)|
+|New weed|**89712**|BlueMorningGlory|RED|[333513515](https://www.inaturalist.org/observations/333513515)|
+|New weed|**89713**|BlueMorningGlory|RED|[333513989](https://www.inaturalist.org/observations/333513989)|
+|New weed|**89714**|BlueMorningGlory|RED|[333514193](https://www.inaturalist.org/observations/333514193)|
+|New weed|**89715**|BlueMorningGlory|RED|[333514283](https://www.inaturalist.org/observations/333514283)|
+|New weed|**89716**|BlueMorningGlory|RED|[333514681](https://www.inaturalist.org/observations/333514681)|
+|New weed|**89717**|BlueMorningGlory|RED|[333514802](https://www.inaturalist.org/observations/333514802)|
+|New weed|**89718**|BlueMorningGlory|RED|[333517548](https://www.inaturalist.org/observations/333517548)|
+|New weed|**89719**|BlueMorningGlory|RED|[333517549](https://www.inaturalist.org/observations/333517549)|
+|New weed|**89720**|BlueMorningGlory|RED|[333517550](https://www.inaturalist.org/observations/333517550)|
+|New weed|**89721**|BlueMorningGlory|RED|[333517551](https://www.inaturalist.org/observations/333517551)|
+|New weed|**89722**|BlueMorningGlory|RED|[333517552](https://www.inaturalist.org/observations/333517552)|
+|New weed|**89723**|BlueMorningGlory|RED|[333517553](https://www.inaturalist.org/observations/333517553)|
+|New weed|**89724**|BlueMorningGlory|RED|[333517556](https://www.inaturalist.org/observations/333517556)|
+|New weed|**89725**|BlueMorningGlory|RED|[333517557](https://www.inaturalist.org/observations/333517557)|
+|New weed|**89726**|BlueMorningGlory|RED|[333517558](https://www.inaturalist.org/observations/333517558)|
+|New weed|**89727**|BlueMorningGlory|RED|[333517560](https://www.inaturalist.org/observations/333517560)|
+|New weed|**89728**|BlueMorningGlory|RED|[333525304](https://www.inaturalist.org/observations/333525304)|
+|New weed|**89729**|BlueMorningGlory|RED|[333525310](https://www.inaturalist.org/observations/333525310)|
+|New weed|**89730**|WoollyNightshade|RED|[333512881](https://www.inaturalist.org/observations/333512881)|
+|New weed|**89731**|WoollyNightshade|RED|[333514940](https://www.inaturalist.org/observations/333514940)|
+|New weed|**89732**|WoollyNightshade|RED|[333517544](https://www.inaturalist.org/observations/333517544)|
+|New weed|**89733**|WoollyNightshade|RED|[333517545](https://www.inaturalist.org/observations/333517545)|
+|New weed|**89734**|WoollyNightshade|RED|[333517559](https://www.inaturalist.org/observations/333517559)|
+|New weed|**89735**|WoollyNightshade|RED|[333518665](https://www.inaturalist.org/observations/333518665)|
+|New weed|**89736**|WoollyNightshade|RED|[333518668](https://www.inaturalist.org/observations/333518668)|
+|New weed|**89737**|WoollyNightshade|RED|[333518670](https://www.inaturalist.org/observations/333518670)|
+|New weed|**89738**|WoollyNightshade|RED|[333518672](https://www.inaturalist.org/observations/333518672)|
+|New weed|**89739**|WoollyNightshade|RED|[333518674](https://www.inaturalist.org/observations/333518674)|
+|New weed|**89740**|WoollyNightshade|RED|[333518675](https://www.inaturalist.org/observations/333518675)|
+|New weed|**89741**|WoollyNightshade|RED|[333518676](https://www.inaturalist.org/observations/333518676)|
+|New weed|**89742**|WoollyNightshade|RED|[333518677](https://www.inaturalist.org/observations/333518677)|
+|New weed|**89743**|WoollyNightshade|RED|[333518678](https://www.inaturalist.org/observations/333518678)|
+|New weed|**89744**|WoollyNightshade|RED|[333518679](https://www.inaturalist.org/observations/333518679)|
+|New weed|**89745**|WoollyNightshade|RED|[333519554](https://www.inaturalist.org/observations/333519554)|
+|New weed|**89746**|WoollyNightshade|RED|[333519559](https://www.inaturalist.org/observations/333519559)|
+|New weed|**89747**|WoollyNightshade|RED|[333519561](https://www.inaturalist.org/observations/333519561)|
+|New weed|**89748**|WoollyNightshade|RED|[333519563](https://www.inaturalist.org/observations/333519563)|
+|New weed|**89749**|WoollyNightshade|RED|[333519568](https://www.inaturalist.org/observations/333519568)|
+|New weed|**89750**|WoollyNightshade|RED|[333519569](https://www.inaturalist.org/observations/333519569)|
+|New weed|**89751**|WoollyNightshade|RED|[333519571](https://www.inaturalist.org/observations/333519571)|
+|New weed|**89752**|WoollyNightshade|RED|[333519573](https://www.inaturalist.org/observations/333519573)|
+|New weed|**89753**|WoollyNightshade|RED|[333519574](https://www.inaturalist.org/observations/333519574)|
+|New weed|**89754**|WoollyNightshade|RED|[333519577](https://www.inaturalist.org/observations/333519577)|
+|New weed|**89755**|WoollyNightshade|RED|[333525299](https://www.inaturalist.org/observations/333525299)|
+|New weed|**89756**|WoollyNightshade|RED|[333525300](https://www.inaturalist.org/observations/333525300)|
+|New weed|**89757**|WoollyNightshade|RED|[333525302](https://www.inaturalist.org/observations/333525302)|
+|New weed|**89758**|WoollyNightshade|RED|[333525305](https://www.inaturalist.org/observations/333525305)|
+|New weed|**89759**|WoollyNightshade|RED|[333525306](https://www.inaturalist.org/observations/333525306)|
+|New weed|**89760**|WoollyNightshade|RED|[333525308](https://www.inaturalist.org/observations/333525308)|
+|New weed|**89761**|WoollyNightshade|RED|[333525309](https://www.inaturalist.org/observations/333525309)|
+|New weed|**89762**|WoollyNightshade|RED|[333525311](https://www.inaturalist.org/observations/333525311)|
+|New weed|**89763**|WoollyNightshade|RED|[333525312](https://www.inaturalist.org/observations/333525312)|
+|New weed|**89764**|WoollyNightshade|RED|[333525313](https://www.inaturalist.org/observations/333525313)|
+|New weed|**89765**|WoollyNightshade|RED|[333525314](https://www.inaturalist.org/observations/333525314)|
+|New weed|**89766**|WoollyNightshade|RED|[333525315](https://www.inaturalist.org/observations/333525315)|
+|New weed|**89767**|WoollyNightshade|RED|[333525316](https://www.inaturalist.org/observations/333525316)|
+|New weed|**89768**|WoollyNightshade|RED|[333525921](https://www.inaturalist.org/observations/333525921)|
+|New weed|**89769**|WoollyNightshade|RED|[333525924](https://www.inaturalist.org/observations/333525924)|
+|New weed|**89770**|WoollyNightshade|RED|[333525925](https://www.inaturalist.org/observations/333525925)|
+|New weed|**89771**|WoollyNightshade|RED|[333525926](https://www.inaturalist.org/observations/333525926)|
+|New weed|**89772**|WoollyNightshade|RED|[333525928](https://www.inaturalist.org/observations/333525928)|
+|New weed|**89773**|WoollyNightshade|RED|[333525929](https://www.inaturalist.org/observations/333525929)|
+|New weed|**89774**|WoollyNightshade|RED|[333525930](https://www.inaturalist.org/observations/333525930)|
+|New weed|**89775**|WoollyNightshade|RED|[333525934](https://www.inaturalist.org/observations/333525934)|
+|New weed|**89776**|WoollyNightshade|RED|[333525937](https://www.inaturalist.org/observations/333525937)|
