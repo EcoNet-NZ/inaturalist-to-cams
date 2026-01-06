@@ -61731,3 +61731,11 @@
 |Visit record updated|**89838**|OldMansBeard|RED|[333703752](https://www.inaturalist.org/observations/333703752)|
 |Visit record updated|**89842**|OldMansBeard|RED|[333704064](https://www.inaturalist.org/observations/333704064)|
 |Weed record updated, Visit record updated|**89843**|OldMansBeard|RED|[333705913](https://www.inaturalist.org/observations/333705913)|
+---
+
+# Run [15996](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/5d6fcd99c065897074ac392cd45edaddab3ed6e0/checks/20744716045)
+2026-01-06 22:57
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Visit record updated|**89843**|OldMansBeard|RED|[333705913](https://www.inaturalist.org/observations/333705913)|
