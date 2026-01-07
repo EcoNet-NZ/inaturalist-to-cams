@@ -61914,3 +61914,11 @@
 |Visit record updated|**89855**|BlueMorningGlory|RED|[333775818](https://www.inaturalist.org/observations/333775818)|
 |Visit record updated|**89856**|BlueMorningGlory|RED|[333775881](https://www.inaturalist.org/observations/333775881)|
 |Visit record updated|**89876**|BlueMorningGlory|RED|[333792265](https://www.inaturalist.org/observations/333792265)|
+---
+
+# Run [16028](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/47548fb8c6de9f3a501ec47288b6584a0b7d1a48/checks/20794647195)
+2026-01-08 08:56
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Visit record updated|**89883**|MothPlant|RED|[333831579](https://www.inaturalist.org/observations/333831579)|
