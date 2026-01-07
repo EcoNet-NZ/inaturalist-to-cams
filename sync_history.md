@@ -61874,3 +61874,43 @@
 |Sync Event|Object Id|Species|Status|iNaturalist Id|
 |----------|---------|-------|------|--------------|
 |New weed|**89884**|BananaPassionfruit|RED|[333722342](https://www.inaturalist.org/observations/333722342)|
+---
+
+# Run [16025](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/6d3c5d8fcbd450bdf9adfc73a39a97288d86bb0e/checks/20789886370)
+2026-01-08 06:13
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Visit record updated|**89220**|BlueMorningGlory|RED|[331376064](https://www.inaturalist.org/observations/331376064)|
+|Visit record updated|**89236**|BlueMorningGlory|RED|[331590351](https://www.inaturalist.org/observations/331590351)|
+|Visit record updated|**89237**|BlueMorningGlory|RED|[331590498](https://www.inaturalist.org/observations/331590498)|
+|Visit record updated|**89246**|BlueMorningGlory|RED|[331604033](https://www.inaturalist.org/observations/331604033)|
+|Visit record updated|**89383**|BlueMorningGlory|RED|[332237327](https://www.inaturalist.org/observations/332237327)|
+|Visit record updated|**89434**|BlueMorningGlory|RED|[332402372](https://www.inaturalist.org/observations/332402372)|
+|Visit record updated|**89448**|BlueMorningGlory|RED|[332494624](https://www.inaturalist.org/observations/332494624)|
+|Visit record updated|**89480**|BlueMorningGlory|RED|[332672716](https://www.inaturalist.org/observations/332672716)|
+|Visit record updated|**89694**|BlueMorningGlory|RED|[332951220](https://www.inaturalist.org/observations/332951220)|
+|Visit record updated|**89707**|BlueMorningGlory|RED|[333057972](https://www.inaturalist.org/observations/333057972)|
+|Visit record updated|**89712**|BlueMorningGlory|RED|[333513515](https://www.inaturalist.org/observations/333513515)|
+|Visit record updated|**89713**|BlueMorningGlory|RED|[333513989](https://www.inaturalist.org/observations/333513989)|
+|Visit record updated|**89714**|BlueMorningGlory|RED|[333514193](https://www.inaturalist.org/observations/333514193)|
+|Visit record updated|**89715**|BlueMorningGlory|RED|[333514283](https://www.inaturalist.org/observations/333514283)|
+|Visit record updated|**89716**|BlueMorningGlory|RED|[333514681](https://www.inaturalist.org/observations/333514681)|
+|Visit record updated|**89717**|BlueMorningGlory|RED|[333514802](https://www.inaturalist.org/observations/333514802)|
+|Visit record updated|**89718**|BlueMorningGlory|RED|[333517548](https://www.inaturalist.org/observations/333517548)|
+|Visit record updated|**89721**|BlueMorningGlory|RED|[333517551](https://www.inaturalist.org/observations/333517551)|
+|Visit record updated|**89722**|BlueMorningGlory|RED|[333517552](https://www.inaturalist.org/observations/333517552)|
+|Visit record updated|**89723**|BlueMorningGlory|RED|[333517553](https://www.inaturalist.org/observations/333517553)|
+|Visit record updated|**89724**|BlueMorningGlory|RED|[333517556](https://www.inaturalist.org/observations/333517556)|
+|Visit record updated|**89725**|BlueMorningGlory|RED|[333517557](https://www.inaturalist.org/observations/333517557)|
+|Visit record updated|**89726**|BlueMorningGlory|RED|[333517558](https://www.inaturalist.org/observations/333517558)|
+|Visit record updated|**89727**|BlueMorningGlory|RED|[333517560](https://www.inaturalist.org/observations/333517560)|
+|Visit record updated|**89728**|BlueMorningGlory|RED|[333525304](https://www.inaturalist.org/observations/333525304)|
+|Visit record updated|**89729**|BlueMorningGlory|RED|[333525310](https://www.inaturalist.org/observations/333525310)|
+|Visit record updated|**89849**|BlueMorningGlory|RED|[333768286](https://www.inaturalist.org/observations/333768286)|
+|Visit record updated|**89852**|BlueMorningGlory|RED|[333775583](https://www.inaturalist.org/observations/333775583)|
+|Visit record updated|**89853**|BlueMorningGlory|RED|[333775642](https://www.inaturalist.org/observations/333775642)|
+|Visit record updated|**89854**|BlueMorningGlory|RED|[333775796](https://www.inaturalist.org/observations/333775796)|
+|Visit record updated|**89855**|BlueMorningGlory|RED|[333775818](https://www.inaturalist.org/observations/333775818)|
+|Visit record updated|**89856**|BlueMorningGlory|RED|[333775881](https://www.inaturalist.org/observations/333775881)|
+|Visit record updated|**89876**|BlueMorningGlory|RED|[333792265](https://www.inaturalist.org/observations/333792265)|
