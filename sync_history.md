@@ -62162,3 +62162,12 @@
 |Sync Event|Object Id|Species|Status|iNaturalist Id|
 |----------|---------|-------|------|--------------|
 |Visit record updated|**89973**|MothPlant|RED|[334153642](https://www.inaturalist.org/observations/334153642)|
+---
+
+# Run [16091](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/acfc9a067bdedacad3912b912485f459bc06b282/checks/20880749789)
+2026-01-11 04:56
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Visit record updated|**89955**|BananaPassionfruit|RED|[334123174](https://www.inaturalist.org/observations/334123174)|
+|Visit record updated|**89969**|BananaPassionfruit|RED|[334145290](https://www.inaturalist.org/observations/334145290)|
