@@ -62284,3 +62284,25 @@
 |New weed|**90060**|WoollyNightshade|RED|[334306003](https://www.inaturalist.org/observations/334306003)|
 |Visit record updated|**86531**|ArumLily|YELLOW|[308294178](https://www.inaturalist.org/observations/308294178)|
 |Visit record updated|**86532**|ArumLily|RED|[308294375](https://www.inaturalist.org/observations/308294375)|
+---
+
+# Run [16106](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/72b5e1cbb193cde604353ed198f585d142096204/checks/20892542063)
+2026-01-11 21:59
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Visit record updated|**90016**|WoollyNightshade|RED|[334302629](https://www.inaturalist.org/observations/334302629)|
+|Visit record updated|**90017**|WoollyNightshade|RED|[334302668](https://www.inaturalist.org/observations/334302668)|
+|Visit record updated|**90018**|WoollyNightshade|RED|[334302742](https://www.inaturalist.org/observations/334302742)|
+|Visit record updated|**90019**|WoollyNightshade|RED|[334302886](https://www.inaturalist.org/observations/334302886)|
+|Visit record updated|**90020**|WoollyNightshade|RED|[334302990](https://www.inaturalist.org/observations/334302990)|
+|Visit record updated|**90030**|WoollyNightshade|RED|[334303867](https://www.inaturalist.org/observations/334303867)|
+|Visit record updated|**90031**|WoollyNightshade|RED|[334303933](https://www.inaturalist.org/observations/334303933)|
+|Visit record updated|**90038**|WoollyNightshade|RED|[334304349](https://www.inaturalist.org/observations/334304349)|
+|Visit record updated|**90039**|WoollyNightshade|RED|[334304367](https://www.inaturalist.org/observations/334304367)|
+|Visit record updated|**90040**|WoollyNightshade|RED|[334304557](https://www.inaturalist.org/observations/334304557)|
+|Visit record updated|**90041**|WoollyNightshade|RED|[334304565](https://www.inaturalist.org/observations/334304565)|
+|Visit record updated|**90051**|WoollyNightshade|RED|[334305383](https://www.inaturalist.org/observations/334305383)|
+|Visit record updated|**90052**|WoollyNightshade|RED|[334305433](https://www.inaturalist.org/observations/334305433)|
+|Visit record updated|**90053**|WoollyNightshade|RED|[334305456](https://www.inaturalist.org/observations/334305456)|
+|Visit record updated|**90059**|WoollyNightshade|RED|[334305958](https://www.inaturalist.org/observations/334305958)|
