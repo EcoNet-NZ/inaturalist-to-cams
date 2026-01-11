@@ -62364,3 +62364,28 @@
 |New weed|**90076**|OldMansBeard|RED|[334406029](https://www.inaturalist.org/observations/334406029)|
 |New weed|**90077**|BananaPassionfruit|RED|[334408670](https://www.inaturalist.org/observations/334408670)|
 |Visit record updated|**90069**|WoollyNightshade|RED|[334395887](https://www.inaturalist.org/observations/334395887)|
+---
+
+# Run [16120](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/85ac9faebd398d05787eb813590ea7d1ce7d6c3a/checks/20903253796)
+2026-01-12 11:55
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Visit record updated|**90075**|OldMansBeard|RED|[334405743](https://www.inaturalist.org/observations/334405743)|
+|Weed record updated, Visit record updated|**90067**|BlueMorningGlory|RED|[334394382](https://www.inaturalist.org/observations/334394382)|
+|New weed|**90080**|BlueMorningGlory|RED|[334410413](https://www.inaturalist.org/observations/334410413)|
+|New weed|**90081**|BlueMorningGlory|RED|[334410490](https://www.inaturalist.org/observations/334410490)|
+|New weed|**90082**|BlueMorningGlory|RED|[334410651](https://www.inaturalist.org/observations/334410651)|
+|New weed|**90083**|BlueMorningGlory|RED|[334410667](https://www.inaturalist.org/observations/334410667)|
+|Visit record updated|**90069**|WoollyNightshade|RED|[334395887](https://www.inaturalist.org/observations/334395887)|
+|New weed|**90084**|WoollyNightshade|RED|[334409313](https://www.inaturalist.org/observations/334409313)|
+|New weed|**90085**|WoollyNightshade|RED|[334409458](https://www.inaturalist.org/observations/334409458)|
+|New weed|**90086**|WoollyNightshade|RED|[334409512](https://www.inaturalist.org/observations/334409512)|
+|New weed|**90087**|WoollyNightshade|RED|[334409585](https://www.inaturalist.org/observations/334409585)|
+|New weed|**90088**|WoollyNightshade|RED|[334409611](https://www.inaturalist.org/observations/334409611)|
+|New weed|**90089**|WoollyNightshade|RED|[334409954](https://www.inaturalist.org/observations/334409954)|
+|New weed|**90090**|WoollyNightshade|RED|[334409988](https://www.inaturalist.org/observations/334409988)|
+|New weed|**90091**|WoollyNightshade|RED|[334410018](https://www.inaturalist.org/observations/334410018)|
+|New weed|**90092**|WoollyNightshade|RED|[334410109](https://www.inaturalist.org/observations/334410109)|
+|New weed|**90093**|WoollyNightshade|RED|[334410213](https://www.inaturalist.org/observations/334410213)|
+|New weed|**90094**|WoollyNightshade|RED|[334410856](https://www.inaturalist.org/observations/334410856)|
