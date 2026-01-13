@@ -62638,3 +62638,11 @@
 |Visit record updated|**89884**|BananaPassionfruit|RED|[333722342](https://www.inaturalist.org/observations/333722342)|
 |Visit record updated|**89925**|BananaPassionfruit|RED|[333948149](https://www.inaturalist.org/observations/333948149)|
 |Visit record updated|**90136**|BananaPassionfruit|RED|[334414555](https://www.inaturalist.org/observations/334414555)|
+---
+
+# Run [16161](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/d3ab07ba9499c29cb3c48fad45bec256e07089ea/checks/20970542891)
+2026-01-14 08:56
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Visit record updated|**89931**|BluePassionFlower|RED|[334003906](https://www.inaturalist.org/observations/334003906)|
