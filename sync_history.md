@@ -62797,3 +62797,22 @@
 |New weed|**90254**|BlueMorningGlory|RED|[334792379](https://www.inaturalist.org/observations/334792379)|
 |Weed record updated, Visit record updated|**90253**|MothPlant|RED|[334782029](https://www.inaturalist.org/observations/334782029)|
 |New weed|**90255**|MothPlant|RED|[334797837](https://www.inaturalist.org/observations/334797837)|
+---
+
+# Run [16190](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/91f1661d49491f6077e20791adc6cf8270000fed/checks/21020560963)
+2026-01-15 18:14
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Visit record updated|**89919**|BlueMorningGlory|RED|[333934199](https://www.inaturalist.org/observations/333934199)|
+|Geolocation updated, Weed record updated, Visit record updated|**89931**|BluePassionFlower|RED|[334003906](https://www.inaturalist.org/observations/334003906)|
+|Visit record updated|**89934**|BlueMorningGlory|RED|[334040692](https://www.inaturalist.org/observations/334040692)|
+|Visit record updated|**89956**|BlueMorningGlory|RED|[334126315](https://www.inaturalist.org/observations/334126315)|
+|Visit record updated|**89962**|BlueMorningGlory|RED|[334140801](https://www.inaturalist.org/observations/334140801)|
+|Visit record updated|**89963**|BlueMorningGlory|RED|[334140899](https://www.inaturalist.org/observations/334140899)|
+|Visit record updated|**90065**|BlueMorningGlory|RED|[334382207](https://www.inaturalist.org/observations/334382207)|
+|Visit record updated|**90067**|BlueMorningGlory|RED|[334394382](https://www.inaturalist.org/observations/334394382)|
+|Visit record updated|**90126**|BlueMorningGlory|RED|[334466311](https://www.inaturalist.org/observations/334466311)|
+|Visit record updated|**90189**|BlueMorningGlory|RED|[334582038](https://www.inaturalist.org/observations/334582038)|
+|Visit record updated|**90212**|BlueMorningGlory|RED|[334648169](https://www.inaturalist.org/observations/334648169)|
+|Visit record updated|**90254**|BlueMorningGlory|RED|[334792379](https://www.inaturalist.org/observations/334792379)|
