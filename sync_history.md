@@ -63050,3 +63050,32 @@
 |Sync Event|Object Id|Species|Status|iNaturalist Id|
 |----------|---------|-------|------|--------------|
 |Visit record updated|**90380**|StinkingIris|RED|[335263281](https://www.inaturalist.org/observations/335263281)|
+---
+
+# Run [16277](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/cdfb6cc627f94bacaa00b30db32b8317c5e15842/checks/21123769558)
+2026-01-19 15:58
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Weed record updated, Visit record added|**57473**|OldMansBeard|YELLOW|[49410666](https://www.inaturalist.org/observations/49410666)|
+|Weed record updated, Visit record added|**57864**|OldMansBeard|GREEN|[80683630](https://www.inaturalist.org/observations/80683630)|
+|Weed record updated, Visit record added|**58119**|OldMansBeard|GREEN|[105882646](https://www.inaturalist.org/observations/105882646)|
+|Weed record updated, Visit record added|**68126**|OldMansBeard|YELLOW|[201316270](https://www.inaturalist.org/observations/201316270)|
+|Weed record updated, Visit record added|**78827**|OldMansBeard|YELLOW|[258111468](https://www.inaturalist.org/observations/258111468)|
+|New weed|**90395**|OldMansBeard|YELLOW|[335292486](https://www.inaturalist.org/observations/335292486)|
+|Visit record updated|**89935**|BlueMorningGlory|RED|[334041360](https://www.inaturalist.org/observations/334041360)|
+|Visit record updated|**90080**|BlueMorningGlory|RED|[334410413](https://www.inaturalist.org/observations/334410413)|
+|Visit record updated|**90081**|BlueMorningGlory|RED|[334410490](https://www.inaturalist.org/observations/334410490)|
+|Visit record updated|**90082**|BlueMorningGlory|RED|[334410651](https://www.inaturalist.org/observations/334410651)|
+|Visit record updated|**90083**|BlueMorningGlory|RED|[334410667](https://www.inaturalist.org/observations/334410667)|
+|Visit record updated|**90190**|BlueMorningGlory|RED|[334582361](https://www.inaturalist.org/observations/334582361)|
+|New weed|**90396**|BananaPassionfruit|RED|[335292235](https://www.inaturalist.org/observations/335292235)|
+|Visit record updated|**89151**|WoollyNightshade|RED|[331130127](https://www.inaturalist.org/observations/331130127)|
+|Visit record updated|**89256**|WoollyNightshade|RED|[331616726](https://www.inaturalist.org/observations/331616726)|
+|Visit record updated|**89939**|WoollyNightshade|RED|[334040542](https://www.inaturalist.org/observations/334040542)|
+|Visit record updated|**90087**|WoollyNightshade|RED|[334409585](https://www.inaturalist.org/observations/334409585)|
+|Visit record updated|**90092**|WoollyNightshade|RED|[334410109](https://www.inaturalist.org/observations/334410109)|
+|Visit record updated|**90194**|WoollyNightshade|RED|[334581832](https://www.inaturalist.org/observations/334581832)|
+|Visit record updated|**90198**|WoollyNightshade|RED|[334582258](https://www.inaturalist.org/observations/334582258)|
+|Visit record updated|**90342**|WoollyNightshade|RED|[335149846](https://www.inaturalist.org/observations/335149846)|
+|Weed record updated, Visit record updated|**88749**|OTHER|RED|[329648501](https://www.inaturalist.org/observations/329648501)|
