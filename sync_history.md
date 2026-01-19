@@ -63122,3 +63122,11 @@
 |New weed|**90422**|WoollyNightshade|RED|[335332586](https://www.inaturalist.org/observations/335332586)|
 |Visit record added|**90152**|MothPlant|RED|[334550993](https://www.inaturalist.org/observations/334550993)|
 |New weed|**90423**|MothPlant|RED|[335334797](https://www.inaturalist.org/observations/335334797)|
+---
+
+# Run [16284](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/521571d0abdd811c89473d09a660df8b478d4ee7/checks/21133154064)
+2026-01-19 23:02
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**90424**|BananaPassionfruit|RED|[335323354](https://www.inaturalist.org/observations/335323354)|
