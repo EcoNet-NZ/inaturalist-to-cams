@@ -64073,3 +64073,16 @@
 |Weed record updated, Visit record added|**83691**|OldMansBeard|RED|[272957374](https://www.inaturalist.org/observations/272957374)|
 |Weed record updated, Visit record updated|**90731**|OldMansBeard|RED|[336515519](https://www.inaturalist.org/observations/336515519)|
 |Visit record updated|**85458**|MadeiraVine|RED|[214856988](https://www.inaturalist.org/observations/214856988)|
+---
+
+# Run [16496](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/d1b90d5aeca6050d5887aca8c3849bace003dcff/checks/21464220452)
+2026-01-29 16:15
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Visit record updated|**90726**|OldMansBeard|RED|[336514149](https://www.inaturalist.org/observations/336514149)|
+|Visit record updated|**90728**|OldMansBeard|RED|[336514515](https://www.inaturalist.org/observations/336514515)|
+|Visit record updated|**90729**|OldMansBeard|RED|[336514853](https://www.inaturalist.org/observations/336514853)|
+|New weed|**90738**|OldMansBeard|RED|[336521481](https://www.inaturalist.org/observations/336521481)|
+|New weed|**90739**|OldMansBeard|RED|[336523103](https://www.inaturalist.org/observations/336523103)|
+|New weed|**90740**|OldMansBeard|RED|[336529252](https://www.inaturalist.org/observations/336529252)|
