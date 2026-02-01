@@ -64403,3 +64403,11 @@
 |Sync Event|Object Id|Species|Status|iNaturalist Id|
 |----------|---------|-------|------|--------------|
 |Visit record updated|**90918**|BananaPassionfruit|RED|[336926273](https://www.inaturalist.org/observations/336926273)|
+---
+
+# Run [16574](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/2a9220979ddeced7951116fd26a5d0b2bb3bd9b4/checks/21568630049)
+2026-02-02 08:14
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**90919**|OldMansBeard|RED|[336986954](https://www.inaturalist.org/observations/336986954)|
