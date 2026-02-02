@@ -64446,3 +64446,11 @@
 |New weed|**90939**|MothPlant|RED|[337042782](https://www.inaturalist.org/observations/337042782)|
 |New weed|**90940**|LadderFern|RED|[337015039](https://www.inaturalist.org/observations/337015039)|
 |New weed|**90941**|Elaeagnus|RED|[337016187](https://www.inaturalist.org/observations/337016187)|
+---
+
+# Run [16581](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/37ee21050ca8b598baeee40e1f9c7d17c159ee85/checks/21578274421)
+2026-02-02 18:17
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**90943**|WoollyNightshade|RED|[337054150](https://www.inaturalist.org/observations/337054150)|
