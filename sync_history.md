@@ -64499,3 +64499,11 @@
 |Visit record updated|**90943**|WoollyNightshade|RED|[337054150](https://www.inaturalist.org/observations/337054150)|
 |Visit record updated|**90549**|MothPlant|RED|[335776484](https://www.inaturalist.org/observations/335776484)|
 |Visit record updated|**90940**|LadderFern|RED|[337015039](https://www.inaturalist.org/observations/337015039)|
+---
+
+# Run [16601](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/47a35d6d735d0c846a0095ce12ba6dc34a5afb90/checks/21615706978)
+2026-02-03 16:27
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**90996**|MothPlant|RED|[337150876](https://www.inaturalist.org/observations/337150876)|
