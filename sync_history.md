@@ -65337,3 +65337,22 @@
 |Sync Event|Object Id|Species|Status|iNaturalist Id|
 |----------|---------|-------|------|--------------|
 |Visit record updated|**91133**|BlueMorningGlory|RED|[337507084](https://www.inaturalist.org/observations/337507084)|
+---
+
+# Run [16762](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/1d666b2cd9f62f914215e0d38041c3f4c46cf73b/checks/21894461277)
+2026-02-11 19:00
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Visit record updated|**91052**|BlueMorningGlory|RED|[337298093](https://www.inaturalist.org/observations/337298093)|
+|Visit record updated|**91127**|BlueMorningGlory|RED|[337489110](https://www.inaturalist.org/observations/337489110)|
+|Visit record updated|**91128**|BlueMorningGlory|RED|[337493856](https://www.inaturalist.org/observations/337493856)|
+|Visit record updated|**91133**|BlueMorningGlory|RED|[337507084](https://www.inaturalist.org/observations/337507084)|
+|Visit record updated|**91161**|BlueMorningGlory|RED|[337591796](https://www.inaturalist.org/observations/337591796)|
+|Visit record updated|**91171**|BlueMorningGlory|RED|[337602129](https://www.inaturalist.org/observations/337602129)|
+|Visit record updated|**91262**|BlueMorningGlory|RED|[337929266](https://www.inaturalist.org/observations/337929266)|
+|Visit record updated|**91274**|BlueMorningGlory|RED|[338002111](https://www.inaturalist.org/observations/338002111)|
+|Visit record updated|**91275**|BlueMorningGlory|RED|[338002270](https://www.inaturalist.org/observations/338002270)|
+|Visit record updated|**91276**|BlueMorningGlory|RED|[338002462](https://www.inaturalist.org/observations/338002462)|
+|Visit record updated|**91277**|BlueMorningGlory|RED|[338002508](https://www.inaturalist.org/observations/338002508)|
+|Visit record updated|**91278**|BlueMorningGlory|RED|[338002538](https://www.inaturalist.org/observations/338002538)|
