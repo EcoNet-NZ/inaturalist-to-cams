@@ -65801,3 +65801,12 @@
 |New weed|**91392**|MothPlant|RED|[338773598](https://www.inaturalist.org/observations/338773598)|
 |Visit record updated|**91296**|Pampas|YELLOW|[338114667](https://www.inaturalist.org/observations/338114667)|
 |New weed|**91393**|PrivetTree|RED|[338115399](https://www.inaturalist.org/observations/338115399)|
+---
+
+# Run [16860](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/5a68337bebf238a013a06dc77e0efba68d65613c/checks/22043811012)
+2026-02-16 10:59
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**91397**|BluePassionFlower|RED|[338667842](https://www.inaturalist.org/observations/338667842)|
+|New weed|**91398**|WoollyNightshade|RED|[338772771](https://www.inaturalist.org/observations/338772771)|
