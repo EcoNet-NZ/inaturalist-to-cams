@@ -66023,3 +66023,11 @@
 |Sync Event|Object Id|Species|Status|iNaturalist Id|
 |----------|---------|-------|------|--------------|
 |Visit record updated|**91462**|BananaPassionfruit|RED|[338936170](https://www.inaturalist.org/observations/338936170)|
+---
+
+# Run [16896](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/03875c1b7a5b5333807333a2ffba77754a62e68d/checks/22110927757)
+2026-02-18 07:37
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Visit record updated|**91469**|BlueMorningGlory|RED|[338957654](https://www.inaturalist.org/observations/338957654)|
