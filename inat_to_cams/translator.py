@@ -113,7 +113,26 @@ class INatToCamsTranslator:
         weed_visit.date_visit_made = self.as_local_datetime(visit_date)
         weed_visit.observation_quality = inat_observation.quality_grade
         weed_visit.site_difficulty = inat_observation.site_difficulty
-        weed_visit.follow_up_date = inat_observation.follow_up_date
+        # Validate and normalize follow_up_date
+        if inat_observation.follow_up_date:
+            # Handle both datetime objects and strings
+            if hasattr(inat_observation.follow_up_date, 'isoformat'):
+                follow_up_datetime = inat_observation.follow_up_date
+            else:
+                follow_up_datetime = self.as_local_datetime(inat_observation.follow_up_date)
+            
+            # Check if follow_up_date is after the visit date
+            if follow_up_datetime and weed_visit.date_visit_made:
+                if follow_up_datetime <= weed_visit.date_visit_made:
+                    logging.info(f'Ignoring follow-up date {follow_up_datetime} as it is before or on visit date {weed_visit.date_visit_made}')
+                    weed_visit.follow_up_date = None
+                else:
+                    weed_visit.follow_up_date = follow_up_datetime
+            else:
+                weed_visit.follow_up_date = follow_up_datetime
+        else:
+            weed_visit.follow_up_date = None
+        
         weed_visit.phenology = inat_observation.phenology
         weed_visit.visit_status = visit_status
         weed_visit.treated = inat_observation.treated

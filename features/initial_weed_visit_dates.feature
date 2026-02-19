@@ -79,4 +79,25 @@ Feature: DateVisitMade (DateCheck) and 'Date for next visit' (DateForReturnVisit
 		When we process the observation
 		Then the visits record has date 'DateForReturnVisit' set to '2025-02-14'
 
+	Rule:
+		If 'Date for next visit' is before or on the visit date, DateForReturnVisit is left blank
+
+		Example: 'Date for next visit' is before visit date
+		Given iNaturalist has a new OMB observation observed at 2025-03-15T12:00:00+12:00
+		And 'Date for next visit' is set to '2025-03-10'
+		When we process the observation
+		Then the visits record has 'DateForReturnVisit' set to None
+
+		Example: 'Date for next visit' is same as visit date
+		Given iNaturalist has a new OMB observation observed at 2025-03-15T12:00:00+12:00
+		And 'Date for next visit' is set to '2025-03-15'
+		When we process the observation
+		Then the visits record has 'DateForReturnVisit' set to None
+
+		Example: 'Date for next visit' is after visit date
+		Given iNaturalist has a new OMB observation observed at 2025-03-15T12:00:00+12:00
+		And 'Date for next visit' is set to '2025-03-20'
+		When we process the observation
+		Then the visits record has date 'DateForReturnVisit' set to '2025-03-20'
+
 		
