@@ -35,6 +35,12 @@ class CamsConnection:
         print("Connecting to layer")
         # self.gis = arcgis.GIS(profile='econet_sync')
         self.item = self.gis.content.get(os.environ['ARCGIS_FEATURE_LAYER_ID'])
+        
+        if self.item is None:
+            raise ValueError(f"Could not find feature layer with ID '{os.environ['ARCGIS_FEATURE_LAYER_ID']}'. "
+                           f"Please check the ARCGIS_FEATURE_LAYER_ID environment variable and ensure the user "
+                           f"'{self.gis.properties.user.username}' has access to this layer.")
+        
         print("Connected")
 
         setup_logging.SetupLogging()
@@ -55,7 +61,7 @@ class CamsConnection:
         self.test_schema = ['iNat_to_CAMS_Dev', 'XXX Nigel_Updated_EasyEditor_DEV - clone of CAMS Weeds (FL_BASE ALL)' ]
 
     def is_test_schema(self):
-        return self.item.title in self.test_schema
+        return self.item.title in self.test_schema or 'clone of CAMS Weeds (FL_BASE ALL)' in self.item.title
 
     @retry(delay=5, tries=3)
     def query_weed_visits_table(self, query_table):
@@ -100,11 +106,11 @@ class CamsConnection:
     @retry(delay=5, tries=3)
     def delete_table_rows_if_allowed(self, query):
         logging.info(f'Deleting table rows where {query}')
-        if self.item.title in self.test_schema:
+        if self.is_test_schema():
             self.table.delete_features(where=query)
             logging.info(f"Deleted table rows where {query}")
         else:
-            logging.info(f"ERROR: for safety, records can only be deleted from the named items {self.test_schema}")
+            logging.info(f"ERROR: for safety, records can only be deleted from test schemas. Current schema: '{self.item.title}'")
             exit(1)
 
     def delete_location_rows_with_object_id_gt(self, object_id):
@@ -114,11 +120,11 @@ class CamsConnection:
     @retry(delay=5, tries=3)
     def delete_layer_rows_if_allowed(self, query):
         logging.info(f'Deleting layer rows where {query}')
-        if self.item.title in self.test_schema:
+        if self.is_test_schema():
             self.layer.delete_features(where=query)
             logging.info(f"Deleted layer rows where {query}")
         else:
-            logging.info(f"ERROR: for safety, records can only be deleted from the named items {self.test_schema}")
+            logging.info(f"ERROR: for safety, records can only be deleted from test schemas. Current schema: '{self.item.title}'")
             exit(1)
 
     def delete_feature_with_id(self, inat_id):
