@@ -106,11 +106,11 @@ class CamsConnection:
     @retry(delay=5, tries=3)
     def delete_table_rows_if_allowed(self, query):
         logging.info(f'Deleting table rows where {query}')
-        if self.item.title in self.test_schema:
+        if self.is_test_schema():
             self.table.delete_features(where=query)
             logging.info(f"Deleted table rows where {query}")
         else:
-            logging.info(f"ERROR: for safety, records can only be deleted from the named items {self.test_schema}")
+            logging.info(f"ERROR: for safety, records can only be deleted from test schemas. Current schema: '{self.item.title}'")
             exit(1)
 
     def delete_location_rows_with_object_id_gt(self, object_id):
@@ -120,11 +120,11 @@ class CamsConnection:
     @retry(delay=5, tries=3)
     def delete_layer_rows_if_allowed(self, query):
         logging.info(f'Deleting layer rows where {query}')
-        if self.item.title in self.test_schema:
+        if self.is_test_schema():
             self.layer.delete_features(where=query)
             logging.info(f"Deleted layer rows where {query}")
         else:
-            logging.info(f"ERROR: for safety, records can only be deleted from the named items {self.test_schema}")
+            logging.info(f"ERROR: for safety, records can only be deleted from test schemas. Current schema: '{self.item.title}'")
             exit(1)
 
     def delete_feature_with_id(self, inat_id):
