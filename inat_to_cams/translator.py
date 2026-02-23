@@ -116,8 +116,9 @@ class INatToCamsTranslator:
         # Validate and normalize follow_up_date
         if inat_observation.follow_up_date:
             # Handle both datetime objects and strings
+            # Normalize to naive datetime to ensure consistent timezone handling
             if hasattr(inat_observation.follow_up_date, 'isoformat'):
-                follow_up_datetime = inat_observation.follow_up_date
+                follow_up_datetime = self.as_local_datetime(inat_observation.follow_up_date.isoformat())
             else:
                 follow_up_datetime = self.as_local_datetime(inat_observation.follow_up_date)
             
