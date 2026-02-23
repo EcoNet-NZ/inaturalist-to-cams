@@ -116,14 +116,19 @@ class INatToCamsTranslator:
         # Validate and normalize follow_up_date
         if inat_observation.follow_up_date:
             # Handle both datetime objects and strings
+            # Normalize to naive datetime to ensure consistent timezone handling
             if hasattr(inat_observation.follow_up_date, 'isoformat'):
-                follow_up_datetime = inat_observation.follow_up_date
+                follow_up_datetime = self.as_local_datetime(inat_observation.follow_up_date.isoformat())
             else:
                 follow_up_datetime = self.as_local_datetime(inat_observation.follow_up_date)
             
             # Check if follow_up_date is after the visit date
             if follow_up_datetime and weed_visit.date_visit_made:
-                if follow_up_datetime <= weed_visit.date_visit_made:
+                # Extract date part for comparison to handle both datetime.date and datetime.datetime
+                follow_up_date_only = follow_up_datetime.date() if hasattr(follow_up_datetime, 'date') else follow_up_datetime
+                visit_date_only = weed_visit.date_visit_made.date() if hasattr(weed_visit.date_visit_made, 'date') else weed_visit.date_visit_made
+                
+                if follow_up_date_only <= visit_date_only:
                     logging.info(f'Ignoring follow-up date {follow_up_datetime} as it is before or on visit date {weed_visit.date_visit_made}')
                     weed_visit.follow_up_date = None
                 else:
