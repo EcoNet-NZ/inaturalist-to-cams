@@ -66781,3 +66781,21 @@
 |Visit record updated|**91731**|WoollyNightshade|RED|[340078008](https://www.inaturalist.org/observations/340078008)|
 |New weed|**91737**|WoollyNightshade|RED|[340082444](https://www.inaturalist.org/observations/340082444)|
 |Weed record updated, Visit record updated|**91733**|AsparagusClimbing|RED|[340077673](https://www.inaturalist.org/observations/340077673)|
+---
+
+# Run [17046](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/180befa3afd6128173165758b1c5644997b816b2/checks/22377131586)
+2026-02-25 13:58
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Weed record updated, Visit record added|**78828**|OldMansBeard|YELLOW|[258111745](https://www.inaturalist.org/observations/258111745)|
+|Weed record updated, Visit record updated|**84145**|OldMansBeard|RED|[277892756](https://www.inaturalist.org/observations/277892756)|
+|Weed record updated, Visit record updated|**84147**|OldMansBeard|RED|[277901654](https://www.inaturalist.org/observations/277901654)|
+|Weed record updated, Visit record updated|**84213**|OldMansBeard|RED|[278236590](https://www.inaturalist.org/observations/278236590)|
+|Weed record updated, Visit record updated|**84259**|OldMansBeard|RED|[278363879](https://www.inaturalist.org/observations/278363879)|
+|Weed record updated, Visit record updated|**84258**|OldMansBeard|RED|[278363907](https://www.inaturalist.org/observations/278363907)|
+|Weed record updated, Visit record updated|**84745**|OldMansBeard|RED|[281701764](https://www.inaturalist.org/observations/281701764)|
+||**85919**|OldMansBeard|PURPLE|[296401393](https://www.inaturalist.org/observations/296401393)|
+|Visit record updated|**88502**|OldMansBeard|RED|[326520962](https://www.inaturalist.org/observations/326520962)|
+|Visit record added|**88546**|OldMansBeard|YELLOW|[328719182](https://www.inaturalist.org/observations/328719182)|
+|Visit record updated|**88838**|OldMansBeard|YELLOW|[329951507](https://www.inaturalist.org/observations/329951507)|
