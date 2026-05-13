@@ -14,9 +14,8 @@
 #  limitations under the License.
 #  ====================================================================
 
-# workflow_dispatch only. Mirrors the first half of test.yml (through timezone),
-# then stops before flake8 / behave / artifact upload. No concurrency group so it
-# does not queue behind other workflows.
+# workflow_dispatch only. Like test.yml through timezone, without apt or lint/tests.
+# No concurrency group so it does not queue behind other workflows.
 
 name: Actions runner smoke
 
@@ -26,20 +25,14 @@ on:
 jobs:
   smoke:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 5
 
     steps:
     - name: Checkout
-      uses: actions/checkout@v4
-
-    - name: Install apt dependencies
-      uses: awalsh128/cache-apt-pkgs-action@v1.4.3
-      with:
-        packages: heimdal-dev   # Workaround for problem building gssapi wheel, see https://stackoverflow.com/questions/44449290/krb5-config-is-not-recognized-as-an-internal-or-external-command
-        version: 1.0
+      uses: actions/checkout@v6
 
     - name: Set up Python
-      uses: actions/setup-python@v5
+      uses: actions/setup-python@v6
       with:
         python-version: '3.11'
         cache: 'pip'
@@ -51,7 +44,7 @@ jobs:
         if [ -f requirements_lock.txt ]; then pip install -r requirements_lock.txt; fi
 
     - name: Set timezone   # so that we observations are stored to CAMS in NZ time
-      uses: zcong1993/setup-timezone@master
+      uses: zcong1993/setup-timezone@v2.0.0
       with:
         timezone: Pacific/Auckland
 
