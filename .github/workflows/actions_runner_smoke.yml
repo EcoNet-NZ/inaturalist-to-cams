@@ -15,12 +15,14 @@
 #  ====================================================================
 
 # workflow_dispatch only. Like test.yml through timezone, without lint/tests.
-# No concurrency group so it does not queue behind other workflows.
+# Same concurrency group as test.yml and sync workflows for diagnosis.
 
 name: Actions runner smoke
 
 on:
   workflow_dispatch:
+
+concurrency: non-concurrent
 
 jobs:
   smoke:
