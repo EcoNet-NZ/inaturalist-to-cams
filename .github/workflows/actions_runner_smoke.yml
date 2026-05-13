@@ -14,8 +14,9 @@
 #  limitations under the License.
 #  ====================================================================
 
-# Minimal workflow_dispatch job: no checkout, no Python, no third-party actions.
-# Use to see whether GitHub-hosted runners complete trivial work in this repo.
+# workflow_dispatch only. Mirrors the first half of test.yml (through timezone),
+# then stops before flake8 / behave / artifact upload. No concurrency group so it
+# does not queue behind other workflows.
 
 name: Actions runner smoke
 
@@ -25,9 +26,37 @@ on:
 jobs:
   smoke:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 30
+
     steps:
-      - name: Shell only
-        run: |
-          echo "smoke ok run=${{ github.run_id }} attempt=${{ github.run_attempt }}"
-          date -u
+    - name: Checkout
+      uses: actions/checkout@v4
+
+    - name: Install apt dependencies
+      uses: awalsh128/cache-apt-pkgs-action@v1.4.3
+      with:
+        packages: heimdal-dev   # Workaround for problem building gssapi wheel, see https://stackoverflow.com/questions/44449290/krb5-config-is-not-recognized-as-an-internal-or-external-command
+        version: 1.0
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+        cache: 'pip'
+
+    - name: Install pip dependencies
+      run: |
+        python -m pip install --upgrade pip
+        python -m pip install wheel
+        if [ -f requirements_lock.txt ]; then pip install -r requirements_lock.txt; fi
+
+    - name: Set timezone   # so that we observations are stored to CAMS in NZ time
+      uses: zcong1993/setup-timezone@master
+      with:
+        timezone: Pacific/Auckland
+
+    - name: Bootstrap sanity check
+      run: |
+        echo "bootstrap ok run=${{ github.run_id }} attempt=${{ github.run_attempt }}"
+        python --version
+        date
