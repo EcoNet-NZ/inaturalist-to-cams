@@ -14,7 +14,7 @@
 #  limitations under the License.
 #  ====================================================================
 
-# workflow_dispatch only. Like test.yml through timezone, without apt or lint/tests.
+# workflow_dispatch only. Like test.yml through timezone, without lint/tests.
 # No concurrency group so it does not queue behind other workflows.
 
 name: Actions runner smoke
@@ -30,6 +30,12 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v6
+
+    - name: Install apt dependencies
+      uses: awalsh128/cache-apt-pkgs-action@v1.4.3
+      with:
+        packages: heimdal-dev   # Workaround for problem building gssapi wheel, see https://stackoverflow.com/questions/44449290/krb5-config-is-not-recognized-as-an-internal-or-external-command
+        version: 1.0
 
     - name: Set up Python
       uses: actions/setup-python@v6
