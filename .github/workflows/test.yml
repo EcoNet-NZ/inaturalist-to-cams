@@ -33,16 +33,16 @@ jobs:
 
     steps:
     - name: Checkout
-      uses: actions/checkout@v4
+      uses: actions/checkout@v6
 
     - name: Install apt dependencies
-      uses: awalsh128/cache-apt-pkgs-action@v1.4.3
+      uses: awalsh128/cache-apt-pkgs-action@latest
       with:
         packages: heimdal-dev   # Workaround for problem building gssapi wheel, see https://stackoverflow.com/questions/44449290/krb5-config-is-not-recognized-as-an-internal-or-external-command
         version: 1.0
 
     - name: Set up Python
-      uses: actions/setup-python@v5
+      uses: actions/setup-python@v6
       with:
         python-version: '3.11'
         cache: 'pip'
@@ -75,7 +75,7 @@ jobs:
         ARCGIS_FEATURE_LAYER_ID: ${{ secrets.ARCGIS_FEATURE_LAYER_ID_DEV }}        
 
     - name: Upload test reports
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v7
       with:
         name: test reports
         path: |
