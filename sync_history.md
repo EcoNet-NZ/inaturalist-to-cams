@@ -428,3 +428,11 @@
 |Weed record updated, Visit record updated|**94340**|OTHER|YELLOW|[361012577](https://www.inaturalist.org/observations/361012577)|
 |Weed record updated, Visit record updated|**94449**|OTHER|RED|[362903715](https://www.inaturalist.org/observations/362903715)|
 |Visit record updated|**94461**|PhoenixPalm|RED|[362903975](https://www.inaturalist.org/observations/362903975)|
+---
+
+# Run [18473](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/71a85a4d2d18830b70079fa7d7c45432aa32c7e0/checks/26101238590)
+2026-05-20 01:45
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**94468**|OldMansBeard|RED|[363019073](https://www.inaturalist.org/observations/363019073)|
