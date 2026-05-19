@@ -395,3 +395,13 @@
 |New weed|**94448**|BananaPassionfruit|RED|[362892867](https://www.inaturalist.org/observations/362892867)|
 |Visit record updated|**86667**|ClimbingDock|RED|[156527383](https://www.inaturalist.org/observations/156527383)|
 |New weed|**94449**|OTHER|RED|[362903715](https://www.inaturalist.org/observations/362903715)|
+---
+
+# Run [18470](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/11965dca9428e81eb6f9eb2cf70847c43041f3d9/checks/26071300037)
+2026-05-19 13:52
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Visit record updated|**94374**|BluePassionFlower|RED|[361541677](https://www.inaturalist.org/observations/361541677)|
+|New weed|**94460**|BananaPassionfruit|RED|[362879933](https://www.inaturalist.org/observations/362879933)|
+|New weed|**94461**|PhoenixPalm|RED|[362903975](https://www.inaturalist.org/observations/362903975)|
