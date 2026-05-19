@@ -405,3 +405,14 @@
 |Visit record updated|**94374**|BluePassionFlower|RED|[361541677](https://www.inaturalist.org/observations/361541677)|
 |New weed|**94460**|BananaPassionfruit|RED|[362879933](https://www.inaturalist.org/observations/362879933)|
 |New weed|**94461**|PhoenixPalm|RED|[362903975](https://www.inaturalist.org/observations/362903975)|
+---
+
+# Run [18471](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/f4aa628f5f0dbd7145d5005b44d24b8ac3881479/checks/26080612525)
+2026-05-19 18:36
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Weed record updated, Visit record updated|**73618**|BluePassionFlower|RED|[197749582](https://www.inaturalist.org/observations/197749582)|
+|Weed record updated, Visit record updated|**75629**|BananaPassionfruit|RED|[228366793](https://www.inaturalist.org/observations/228366793)|
+|New weed|**94466**|BananaPassionfruit|RED|[362950210](https://www.inaturalist.org/observations/362950210)|
+|Visit record updated|**85471**|Rhamnus|RED|[246395374](https://www.inaturalist.org/observations/246395374)|
