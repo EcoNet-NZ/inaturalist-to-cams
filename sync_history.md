@@ -906,3 +906,11 @@
 |----------|---------|-------|------|--------------|
 |Visit record updated|**94684**|OldMansBeard|RED|[365687448](https://www.inaturalist.org/observations/365687448)|
 |Visit record updated|**94686**|OldMansBeard|RED|[365687451](https://www.inaturalist.org/observations/365687451)|
+---
+
+# Run [18557](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/da39e86cafdb0c4303a57ca333410a67f007d60d/checks/26539820951)
+2026-05-28 09:29
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Visit record updated|**94461**|PhoenixPalm|RED|[362903975](https://www.inaturalist.org/observations/362903975)|
