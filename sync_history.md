@@ -965,3 +965,49 @@
 |New weed|**94712**|MothPlant|RED|[365949342](https://www.inaturalist.org/observations/365949342)|
 |New weed|**94713**|MothPlant|RED|[365949718](https://www.inaturalist.org/observations/365949718)|
 |Visit record updated|**87439**|AsparagusClimbing|RED|[319441806](https://www.inaturalist.org/observations/319441806)|
+---
+
+# Run [18561](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/c3d3a1ebe99c7237552abf2d16f4ee3c360ed0ac/checks/26569704286)
+2026-05-28 22:39
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Weed record updated, Visit record added|**57228**|OldMansBeard|GREEN|[20375015](https://www.inaturalist.org/observations/20375015)|
+|Weed record updated, Visit record added|**57233**|OldMansBeard|GREEN|[20380234](https://www.inaturalist.org/observations/20380234)|
+|Weed record updated, Visit record added|**65684**|OldMansBeard|GREEN|[194008066](https://www.inaturalist.org/observations/194008066)|
+|Weed record updated, Visit record added|**69289**|OldMansBeard|GREEN|[209899581](https://www.inaturalist.org/observations/209899581)|
+|New weed|**94715**|OldMansBeard|RED|[252443413](https://www.inaturalist.org/observations/252443413)|
+|New weed|**94716**|OldMansBeard|RED|[252941979](https://www.inaturalist.org/observations/252941979)|
+|Visit record updated|**94698**|OldMansBeard|YELLOW|[365884762](https://www.inaturalist.org/observations/365884762)|
+|Visit record updated|**94700**|OldMansBeard|RED|[365905914](https://www.inaturalist.org/observations/365905914)|
+|Visit record updated|**94701**|OldMansBeard|RED|[365906209](https://www.inaturalist.org/observations/365906209)|
+|Visit record updated|**86920**|BananaPassionfruit|RED|[312147688](https://www.inaturalist.org/observations/312147688)|
+|Visit record updated|**87800**|BananaPassionfruit|RED|[322813715](https://www.inaturalist.org/observations/322813715)|
+|Visit record updated|**90452**|BananaPassionfruit|RED|[335441310](https://www.inaturalist.org/observations/335441310)|
+|Visit record updated|**91037**|BananaPassionfruit|RED|[337287055](https://www.inaturalist.org/observations/337287055)|
+|Visit record updated|**91038**|BananaPassionfruit|RED|[337287066](https://www.inaturalist.org/observations/337287066)|
+|Visit record updated|**91051**|BananaPassionfruit|RED|[337296481](https://www.inaturalist.org/observations/337296481)|
+|New weed|**94717**|BananaPassionfruit|RED|[343451347](https://www.inaturalist.org/observations/343451347)|
+|Visit record updated|**92448**|BananaPassionfruit|RED|[343775242](https://www.inaturalist.org/observations/343775242)|
+|Visit record updated|**93579**|BananaPassionfruit|RED|[353971847](https://www.inaturalist.org/observations/353971847)|
+|Visit record updated|**93580**|BananaPassionfruit|RED|[353972703](https://www.inaturalist.org/observations/353972703)|
+|Visit record updated|**93728**|BananaPassionfruit|RED|[355105997](https://www.inaturalist.org/observations/355105997)|
+|Geolocation updated, Weed record updated, Visit record updated|**93729**|BananaPassionfruit|RED|[355112648](https://www.inaturalist.org/observations/355112648)|
+|Visit record updated|**93836**|BananaPassionfruit|RED|[356340246](https://www.inaturalist.org/observations/356340246)|
+|Visit record updated|**93824**|BananaPassionfruit|RED|[356342513](https://www.inaturalist.org/observations/356342513)|
+|Visit record updated|**93931**|BananaPassionfruit|RED|[357122591](https://www.inaturalist.org/observations/357122591)|
+|Visit record updated|**93976**|BananaPassionfruit|RED|[357739560](https://www.inaturalist.org/observations/357739560)|
+|Visit record updated|**94100**|BananaPassionfruit|RED|[359047144](https://www.inaturalist.org/observations/359047144)|
+|Visit record updated|**94139**|BluePassionFlower|RED|[359459904](https://www.inaturalist.org/observations/359459904)|
+|Visit record updated|**94193**|BananaPassionfruit|RED|[359769186](https://www.inaturalist.org/observations/359769186)|
+|Visit record updated|**94194**|BananaPassionfruit|RED|[359769194](https://www.inaturalist.org/observations/359769194)|
+|Visit record updated|**94196**|BananaPassionfruit|RED|[359769772](https://www.inaturalist.org/observations/359769772)|
+|Visit record updated|**94197**|BananaPassionfruit|RED|[359769814](https://www.inaturalist.org/observations/359769814)|
+|Visit record updated|**94198**|BananaPassionfruit|RED|[359769820](https://www.inaturalist.org/observations/359769820)|
+|Visit record updated|**94202**|BananaPassionfruit|RED|[359794966](https://www.inaturalist.org/observations/359794966)|
+|Visit record updated|**94205**|BananaPassionfruit|RED|[359998822](https://www.inaturalist.org/observations/359998822)|
+|Visit record updated|**94523**|BananaPassionfruit|RED|[363580915](https://www.inaturalist.org/observations/363580915)|
+|Visit record updated|**94688**|BananaPassionfruit|RED|[365686855](https://www.inaturalist.org/observations/365686855)|
+|Visit record updated|**94707**|BlueMorningGlory|RED|[365915598](https://www.inaturalist.org/observations/365915598)|
+|Visit record updated|**94702**|MothPlant|RED|[365897924](https://www.inaturalist.org/observations/365897924)|
+|Visit record updated|**94710**|MothPlant|RED|[365933407](https://www.inaturalist.org/observations/365933407)|
