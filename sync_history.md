@@ -1293,3 +1293,14 @@
 |New weed|**94798**|WoollyNightshade|YELLOW|[367569883](https://www.inaturalist.org/observations/367569883)|
 |Weed record updated, Visit record added|**63380**|MothPlant|GREEN|[70215675](https://www.inaturalist.org/observations/70215675)|
 |New weed|**94799**|PrivetChinese|YELLOW|[367570990](https://www.inaturalist.org/observations/367570990)|
+---
+
+# Run [18607](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/a0b241cc67d52f1d87e079efb094c4a1e4e03e11/checks/26799991075)
+2026-06-02 17:17
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**94802**|BananaPassionfruit|RED|[367627023](https://www.inaturalist.org/observations/367627023)|
+|Visit record updated|**94798**|WoollyNightshade|YELLOW|[367569883](https://www.inaturalist.org/observations/367569883)|
+|Visit record updated|**94792**|MothPlant|RED|[367252290](https://www.inaturalist.org/observations/367252290)|
+|Visit record updated|**94799**|PrivetChinese|YELLOW|[367570990](https://www.inaturalist.org/observations/367570990)|
