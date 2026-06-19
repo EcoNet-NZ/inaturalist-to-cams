@@ -2081,3 +2081,11 @@
 |Visit record added|**92354**|MothPlant|GREEN|[340669114](https://www.inaturalist.org/observations/340669114)|
 |New weed|**95274**|MothPlant|RED|[373146865](https://www.inaturalist.org/observations/373146865)|
 |New weed|**95275**|Macrocarpa|RED|[373147388](https://www.inaturalist.org/observations/373147388)|
+---
+
+# Run [18747](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/ce7afcb41f3309ead41451a6be18ac0c199ebb1e/checks/27851571309)
+2026-06-20 10:39
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Visit record updated|**95274**|MothPlant|RED|[373146865](https://www.inaturalist.org/observations/373146865)|
