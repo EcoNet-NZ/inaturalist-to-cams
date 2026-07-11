@@ -2844,3 +2844,11 @@
 |Visit record updated|**95445**|BananaPassionfruit|RED|[376752423](https://www.inaturalist.org/observations/376752423)|
 |New weed|**95653**|BananaPassionfruit|RED|[379841065](https://www.inaturalist.org/observations/379841065)|
 |New weed|**95654**|BananaPassionfruit|RED|[379942699](https://www.inaturalist.org/observations/379942699)|
+---
+
+# Run [18955](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/ae0d9f94771aa4c79c3ae2ab5cc3c0a89b628631/checks/29147295215)
+2026-07-11 21:11
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**95655**|JapaneseSpindleberry|RED|[380252873](https://www.inaturalist.org/observations/380252873)|
