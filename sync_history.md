@@ -2887,3 +2887,12 @@
 |Visit record updated|**94286**|BlueMorningGlory|RED|[360502442](https://www.inaturalist.org/observations/360502442)|
 |Visit record updated|**95655**|JapaneseSpindleberry|RED|[380252873](https://www.inaturalist.org/observations/380252873)|
 |New weed|**95671**|OTHER|RED|[380546109](https://www.inaturalist.org/observations/380546109)|
+---
+
+# Run [18970](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/1f9b3747986cac874afd291ba95ec305cdb9544f/checks/29184865276)
+2026-07-12 19:51
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**95672**|MothPlant|RED|[380573339](https://www.inaturalist.org/observations/380573339)|
+|Weed record updated, Visit record updated|**95671**|OTHER|RED|[380546109](https://www.inaturalist.org/observations/380546109)|
