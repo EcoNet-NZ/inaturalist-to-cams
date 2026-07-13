@@ -2960,3 +2960,20 @@
 |New weed|**95718**|CathedralBells|RED|[380916571](https://www.inaturalist.org/observations/380916571)|
 |New weed|**95719**|WoollyNightshade|RED|[380920995](https://www.inaturalist.org/observations/380920995)|
 |Weed record updated, Visit record added|**89052**|ClimbingDock|RED|[330689485](https://www.inaturalist.org/observations/330689485)|
+---
+
+# Run [18985](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/79f3fd7a45e9c7384f76c5784ad5a53301d398ed/checks/29236022306)
+2026-07-13 20:37
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Visit record updated|**94089**|BlueMorningGlory|RED|[342825101](https://www.inaturalist.org/observations/342825101)|
+|Visit record updated|**93620**|BlueMorningGlory|RED|[354076199](https://www.inaturalist.org/observations/354076199)|
+|Visit record updated|**93743**|BlueMorningGlory|RED|[355764458](https://www.inaturalist.org/observations/355764458)|
+|Visit record updated|**94061**|BlueMorningGlory|RED|[358782248](https://www.inaturalist.org/observations/358782248)|
+|Visit record updated|**95677**|CathedralBells|RED|[380887358](https://www.inaturalist.org/observations/380887358)|
+|Visit record updated|**95718**|CathedralBells|RED|[380916571](https://www.inaturalist.org/observations/380916571)|
+|Visit record updated|**95676**|MothPlant|RED|[380841050](https://www.inaturalist.org/observations/380841050)|
+|New weed|**95734**|MothPlant|RED|[380954480](https://www.inaturalist.org/observations/380954480)|
+|Weed record updated, Visit record added|**85613**|JapaneseHoneysuckle|GREEN|[287436115](https://www.inaturalist.org/observations/287436115)|
+|Visit record added|**88743**|Elaeagnus|GREEN|[329641060](https://www.inaturalist.org/observations/329641060)|
