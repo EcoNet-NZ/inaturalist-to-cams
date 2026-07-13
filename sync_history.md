@@ -2923,3 +2923,40 @@
 |Visit record added|**91312**|OldMansBeard|GREEN|[338241725](https://www.inaturalist.org/observations/338241725)|
 |New weed|**95677**|CathedralBells|RED|[380887358](https://www.inaturalist.org/observations/380887358)|
 |Visit record added|**85606**|Elaeagnus|RED|[283539961](https://www.inaturalist.org/observations/283539961)|
+---
+
+# Run [18984](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/29e97ee1060c2158daa4260f122f330d842ee0af/checks/29225985541)
+2026-07-13 17:19
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Visit record updated|**93480**|BlueMorningGlory|RED|[352428342](https://www.inaturalist.org/observations/352428342)|
+|Visit record updated|**93515**|BlueMorningGlory|RED|[352605951](https://www.inaturalist.org/observations/352605951)|
+|Visit record updated|**93523**|BlueMorningGlory|RED|[353080978](https://www.inaturalist.org/observations/353080978)|
+|Visit record updated|**93640**|BlueMorningGlory|RED|[354138114](https://www.inaturalist.org/observations/354138114)|
+|Visit record updated|**93642**|BlueMorningGlory|RED|[354154325](https://www.inaturalist.org/observations/354154325)|
+|Visit record updated|**93682**|BlueMorningGlory|RED|[354890533](https://www.inaturalist.org/observations/354890533)|
+|Visit record updated|**93707**|BlueMorningGlory|RED|[354972014](https://www.inaturalist.org/observations/354972014)|
+|Visit record updated|**93723**|BlueMorningGlory|RED|[355049112](https://www.inaturalist.org/observations/355049112)|
+|Visit record updated|**93825**|BlueMorningGlory|RED|[356353245](https://www.inaturalist.org/observations/356353245)|
+|Visit record updated|**93919**|BlueMorningGlory|RED|[357075919](https://www.inaturalist.org/observations/357075919)|
+|Visit record updated|**93963**|BlueMorningGlory|RED|[357647746](https://www.inaturalist.org/observations/357647746)|
+|Visit record updated|**93992**|BlueMorningGlory|RED|[357870464](https://www.inaturalist.org/observations/357870464)|
+|Visit record updated|**94018**|BlueMorningGlory|RED|[358226118](https://www.inaturalist.org/observations/358226118)|
+|Visit record updated|**94042**|BlueMorningGlory|RED|[358710116](https://www.inaturalist.org/observations/358710116)|
+|Visit record updated|**94286**|BlueMorningGlory|RED|[360502442](https://www.inaturalist.org/observations/360502442)|
+|Visit record updated|**94384**|BlueMorningGlory|RED|[361636943](https://www.inaturalist.org/observations/361636943)|
+|Visit record updated|**94408**|BlueMorningGlory|RED|[361935260](https://www.inaturalist.org/observations/361935260)|
+|Visit record updated|**94583**|BlueMorningGlory|RED|[363598896](https://www.inaturalist.org/observations/363598896)|
+|Visit record updated|**94707**|BlueMorningGlory|RED|[365915598](https://www.inaturalist.org/observations/365915598)|
+|Visit record updated|**94729**|BlueMorningGlory|RED|[366200470](https://www.inaturalist.org/observations/366200470)|
+|Visit record updated|**94774**|BlueMorningGlory|RED|[366851358](https://www.inaturalist.org/observations/366851358)|
+|Visit record updated|**94927**|BlueMorningGlory|RED|[369651962](https://www.inaturalist.org/observations/369651962)|
+|Visit record updated|**95097**|BlueMorningGlory|RED|[371486606](https://www.inaturalist.org/observations/371486606)|
+|Visit record updated|**95446**|BlueMorningGlory|RED|[376758389](https://www.inaturalist.org/observations/376758389)|
+|Visit record updated|**95479**|BlueMorningGlory|RED|[377382428](https://www.inaturalist.org/observations/377382428)|
+|Visit record updated|**95629**|BlueMorningGlory|RED|[379462025](https://www.inaturalist.org/observations/379462025)|
+|Visit record updated|**95656**|BananaPassionfruit|RED|[380488502](https://www.inaturalist.org/observations/380488502)|
+|New weed|**95718**|CathedralBells|RED|[380916571](https://www.inaturalist.org/observations/380916571)|
+|New weed|**95719**|WoollyNightshade|RED|[380920995](https://www.inaturalist.org/observations/380920995)|
+|Weed record updated, Visit record added|**89052**|ClimbingDock|RED|[330689485](https://www.inaturalist.org/observations/330689485)|
