@@ -2977,3 +2977,11 @@
 |New weed|**95734**|MothPlant|RED|[380954480](https://www.inaturalist.org/observations/380954480)|
 |Weed record updated, Visit record added|**85613**|JapaneseHoneysuckle|GREEN|[287436115](https://www.inaturalist.org/observations/287436115)|
 |Visit record added|**88743**|Elaeagnus|GREEN|[329641060](https://www.inaturalist.org/observations/329641060)|
+---
+
+# Run [18986](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/57b9777dec23be5ac5d0e3eff1d64e6a1f87d261/checks/29247274582)
+2026-07-13 23:45
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**95735**|BlueMorningGlory|RED|[381002497](https://www.inaturalist.org/observations/381002497)|
