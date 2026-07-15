@@ -3116,3 +3116,12 @@
 |Weed record updated, Visit record added|**63164**|MothPlant|YELLOW|[35436043](https://www.inaturalist.org/observations/35436043)|
 |Weed record updated, Visit record updated|**95780**|IvyCape|RED|[381492547](https://www.inaturalist.org/observations/381492547)|
 |Weed record updated, Visit record updated|**95802**|OTHER|RED|[381594878](https://www.inaturalist.org/observations/381594878)|
+---
+
+# Run [19012](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/cf0cd07f901c77fc48ce3cac16a29ad6d32f2ffe/checks/29417288361)
+2026-07-16 00:59
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Visit record updated|**95433**|WoollyNightshade|RED|[376400460](https://www.inaturalist.org/observations/376400460)|
+|Weed record updated, Visit record updated|**95802**|OTHER|RED|[381594878](https://www.inaturalist.org/observations/381594878)|
