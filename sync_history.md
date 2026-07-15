@@ -3078,3 +3078,22 @@
 |Sync Event|Object Id|Species|Status|iNaturalist Id|
 |----------|---------|-------|------|--------------|
 |Weed record updated, Visit record updated|**72404**|BananaPassionfruit|RED|[20967062](https://www.inaturalist.org/observations/20967062)|
+---
+
+# Run [19008](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/20ea861051d3d236c35022d1a7f63305cf593517/checks/29389274221)
+2026-07-15 16:34
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Weed record updated, Visit record updated|**70455**|OldMansBeard|RED|[11980180](https://www.inaturalist.org/observations/11980180)|
+|Weed record updated, Visit record updated|**70471**|OldMansBeard|RED|[18026274](https://www.inaturalist.org/observations/18026274)|
+|Visit record updated|**72334**|BananaPassionfruit|RED|[18514645](https://www.inaturalist.org/observations/18514645)|
+|Weed record updated, Visit record updated|**72341**|BananaPassionfruit|RED|[18690997](https://www.inaturalist.org/observations/18690997)|
+|Weed record updated, Visit record updated|**72342**|BananaPassionfruit|RED|[18691083](https://www.inaturalist.org/observations/18691083)|
+|Weed record updated, Visit record updated|**74196**|WoollyNightshade|RED|[4460077](https://www.inaturalist.org/observations/4460077)|
+|Weed record updated, Visit record updated|**74202**|WoollyNightshade|RED|[4572429](https://www.inaturalist.org/observations/4572429)|
+|Weed record updated, Visit record updated|**74301**|WoollyNightshade|RED|[17766426](https://www.inaturalist.org/observations/17766426)|
+|Weed record updated|**62767**|MothPlant|PURPLE|[17766981](https://www.inaturalist.org/observations/17766981)|
+|Weed record updated, Visit record added|**91005**|MothPlant|RED|[337183271](https://www.inaturalist.org/observations/337183271)|
+|Visit record added|**91006**|MothPlant|YELLOW|[337183284](https://www.inaturalist.org/observations/337183284)|
+|Visit record added|**91007**|MothPlant|YELLOW|[337183408](https://www.inaturalist.org/observations/337183408)|
