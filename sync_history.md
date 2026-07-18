@@ -3187,3 +3187,20 @@
 |----------|---------|-------|------|--------------|
 |Visit record updated|**95817**|OldMansBeard|RED|[382183173](https://www.inaturalist.org/observations/382183173)|
 |New weed|**95819**|CathedralBells|RED|[382190909](https://www.inaturalist.org/observations/382190909)|
+---
+
+# Run [19048](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/f40e9e91de8a3d428c8c2c28d076bd8caee2564d/checks/29630720576)
+2026-07-18 16:33
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**95827**|OldMansBeard|RED|[382474793](https://www.inaturalist.org/observations/382474793)|
+|Weed record updated, Visit record added|**74400**|WoollyNightshade|GREEN|[22856504](https://www.inaturalist.org/observations/22856504)|
+|Weed record updated, Visit record added|**74401**|WoollyNightshade|GREEN|[22856507](https://www.inaturalist.org/observations/22856507)|
+|Weed record updated, Visit record added|**74404**|WoollyNightshade|GREEN|[22856518](https://www.inaturalist.org/observations/22856518)|
+|Weed record updated, Visit record added|**74405**|WoollyNightshade|GREEN|[22856520](https://www.inaturalist.org/observations/22856520)|
+|Weed record updated, Visit record added|**74406**|WoollyNightshade|GREEN|[22856521](https://www.inaturalist.org/observations/22856521)|
+|Weed record updated, Visit record added|**60501**|WoollyNightshade|RED|[153660961](https://www.inaturalist.org/observations/153660961)|
+|Weed record updated, Visit record added|**63007**|MothPlant|GREEN|[22856513](https://www.inaturalist.org/observations/22856513)|
+|Weed record updated, Visit record added|**63009**|MothPlant|YELLOW|[22856526](https://www.inaturalist.org/observations/22856526)|
+|Weed record updated, Visit record added|**92332**|MothPlant|YELLOW|[343392660](https://www.inaturalist.org/observations/343392660)|
