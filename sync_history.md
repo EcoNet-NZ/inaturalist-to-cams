@@ -3250,3 +3250,11 @@
 |----------|---------|-------|------|--------------|
 |Weed record updated, Visit record added|**95108**|OTHER|RED|[371778858](https://www.inaturalist.org/observations/371778858)|
 |Visit record added|**95324**|MadeiraVine|YELLOW|[374130726](https://www.inaturalist.org/observations/374130726)|
+---
+
+# Run [19080](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/ee2be2000c53d1de1b1d6d83b0e22ee0309d8127/checks/29728017100)
+2026-07-20 20:29
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Visit record added|**95848**|WoollyNightshade|YELLOW|[383135405](https://www.inaturalist.org/observations/383135405)|
