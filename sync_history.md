@@ -3292,3 +3292,11 @@
 |New weed|**95867**|VelvetGroundsel|RED|[124641385](https://www.inaturalist.org/observations/124641385)|
 |New weed|**95868**|VelvetGroundsel|RED|[177077383](https://www.inaturalist.org/observations/177077383)|
 |Weed record updated, Visit record updated|**95802**|OTHER|RED|[381594878](https://www.inaturalist.org/observations/381594878)|
+---
+
+# Run [19098](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/4f585b215ad9706b09551930ee6690f2d80b6411/checks/29874468844)
+2026-07-22 10:39
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**95869**|WoollyNightshade|RED|[383757320](https://www.inaturalist.org/observations/383757320)|
