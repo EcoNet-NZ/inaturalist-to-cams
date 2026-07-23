@@ -3361,3 +3361,11 @@
 |Sync Event|Object Id|Species|Status|iNaturalist Id|
 |----------|---------|-------|------|--------------|
 |Visit record updated|**95879**|PalmGrass|YELLOW|[384077374](https://www.inaturalist.org/observations/384077374)|
+---
+
+# Run [19112](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/85b4a63015379ad5c0882ae4774bd1ac0625a77f/checks/29971346465)
+2026-07-23 13:16
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Visit record updated|**95878**|MothPlant|YELLOW|[384075051](https://www.inaturalist.org/observations/384075051)|
