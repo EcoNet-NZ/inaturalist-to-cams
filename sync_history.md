@@ -4220,3 +4220,11 @@
 |Sync Event|Object Id|Species|Status|iNaturalist Id|
 |----------|---------|-------|------|--------------|
 |Weed record updated, Visit record added|**58178**|OldMansBeard|YELLOW|[106997765](https://www.inaturalist.org/observations/106997765)|
+---
+
+# Run [19318](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/35ed4d4adc63bf7a762787e1ac1b3db4403b788d/checks/31254435823)
+2026-08-08 23:12
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**96075**|PigsEarCOTORB|RED|[389266716](https://www.inaturalist.org/observations/389266716)|
