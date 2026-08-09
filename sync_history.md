@@ -4228,3 +4228,14 @@
 |Sync Event|Object Id|Species|Status|iNaturalist Id|
 |----------|---------|-------|------|--------------|
 |New weed|**96075**|PigsEarCOTORB|RED|[389266716](https://www.inaturalist.org/observations/389266716)|
+---
+
+# Run [19333](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/2a7a2e6310e209bf85b058374dcffc550ff8bc0f/checks/31295405454)
+2026-08-09 16:51
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**96081**|WoollyNightshade|RED|[389543670](https://www.inaturalist.org/observations/389543670)|
+|Weed record updated, Visit record added|**77384**|MothPlant|GREEN|[250229845](https://www.inaturalist.org/observations/250229845)|
+|New weed|**96082**|MothPlant|RED|[389529153](https://www.inaturalist.org/observations/389529153)|
+|New weed|**96083**|MothPlant|RED|[389544306](https://www.inaturalist.org/observations/389544306)|
