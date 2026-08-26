@@ -4962,3 +4962,11 @@
 |Sync Event|Object Id|Species|Status|iNaturalist Id|
 |----------|---------|-------|------|--------------|
 |Visit record updated|**96190**|BluePassionFlower|RED|[394031752](https://www.inaturalist.org/observations/394031752)|
+---
+
+# Run [19697](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/3bb50c89c6bca3183495da802e01221a373eb00b/checks/32921948068)
+2026-08-26 14:15
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**96200**|MothPlant|RED|[394566193](https://www.inaturalist.org/observations/394566193)|
