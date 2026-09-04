@@ -5311,3 +5311,11 @@
 |Sync Event|Object Id|Species|Status|iNaturalist Id|
 |----------|---------|-------|------|--------------|
 |Visit record updated|**96297**|WildGinger|RED|[338117525](https://www.inaturalist.org/observations/338117525)|
+---
+
+# Run [19756](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/da40d681347ca792b8e97989db72c9a1da9478d5/checks/33884459918)
+2026-09-05 02:35
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**96307**|OldMansBeard|RED|[397144495](https://www.inaturalist.org/observations/397144495)|
