@@ -5437,3 +5437,11 @@
 |Weed record updated, Visit record updated|**62818**|MothPlant|RED|[20249885](https://www.inaturalist.org/observations/20249885)|
 |Weed record updated, Visit record updated|**62819**|MothPlant|RED|[20249892](https://www.inaturalist.org/observations/20249892)|
 |Visit record updated|**96339**|MothPlant|RED|[398319517](https://www.inaturalist.org/observations/398319517)|
+---
+
+# Run [19788](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/070200ccb3e19ee70383669d38009789bd1ad937/checks/34296064238)
+2026-09-09 12:42
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**96347**|CapeHoneyFlower|RED|[398547620](https://www.inaturalist.org/observations/398547620)|
