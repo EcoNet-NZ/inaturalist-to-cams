@@ -5717,3 +5717,12 @@
 |----------|---------|-------|------|--------------|
 |Visit record added|**90280**|OldMansBeard|GRAY|[334920336](https://www.inaturalist.org/observations/334920336)|
 |Visit record updated|**96282**|OldMansBeard|YELLOW|[396540601](https://www.inaturalist.org/observations/396540601)|
+---
+
+# Run [19842](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/b2bcd7dafb640ca9611fcf179bcb233f64d52973/checks/35219690961)
+2026-09-18 00:12
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Visit record updated|**59225**|WoollyNightshade|RED|[16000878](https://www.inaturalist.org/observations/16000878)|
+|Visit record updated|**59227**|WoollyNightshade|RED|[16000889](https://www.inaturalist.org/observations/16000889)|
