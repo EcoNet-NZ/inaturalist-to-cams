@@ -5902,3 +5902,12 @@
 |----------|---------|-------|------|--------------|
 |New weed|**96431**|OldMansBeard|RED|[402279021](https://www.inaturalist.org/observations/402279021)|
 |New weed|**96432**|BluePassionFlower|RED|[402250813](https://www.inaturalist.org/observations/402250813)|
+---
+
+# Run [19871](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/a6b647d607e5826b74bc551dce19cd2c9a4662b9/checks/35671372653)
+2026-09-22 12:19
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**96434**|WoollyNightshade|RED|[402313241](https://www.inaturalist.org/observations/402313241)|
+|New weed|**96435**|WoollyNightshade|RED|[402323120](https://www.inaturalist.org/observations/402323120)|
