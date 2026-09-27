@@ -6193,3 +6193,60 @@
 |Visit record updated|**96085**|MothPlant|RED|[389602608](https://www.inaturalist.org/observations/389602608)|
 |Visit record updated|**96464**|MothPlant|RED|[403431163](https://www.inaturalist.org/observations/403431163)|
 |Weed record updated, Visit record updated|**96449**|OTHER|YELLOW|[402678508](https://www.inaturalist.org/observations/402678508)|
+---
+
+# Run [19902](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/9f17edced409c12ebb9e67c9762f2097aae181c3/checks/36325458736)
+2026-09-28 03:19
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Visit record updated|**96471**|OldMansBeard|RED|[403750175](https://www.inaturalist.org/observations/403750175)|
+|Visit record updated|**96472**|OldMansBeard|RED|[403750647](https://www.inaturalist.org/observations/403750647)|
+|New weed|**96475**|BluePassionFlower|RED|[403811306](https://www.inaturalist.org/observations/403811306)|
+|Visit record updated|**59261**|WoollyNightshade|RED|[25990133](https://www.inaturalist.org/observations/25990133)|
+|Visit record updated|**62738**|MothPlant|RED|[13765492](https://www.inaturalist.org/observations/13765492)|
+|Visit record updated|**62756**|MothPlant|RED|[16023367](https://www.inaturalist.org/observations/16023367)|
+|Visit record updated|**62776**|MothPlant|RED|[18241849](https://www.inaturalist.org/observations/18241849)|
+|Visit record updated|**62778**|MothPlant|RED|[18669514](https://www.inaturalist.org/observations/18669514)|
+|Visit record updated|**62779**|MothPlant|RED|[18670730](https://www.inaturalist.org/observations/18670730)|
+|Visit record updated|**62780**|MothPlant|RED|[18670731](https://www.inaturalist.org/observations/18670731)|
+|Visit record updated|**62781**|MothPlant|RED|[18670733](https://www.inaturalist.org/observations/18670733)|
+|Visit record updated|**62782**|MothPlant|RED|[18670737](https://www.inaturalist.org/observations/18670737)|
+|Visit record updated|**62783**|MothPlant|RED|[18670744](https://www.inaturalist.org/observations/18670744)|
+|Visit record updated|**62784**|MothPlant|RED|[18670748](https://www.inaturalist.org/observations/18670748)|
+|Visit record updated|**62786**|MothPlant|RED|[18876231](https://www.inaturalist.org/observations/18876231)|
+|Visit record updated|**62787**|MothPlant|RED|[18937192](https://www.inaturalist.org/observations/18937192)|
+|Visit record updated|**62809**|MothPlant|RED|[19717003](https://www.inaturalist.org/observations/19717003)|
+|Visit record updated|**62817**|MothPlant|RED|[20246870](https://www.inaturalist.org/observations/20246870)|
+|Visit record updated|**62822**|MothPlant|RED|[20273747](https://www.inaturalist.org/observations/20273747)|
+|Visit record updated|**62826**|MothPlant|RED|[20493732](https://www.inaturalist.org/observations/20493732)|
+|Visit record updated|**62860**|MothPlant|RED|[21866246](https://www.inaturalist.org/observations/21866246)|
+|Visit record updated|**62871**|MothPlant|RED|[21977619](https://www.inaturalist.org/observations/21977619)|
+|Visit record updated|**62872**|MothPlant|RED|[21977621](https://www.inaturalist.org/observations/21977621)|
+|Visit record updated|**62874**|MothPlant|RED|[21977720](https://www.inaturalist.org/observations/21977720)|
+|Visit record updated|**62891**|MothPlant|RED|[22274487](https://www.inaturalist.org/observations/22274487)|
+|Visit record updated|**62930**|MothPlant|RED|[22480389](https://www.inaturalist.org/observations/22480389)|
+|Visit record updated|**62931**|MothPlant|RED|[22480390](https://www.inaturalist.org/observations/22480390)|
+|Visit record updated|**63125**|MothPlant|RED|[26474546](https://www.inaturalist.org/observations/26474546)|
+|Visit record updated|**63136**|MothPlant|RED|[27917357](https://www.inaturalist.org/observations/27917357)|
+|Visit record updated|**63143**|MothPlant|RED|[30742016](https://www.inaturalist.org/observations/30742016)|
+|Visit record updated|**63144**|MothPlant|RED|[31216298](https://www.inaturalist.org/observations/31216298)|
+|Visit record updated|**63172**|MothPlant|RED|[37385987](https://www.inaturalist.org/observations/37385987)|
+|Visit record updated|**63221**|MothPlant|RED|[42450017](https://www.inaturalist.org/observations/42450017)|
+|Visit record updated|**63225**|MothPlant|RED|[42933779](https://www.inaturalist.org/observations/42933779)|
+|Visit record updated|**63226**|MothPlant|RED|[43049060](https://www.inaturalist.org/observations/43049060)|
+|Visit record updated|**63227**|MothPlant|RED|[43049073](https://www.inaturalist.org/observations/43049073)|
+|Visit record updated|**63228**|MothPlant|RED|[43049094](https://www.inaturalist.org/observations/43049094)|
+|Visit record updated|**63237**|MothPlant|RED|[44931027](https://www.inaturalist.org/observations/44931027)|
+|Visit record updated|**63270**|MothPlant|RED|[53121045](https://www.inaturalist.org/observations/53121045)|
+|Visit record updated|**63271**|MothPlant|RED|[53121049](https://www.inaturalist.org/observations/53121049)|
+|Visit record updated|**63278**|MothPlant|RED|[56115295](https://www.inaturalist.org/observations/56115295)|
+|Visit record updated|**63281**|MothPlant|RED|[56797915](https://www.inaturalist.org/observations/56797915)|
+|Visit record updated|**63282**|MothPlant|RED|[56797924](https://www.inaturalist.org/observations/56797924)|
+|Visit record updated|**63292**|MothPlant|RED|[61445820](https://www.inaturalist.org/observations/61445820)|
+|Visit record updated|**63324**|MothPlant|RED|[67297384](https://www.inaturalist.org/observations/67297384)|
+|Visit record updated|**63362**|MothPlant|RED|[68952585](https://www.inaturalist.org/observations/68952585)|
+|Visit record updated|**63364**|MothPlant|RED|[68983203](https://www.inaturalist.org/observations/68983203)|
+|Visit record updated|**63365**|MothPlant|RED|[68996470](https://www.inaturalist.org/observations/68996470)|
+|Visit record updated|**63366**|MothPlant|RED|[68997097](https://www.inaturalist.org/observations/68997097)|
+|Visit record updated|**63373**|MothPlant|RED|[69609919](https://www.inaturalist.org/observations/69609919)|
