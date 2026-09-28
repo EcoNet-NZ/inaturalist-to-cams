@@ -6279,3 +6279,15 @@
 |Visit record updated|**96474**|OldMansBeard|RED|[403801918](https://www.inaturalist.org/observations/403801918)|
 |New weed|**96477**|OldMansBeard|RED|[404041006](https://www.inaturalist.org/observations/404041006)|
 |New weed|**96478**|OldMansBeard|RED|[404041103](https://www.inaturalist.org/observations/404041103)|
+---
+
+# Run [19906](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/c0e0ebbd0cbdfe67701f8ed65a449f3b33611bba/checks/36384063026)
+2026-09-28 18:57
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Visit record updated|**96477**|OldMansBeard|RED|[404041006](https://www.inaturalist.org/observations/404041006)|
+|Visit record updated|**96478**|OldMansBeard|RED|[404041103](https://www.inaturalist.org/observations/404041103)|
+|New weed|**96480**|OldMansBeard|RED|[404107018](https://www.inaturalist.org/observations/404107018)|
+|Weed record updated, Visit record added|**85614**|LadderFern|YELLOW|[287443260](https://www.inaturalist.org/observations/287443260)|
+|Weed record updated, Visit record added|**94891**|WillowGrey|RED|[369184883](https://www.inaturalist.org/observations/369184883)|
