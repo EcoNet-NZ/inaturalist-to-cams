@@ -37,19 +37,21 @@ jobs:
   synchronise:
 
     runs-on: ubuntu-latest
+    env:
+      TZ: Pacific/Auckland  # so observations are stored to CAMS in NZ time
 
     steps:
     - name: Checkout
-      uses: actions/checkout@v4
+      uses: actions/checkout@v6
 
     - name: Install apt dependencies
-      uses: awalsh128/cache-apt-pkgs-action@v1.4.3
+      uses: awalsh128/cache-apt-pkgs-action@v1.6.3
       with:
         packages: heimdal-dev   # Workaround for problem building gssapi wheel, see https://stackoverflow.com/questions/44449290/krb5-config-is-not-recognized-as-an-internal-or-external-command
         version: 1.0
 
     - name: Set up Python
-      uses: actions/setup-python@v5
+      uses: actions/setup-python@v6
       with:
         python-version: '3.11'
         cache: 'pip'
@@ -59,11 +61,6 @@ jobs:
         python -m pip install --upgrade pip
         python -m pip install wheel
         if [ -f requirements_lock.txt ]; then pip install -r requirements_lock.txt; fi      
-
-    - name: Set timezone   # so that we observations are stored to CAMS in NZ time
-      uses: zcong1993/setup-timezone@master
-      with:
-        timezone: Pacific/Auckland
 
     - name: Synchronise iNaturalist to CAMS
       run: |
@@ -76,7 +73,7 @@ jobs:
 
     - name: Commit & Push
       if: ${{ inputs.ENV_TYPE == 'PRODUCTION' }}
-      uses: actions-js/push@v1.5
+      uses: actions-js/push@v1.6
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         message: Updated by Github Actions ${{ github.run_number }}.${{ github.run_attempt }}
