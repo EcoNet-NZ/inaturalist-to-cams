@@ -1,6 +1,7 @@
 pyinaturalist==0.21.1
 arcgis==2.4.3
 func_timeout==4.3.5
+retry==0.9.2
 pytz==2026.4
 python-dateutil==2.9.0.post0
 tenacity==9.1.4
