@@ -1,13 +1,13 @@
-pyinaturalist==0.19.0
-arcgis==2.4.1
+pyinaturalist==0.21.1
+arcgis==2.4.3
 func_timeout==4.3.5
-pytz==2025.2
+pytz==2026.4
 python-dateutil==2.9.0.post0
-tenacity==9.1.2
+tenacity==9.1.4
 
 git+https://github.com/behave/behave@v1.2.7.dev6
 behave_html_formatter==0.9.10
-pyhamcrest==2.0.4
-factory_boy==3.3.0
+pyhamcrest==2.1.0
+factory_boy==3.3.3
 
-flake8==7.3.0
+flake8==7.4.1

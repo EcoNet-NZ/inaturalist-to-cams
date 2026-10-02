@@ -236,7 +236,7 @@ In addition to these configuration files, the following environment variables ar
 
 ## Code
 
-The code is written in Python 3.11. 
+The code is written in Python 3.14. 
 
 ### Dependencies
 
@@ -246,7 +246,7 @@ The dependencies are frozen so that new transitive dependencies do not break the
 2. `pip install -r requirements.txt`
 3. `pip freeze > requirements_lock.txt`
 
-*The `arcgis` package only supports up to Python3.11 as of 2023-09-25 (version 2.2.0 requires Python >=3.9, <3.11).*
+*`arcgis` 2.4.3 requires Python >=3.11 and <3.15.*
 
 Dependencies include:
 
