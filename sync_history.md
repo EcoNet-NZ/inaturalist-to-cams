@@ -7103,3 +7103,11 @@
 |Sync Event|Object Id|Species|Status|iNaturalist Id|
 |----------|---------|-------|------|--------------|
 |Visit record updated|**96365**|BlueMorningGlory|RED|[399429430](https://www.inaturalist.org/observations/399429430)|
+---
+
+# Run [20007](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/20dfda5fa8cd283dee8748345b600bd4301b4bbe/checks/39124544537)
+2026-10-19 00:46
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Weed record updated, Visit record updated|**78503**|WoollyNightshade|RED|[256964228](https://www.inaturalist.org/observations/256964228)|
