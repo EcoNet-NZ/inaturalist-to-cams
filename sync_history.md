@@ -7111,3 +7111,11 @@
 |Sync Event|Object Id|Species|Status|iNaturalist Id|
 |----------|---------|-------|------|--------------|
 |Weed record updated, Visit record updated|**78503**|WoollyNightshade|RED|[256964228](https://www.inaturalist.org/observations/256964228)|
+---
+
+# Run [20010](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/18e0e4fa5cc3360cd965770a74b153141459b4a6/checks/39166185157)
+2026-10-19 10:05
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Visit record updated|**96723**|WoollyNightshade|RED|[408861489](https://www.inaturalist.org/observations/408861489)|
