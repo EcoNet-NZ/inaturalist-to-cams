@@ -7397,3 +7397,22 @@
 |Weed record updated, Visit record added|**92079**|MothPlant|YELLOW|[341824196](https://www.inaturalist.org/observations/341824196)|
 |New weed|**96868**|MothPlant|YELLOW|[410585617](https://www.inaturalist.org/observations/410585617)|
 |Visit record updated|**88743**|Elaeagnus|GREEN|[329641060](https://www.inaturalist.org/observations/329641060)|
+---
+
+# Run [20045](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/e6b4dad3411b26ec987837437d17dd20bad05f57/checks/40147174663)
+2026-10-25 13:34
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Weed record updated, Visit record updated|**72577**|BananaPassionfruit|RED|[39913234](https://www.inaturalist.org/observations/39913234)|
+|Weed record updated, Visit record updated|**72682**|BananaPassionfruit|RED|[54795755](https://www.inaturalist.org/observations/54795755)|
+|Weed record updated, Visit record updated|**72997**|BananaPassionfruit|RED|[101689334](https://www.inaturalist.org/observations/101689334)|
+|Visit record updated|**73005**|BananaPassionfruit|RED|[102448651](https://www.inaturalist.org/observations/102448651)|
+|Weed record updated, Visit record updated|**73067**|BananaPassionfruit|RED|[108245231](https://www.inaturalist.org/observations/108245231)|
+|Weed record updated, Visit record updated|**73144**|BananaPassionfruit|RED|[117096411](https://www.inaturalist.org/observations/117096411)|
+|Weed record updated, Visit record updated|**77542**|BananaPassionfruit|RED|[251118609](https://www.inaturalist.org/observations/251118609)|
+|Visit record updated|**87528**|BananaPassionfruit|RED|[320307872](https://www.inaturalist.org/observations/320307872)|
+|Visit record updated|**88106**|BananaPassionfruit|RED|[325635354](https://www.inaturalist.org/observations/325635354)|
+|New weed|**96869**|BananaPassionfruit|RED|[410596411](https://www.inaturalist.org/observations/410596411)|
+|New weed|**96870**|MothPlant|RED|[410609211](https://www.inaturalist.org/observations/410609211)|
+|New weed|**96871**|StinkingIris|RED|[410591873](https://www.inaturalist.org/observations/410591873)|
