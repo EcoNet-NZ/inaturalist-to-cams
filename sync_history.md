@@ -7538,3 +7538,16 @@
 |----------|---------|-------|------|--------------|
 |Visit record updated|**96908**|OldMansBeard|RED|[410915987](https://www.inaturalist.org/observations/410915987)|
 |Visit record updated|**73005**|BananaPassionfruit|RED|[102448651](https://www.inaturalist.org/observations/102448651)|
+---
+
+# Run [20056](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/eb17d55b3bf77587c1204651baeca9c6deacdb0a/checks/40424126364)
+2026-10-27 13:06
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Visit record added|**92952**|OldMansBeard|GRAY|[347403842](https://www.inaturalist.org/observations/347403842)|
+|Visit record updated|**96909**|BananaPassionfruit|RED|[409839895](https://www.inaturalist.org/observations/409839895)|
+|New weed|**96918**|BananaPassionfruit|RED|[410901651](https://www.inaturalist.org/observations/410901651)|
+|New weed|**96919**|BluePassionFlower|RED|[410910250](https://www.inaturalist.org/observations/410910250)|
+|New weed|**96920**|WoollyNightshade|RED|[411068801](https://www.inaturalist.org/observations/411068801)|
+|Weed record updated, Visit record updated|**88743**|Elaeagnus|GREEN|[329641060](https://www.inaturalist.org/observations/329641060)|
