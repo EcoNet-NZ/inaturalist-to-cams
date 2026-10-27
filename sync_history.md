@@ -7551,3 +7551,23 @@
 |New weed|**96919**|BluePassionFlower|RED|[410910250](https://www.inaturalist.org/observations/410910250)|
 |New weed|**96920**|WoollyNightshade|RED|[411068801](https://www.inaturalist.org/observations/411068801)|
 |Weed record updated, Visit record updated|**88743**|Elaeagnus|GREEN|[329641060](https://www.inaturalist.org/observations/329641060)|
+---
+
+# Run [20057](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/3dc08ee9f0296ad319846a9f0aec978fbabb1a61/checks/40456704488)
+2026-10-27 18:41
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Visit record updated|**96905**|OldMansBeard|YELLOW|[410835685](https://www.inaturalist.org/observations/410835685)|
+|Visit record updated|**96906**|OldMansBeard|YELLOW|[410853705](https://www.inaturalist.org/observations/410853705)|
+|Visit record updated|**96899**|OldMansBeard|YELLOW|[410857570](https://www.inaturalist.org/observations/410857570)|
+|Visit record updated|**96900**|OldMansBeard|RED|[410874210](https://www.inaturalist.org/observations/410874210)|
+|Visit record updated|**96901**|OldMansBeard|RED|[410874330](https://www.inaturalist.org/observations/410874330)|
+|Visit record updated|**96907**|OldMansBeard|RED|[410877436](https://www.inaturalist.org/observations/410877436)|
+|New weed|**96931**|OldMansBeard|RED|[411086560](https://www.inaturalist.org/observations/411086560)|
+|Visit record updated|**93556**|BananaPassionfruit|RED|[352607136](https://www.inaturalist.org/observations/352607136)|
+|Visit record added|**94150**|BananaPassionfruit|YELLOW|[359662775](https://www.inaturalist.org/observations/359662775)|
+|Visit record updated|**95284**|BananaPassionfruit|RED|[373421696](https://www.inaturalist.org/observations/373421696)|
+|Visit record updated|**96123**|BananaPassionfruit|RED|[390701467](https://www.inaturalist.org/observations/390701467)|
+|Visit record updated|**96751**|BananaPassionfruit|RED|[408552083](https://www.inaturalist.org/observations/408552083)|
+|New weed|**96932**|WoollyNightshade|RED|[411098968](https://www.inaturalist.org/observations/411098968)|
