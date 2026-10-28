@@ -150,6 +150,12 @@ def to_numeric(index_str):
         raise ValueError(f'Value {index_str} not supported')
 
 
+@then(u"the feature has '{field}' set to None")
+def step_impl(context, field):
+    feature_attributes = context.connection.get_location_details(context.global_id)
+    assert_that(feature_attributes[field], equal_to(None))
+
+
 @then(u"the feature has '{field}' set to date '{date:ti}'")
 def step_impl(context, field, date):
     feature_attributes = context.connection.get_location_details(context.global_id)

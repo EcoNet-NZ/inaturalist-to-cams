@@ -46,8 +46,9 @@ class CamsWriter:
             
             # Check if either the existing CAMS visit date or the rollover date is more recent than the iNat visit date
             logging.info(f'DEBUG: Comparing dates - existing CAMS visit: {existing_feature.latest_weed_visit.date_visit_made}, rollover: {rollover_date}, new iNat visit: {cams_feature.latest_weed_visit.date_visit_made}')
-            if existing_feature.latest_weed_visit.date_visit_made > cams_feature.latest_weed_visit.date_visit_made or \
-               (rollover_date is not None and rollover_date > cams_feature.latest_weed_visit.date_visit_made):
+            newer_cams_visit = existing_feature.latest_weed_visit.date_visit_made > cams_feature.latest_weed_visit.date_visit_made
+            rollover_newer = rollover_date is not None and rollover_date > cams_feature.latest_weed_visit.date_visit_made
+            if newer_cams_visit or rollover_newer:
                 logging.info(f'Preserving CAMS status - visit date: {existing_feature.latest_weed_visit.date_visit_made}, rollover date: {rollover_date}, iNat date: {cams_feature.latest_weed_visit.date_visit_made}')
                 # Preserve the existing status and effort_to_control values
                 cams_feature.weed_location.current_status = existing_feature.weed_location.current_status
@@ -55,6 +56,11 @@ class CamsWriter:
                 # Also preserve the audit_log
                 cams_feature.weed_location.audit_log = existing_feature.weed_location.audit_log
                 update_visit_record = False
+            if newer_cams_visit:
+                # The CAMS visit is the latest one, so leave the parent visit fields as stored.
+                cams_feature.weed_location.date_visit_made_from_last_visit = existing_feature.weed_location.date_visit_made_from_last_visit
+                cams_feature.weed_location.date_for_next_visit_from_last_visit = existing_feature.weed_location.date_for_next_visit_from_last_visit
+                cams_feature.weed_location.latest_area = existing_feature.weed_location.latest_area
 
             if existing_feature == cams_feature:
                 logging.info('No relevant updates to observation')
@@ -132,7 +138,8 @@ class CamsWriter:
             ('GUID_visits', global_id),
             ('RecordedByUserId', weed_visit.recorded_by_user_id),
             ('RecordedByUserName', weed_visit.recorded_by_username),
-            ('RecordedDate', weed_visit.recorded_date)
+            ('RecordedDate', weed_visit.recorded_date),
+            ('Effort to control', weed_visit.effort_to_control)
         ]
 
         [self.add_field(new_data[0], 'Visits_Table', field) for field in fields]
@@ -177,7 +184,10 @@ class CamsWriter:
             ('iNaturalistURL', cams_feature.weed_location.external_url),
             ('Image URLs', cams_feature.weed_location.image_urls),
             ('Image Attribution', cams_feature.weed_location.image_attribution),
-            ('Location Accuracy', cams_feature.weed_location.location_accuracy)
+            ('Location Accuracy', cams_feature.weed_location.location_accuracy),
+            ('Date Visit Made From Last Visit', cams_feature.weed_location.date_visit_made_from_last_visit),
+            ('Date For Next Visit From Last Visit', cams_feature.weed_location.date_for_next_visit_from_last_visit),
+            ('Latest Area', cams_feature.weed_location.latest_area)
         ]
         
         if cams_feature.weed_location.other_weed_details:

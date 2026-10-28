@@ -72,6 +72,7 @@ These are custom observation fields defined in iNaturalist projects.
 |------------------|------------|------------|-------|
 | `Height (m)` | Visits_Table | `Height` | Height in meters |
 | `Area in square meters` | Visits_Table | `Area` | Area in square meters |
+| `Area in square meters` | WeedLocations | `LatestArea` | Copied from the visit when that visit is the latest. A blank value clears it |
 | `Plant phenology->most common flowering/fruiting reproductive stage` | Visits_Table | `Flowering` | Values: not recorded, vegetative only, flower buds, flowers, immature fruit, mature fruit, seed dispersed |
 
 ### Treatment Information
@@ -91,7 +92,9 @@ These are custom observation fields defined in iNaturalist projects.
 | `Status update` | - | - | Values: Dead / Not Present, Duplicate; used to calculate visit status |
 | `Date of status update` | - | - | Used to calculate visit date and status |
 | `Date for next visit` | Visits_Table | `DateForReturnVisit` | Planned follow-up date |
-| `Effort to control` | WeedLocations | `Urgency` | Integer 1-5; first character extracted; default 1 (initial sync only) |
+| `Date for next visit` | WeedLocations | `DateForNextVisitFromLastVisit` | Copied from the visit when that visit is the latest. A blank value clears it |
+| `Effort to control` | WeedLocations | `Urgency` | Integer 1-5; first character extracted; default 1 |
+| `Effort to control` | Visits_Table | `DifficultyChild` | Same integer as `Urgency`, written on the visit |
 
 ### User Tracking
 
@@ -161,7 +164,16 @@ For backward compatibility with older iNaturalist projects:
 
 These fields are only set when creating a new WeedLocation and are **not** updated on subsequent syncs:
 - `DateDiscovered` (observed_on)
-- `Urgency` (effort_to_control)
+
+### Updated from the latest visit (WeedLocation)
+
+When the iNaturalist visit is the latest visit, these fields are written from that visit:
+- `effort_to_control`, written to `Urgency` on the weed and `DifficultyChild` on the visit
+- `DateVisitMadeFromLastVisit`, from `DateCheck`
+- `DateForNextVisitFromLastVisit`, from `DateForReturnVisit`
+- `LatestArea`, from `Area`
+
+A newer CAMS visit keeps the stored effort, status, and these parent fields already on the weed. A later status-rollover date keeps effort and status, and still refreshes the date and area fields from the iNaturalist visit.
 
 ### Always Updated (WeedLocation)
 
@@ -220,6 +232,9 @@ The "winning field" (Date controlled vs Date of status update) determines:
 | DataSource | SiteSource | String(39) |
 | Location details | LocationInfo | String(256) |
 | Effort to control | Urgency | Integer(1-5) |
+| Date Visit Made From Last Visit | DateVisitMadeFromLastVisit | Date |
+| Date For Next Visit From Last Visit | DateForNextVisitFromLastVisit | Date |
+| Latest Area | LatestArea | Double |
 | CurrentStatus | ParentStatusWithDomain | String(80) |
 | iNaturalistURL | iNatURL | String(256) |
 | iNaturalist Longitude | iNatLongitude | Double |
@@ -251,6 +266,7 @@ The "winning field" (Date controlled vs Date of status update) determines:
 | RecordedByUserId | RecordedByUserId | String(64) |
 | RecordedByUserName | RecordedByUserName | String(64) |
 | RecordedDate | RecordedDate | Date |
+| Effort to control | DifficultyChild | Integer(1-5) |
 
 ## Configuration Files
 

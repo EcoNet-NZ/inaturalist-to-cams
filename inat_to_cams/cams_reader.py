@@ -70,6 +70,8 @@ class CamsReader:
         visit.recorded_by_user_id = visit_table_row.attributes.get('RecordedByUserId')
         visit.recorded_by_username = visit_table_row.attributes.get('RecordedByUserName')
         visit.recorded_date = self.as_datetime(visit_table_row.attributes['RecordedDate']) if visit_table_row.attributes.get('RecordedDate') else None
+        visit_effort_field = cams_schema_config.cams_field_name('Visits_Table', 'Effort to control')
+        visit.effort_to_control = visit_table_row.attributes.get(visit_effort_field)
 
         guid = visit_table_row.attributes['GUID_visits']
 
@@ -87,7 +89,8 @@ class CamsReader:
             location.species = featureRow.attributes['SpeciesDropDown']
             location.data_source = featureRow.attributes['SiteSource']
             location.location_details = featureRow.attributes['LocationInfo']
-            location.effort_to_control = featureRow.attributes['Urgency']
+            location_effort_field = cams_schema_config.cams_field_name('WeedLocations', 'Effort to control')
+            location.effort_to_control = featureRow.attributes[location_effort_field]
             location.iNaturalist_longitude = featureRow.attributes['iNatLongitude']
             location.iNaturalist_latitude = featureRow.attributes['iNatLatitude']
             location.current_status = cams_schema_config.cams_field_key('WeedLocations', 'CurrentStatus', featureRow.attributes['ParentStatusWithDomain'])
@@ -95,11 +98,19 @@ class CamsReader:
             location.image_attribution = featureRow.attributes['ImageAttribution']
             location.location_accuracy = featureRow.attributes['LocationAccuracy']
             location.audit_log = featureRow.attributes['audit_log']
+            location.date_visit_made_from_last_visit = self.optional_datetime(featureRow.attributes.get('DateVisitMadeFromLastVisit'))
+            location.date_for_next_visit_from_last_visit = self.optional_datetime(featureRow.attributes.get('DateForNextVisitFromLastVisit'))
+            location.latest_area = featureRow.attributes.get('LatestArea')
 
             # Temporarily until updated from weed visit by database trigger
             location.external_url = featureRow.attributes['iNatURL']
 
         return cams_feature.CamsFeature(featureRow.geometry, location, visit)
+
+    def optional_datetime(self, date_field):
+        if not date_field:
+            return None
+        return self.as_datetime(date_field)
 
     def as_datetime(self, date_field):
         naive_datetime = datetime.fromtimestamp(date_field // 1000)
