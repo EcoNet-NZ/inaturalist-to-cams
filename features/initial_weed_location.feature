@@ -29,3 +29,12 @@ Feature: Processing a new iNaturalist observation populates a new WeedLocation f
 		Given iNaturalist has a new OMB observation with 'Effort to control' set to '3 = Three person hours'
 		When we process the observation
 		Then the feature has 'Urgency' set to 3
+		And the visits record has 'DifficultyChild' set to 3
+
+		Example: Blank effort defaults to 1
+		Given iNaturalist has a new OMB observation
+		When we process the observation
+		Then the feature has 'Urgency' set to 1
+		And the visits record has 'DifficultyChild' set to 1
+		And the feature has 'LatestArea' set to None
+		And the feature has 'DateForNextVisitFromLastVisit' set to None

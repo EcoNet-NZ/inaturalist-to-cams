@@ -72,6 +72,18 @@
             "name": "LocationAccuracy",
             "type": "Integer"
         },
+        "Date Visit Made From Last Visit": {
+            "name": "DateVisitMadeFromLastVisit",
+            "type": "Date"
+        },
+        "Date For Next Visit From Last Visit": {
+            "name": "DateForNextVisitFromLastVisit",
+            "type": "Date"
+        },
+        "Latest Area": {
+            "name": "LatestArea",
+            "type": "Double"
+        },
         "GeoPrivacy":{
             "name": "GeoPrivacy",
             "type": "String",
@@ -245,6 +257,11 @@
         "RecordedDate": {
             "name": "RecordedDate",
             "type": "Date"
+        },
+        "Effort to control": {
+            "name": "DifficultyChild",
+            "type": "Integer",
+            "range": "[1, 5]"
         }
     }
 }

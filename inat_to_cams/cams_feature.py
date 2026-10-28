@@ -62,6 +62,9 @@ class WeedLocation:
         self.location_accuracy = None
         self.audit_log = None
         self.other_weed_details = None
+        self.date_visit_made_from_last_visit = None
+        self.date_for_next_visit_from_last_visit = None
+        self.latest_area = None
 
     def __eq__(self, other):
         if type(other) is type(self):
@@ -108,6 +111,7 @@ class WeedVisit:
         self.recorded_by_user_id = None
         self.recorded_by_username = None
         self.recorded_date = None
+        self.effort_to_control = None
 
     def __eq__(self, other):
         if type(other) is type(self):

@@ -59,6 +59,7 @@ Feature: Processing a new iNaturalist observation populates a new WeedVisits rec
 		Given iNaturalist has a new OMB observation with 'Area in square meters' set to 150
 		When we process the observation
 		Then the visits record has 'Area' set to 150
+		And the feature has 'LatestArea' set to 150
 
 		Example: Area is set to legacy field if provided
 		Given iNaturalist has a new OMB observation with 'Adult Area' set to 122
