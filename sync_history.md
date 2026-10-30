@@ -7813,3 +7813,27 @@
 |Weed record updated, Visit record updated|**63673**|MothPlant|RED|[109127374](https://www.inaturalist.org/observations/109127374)|
 |Weed record updated, Visit record updated|**63675**|MothPlant|RED|[109127377](https://www.inaturalist.org/observations/109127377)|
 |Weed record updated, Visit record updated|**95839**|MothPlant|RED|[382840848](https://www.inaturalist.org/observations/382840848)|
+---
+
+# Run [20074](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/4a10efc8d2e361a638a96d8e96f168fa0ae60cb1/checks/41128543242)
+2026-10-31 10:07
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Weed record updated, Visit record updated|**70466**|OldMansBeard|RED|[17297064](https://www.inaturalist.org/observations/17297064)|
+|Weed record updated, Visit record updated|**70483**|OldMansBeard|RED|[18931054](https://www.inaturalist.org/observations/18931054)|
+|Weed record updated, Visit record updated|**70636**|OldMansBeard|RED|[34816931](https://www.inaturalist.org/observations/34816931)|
+|Weed record updated, Visit record updated|**70682**|OldMansBeard|RED|[37552114](https://www.inaturalist.org/observations/37552114)|
+|Weed record updated, Visit record updated|**70932**|OldMansBeard|RED|[62692884](https://www.inaturalist.org/observations/62692884)|
+|Weed record updated, Visit record updated|**71017**|OldMansBeard|RED|[72512412](https://www.inaturalist.org/observations/72512412)|
+|Weed record updated, Visit record updated|**71564**|OldMansBeard|RED|[151805824](https://www.inaturalist.org/observations/151805824)|
+|Weed record updated, Visit record updated|**86054**|OldMansBeard|RED|[299428513](https://www.inaturalist.org/observations/299428513)|
+|Weed record updated, Visit record updated|**88996**|OldMansBeard|RED|[330602020](https://www.inaturalist.org/observations/330602020)|
+|Weed record updated, Visit record updated|**72525**|BananaPassionfruit|RED|[35664386](https://www.inaturalist.org/observations/35664386)|
+|Weed record updated, Visit record updated|**72812**|BluePassionFlower|RED|[68674613](https://www.inaturalist.org/observations/68674613)|
+|Weed record updated, Visit record updated|**72923**|BananaPassionfruit|RED|[83366348](https://www.inaturalist.org/observations/83366348)|
+|Weed record updated, Visit record updated|**72934**|BananaPassionfruit|RED|[89283504](https://www.inaturalist.org/observations/89283504)|
+|Weed record updated, Visit record updated|**73903**|BananaPassionfruit|RED|[223920087](https://www.inaturalist.org/observations/223920087)|
+|Visit record updated|**96644**|BananaPassionfruit|YELLOW|[406733246](https://www.inaturalist.org/observations/406733246)|
+|Weed record updated, Visit record updated|**74302**|WoollyNightshade|RED|[18004175](https://www.inaturalist.org/observations/18004175)|
+|Weed record updated, Visit record updated|**75089**|WoollyNightshade|RED|[184651690](https://www.inaturalist.org/observations/184651690)|
