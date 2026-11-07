@@ -8061,3 +8061,37 @@
 |Visit record updated|**97168**|OldMansBeard|RED|[413091662](https://www.inaturalist.org/observations/413091662)|
 |Visit record updated|**97169**|OldMansBeard|RED|[413091681](https://www.inaturalist.org/observations/413091681)|
 |New weed|**97177**|MothPlant|RED|[413209951](https://www.inaturalist.org/observations/413209951)|
+---
+
+# Run [20102](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/04966d207aa1e665da90c59cdc2f301948761bb2/checks/42323247586)
+2026-11-07 14:18
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Weed record updated, Visit record updated|**70404**|OldMansBeard|RED|[8889722](https://www.inaturalist.org/observations/8889722)|
+|Weed record updated, Visit record updated|**70542**|OldMansBeard|RED|[23485845](https://www.inaturalist.org/observations/23485845)|
+|Weed record updated, Visit record updated|**70600**|OldMansBeard|RED|[30009130](https://www.inaturalist.org/observations/30009130)|
+|Weed record updated, Visit record updated|**70601**|OldMansBeard|RED|[30015577](https://www.inaturalist.org/observations/30015577)|
+|Weed record updated, Visit record updated|**70631**|OldMansBeard|RED|[33045210](https://www.inaturalist.org/observations/33045210)|
+|Weed record updated, Visit record updated|**70834**|OldMansBeard|RED|[43809321](https://www.inaturalist.org/observations/43809321)|
+|Weed record updated, Visit record updated|**71061**|OldMansBeard|RED|[76077247](https://www.inaturalist.org/observations/76077247)|
+|Weed record updated, Visit record updated|**71062**|OldMansBeard|RED|[76086085](https://www.inaturalist.org/observations/76086085)|
+|Weed record updated, Visit record updated|**71784**|OldMansBeard|RED|[198704463](https://www.inaturalist.org/observations/198704463)|
+|Weed record updated, Visit record updated|**71993**|OldMansBeard|RED|[219436774](https://www.inaturalist.org/observations/219436774)|
+|Weed record updated, Visit record updated|**78556**|OldMansBeard|RED|[257299314](https://www.inaturalist.org/observations/257299314)|
+|Weed record updated, Visit record updated|**79249**|OldMansBeard|RED|[259107550](https://www.inaturalist.org/observations/259107550)|
+|Weed record updated, Visit record updated|**80291**|OldMansBeard|RED|[261322414](https://www.inaturalist.org/observations/261322414)|
+|Weed record updated, Visit record updated|**80954**|OldMansBeard|RED|[263521130](https://www.inaturalist.org/observations/263521130)|
+|Weed record updated, Visit record updated|**84923**|OldMansBeard|RED|[284494453](https://www.inaturalist.org/observations/284494453)|
+|Visit record updated|**86506**|OldMansBeard|RED|[307850717](https://www.inaturalist.org/observations/307850717)|
+|Visit record updated|**88746**|OldMansBeard|RED|[329655091](https://www.inaturalist.org/observations/329655091)|
+|Visit record updated|**89293**|OldMansBeard|RED|[331656525](https://www.inaturalist.org/observations/331656525)|
+|Visit record updated|**94721**|OldMansBeard|RED|[366180861](https://www.inaturalist.org/observations/366180861)|
+|Visit record updated|**95142**|OldMansBeard|RED|[372182956](https://www.inaturalist.org/observations/372182956)|
+|Visit record updated|**96712**|OldMansBeard|RED|[408645799](https://www.inaturalist.org/observations/408645799)|
+|New weed|**97178**|OldMansBeard|RED|[413254082](https://www.inaturalist.org/observations/413254082)|
+|Weed record updated, Visit record updated|**72507**|BananaPassionfruit|RED|[32878292](https://www.inaturalist.org/observations/32878292)|
+|Weed record updated, Visit record updated|**72613**|BananaPassionfruit|RED|[43265842](https://www.inaturalist.org/observations/43265842)|
+|Weed record updated, Visit record updated|**72623**|BananaPassionfruit|RED|[43808062](https://www.inaturalist.org/observations/43808062)|
+|Weed record updated, Visit record updated|**73628**|BananaPassionfruit|RED|[198314143](https://www.inaturalist.org/observations/198314143)|
+|Weed record updated, Visit record updated|**74911**|WoollyNightshade|RED|[139272244](https://www.inaturalist.org/observations/139272244)|
