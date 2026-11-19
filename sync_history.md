@@ -8600,3 +8600,22 @@
 |----------|---------|-------|------|--------------|
 |New weed|**97406**|OldMansBeard|RED|[415524139](https://www.inaturalist.org/observations/415524139)|
 |New weed|**97407**|OldMansBeard|RED|[415544036](https://www.inaturalist.org/observations/415544036)|
+---
+
+# Run [20147](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/9855e39b9aa0cdf7b07913f5d737252ecaa581d4/checks/44521774078)
+2026-11-20 01:13
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Weed record updated, Visit record updated|**83892**|OldMansBeard|RED|[274594230](https://www.inaturalist.org/observations/274594230)|
+|Weed record updated, Visit record updated|**84020**|OldMansBeard|RED|[277120639](https://www.inaturalist.org/observations/277120639)|
+|Weed record updated, Visit record updated|**84045**|OldMansBeard|RED|[277297386](https://www.inaturalist.org/observations/277297386)|
+|Weed record updated, Visit record updated|**86519**|OldMansBeard|RED|[308083921](https://www.inaturalist.org/observations/308083921)|
+|Weed record updated, Visit record updated|**87884**|OldMansBeard|RED|[323598512](https://www.inaturalist.org/observations/323598512)|
+|Weed record updated, Visit record updated|**88036**|OldMansBeard|RED|[324825948](https://www.inaturalist.org/observations/324825948)|
+|Weed record updated, Visit record updated|**93156**|OldMansBeard|RED|[348634105](https://www.inaturalist.org/observations/348634105)|
+|Visit record updated|**97407**|OldMansBeard|RED|[415544036](https://www.inaturalist.org/observations/415544036)|
+|Weed record updated, Visit record updated|**73737**|BananaPassionfruit|RED|[210839144](https://www.inaturalist.org/observations/210839144)|
+|Weed record updated, Visit record updated|**86520**|BananaPassionfruit|RED|[308083886](https://www.inaturalist.org/observations/308083886)|
+|Weed record updated, Visit record updated|**96590**|BananaPassionfruit|RED|[406246943](https://www.inaturalist.org/observations/406246943)|
+|New weed|**97416**|WoollyNightshade|RED|[415502616](https://www.inaturalist.org/observations/415502616)|
