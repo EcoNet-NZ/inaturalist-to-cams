@@ -8750,3 +8750,22 @@
 |New weed|**97515**|BluePassionFlower|RED|[416512166](https://www.inaturalist.org/observations/416512166)|
 |New weed|**97516**|WoollyNightshade|RED|[416512168](https://www.inaturalist.org/observations/416512168)|
 |New weed|**97517**|MothPlant|RED|[416582305](https://www.inaturalist.org/observations/416582305)|
+---
+
+# Run [20162](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/85f109fbe43e0eb2ac949473f0fc37a5d67a9323/checks/45330221279)
+2026-11-24 18:01
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Weed record updated, Visit record added|**58298**|OldMansBeard|YELLOW|[108400817](https://www.inaturalist.org/observations/108400817)|
+|Weed record updated, Visit record added|**60846**|OldMansBeard|YELLOW|[156362326](https://www.inaturalist.org/observations/156362326)|
+|Weed record updated, Visit record added|**61325**|OldMansBeard|YELLOW|[162063086](https://www.inaturalist.org/observations/162063086)|
+|Weed record updated, Visit record added|**65490**|OldMansBeard|YELLOW|[192997246](https://www.inaturalist.org/observations/192997246)|
+|Weed record updated, Visit record added|**65571**|OldMansBeard|YELLOW|[193529437](https://www.inaturalist.org/observations/193529437)|
+|New weed|**97526**|OldMansBeard|RED|[416634609](https://www.inaturalist.org/observations/416634609)|
+|New weed|**97527**|OldMansBeard|RED|[416647247](https://www.inaturalist.org/observations/416647247)|
+|New weed|**97528**|OldMansBeard|RED|[416647784](https://www.inaturalist.org/observations/416647784)|
+|Visit record updated|**97488**|BluePassionFlower|RED|[416374614](https://www.inaturalist.org/observations/416374614)|
+|New weed|**97529**|BananaPassionfruit|RED|[416615129](https://www.inaturalist.org/observations/416615129)|
+|New weed|**97530**|WoollyNightshade|RED|[416634084](https://www.inaturalist.org/observations/416634084)|
+|New weed|**97531**|MothPlant|RED|[416634186](https://www.inaturalist.org/observations/416634186)|
