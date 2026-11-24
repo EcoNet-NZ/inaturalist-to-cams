@@ -8769,3 +8769,23 @@
 |New weed|**97529**|BananaPassionfruit|RED|[416615129](https://www.inaturalist.org/observations/416615129)|
 |New weed|**97530**|WoollyNightshade|RED|[416634084](https://www.inaturalist.org/observations/416634084)|
 |New weed|**97531**|MothPlant|RED|[416634186](https://www.inaturalist.org/observations/416634186)|
+---
+
+# Run [20163](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/53531d9fa2cbfd557ec22f00f0ed7976f611c5c9/checks/45437824713)
+2026-11-25 05:30
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Weed record updated, Visit record added|**58777**|OldMansBeard|YELLOW|[143328346](https://www.inaturalist.org/observations/143328346)|
+|Weed record updated, Visit record added|**59733**|OldMansBeard|YELLOW|[149520367](https://www.inaturalist.org/observations/149520367)|
+|Weed record updated, Visit record added|**59734**|OldMansBeard|YELLOW|[149521471](https://www.inaturalist.org/observations/149521471)|
+|Weed record updated, Visit record added|**59852**|OldMansBeard|YELLOW|[149946399](https://www.inaturalist.org/observations/149946399)|
+|Weed record updated, Visit record added|**83874**|OldMansBeard|YELLOW|[274409852](https://www.inaturalist.org/observations/274409852)|
+|Weed record updated, Visit record added|**87728**|OldMansBeard|RED|[322017904](https://www.inaturalist.org/observations/322017904)|
+|Weed record updated, Visit record added|**89254**|OldMansBeard|YELLOW|[331621423](https://www.inaturalist.org/observations/331621423)|
+|Weed record updated, Visit record added|**97526**|OldMansBeard|YELLOW|[416634609](https://www.inaturalist.org/observations/416634609)|
+|New weed|**97532**|OldMansBeard|RED|[416673058](https://www.inaturalist.org/observations/416673058)|
+|New weed|**97533**|OldMansBeard|RED|[416675588](https://www.inaturalist.org/observations/416675588)|
+|Visit record updated|**95284**|BananaPassionfruit|RED|[373421696](https://www.inaturalist.org/observations/373421696)|
+|New weed|**97534**|MothPlant|RED|[415551072](https://www.inaturalist.org/observations/415551072)|
+|New weed|**97535**|MothPlant|RED|[416686029](https://www.inaturalist.org/observations/416686029)|
