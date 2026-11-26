@@ -8900,3 +8900,22 @@
 |Weed record updated, Visit record added|**63695**|MothPlant|GREEN|[113258610](https://www.inaturalist.org/observations/113258610)|
 |Weed record updated, Visit record added|**88413**|MothPlant|YELLOW|[327795888](https://www.inaturalist.org/observations/327795888)|
 |Visit record updated|**97555**|WillowLeavedHakea|RED|[416783578](https://www.inaturalist.org/observations/416783578)|
+---
+
+# Run [20169](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/7a8e2b450e0d34bba90a6c72460fd07890c2c8a4/checks/45906003352)
+2026-11-27 11:38
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Weed record updated, Visit record updated|**97584**|OldMansBeard|RED|[416985182](https://www.inaturalist.org/observations/416985182)|
+|Visit record updated|**97603**|BluePassionFlower|RED|[417025746](https://www.inaturalist.org/observations/417025746)|
+|Visit record updated|**97604**|BlueMorningGlory|RED|[417025748](https://www.inaturalist.org/observations/417025748)|
+|New weed|**97606**|WoollyNightshade|RED|[417120397](https://www.inaturalist.org/observations/417120397)|
+|Weed record updated, Visit record updated|**95075**|MothPlant|RED|[370829374](https://www.inaturalist.org/observations/370829374)|
+|Weed record updated, Visit record updated|**95385**|MothPlant|RED|[375111740](https://www.inaturalist.org/observations/375111740)|
+|Weed record updated, Visit record updated|**96792**|MothPlant|RED|[409825434](https://www.inaturalist.org/observations/409825434)|
+|Weed record updated, Visit record updated|**96793**|MothPlant|RED|[409826934](https://www.inaturalist.org/observations/409826934)|
+|Weed record updated, Visit record updated|**96794**|MothPlant|RED|[409827032](https://www.inaturalist.org/observations/409827032)|
+|Visit record updated|**96795**|MothPlant|RED|[409827153](https://www.inaturalist.org/observations/409827153)|
+|New weed|**97607**|MothPlant|RED|[417087869](https://www.inaturalist.org/observations/417087869)|
+|New weed|**97608**|MothPlant|RED|[417116063](https://www.inaturalist.org/observations/417116063)|
