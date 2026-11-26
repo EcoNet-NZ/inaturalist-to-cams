@@ -8879,3 +8879,24 @@
 |New weed|**97586**|IvyEnglish|RED|[416965874](https://www.inaturalist.org/observations/416965874)|
 |New weed|**97587**|WattleBrush|RED|[416966484](https://www.inaturalist.org/observations/416966484)|
 |New weed|**97588**|WattleBrush|RED|[416968856](https://www.inaturalist.org/observations/416968856)|
+---
+
+# Run [20168](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/f8f8d2b9e205c10805bf66450113dee8c9d2ad56/checks/45826971155)
+2026-11-27 02:13
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|Visit record updated|**97577**|OldMansBeard|RED|[416870629](https://www.inaturalist.org/observations/416870629)|
+|Visit record updated|**97581**|OldMansBeard|RED|[416966568](https://www.inaturalist.org/observations/416966568)|
+|Visit record updated|**97582**|OldMansBeard|RED|[416980271](https://www.inaturalist.org/observations/416980271)|
+|New weed|**97600**|OldMansBeard|RED|[416999845](https://www.inaturalist.org/observations/416999845)|
+|New weed|**97601**|OldMansBeard|RED|[417007638](https://www.inaturalist.org/observations/417007638)|
+|Visit record updated|**97578**|BananaPassionfruit|RED|[416814259](https://www.inaturalist.org/observations/416814259)|
+|New weed|**97602**|BananaPassionfruit|RED|[417019383](https://www.inaturalist.org/observations/417019383)|
+|New weed|**97603**|BluePassionFlower|RED|[417025746](https://www.inaturalist.org/observations/417025746)|
+|New weed|**97604**|BlueMorningGlory|RED|[417025748](https://www.inaturalist.org/observations/417025748)|
+|Weed record updated, Visit record added|**74823**|WoollyNightshade|RED|[113258893](https://www.inaturalist.org/observations/113258893)|
+|Weed record updated, Visit record added|**74993**|WoollyNightshade|GREEN|[157246527](https://www.inaturalist.org/observations/157246527)|
+|Weed record updated, Visit record added|**63695**|MothPlant|GREEN|[113258610](https://www.inaturalist.org/observations/113258610)|
+|Weed record updated, Visit record added|**88413**|MothPlant|YELLOW|[327795888](https://www.inaturalist.org/observations/327795888)|
+|Visit record updated|**97555**|WillowLeavedHakea|RED|[416783578](https://www.inaturalist.org/observations/416783578)|
