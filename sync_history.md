@@ -8859,3 +8859,23 @@
 |New weed|**97577**|OldMansBeard|RED|[416870629](https://www.inaturalist.org/observations/416870629)|
 |New weed|**97578**|BananaPassionfruit|RED|[416814259](https://www.inaturalist.org/observations/416814259)|
 |New weed|**97579**|BananaPassionfruit|RED|[416916105](https://www.inaturalist.org/observations/416916105)|
+---
+
+# Run [20167](https://github.com/EcoNet-NZ/inaturalist-to-cams/commit/2c9eccee09be62657ba558e44de80153fd77f4bf/checks/45747315922)
+2026-11-26 16:12
+
+|Sync Event|Object Id|Species|Status|iNaturalist Id|
+|----------|---------|-------|------|--------------|
+|New weed|**97581**|OldMansBeard|RED|[416966568](https://www.inaturalist.org/observations/416966568)|
+|New weed|**97582**|OldMansBeard|RED|[416980271](https://www.inaturalist.org/observations/416980271)|
+|New weed|**97583**|OldMansBeard|RED|[416981611](https://www.inaturalist.org/observations/416981611)|
+|New weed|**97584**|OldMansBeard|RED|[416985182](https://www.inaturalist.org/observations/416985182)|
+|Visit record updated|**97529**|BananaPassionfruit|RED|[416615129](https://www.inaturalist.org/observations/416615129)|
+|Visit record updated|**97578**|BananaPassionfruit|RED|[416814259](https://www.inaturalist.org/observations/416814259)|
+|Visit record updated|**97579**|BananaPassionfruit|RED|[416916105](https://www.inaturalist.org/observations/416916105)|
+|New weed|**97585**|BlueMorningGlory|RED|[416941672](https://www.inaturalist.org/observations/416941672)|
+|Weed record updated|**89306**|OTHER|PURPLE|[331725157](https://www.inaturalist.org/observations/331725157)|
+|Visit record updated|**97555**|WillowLeavedHakea|RED|[416783578](https://www.inaturalist.org/observations/416783578)|
+|New weed|**97586**|IvyEnglish|RED|[416965874](https://www.inaturalist.org/observations/416965874)|
+|New weed|**97587**|WattleBrush|RED|[416966484](https://www.inaturalist.org/observations/416966484)|
+|New weed|**97588**|WattleBrush|RED|[416968856](https://www.inaturalist.org/observations/416968856)|
